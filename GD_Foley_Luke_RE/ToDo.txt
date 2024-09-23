@@ -1,0 +1,5 @@
+set max characters for rate description
+set a max rate
+set max description and manufacturer for tool
+datagridview proporties method
+stop adding tool to rental basket more than once
