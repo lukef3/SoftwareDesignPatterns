@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ToolSYS.Data
-build_property.ProjectDir = C:\Users\lukef\OneDrive\Documents\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\
+build_property.ProjectDir = C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

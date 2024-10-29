@@ -12,4 +12,8 @@
     <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="23.5.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ToolSYS.Business\ToolSYS.Business.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ToolSYS.Business;
 
 namespace ToolSYS
 {
     public partial class frmViewTools : Form
     {
+        private ToolService _toolService;
+
         public frmViewTools()
         {
             InitializeComponent();
+            _toolService = new ToolService();
         }
 
         private void frmViewTools_Load(object sender, EventArgs e)
@@ -67,7 +71,7 @@ namespace ToolSYS
 
         private void RefreshGridView(String toolID, String categoryCode, String status)
         {
-            dgvTools.DataSource = Tool.GetFilteredTools(toolID, categoryCode, txtDescription.Text, txtManufacturer.Text, status, txtPhrase.Text).Tables["tool"];
+            dgvTools.DataSource = _toolService.GetFilteredTools(toolID, categoryCode, txtDescription.Text, txtManufacturer.Text, status, txtPhrase.Text).Tables["tool"];
             dgvTools.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvTools.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
         }

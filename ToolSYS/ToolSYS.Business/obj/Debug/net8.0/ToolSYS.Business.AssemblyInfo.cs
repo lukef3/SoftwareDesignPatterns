@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ToolSYS.Business")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a97cb33a2a93c5b97309757711944c1ca483b18")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b3b5b4f818897d78e31eccc58296ccc12b4907fc")]
 [assembly: System.Reflection.AssemblyProductAttribute("ToolSYS.Business")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ToolSYS.Business")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

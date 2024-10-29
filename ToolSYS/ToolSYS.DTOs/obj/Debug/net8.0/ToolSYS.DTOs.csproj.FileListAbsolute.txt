@@ -1,0 +1,12 @@
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\bin\Debug\net8.0\ToolSYS.DTOs.deps.json
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\bin\Debug\net8.0\ToolSYS.DTOs.dll
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\bin\Debug\net8.0\ToolSYS.DTOs.pdb
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\obj\Debug\net8.0\ToolSYS.DTOs.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\obj\Debug\net8.0\ToolSYS.DTOs.AssemblyInfoInputs.cache
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\obj\Debug\net8.0\ToolSYS.DTOs.AssemblyInfo.cs
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\obj\Debug\net8.0\ToolSYS.DTOs.csproj.CoreCompileInputs.cache
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\obj\Debug\net8.0\ToolSYS.DTOs.sourcelink.json
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\obj\Debug\net8.0\ToolSYS.DTOs.dll
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\obj\Debug\net8.0\refint\ToolSYS.DTOs.dll
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\obj\Debug\net8.0\ToolSYS.DTOs.pdb
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\obj\Debug\net8.0\ref\ToolSYS.DTOs.dll

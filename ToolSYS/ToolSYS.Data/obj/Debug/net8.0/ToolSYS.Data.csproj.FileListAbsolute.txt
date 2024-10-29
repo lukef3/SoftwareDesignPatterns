@@ -1,0 +1,16 @@
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\obj\Debug\net8.0\ToolSYS.Data.csproj.AssemblyReference.cache
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\obj\Debug\net8.0\ToolSYS.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\obj\Debug\net8.0\ToolSYS.Data.AssemblyInfoInputs.cache
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\obj\Debug\net8.0\ToolSYS.Data.AssemblyInfo.cs
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\obj\Debug\net8.0\ToolSYS.Data.csproj.CoreCompileInputs.cache
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\obj\Debug\net8.0\ToolSYS.Data.sourcelink.json
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\bin\Debug\net8.0\ToolSYS.Data.deps.json
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\bin\Debug\net8.0\ToolSYS.Data.dll
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\bin\Debug\net8.0\ToolSYS.Data.pdb
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\bin\Debug\net8.0\ToolSYS.DTOs.dll
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\bin\Debug\net8.0\ToolSYS.DTOs.pdb
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\obj\Debug\net8.0\ToolSYS..82028104.Up2Date
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\obj\Debug\net8.0\ToolSYS.Data.dll
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\obj\Debug\net8.0\refint\ToolSYS.Data.dll
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\obj\Debug\net8.0\ToolSYS.Data.pdb
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\obj\Debug\net8.0\ref\ToolSYS.Data.dll

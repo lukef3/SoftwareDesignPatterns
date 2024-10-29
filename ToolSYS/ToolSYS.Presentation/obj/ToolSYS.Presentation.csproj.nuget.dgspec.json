@@ -1,17 +1,220 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lukef\\OneDrive\\Documents\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\ToolSYS.Presentation.csproj": {}
+    "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\ToolSYS.Presentation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lukef\\OneDrive\\Documents\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\ToolSYS.Presentation.csproj": {
+    "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\ToolSYS.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lukef\\OneDrive\\Documents\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\ToolSYS.Presentation.csproj",
-        "projectName": "ToolSYS.Presentation",
-        "projectPath": "C:\\Users\\lukef\\OneDrive\\Documents\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\ToolSYS.Presentation.csproj",
+        "projectUniqueName": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\ToolSYS.Business.csproj",
+        "projectName": "ToolSYS.Business",
+        "projectPath": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\ToolSYS.Business.csproj",
         "packagesPath": "C:\\Users\\lukef\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lukef\\OneDrive\\Documents\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\obj\\",
+        "outputPath": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\lukef\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\ToolSYS.Data.csproj": {
+                "projectPath": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\ToolSYS.Data.csproj"
+              },
+              "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\ToolSYS.DTOs.csproj": {
+                "projectPath": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\ToolSYS.DTOs.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Oracle.ManagedDataAccess.Core": {
+              "target": "Package",
+              "version": "[23.5.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\ToolSYS.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\ToolSYS.Data.csproj",
+        "projectName": "ToolSYS.Data",
+        "projectPath": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\ToolSYS.Data.csproj",
+        "packagesPath": "C:\\Users\\lukef\\.nuget\\packages\\",
+        "outputPath": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\lukef\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\ToolSYS.DTOs.csproj": {
+                "projectPath": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\ToolSYS.DTOs.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Oracle.ManagedDataAccess.Core": {
+              "target": "Package",
+              "version": "[23.5.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\ToolSYS.DTOs.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\ToolSYS.DTOs.csproj",
+        "projectName": "ToolSYS.DTOs",
+        "projectPath": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\ToolSYS.DTOs.csproj",
+        "packagesPath": "C:\\Users\\lukef\\.nuget\\packages\\",
+        "outputPath": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\lukef\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\ToolSYS.Presentation.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\ToolSYS.Presentation.csproj",
+        "projectName": "ToolSYS.Presentation",
+        "projectPath": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\ToolSYS.Presentation.csproj",
+        "packagesPath": "C:\\Users\\lukef\\.nuget\\packages\\",
+        "outputPath": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lukef\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,7 +230,11 @@
         "frameworks": {
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\ToolSYS.Business.csproj": {
+                "projectPath": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\ToolSYS.Business.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

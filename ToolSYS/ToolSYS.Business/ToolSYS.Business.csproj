@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="23.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ToolSYS.Data\ToolSYS.Data.csproj" />
+    <ProjectReference Include="..\ToolSYS.DTOs\ToolSYS.DTOs.csproj" />
+  </ItemGroup>
+
 </Project>

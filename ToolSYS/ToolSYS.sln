@@ -5,9 +5,11 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolSYS.Presentation", "ToolSYS.Presentation\ToolSYS.Presentation.csproj", "{DA25EA1E-5B06-41F4-8960-6C45641754E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolSYS.Business", "ToolSYS.Business\ToolSYS.Business.csproj", "{52FC2CF2-BDF3-4543-A054-692018345D50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolSYS.Business", "ToolSYS.Business\ToolSYS.Business.csproj", "{52FC2CF2-BDF3-4543-A054-692018345D50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolSYS.Data", "ToolSYS.Data\ToolSYS.Data.csproj", "{688AD2ED-70AA-4881-81FE-16AC8B2C5C8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolSYS.Data", "ToolSYS.Data\ToolSYS.Data.csproj", "{688AD2ED-70AA-4881-81FE-16AC8B2C5C8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolSYS.DTOs", "ToolSYS.DTOs\ToolSYS.DTOs.csproj", "{605D721C-D4D1-4C31-B2FF-F3650851AD52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{688AD2ED-70AA-4881-81FE-16AC8B2C5C8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{688AD2ED-70AA-4881-81FE-16AC8B2C5C8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{688AD2ED-70AA-4881-81FE-16AC8B2C5C8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{605D721C-D4D1-4C31-B2FF-F3650851AD52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{605D721C-D4D1-4C31-B2FF-F3650851AD52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{605D721C-D4D1-4C31-B2FF-F3650851AD52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{605D721C-D4D1-4C31-B2FF-F3650851AD52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
