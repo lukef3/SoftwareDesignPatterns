@@ -1,4 +1,4 @@
-﻿namespace ToolSYS.Presentation
+﻿namespace ToolSYS.Presentation.Presentation
 {
     partial class Form1
     {

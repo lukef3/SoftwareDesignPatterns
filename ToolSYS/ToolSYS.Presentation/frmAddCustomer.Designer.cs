@@ -1,7 +1,7 @@
 ﻿
 using System;
 
-namespace ToolSYS
+namespace ToolSYS.Presentation
 {
     partial class frmAddCustomer
     {

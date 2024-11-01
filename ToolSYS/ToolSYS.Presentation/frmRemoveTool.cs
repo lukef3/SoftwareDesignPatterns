@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
 
-namespace ToolSYS
+namespace ToolSYS.Presentation
 {
     public partial class frmRemoveTool : Form
     {

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ToolSYS.Business;
 
-namespace ToolSYS
+namespace ToolSYS.Presentation
 {
     public partial class frmViewTools : Form
     {

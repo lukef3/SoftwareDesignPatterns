@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Oracle.ManagedDataAccess.Client;
 
-namespace ToolSYS
+namespace ToolSYS.Presentation
 {
     class RentalItem
     {

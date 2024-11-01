@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ToolSYS
+namespace ToolSYS.Presentation
 {
     public partial class frmUpdateTool : Form
     {

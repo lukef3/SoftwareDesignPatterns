@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ToolSYS
+namespace ToolSYS.Presentation
 {
     static class Program
     {

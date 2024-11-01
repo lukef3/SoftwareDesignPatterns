@@ -7,7 +7,7 @@ using System.Data;
 using Oracle.ManagedDataAccess.Client;
 using System.Windows.Forms;
 
-namespace ToolSYS
+namespace ToolSYS.Presentation
 {
     class Rate
     {

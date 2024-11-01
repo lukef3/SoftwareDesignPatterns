@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ToolSYS
+namespace ToolSYS.Presentation
 {
     public class DBConnect
     {
