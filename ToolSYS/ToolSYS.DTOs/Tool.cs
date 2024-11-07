@@ -2,25 +2,28 @@
 {
     public class Tool
     {
-        public int ToolID { get; set; }
-        public string CategoryCode { get; set; }
-        public string ToolDescription { get; set; }
-        public string ToolManufacturer { get; set; }
-        public string ToolStatus { get; set; }
+        public int toolID { get; set; }
+        public string categoryCode { get; set; }
+        public string toolDescription { get; set; }
+        public string toolManufacturer { get; set; }
+        public string toolStatus { get; set; }
 
         // Constructors
         public Tool()
         {
-            ToolStatus = "I"; // Default status
+            this.toolID = 0;
+            this.categoryCode = "";
+            this.toolDescription = "";
+            this.toolManufacturer = "";
         }
 
         public Tool(int toolID, string categoryCode, string toolDescription, string toolManufacturer)
         {
-            ToolID = toolID;
-            CategoryCode = categoryCode;
-            ToolDescription = toolDescription;
-            ToolManufacturer = toolManufacturer;
-            ToolStatus = "I";
+            this.toolID = toolID;
+            this.categoryCode = categoryCode;
+            this.toolDescription = toolDescription;
+            this.toolManufacturer = toolManufacturer;
+            this.toolStatus = "I";
         }
     }
 }

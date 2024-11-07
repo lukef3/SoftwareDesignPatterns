@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using Oracle.ManagedDataAccess.Client;
 using ToolSYS.DTOs;
 
@@ -21,11 +16,11 @@ namespace ToolSYS.Data
                                     "VALUES (:toolID, :categoryCode, :toolDescription, :toolManufacturer, :toolStatus)";
 
                 OracleCommand cmd = new OracleCommand(sqlQuery, conn);
-                cmd.Parameters.Add(":toolID", tool.ToolID);
-                cmd.Parameters.Add(":categoryCode", tool.CategoryCode.Substring(0, 2));
-                cmd.Parameters.Add(":toolDescription", tool.ToolDescription);
-                cmd.Parameters.Add(":toolManufacturer", tool.ToolManufacturer);
-                cmd.Parameters.Add(":toolStatus", tool.ToolStatus);
+                cmd.Parameters.Add(":toolID", tool.toolID);
+                cmd.Parameters.Add(":categoryCode", tool.categoryCode.Substring(0, 2));
+                cmd.Parameters.Add(":toolDescription", tool.toolDescription);
+                cmd.Parameters.Add(":toolManufacturer", tool.toolManufacturer);
+                cmd.Parameters.Add(":toolStatus", tool.toolStatus);
 
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -44,11 +39,11 @@ namespace ToolSYS.Data
                                     "WHERE ToolID = :toolID";
 
                 OracleCommand cmd = new OracleCommand(sqlQuery, conn);
-                cmd.Parameters.Add(":categoryCode", tool.CategoryCode);
-                cmd.Parameters.Add(":toolDescription", tool.ToolDescription);
-                cmd.Parameters.Add(":toolManufacturer", tool.ToolManufacturer);
-                cmd.Parameters.Add(":toolStatus", tool.ToolStatus);
-                cmd.Parameters.Add(":toolID", tool.ToolID);
+                cmd.Parameters.Add(":categoryCode", tool.categoryCode);
+                cmd.Parameters.Add(":toolDescription", tool.toolDescription);
+                cmd.Parameters.Add(":toolManufacturer", tool.toolManufacturer);
+                cmd.Parameters.Add(":toolStatus", tool.toolStatus);
+                cmd.Parameters.Add(":toolID", tool.toolID);
 
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -173,6 +168,23 @@ namespace ToolSYS.Data
 
             }
         }
+
+        public bool DoesToolIDExist(int toolID)
+        {
+            using (var conn = new OracleConnection(DBConnect.oradb))
+            {
+                string sqlQuery = "SELECT COUNT(*) FROM Tools WHERE ToolID = :toolID AND ToolStatus = 'I'";
+                OracleCommand cmd = new OracleCommand(sqlQuery, conn);
+                cmd.Parameters.Add(":toolID", toolID);
+
+                conn.Open();
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                conn.Close();
+
+                return count > 0;
+            }
+        }
+
     }
 }
 

@@ -1,141 +1,153 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Data;
+using ToolSYS.Business;
+using ToolSYS.DTOs;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ToolSYS.Presentation
 {
     public partial class frmUpdateTool : Form
     {
+        private readonly ToolService _toolService;
+        private readonly RateService _rateService;
+
         public frmUpdateTool()
         {
             InitializeComponent();
+            _toolService = new ToolService();
+            _rateService = new RateService();
         }
-        Tool tool = new Tool();
 
         private void frmUpdateTool_Load(object sender, EventArgs e)
         {
-            cboCategories.Items.Add("");
-            Rate.LoadCategories(cboCategories);
+            cboCategories.Items.Add(""); // Add empty entry
+            DataSet categories = _rateService.GetAllCategories(); // Load categories from service
+
+            foreach (DataRow row in categories.Tables[0].Rows)
+            {
+                string category = row["CategoryCode"] + " - " + row["CategoryDesc"];
+                cboCategories.Items.Add(category);
+                cboUpdCategories.Items.Add(category); // Add to both ComboBoxes
+            }
 
             cboStatus.Items.Add("");
             cboStatus.Items.Add("I - In");
             cboStatus.Items.Add("O - Out");
             cboStatus.Items.Add("U - Unavailable");
 
-            Rate.LoadCategories(cboUpdCategories);
-
             cboUpdStatus.Items.Add("I - In");
             cboUpdStatus.Items.Add("U - Unavailable");
-            this.AcceptButton = btnSearch;          //https://social.msdn.microsoft.com/Forums/vstudio/en-US/0a5e3852-af4e-44ed-bef0-30ab02224a20/press-enter-key-instead-of-clicking-on-a-button?forum=csharpgeneral
-
+            this.AcceptButton = btnSearch; // Allow Enter key to trigger Search
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            String toolID = "";
-            String categoryCode = "";
-            String description = "";
-            String status = "";
-            if (!String.IsNullOrEmpty(txtToolID.Text))
+            try
             {
-                if (Tool.IsValidToolID(txtToolID.Text, txtToolID))
-                {
-                    toolID = txtToolID.Text;
-                }
-                else
-                {
-                    return;
-                }
-            }
-            if (!String.IsNullOrEmpty(txtDescription.Text))
-            {
-                if (Tool.IsValidDescription(txtDescription.Text, txtDescription))
-                {
-                    description = txtDescription.Text;
-                }
-                else
-                {
-                    return;
-                }
-            }
-            if (cboCategories.SelectedIndex == -1)
-            {
-                categoryCode = "";
-            }
-            else
-            {
-                categoryCode = cboCategories.SelectedItem.ToString();
-            }
+                string toolID = _toolService.IsValidToolID(txtToolID.Text) ? txtToolID.Text : null;
+                string categoryCode = cboCategories.SelectedIndex > -1 ? cboCategories.SelectedItem.ToString() : null;
+                string status = cboStatus.SelectedIndex > -1 ? cboStatus.SelectedItem.ToString() : null;
 
-            if (cboStatus.SelectedIndex == -1)
-            {
-                status = "";
+                if (toolID == null && !string.IsNullOrEmpty(txtToolID.Text))
+                {
+                    // Invalid ToolID; Tool.IsValidToolID already shows an error message
+                    return;
+                }
+
+                RefreshGridView(toolID, categoryCode, status);
             }
-            else
+            catch (Exception ex)
             {
-                status = cboStatus.SelectedItem.ToString();
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            RefreshGridView(toolID, categoryCode, status);
         }
 
-        private void RefreshGridView(String toolID, String categoryCode, String status)
+        private void RefreshGridView(string toolID, string categoryCode, string status)
         {
-            dgvTools.DataSource = Tool.GetFilteredTools(toolID, categoryCode, txtDescription.Text, txtManufacturer.Text, status, txtPhrase.Text).Tables["tool"];
-            dgvTools.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvTools.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            try
+            {
+                var filteredTools = _toolService.GetFilteredTools(
+                    toolID,
+                    categoryCode,
+                    txtDescription.Text,
+                    txtManufacturer.Text,
+                    status,
+                    txtPhrase.Text);
+
+                dgvTools.DataSource = filteredTools.Tables["tool"];
+                dgvTools.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvTools.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while refreshing the grid: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void dgvTools_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtUpdToolID.Text = dgvTools.Rows[dgvTools.CurrentRow.Index].Cells[0].Value.ToString();
-            for(int i=0; i <= cboUpdCategories.Items.Count; i++)
+            if (dgvTools.CurrentRow != null)
             {
-                cboUpdCategories.SelectedIndex = i;
-                if (cboUpdCategories.SelectedItem.ToString().Substring(0, 2) == dgvTools.Rows[dgvTools.CurrentRow.Index].Cells[1].Value.ToString())
-                {
-                    break;
-                }
-            }
-            txtUpdDescription.Text = dgvTools.Rows[dgvTools.CurrentRow.Index].Cells[2].Value.ToString();
-            txtUpdManufacturer.Text = dgvTools.Rows[dgvTools.CurrentRow.Index].Cells[3].Value.ToString();
-            for (int i = 0; i <= cboUpdStatus.Items.Count; i++)
-            {
-                cboUpdStatus.SelectedIndex = i;
-                if (cboUpdStatus.SelectedItem.ToString().Substring(0, 1) == dgvTools.Rows[dgvTools.CurrentRow.Index].Cells[4].Value.ToString())
-                {
-                    break;
-                }
+                txtUpdToolID.Text = dgvTools.CurrentRow.Cells[0].Value.ToString();
+
+                string categoryCode = dgvTools.CurrentRow.Cells[1].Value.ToString();
+                cboUpdCategories.SelectedItem = cboUpdCategories.Items.Cast<string>()
+                    .FirstOrDefault(item => item.StartsWith(categoryCode));
+
+                txtUpdDescription.Text = dgvTools.CurrentRow.Cells[2].Value.ToString();
+                txtUpdManufacturer.Text = dgvTools.CurrentRow.Cells[3].Value.ToString();
+
+                string status = dgvTools.CurrentRow.Cells[4].Value.ToString();
+                cboUpdStatus.SelectedItem = cboUpdStatus.Items.Cast<string>()
+                    .FirstOrDefault(item => item.StartsWith(status));
             }
         }
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (Tool.IsValidDescription(txtUpdDescription.Text, txtUpdDescription))
+            try
             {
-                tool.SetDescription(txtUpdDescription.Text);
-                if(Tool.IsValidManufacturer(txtUpdManufacturer.Text, txtUpdManufacturer))
+                 // Validate and create ToolDTO
+                var tool = new DTOs.Tool
                 {
-                    tool.SetManufacturer(txtUpdManufacturer.Text);
-                    tool.SetToolID(Convert.ToInt32(txtUpdToolID.Text));
-                    tool.SetCategory(cboUpdCategories.SelectedItem.ToString().Substring(0, 2));
-                    tool.SetToolStatus(cboUpdStatus.SelectedItem.ToString().Substring(0, 1));
-                    tool.UpdateTool();
-                    MessageBox.Show("Tool Has Been Successfully Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtUpdToolID.Clear();
-                    txtUpdDescription.Clear();
-                    txtUpdManufacturer.Clear();
-                    cboUpdCategories.SelectedIndex = -1;
-                    cboUpdStatus.SelectedIndex = -1;
-                    btnSearch.PerformClick();
-                }
+                    toolID = int.Parse(txtUpdToolID.Text),
+                    categoryCode = cboUpdCategories.SelectedItem.ToString().Substring(0, 2),
+                    toolDescription = txtUpdDescription.Text,
+                    toolManufacturer = txtUpdManufacturer.Text,
+                    toolStatus = cboUpdStatus.SelectedItem.ToString().Substring(0, 1)
+                };
+
+                _toolService.UpdateTool(tool); // Update tool using service
+                MessageBox.Show("Tool has been successfully updated", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Clear inputs
+                ClearUpdateInputs();
+                btnSearch.PerformClick(); // Refresh grid
             }
-              
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Update Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
+        private void ClearUpdateInputs()
+        {
+            txtUpdToolID.Clear();
+            txtUpdDescription.Clear();
+            txtUpdManufacturer.Clear();
+            cboUpdCategories.SelectedIndex = -1;
+            cboUpdStatus.SelectedIndex = -1;
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtToolID.Clear();
+            cboCategories.SelectedIndex = -1;
+            txtDescription.Clear();
+            txtManufacturer.Clear();
+            cboStatus.SelectedIndex = -1;
+            txtPhrase.Clear();
+        }
+
 
         private void SetToolCategoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -196,16 +208,6 @@ namespace ToolSYS.Presentation
         private void MainMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Navigation.MainMenu(this);
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            txtToolID.Clear();
-            cboCategories.SelectedIndex = -1;
-            txtDescription.Clear();
-            txtManufacturer.Clear();
-            cboStatus.SelectedIndex = -1;
-            txtPhrase.Clear();
         }
     }
 }

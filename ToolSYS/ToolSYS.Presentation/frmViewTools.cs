@@ -32,48 +32,49 @@ namespace ToolSYS.Presentation
             cboStatus.Items.Add("U - Unavailable");
             this.AcceptButton = btnSearch;          //https://social.msdn.microsoft.com/Forums/vstudio/en-US/0a5e3852-af4e-44ed-bef0-30ab02224a20/press-enter-key-instead-of-clicking-on-a-button?forum=csharpgeneral
         }
-            
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            String toolID = "";
-            String categoryCode = "";
-            String status = "";
-            if (!String.IsNullOrEmpty(txtToolID.Text))
+            try
             {
-                if(Tool.IsValidToolID(txtToolID.Text, txtToolID))
+                string toolID = _toolService.IsValidToolID(txtToolID.Text) ? txtToolID.Text : null;
+                string categoryCode = cboCategories.SelectedIndex > -1 ? cboCategories.SelectedItem.ToString() : null;
+                string status = cboStatus.SelectedIndex > -1 ? cboStatus.SelectedItem.ToString() : null;
+
+                if (toolID == null && !string.IsNullOrEmpty(txtToolID.Text))
                 {
-                    toolID = txtToolID.Text;
-                }
-                else
-                {
+                    // Invalid ToolID; Tool.IsValidToolID already shows an error message
                     return;
                 }
-            }
-            if (cboCategories.SelectedIndex == -1)
-            {
-                categoryCode = "";
-            }
-            else
-            {
-                categoryCode = cboCategories.SelectedItem.ToString();
-            }
 
-            if(cboStatus.SelectedIndex == -1)
-            {
-                status = "";
+                RefreshGridView(toolID, categoryCode, status);
             }
-            else
+            catch (Exception ex)
             {
-                status = cboStatus.SelectedItem.ToString();
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            RefreshGridView(toolID, categoryCode, status);
         }
 
-        private void RefreshGridView(String toolID, String categoryCode, String status)
+        private void RefreshGridView(string toolID, string categoryCode, string status)
         {
-            dgvTools.DataSource = _toolService.GetFilteredTools(toolID, categoryCode, txtDescription.Text, txtManufacturer.Text, status, txtPhrase.Text).Tables["tool"];
-            dgvTools.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvTools.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            try
+            {
+                var filteredTools = _toolService.GetFilteredTools(
+                    toolID,
+                    categoryCode,
+                    txtDescription.Text,
+                    txtManufacturer.Text,
+                    status,
+                    txtPhrase.Text);
+
+                dgvTools.DataSource = filteredTools.Tables["tool"];
+                dgvTools.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvTools.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while refreshing the grid: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void SetToolCategoryToolStripMenuItem_Click(object sender, EventArgs e)
