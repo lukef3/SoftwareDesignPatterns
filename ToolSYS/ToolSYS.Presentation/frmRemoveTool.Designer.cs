@@ -29,290 +29,279 @@ namespace ToolSYS.Presentation
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnConfirm = new System.Windows.Forms.Button();
-            this.txtToolID = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dgvTools = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ratesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setToolCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateToolRateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.customersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewCustomersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rentalsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rentToolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.returnToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewRentalsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adminReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.annualRevenueAnalysisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.annualToolTypeAnalysisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MainMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTools)).BeginInit();
-            this.menuStrip1.SuspendLayout();
-            this.SuspendLayout();
+            groupBox1 = new GroupBox();
+            btnConfirm = new Button();
+            txtToolID = new TextBox();
+            label1 = new Label();
+            dgvTools = new DataGridView();
+            label7 = new Label();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            menuStrip1 = new MenuStrip();
+            ratesToolStripMenuItem = new ToolStripMenuItem();
+            setToolCategoryToolStripMenuItem = new ToolStripMenuItem();
+            updateToolRateToolStripMenuItem = new ToolStripMenuItem();
+            toolsToolStripMenuItem = new ToolStripMenuItem();
+            addToolStripMenuItem = new ToolStripMenuItem();
+            updateToolsToolStripMenuItem = new ToolStripMenuItem();
+            viewToolsToolStripMenuItem = new ToolStripMenuItem();
+            customersToolStripMenuItem = new ToolStripMenuItem();
+            addCustomerToolStripMenuItem = new ToolStripMenuItem();
+            updateCustomerToolStripMenuItem = new ToolStripMenuItem();
+            viewCustomersToolStripMenuItem = new ToolStripMenuItem();
+            rentalsToolStripMenuItem = new ToolStripMenuItem();
+            rentToolToolStripMenuItem = new ToolStripMenuItem();
+            returnToolsToolStripMenuItem = new ToolStripMenuItem();
+            viewRentalsToolStripMenuItem = new ToolStripMenuItem();
+            adminReportsToolStripMenuItem = new ToolStripMenuItem();
+            annualRevenueAnalysisToolStripMenuItem = new ToolStripMenuItem();
+            annualToolTypeAnalysisToolStripMenuItem = new ToolStripMenuItem();
+            MainMenuToolStripMenuItem = new ToolStripMenuItem();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvTools).BeginInit();
+            menuStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnConfirm);
-            this.groupBox1.Controls.Add(this.txtToolID);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 449);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1158, 185);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Double click or enter tool ID to remove:";
+            groupBox1.Controls.Add(btnConfirm);
+            groupBox1.Controls.Add(txtToolID);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Location = new Point(9, 337);
+            groupBox1.Margin = new Padding(2, 2, 2, 2);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(2, 2, 2, 2);
+            groupBox1.Size = new Size(901, 139);
+            groupBox1.TabIndex = 5;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Double click or enter tool ID to remove:";
             // 
             // btnConfirm
             // 
-            this.btnConfirm.BackColor = System.Drawing.Color.Gold;
-            this.btnConfirm.Location = new System.Drawing.Point(511, 93);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(134, 69);
-            this.btnConfirm.TabIndex = 8;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.UseVisualStyleBackColor = false;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            btnConfirm.BackColor = Color.Gold;
+            btnConfirm.Location = new Point(397, 70);
+            btnConfirm.Margin = new Padding(2, 2, 2, 2);
+            btnConfirm.Name = "btnConfirm";
+            btnConfirm.Size = new Size(104, 52);
+            btnConfirm.TabIndex = 8;
+            btnConfirm.Text = "Confirm";
+            btnConfirm.UseVisualStyleBackColor = false;
+            btnConfirm.Click += btnConfirm_Click;
             // 
             // txtToolID
             // 
-            this.txtToolID.Location = new System.Drawing.Point(549, 46);
-            this.txtToolID.Name = "txtToolID";
-            this.txtToolID.Size = new System.Drawing.Size(110, 26);
-            this.txtToolID.TabIndex = 5;
+            txtToolID.Location = new Point(427, 34);
+            txtToolID.Margin = new Padding(2, 2, 2, 2);
+            txtToolID.Name = "txtToolID";
+            txtToolID.Size = new Size(86, 23);
+            txtToolID.TabIndex = 5;
+            txtToolID.Text = "0";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(478, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tool ID:";
+            label1.AutoSize = true;
+            label1.Location = new Point(372, 37);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(46, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Tool ID:";
             // 
             // dgvTools
             // 
-            this.dgvTools.AllowUserToAddRows = false;
-            this.dgvTools.AllowUserToDeleteRows = false;
-            this.dgvTools.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTools.Location = new System.Drawing.Point(12, 72);
-            this.dgvTools.Name = "dgvTools";
-            this.dgvTools.ReadOnly = true;
-            this.dgvTools.RowHeadersWidth = 62;
-            this.dgvTools.RowTemplate.Height = 28;
-            this.dgvTools.Size = new System.Drawing.Size(1158, 362);
-            this.dgvTools.TabIndex = 6;
-            this.dgvTools.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTools_CellClick);
-            this.dgvTools.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTools_CellDoubleClick);
-            this.dgvTools.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTools_CellDoubleClick);
+            dgvTools.AllowUserToAddRows = false;
+            dgvTools.AllowUserToDeleteRows = false;
+            dgvTools.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTools.Location = new Point(9, 54);
+            dgvTools.Margin = new Padding(2, 2, 2, 2);
+            dgvTools.Name = "dgvTools";
+            dgvTools.ReadOnly = true;
+            dgvTools.RowHeadersWidth = 62;
+            dgvTools.RowTemplate.Height = 28;
+            dgvTools.Size = new Size(901, 272);
+            dgvTools.TabIndex = 6;
+            dgvTools.CellClick += dgvTools_CellClick;
+            dgvTools.CellContentDoubleClick += dgvTools_CellDoubleClick;
+            dgvTools.CellDoubleClick += dgvTools_CellDoubleClick;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(519, 49);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(140, 20);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Removeable Tools";
+            label7.AutoSize = true;
+            label7.Location = new Point(404, 37);
+            label7.Margin = new Padding(2, 0, 2, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(102, 15);
+            label7.TabIndex = 7;
+            label7.Text = "Removeable Tools";
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.menuStrip1.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ratesToolStripMenuItem,
-            this.toolsToolStripMenuItem,
-            this.customersToolStripMenuItem,
-            this.rentalsToolStripMenuItem,
-            this.adminReportsToolStripMenuItem,
-            this.MainMenuToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1186, 32);
-            this.menuStrip1.TabIndex = 8;
-            this.menuStrip1.Text = "menuStrip1";
+            menuStrip1.BackColor = SystemColors.AppWorkspace;
+            menuStrip1.Font = new Font("Lucida Console", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            menuStrip1.ImageScalingSize = new Size(24, 24);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { ratesToolStripMenuItem, toolsToolStripMenuItem, customersToolStripMenuItem, rentalsToolStripMenuItem, adminReportsToolStripMenuItem, MainMenuToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Padding = new Padding(5, 2, 0, 2);
+            menuStrip1.Size = new Size(922, 24);
+            menuStrip1.TabIndex = 8;
+            menuStrip1.Text = "menuStrip1";
             // 
             // ratesToolStripMenuItem
             // 
-            this.ratesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.setToolCategoryToolStripMenuItem,
-            this.updateToolRateToolStripMenuItem});
-            this.ratesToolStripMenuItem.Name = "ratesToolStripMenuItem";
-            this.ratesToolStripMenuItem.Size = new System.Drawing.Size(79, 28);
-            this.ratesToolStripMenuItem.Text = "Rates";
+            ratesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { setToolCategoryToolStripMenuItem, updateToolRateToolStripMenuItem });
+            ratesToolStripMenuItem.Name = "ratesToolStripMenuItem";
+            ratesToolStripMenuItem.Size = new Size(52, 20);
+            ratesToolStripMenuItem.Text = "Rates";
             // 
             // setToolCategoryToolStripMenuItem
             // 
-            this.setToolCategoryToolStripMenuItem.Name = "setToolCategoryToolStripMenuItem";
-            this.setToolCategoryToolStripMenuItem.Size = new System.Drawing.Size(293, 34);
-            this.setToolCategoryToolStripMenuItem.Text = "Set Tool Category";
-            this.setToolCategoryToolStripMenuItem.Click += new System.EventHandler(this.SetToolCategoryToolStripMenuItem_Click);
+            setToolCategoryToolStripMenuItem.Name = "setToolCategoryToolStripMenuItem";
+            setToolCategoryToolStripMenuItem.Size = new Size(189, 22);
+            setToolCategoryToolStripMenuItem.Text = "Set Tool Category";
+            setToolCategoryToolStripMenuItem.Click += SetToolCategoryToolStripMenuItem_Click;
             // 
             // updateToolRateToolStripMenuItem
             // 
-            this.updateToolRateToolStripMenuItem.Name = "updateToolRateToolStripMenuItem";
-            this.updateToolRateToolStripMenuItem.Size = new System.Drawing.Size(293, 34);
-            this.updateToolRateToolStripMenuItem.Text = "Update Tool Rate";
-            this.updateToolRateToolStripMenuItem.Click += new System.EventHandler(this.UpdateToolRateToolStripMenuItem_Click);
+            updateToolRateToolStripMenuItem.Name = "updateToolRateToolStripMenuItem";
+            updateToolRateToolStripMenuItem.Size = new Size(189, 22);
+            updateToolRateToolStripMenuItem.Text = "Update Tool Rate";
+            updateToolRateToolStripMenuItem.Click += UpdateToolRateToolStripMenuItem_Click;
             // 
             // toolsToolStripMenuItem
             // 
-            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addToolStripMenuItem,
-            this.updateToolsToolStripMenuItem,
-            this.viewToolsToolStripMenuItem});
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(79, 28);
-            this.toolsToolStripMenuItem.Text = "Tools";
+            toolsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addToolStripMenuItem, updateToolsToolStripMenuItem, viewToolsToolStripMenuItem });
+            toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            toolsToolStripMenuItem.Size = new Size(52, 20);
+            toolsToolStripMenuItem.Text = "Tools";
             // 
             // addToolStripMenuItem
             // 
-            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.addToolStripMenuItem.Text = "Add Tools";
-            this.addToolStripMenuItem.Click += new System.EventHandler(this.AddToolStripMenuItem_Click);
+            addToolStripMenuItem.Name = "addToolStripMenuItem";
+            addToolStripMenuItem.Size = new Size(154, 22);
+            addToolStripMenuItem.Text = "Add Tools";
+            addToolStripMenuItem.Click += AddToolStripMenuItem_Click;
             // 
             // updateToolsToolStripMenuItem
             // 
-            this.updateToolsToolStripMenuItem.Name = "updateToolsToolStripMenuItem";
-            this.updateToolsToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.updateToolsToolStripMenuItem.Text = "Update Tools";
-            this.updateToolsToolStripMenuItem.Click += new System.EventHandler(this.UpdateToolsToolStripMenuItem_Click);
+            updateToolsToolStripMenuItem.Name = "updateToolsToolStripMenuItem";
+            updateToolsToolStripMenuItem.Size = new Size(154, 22);
+            updateToolsToolStripMenuItem.Text = "Update Tools";
+            updateToolsToolStripMenuItem.Click += UpdateToolsToolStripMenuItem_Click;
             // 
             // viewToolsToolStripMenuItem
             // 
-            this.viewToolsToolStripMenuItem.Name = "viewToolsToolStripMenuItem";
-            this.viewToolsToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.viewToolsToolStripMenuItem.Text = "View Tools";
-            this.viewToolsToolStripMenuItem.Click += new System.EventHandler(this.ViewToolsToolStripMenuItem_Click);
+            viewToolsToolStripMenuItem.Name = "viewToolsToolStripMenuItem";
+            viewToolsToolStripMenuItem.Size = new Size(154, 22);
+            viewToolsToolStripMenuItem.Text = "View Tools";
+            viewToolsToolStripMenuItem.Click += ViewToolsToolStripMenuItem_Click;
             // 
             // customersToolStripMenuItem
             // 
-            this.customersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addCustomerToolStripMenuItem,
-            this.updateCustomerToolStripMenuItem,
-            this.viewCustomersToolStripMenuItem});
-            this.customersToolStripMenuItem.Name = "customersToolStripMenuItem";
-            this.customersToolStripMenuItem.Size = new System.Drawing.Size(123, 28);
-            this.customersToolStripMenuItem.Text = "Customers";
+            customersToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addCustomerToolStripMenuItem, updateCustomerToolStripMenuItem, viewCustomersToolStripMenuItem });
+            customersToolStripMenuItem.Name = "customersToolStripMenuItem";
+            customersToolStripMenuItem.Size = new Size(80, 20);
+            customersToolStripMenuItem.Text = "Customers";
             // 
             // addCustomerToolStripMenuItem
             // 
-            this.addCustomerToolStripMenuItem.Name = "addCustomerToolStripMenuItem";
-            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(271, 34);
-            this.addCustomerToolStripMenuItem.Text = "Add Customer";
-            this.addCustomerToolStripMenuItem.Click += new System.EventHandler(this.AddCustomerToolStripMenuItem_Click);
+            addCustomerToolStripMenuItem.Name = "addCustomerToolStripMenuItem";
+            addCustomerToolStripMenuItem.Size = new Size(175, 22);
+            addCustomerToolStripMenuItem.Text = "Add Customer";
+            addCustomerToolStripMenuItem.Click += AddCustomerToolStripMenuItem_Click;
             // 
             // updateCustomerToolStripMenuItem
             // 
-            this.updateCustomerToolStripMenuItem.Name = "updateCustomerToolStripMenuItem";
-            this.updateCustomerToolStripMenuItem.Size = new System.Drawing.Size(271, 34);
-            this.updateCustomerToolStripMenuItem.Text = "Update Customer";
-            this.updateCustomerToolStripMenuItem.Click += new System.EventHandler(this.UpdateCustomerToolStripMenuItem_Click);
+            updateCustomerToolStripMenuItem.Name = "updateCustomerToolStripMenuItem";
+            updateCustomerToolStripMenuItem.Size = new Size(175, 22);
+            updateCustomerToolStripMenuItem.Text = "Update Customer";
+            updateCustomerToolStripMenuItem.Click += UpdateCustomerToolStripMenuItem_Click;
             // 
             // viewCustomersToolStripMenuItem
             // 
-            this.viewCustomersToolStripMenuItem.Name = "viewCustomersToolStripMenuItem";
-            this.viewCustomersToolStripMenuItem.Size = new System.Drawing.Size(271, 34);
-            this.viewCustomersToolStripMenuItem.Text = "View Customers";
-            this.viewCustomersToolStripMenuItem.Click += new System.EventHandler(this.viewCustomersToolStripMenuItem_Click);
+            viewCustomersToolStripMenuItem.Name = "viewCustomersToolStripMenuItem";
+            viewCustomersToolStripMenuItem.Size = new Size(175, 22);
+            viewCustomersToolStripMenuItem.Text = "View Customers";
+            viewCustomersToolStripMenuItem.Click += viewCustomersToolStripMenuItem_Click;
             // 
             // rentalsToolStripMenuItem
             // 
-            this.rentalsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rentToolToolStripMenuItem,
-            this.returnToolsToolStripMenuItem,
-            this.viewRentalsToolStripMenuItem});
-            this.rentalsToolStripMenuItem.Name = "rentalsToolStripMenuItem";
-            this.rentalsToolStripMenuItem.Size = new System.Drawing.Size(101, 28);
-            this.rentalsToolStripMenuItem.Text = "Rentals";
+            rentalsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { rentToolToolStripMenuItem, returnToolsToolStripMenuItem, viewRentalsToolStripMenuItem });
+            rentalsToolStripMenuItem.Name = "rentalsToolStripMenuItem";
+            rentalsToolStripMenuItem.Size = new Size(66, 20);
+            rentalsToolStripMenuItem.Text = "Rentals";
             // 
             // rentToolToolStripMenuItem
             // 
-            this.rentToolToolStripMenuItem.Name = "rentToolToolStripMenuItem";
-            this.rentToolToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.rentToolToolStripMenuItem.Text = "Rent Tools";
-            this.rentToolToolStripMenuItem.Click += new System.EventHandler(this.RentToolToolStripMenuItem_Click);
+            rentToolToolStripMenuItem.Name = "rentToolToolStripMenuItem";
+            rentToolToolStripMenuItem.Size = new Size(154, 22);
+            rentToolToolStripMenuItem.Text = "Rent Tools";
+            rentToolToolStripMenuItem.Click += RentToolToolStripMenuItem_Click;
             // 
             // returnToolsToolStripMenuItem
             // 
-            this.returnToolsToolStripMenuItem.Name = "returnToolsToolStripMenuItem";
-            this.returnToolsToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.returnToolsToolStripMenuItem.Text = "Return Tools";
-            this.returnToolsToolStripMenuItem.Click += new System.EventHandler(this.ReturnToolsToolStripMenuItem_Click);
+            returnToolsToolStripMenuItem.Name = "returnToolsToolStripMenuItem";
+            returnToolsToolStripMenuItem.Size = new Size(154, 22);
+            returnToolsToolStripMenuItem.Text = "Return Tools";
+            returnToolsToolStripMenuItem.Click += ReturnToolsToolStripMenuItem_Click;
             // 
             // viewRentalsToolStripMenuItem
             // 
-            this.viewRentalsToolStripMenuItem.Name = "viewRentalsToolStripMenuItem";
-            this.viewRentalsToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.viewRentalsToolStripMenuItem.Text = "View Rentals";
-            this.viewRentalsToolStripMenuItem.Click += new System.EventHandler(this.ViewRentalsToolStripMenuItem_Click);
+            viewRentalsToolStripMenuItem.Name = "viewRentalsToolStripMenuItem";
+            viewRentalsToolStripMenuItem.Size = new Size(154, 22);
+            viewRentalsToolStripMenuItem.Text = "View Rentals";
+            viewRentalsToolStripMenuItem.Click += ViewRentalsToolStripMenuItem_Click;
             // 
             // adminReportsToolStripMenuItem
             // 
-            this.adminReportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.annualRevenueAnalysisToolStripMenuItem,
-            this.annualToolTypeAnalysisToolStripMenuItem});
-            this.adminReportsToolStripMenuItem.Name = "adminReportsToolStripMenuItem";
-            this.adminReportsToolStripMenuItem.Size = new System.Drawing.Size(167, 28);
-            this.adminReportsToolStripMenuItem.Text = "Admin Reports";
+            adminReportsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { annualRevenueAnalysisToolStripMenuItem, annualToolTypeAnalysisToolStripMenuItem });
+            adminReportsToolStripMenuItem.Name = "adminReportsToolStripMenuItem";
+            adminReportsToolStripMenuItem.Size = new Size(108, 20);
+            adminReportsToolStripMenuItem.Text = "Admin Reports";
             // 
             // annualRevenueAnalysisToolStripMenuItem
             // 
-            this.annualRevenueAnalysisToolStripMenuItem.Name = "annualRevenueAnalysisToolStripMenuItem";
-            this.annualRevenueAnalysisToolStripMenuItem.Size = new System.Drawing.Size(381, 34);
-            this.annualRevenueAnalysisToolStripMenuItem.Text = "Annual Revenue Analysis";
-            this.annualRevenueAnalysisToolStripMenuItem.Click += new System.EventHandler(this.AnnualRevenueAnalysisToolStripMenuItem_Click);
+            annualRevenueAnalysisToolStripMenuItem.Name = "annualRevenueAnalysisToolStripMenuItem";
+            annualRevenueAnalysisToolStripMenuItem.Size = new Size(245, 22);
+            annualRevenueAnalysisToolStripMenuItem.Text = "Annual Revenue Analysis";
+            annualRevenueAnalysisToolStripMenuItem.Click += AnnualRevenueAnalysisToolStripMenuItem_Click;
             // 
             // annualToolTypeAnalysisToolStripMenuItem
             // 
-            this.annualToolTypeAnalysisToolStripMenuItem.Name = "annualToolTypeAnalysisToolStripMenuItem";
-            this.annualToolTypeAnalysisToolStripMenuItem.Size = new System.Drawing.Size(381, 34);
-            this.annualToolTypeAnalysisToolStripMenuItem.Text = "Annual Tool Type Analysis";
-            this.annualToolTypeAnalysisToolStripMenuItem.Click += new System.EventHandler(this.AnnualToolTypeAnalysisToolStripMenuItem_Click);
+            annualToolTypeAnalysisToolStripMenuItem.Name = "annualToolTypeAnalysisToolStripMenuItem";
+            annualToolTypeAnalysisToolStripMenuItem.Size = new Size(245, 22);
+            annualToolTypeAnalysisToolStripMenuItem.Text = "Annual Tool Type Analysis";
+            annualToolTypeAnalysisToolStripMenuItem.Click += AnnualToolTypeAnalysisToolStripMenuItem_Click;
             // 
             // MainMenuToolStripMenuItem
             // 
-            this.MainMenuToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.MainMenuToolStripMenuItem.Name = "MainMenuToolStripMenuItem";
-            this.MainMenuToolStripMenuItem.Size = new System.Drawing.Size(123, 28);
-            this.MainMenuToolStripMenuItem.Text = "Main Menu";
-            this.MainMenuToolStripMenuItem.Click += new System.EventHandler(this.MainMenuToolStripMenuItem_Click);
+            MainMenuToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
+            MainMenuToolStripMenuItem.Name = "MainMenuToolStripMenuItem";
+            MainMenuToolStripMenuItem.Size = new Size(80, 20);
+            MainMenuToolStripMenuItem.Text = "Main Menu";
+            MainMenuToolStripMenuItem.Click += MainMenuToolStripMenuItem_Click;
             // 
             // frmRemoveTool
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1186, 646);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.dgvTools);
-            this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "frmRemoveTool";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Remove Tool";
-            this.Load += new System.EventHandler(this.frmRemoveTool_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTools)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(922, 484);
+            Controls.Add(menuStrip1);
+            Controls.Add(label7);
+            Controls.Add(dgvTools);
+            Controls.Add(groupBox1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Margin = new Padding(2, 2, 2, 2);
+            Name = "frmRemoveTool";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Remove Tool";
+            Load += frmRemoveTool_Load;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvTools).EndInit();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

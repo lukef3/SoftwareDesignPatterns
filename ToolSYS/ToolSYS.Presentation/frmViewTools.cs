@@ -46,31 +46,16 @@ namespace ToolSYS.Presentation
         {
             try
             {
-                string toolID = _toolService.IsValidToolID(txtToolID.Text) ? txtToolID.Text : null;
-                string categoryCode = cboCategories.SelectedIndex > -1 ? cboCategories.SelectedItem.ToString() : null;
-                string status = cboStatus.SelectedIndex > -1 ? cboStatus.SelectedItem.ToString() : null;
+                string toolID = txtToolID.Text;
+                string categoryCode = cboCategories.SelectedItem != null ? cboCategories.SelectedItem.ToString() : string.Empty;
+                string description = txtDescription.Text;
+                string manufacturer = txtManufacturer.Text;
+                string status = cboStatus.SelectedItem != null ? cboStatus.SelectedItem.ToString() : string.Empty;
+                string phrase = txtPhrase.Text;
 
-                RefreshGridView(toolID, categoryCode, status);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+                DataSet results = _toolService.GetFilteredTools(toolID, categoryCode, description, manufacturer, status, phrase);
 
-        private void RefreshGridView(string toolID, string categoryCode, string status)
-        {
-            try
-            {
-                var filteredTools = _toolService.GetFilteredTools(
-                    toolID,
-                    categoryCode,
-                    txtDescription.Text,
-                    txtManufacturer.Text,
-                    status,
-                    txtPhrase.Text);
-
-                dgvTools.DataSource = filteredTools.Tables["tool"];
+                dgvTools.DataSource = results.Tables["tool"];
                 dgvTools.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvTools.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }

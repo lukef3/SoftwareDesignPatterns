@@ -29,16 +29,20 @@ namespace ToolSYS.Presentation
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if (_toolService.IsValidToolID(txtToolID.Text))
-            {
-                var confirmRemove = MessageBox.Show("Are you sure you want to remove this tool?", "Confirm", MessageBoxButtons.YesNo);
+            DialogResult confirmRemove = MessageBox.Show("Are you sure you want to remove this tool?", "Confirm", MessageBoxButtons.YesNo);
 
-                if (confirmRemove == DialogResult.Yes)
+            if (confirmRemove == DialogResult.Yes)
+            {
+                try
                 {
                     _toolService.RemoveTool(Convert.ToInt32(txtToolID.Text));
                     MessageBox.Show("Tool Successfully Removed", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtToolID.Clear();
                     RefreshGridView();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -50,10 +54,6 @@ namespace ToolSYS.Presentation
             dgvTools.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
         }
 
-
-
-        
-
         private void dgvTools_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtToolID.Text = dgvTools.CurrentRow.Cells[0].Value.ToString();
@@ -62,7 +62,7 @@ namespace ToolSYS.Presentation
 
         private void dgvTools_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            var confirmRemove = MessageBox.Show("Are you sure you want to remove this tool?", "Confirm", MessageBoxButtons.YesNo);
+            DialogResult confirmRemove = MessageBox.Show("Are you sure you want to remove this tool?", "Confirm", MessageBoxButtons.YesNo);
 
             if (confirmRemove == DialogResult.Yes)
             {
