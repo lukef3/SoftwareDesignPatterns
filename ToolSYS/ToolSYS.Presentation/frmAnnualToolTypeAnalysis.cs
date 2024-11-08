@@ -8,18 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
+using ToolSYS.Business;
 
 namespace ToolSYS.Presentation
 {
     public partial class frmAnnualToolTypeAnalysis : Form
     {
+        private RateService _rateService;
         public frmAnnualToolTypeAnalysis()
         {
             InitializeComponent();
+            _rateService = new RateService();
         }
         private void frmAnnualToolTypeAnalysis_Load(object sender, EventArgs e)
         {
-            Rate.LoadCategories(cboCategories);
+            cboCategories.Items.Add("");
+            DataSet categories = _rateService.GetAllCategories();
+
+            foreach (DataRow row in categories.Tables[0].Rows)
+            {
+                string category = row["CategoryCode"] + " - " + row["CategoryDesc"];
+                cboCategories.Items.Add(category);
+            }
             cboYears.Items.Add("2023");
             cboYears.Items.Add("2024");
             cboYears.Items.Add("2025");

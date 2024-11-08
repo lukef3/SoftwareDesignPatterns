@@ -14,17 +14,26 @@ namespace ToolSYS.Presentation
     public partial class frmViewTools : Form
     {
         private ToolService _toolService;
+        private RateService _rateService;
 
         public frmViewTools()
         {
             InitializeComponent();
             _toolService = new ToolService();
+            _rateService = new RateService();
         }
 
         private void frmViewTools_Load(object sender, EventArgs e)
         {
             cboCategories.Items.Add("");
-            Rate.LoadCategories(cboCategories);
+            cboCategories.Items.Add("");
+            DataSet categories = _rateService.GetAllCategories();
+
+            foreach (DataRow row in categories.Tables[0].Rows)
+            {
+                string category = row["CategoryCode"] + " - " + row["CategoryDesc"];
+                cboCategories.Items.Add(category);
+            }
 
             cboStatus.Items.Add("");
             cboStatus.Items.Add("I - In");
@@ -41,17 +50,11 @@ namespace ToolSYS.Presentation
                 string categoryCode = cboCategories.SelectedIndex > -1 ? cboCategories.SelectedItem.ToString() : null;
                 string status = cboStatus.SelectedIndex > -1 ? cboStatus.SelectedItem.ToString() : null;
 
-                if (toolID == null && !string.IsNullOrEmpty(txtToolID.Text))
-                {
-                    // Invalid ToolID; Tool.IsValidToolID already shows an error message
-                    return;
-                }
-
                 RefreshGridView(toolID, categoryCode, status);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -73,7 +76,7 @@ namespace ToolSYS.Presentation
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred while refreshing the grid: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

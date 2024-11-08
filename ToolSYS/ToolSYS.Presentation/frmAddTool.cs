@@ -7,43 +7,61 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ToolSYS.Business;
+using ToolSYS.DTOs;
 
 namespace ToolSYS.Presentation
 {
     
     public partial class frmAddTool : Form
     {
+        private ToolService _toolService;
+        private RateService _rateService;
         public frmAddTool()
         {
             InitializeComponent();
+            _toolService = new ToolService();
+            _rateService = new RateService();
         }
 
         private void frmAddTool_Load(object sender, EventArgs e)
         {
-            txtToolID.Text = Tool.GetNextToolID().ToString("000");
+            txtToolID.Text = _toolService.GetNextToolID().ToString("000");
 
-            Rate.LoadCategories(cboCategories);
+            cboCategories.Items.Add("");
+            DataSet categories = _rateService.GetAllCategories();
+
+            foreach (DataRow row in categories.Tables[0].Rows)
+            {
+                string category = row["CategoryCode"] + " - " + row["CategoryDesc"];
+                cboCategories.Items.Add(category);
+            }
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if(cboCategories.SelectedIndex >= 0)
+            if (cboCategories.SelectedIndex >= 0)
             {
-                if (Tool.IsValidDescription(txtDescription.Text, txtDescription))
+                try {
+                    Tool tool = new Tool(
+                        Convert.ToInt32(txtToolID.Text),
+                        cboCategories.Text,
+                        txtDescription.Text,
+                        txtManufacturer.Text
+                    );
+
+                    _toolService.AddTool(tool);
+                    MessageBox.Show("Tool Successfully Added To The System", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    txtDescription.Clear();
+                    txtManufacturer.Clear();
+                    cboCategories.SelectedIndex = -1;
+
+                    txtToolID.Text = _toolService.GetNextToolID().ToString("000");
+                }
+                catch (Exception ex)
                 {
-                    if (Tool.IsValidManufacturer(txtManufacturer.Text, txtManufacturer))
-                    {
-                        Tool tool = new Tool(Convert.ToInt32(txtToolID.Text), cboCategories.Text, txtDescription.Text, txtManufacturer.Text);
-
-                        tool.AddTool();
-
-                        MessageBox.Show("Tool Successfully Added To The System", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txtDescription.Clear();
-                        txtManufacturer.Clear();
-                        cboCategories.SelectedIndex = -1;
-
-                        txtToolID.Text = Tool.GetNextToolID().ToString("000");
-                    }
+                    MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else

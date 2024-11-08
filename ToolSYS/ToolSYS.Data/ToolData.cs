@@ -92,45 +92,63 @@ namespace ToolSYS.Data
             }
         }
 
-        private string DetermineSQLQuery(string toolIDAsString, string categoryCode, string description, string manufacturer, string status, string phrase)
+        private static String DetermineSQLQuery(String toolIDAsString, String categoryCode, String description, String manufacturer, String status, String phrase)
         {
-            string sqlQuery = "SELECT ToolID, CategoryCode, ToolDescription, ToolManufacturer, ToolStatus FROM Tools WHERE 1 = 1";
+            String sqlQuery = "";
 
-            if (!string.IsNullOrEmpty(toolIDAsString))
+            if (string.IsNullOrEmpty(toolIDAsString) && String.IsNullOrEmpty(categoryCode) && string.IsNullOrEmpty(description) && string.IsNullOrEmpty(manufacturer) && string.IsNullOrEmpty(status) && string.IsNullOrEmpty(phrase))
             {
-                sqlQuery += " AND ToolID = :toolID";
+                sqlQuery = "SELECT ToolID, CategoryCode, ToolDescription, ToolManufacturer, ToolStatus FROM Tools";
             }
-            if (!string.IsNullOrEmpty(categoryCode))
+            else if (!string.IsNullOrEmpty(toolIDAsString) || !string.IsNullOrEmpty(categoryCode) || !string.IsNullOrEmpty(description) || !string.IsNullOrEmpty(manufacturer) || !string.IsNullOrEmpty(status) || !string.IsNullOrEmpty(phrase))
             {
-                sqlQuery += " AND LOWER(CategoryCode) LIKE LOWER(:categoryCode)";
-            }
-            if (!string.IsNullOrEmpty(description))
-            {
-                sqlQuery += " AND LOWER(ToolDescription) LIKE LOWER(:description)";
-            }
-            if (!string.IsNullOrEmpty(manufacturer))
-            {
-                sqlQuery += " AND LOWER(ToolManufacturer) LIKE LOWER(:manufacturer)";
-            }
-            if (!string.IsNullOrEmpty(status))
-            {
-                sqlQuery += " AND ToolStatus = :status";
-            }
-            if (!string.IsNullOrEmpty(phrase))
-            {
-                sqlQuery += " AND (LOWER(CategoryCode) LIKE LOWER(:phrase) " +
-                            "OR LOWER(ToolDescription) LIKE LOWER(:phrase) " +
-                            "OR LOWER(ToolManufacturer) LIKE LOWER(:phrase))";
-            }
+                sqlQuery = "SELECT ToolID, CategoryCode, ToolDescription, ToolManufacturer, ToolStatus FROM Tools WHERE 1 = 1";
 
+                if (!string.IsNullOrEmpty(toolIDAsString))
+                {
+                    int toolID = Convert.ToInt32(toolIDAsString);
+                    sqlQuery += " AND ToolID = " + toolID;
+                }
+
+                if (!string.IsNullOrEmpty(categoryCode))
+                {
+                    categoryCode = categoryCode.Substring(0, 2);
+                    sqlQuery += " AND LOWER(CategoryCode) LIKE LOWER('" + categoryCode + "')";      //https://stackoverflow.com/questions/2876789/how-can-i-search-case-insensitive-in-a-column-using-like-wildcard
+                }
+
+                if (!string.IsNullOrEmpty(description))
+                {
+                    sqlQuery += " AND LOWER(ToolDescription) LIKE LOWER('%" + description + "%')";
+                }
+
+                if (!string.IsNullOrEmpty(manufacturer))
+                {
+                    sqlQuery += " AND LOWER(ToolManufacturer) LIKE LOWER('%" + manufacturer + "%')";
+                }
+
+                if (!string.IsNullOrEmpty(status))
+                {
+                    status = status.Substring(0, 1);
+                    sqlQuery += " AND ToolStatus = '" + status + "'";
+                }
+
+                if (!string.IsNullOrEmpty(phrase))
+                {
+                    sqlQuery += " AND (LOWER(CategoryCode) LIKE LOWER('%" + phrase + "%') " +
+                        "OR LOWER(ToolDescription) LIKE LOWER('%" + phrase + "%') " +
+                        "OR LOWER(ToolManufacturer) LIKE LOWER('%" + phrase + "%'))";
+                }
+            }
             return sqlQuery;
         }
+
 
         public DataSet GetAvailableTools()
         {
             using (OracleConnection conn = new OracleConnection(connectionString))
             {
-                string sqlQuery = "SELECT ToolID, CategoryCode, ToolDescription, ToolManufacturer FROM Tools WHERE ToolStatus = 'I'";
+                string sqlQuery = "SELECT ToolID, CategoryCode, ToolDescription, ToolManufacturer FROM Tools " +
+                "WHERE ToolStatus = 'I'";
 
                 OracleCommand cmd = new OracleCommand(sqlQuery, conn);
                 OracleDataAdapter da = new OracleDataAdapter(cmd);

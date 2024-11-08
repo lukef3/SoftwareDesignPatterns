@@ -19,14 +19,14 @@ namespace ToolSYS.Presentation
 
         private void frmUpdateTool_Load(object sender, EventArgs e)
         {
-            cboCategories.Items.Add(""); // Add empty entry
-            DataSet categories = _rateService.GetAllCategories(); // Load categories from service
+            cboCategories.Items.Add(""); 
+            DataSet categories = _rateService.GetAllCategories(); 
 
             foreach (DataRow row in categories.Tables[0].Rows)
             {
                 string category = row["CategoryCode"] + " - " + row["CategoryDesc"];
                 cboCategories.Items.Add(category);
-                cboUpdCategories.Items.Add(category); // Add to both ComboBoxes
+                cboUpdCategories.Items.Add(category); 
             }
 
             cboStatus.Items.Add("");
@@ -36,7 +36,7 @@ namespace ToolSYS.Presentation
 
             cboUpdStatus.Items.Add("I - In");
             cboUpdStatus.Items.Add("U - Unavailable");
-            this.AcceptButton = btnSearch; // Allow Enter key to trigger Search
+            this.AcceptButton = btnSearch; 
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -46,12 +46,6 @@ namespace ToolSYS.Presentation
                 string toolID = _toolService.IsValidToolID(txtToolID.Text) ? txtToolID.Text : null;
                 string categoryCode = cboCategories.SelectedIndex > -1 ? cboCategories.SelectedItem.ToString() : null;
                 string status = cboStatus.SelectedIndex > -1 ? cboStatus.SelectedItem.ToString() : null;
-
-                if (toolID == null && !string.IsNullOrEmpty(txtToolID.Text))
-                {
-                    // Invalid ToolID; Tool.IsValidToolID already shows an error message
-                    return;
-                }
 
                 RefreshGridView(toolID, categoryCode, status);
             }
@@ -106,8 +100,7 @@ namespace ToolSYS.Presentation
         {
             try
             {
-                 // Validate and create ToolDTO
-                var tool = new DTOs.Tool
+                Tool tool = new Tool
                 {
                     toolID = int.Parse(txtUpdToolID.Text),
                     categoryCode = cboUpdCategories.SelectedItem.ToString().Substring(0, 2),
@@ -116,12 +109,11 @@ namespace ToolSYS.Presentation
                     toolStatus = cboUpdStatus.SelectedItem.ToString().Substring(0, 1)
                 };
 
-                _toolService.UpdateTool(tool); // Update tool using service
+                _toolService.UpdateTool(tool);
                 MessageBox.Show("Tool has been successfully updated", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Clear inputs
                 ClearUpdateInputs();
-                btnSearch.PerformClick(); // Refresh grid
+                btnSearch.PerformClick();
             }
             catch (Exception ex)
             {

@@ -8,14 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
+using ToolSYS.Business;
 
 namespace ToolSYS.Presentation
 {
     public partial class frmRemoveTool : Form
     {
+        private ToolService _toolService;
         public frmRemoveTool()
         {
             InitializeComponent();
+            _toolService = new ToolService();   
         }
 
         private void frmRemoveTool_Load(object sender, EventArgs e)
@@ -26,13 +29,13 @@ namespace ToolSYS.Presentation
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if (Tool.IsValidToolID(txtToolID.Text, txtToolID))
+            if (_toolService.IsValidToolID(txtToolID.Text))
             {
                 var confirmRemove = MessageBox.Show("Are you sure you want to remove this tool?", "Confirm", MessageBoxButtons.YesNo);
 
                 if (confirmRemove == DialogResult.Yes)
                 {
-                    Tool.RemoveTool(Convert.ToInt32(txtToolID.Text));
+                    _toolService.RemoveTool(Convert.ToInt32(txtToolID.Text));
                     MessageBox.Show("Tool Successfully Removed", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtToolID.Clear();
                     RefreshGridView();
@@ -42,7 +45,7 @@ namespace ToolSYS.Presentation
 
         private void RefreshGridView()
         {
-            dgvTools.DataSource = Tool.getAvailableTools().Tables["tool"];
+            dgvTools.DataSource = _toolService.GetAvailableTools().Tables["tool"];
             dgvTools.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvTools.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
         }
@@ -63,7 +66,7 @@ namespace ToolSYS.Presentation
 
             if (confirmRemove == DialogResult.Yes)
             {
-                Tool.RemoveTool(Convert.ToInt32(txtToolID.Text));
+                _toolService.RemoveTool(Convert.ToInt32(txtToolID.Text));
                 MessageBox.Show("Tool Successfully Removed", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtToolID.Clear();
                 RefreshGridView();

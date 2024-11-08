@@ -7,21 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ToolSYS.Business;
+using ToolSYS.DTOs;
 
 namespace ToolSYS.Presentation
 {
     public partial class frmAddCustomer : Form
     {
+        private CustomerService _customerService;
         public frmAddCustomer()
         {
             InitializeComponent();
+            _customerService = new CustomerService();
         }
-
-        Customer customer = new Customer();
 
         private void frmAddCustomer_Load(object sender, EventArgs e)
         {
-            txtCustomerID.Text = Customer.GetNextCustomerID().ToString("0000");
+            txtCustomerID.Text = _customerService.GetNextCustomerID().ToString("0000");
         }
         private void SetToolCategoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -82,39 +84,35 @@ namespace ToolSYS.Presentation
 
         private void BtnConfirm_Click(object sender, EventArgs e)
         {
-            if (Customer.IsValidForename(txtForename.Text, txtForename))
+            try
             {
-                if(Customer.IsValidSurname(txtForename.Text, txtForename))
+                Customer customer = new Customer
                 {
-                    if(Customer.IsValidEmail(txtEmail.Text, txtEmail))
-                    {
-                        if(Customer.IsValidPhone(txtPhone.Text, txtPhone))
-                        {
-                            if(Customer.IsValidEircode(txtEircode.Text, txtEircode))
-                            {
-                                customer.SetCustomerID(Convert.ToInt32(txtCustomerID.Text));
-                                customer.SetForename(txtForename.Text);
-                                customer.SetSurname(txtSurname.Text);
-                                customer.SetEmail(txtEmail.Text);
-                                customer.SetPhone(txtPhone.Text);
-                                customer.SetEircode(txtEircode.Text);
-                                customer.AddCustomer();
+                    customerID = Convert.ToInt32(txtCustomerID.Text),
+                    forename = txtForename.Text,
+                    surname = txtSurname.Text,
+                    email = txtEmail.Text,
+                    phone = txtPhone.Text,
+                    eircode = txtEircode.Text
+                };
 
-                                MessageBox.Show("Customer Successfully Added To The System", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                txtCustomerID.Clear();
-                                txtForename.Clear();
-                                txtSurname.Clear();
-                                txtEmail.Clear();
-                                txtPhone.Clear();
-                                txtEircode.Clear();
-                                txtCustomerID.Text = Customer.GetNextCustomerID().ToString("0000");
-
-                            }
-                        }
-                    }
-                }
+                _customerService.AddCustomer(customer);
+                MessageBox.Show("Customer Successfully Added To The System", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtCustomerID.Clear();
+                txtForename.Clear();
+                txtSurname.Clear();
+                txtEmail.Clear();
+                txtPhone.Clear();
+                txtEircode.Clear();
+                txtCustomerID.Text = _customerService.GetNextCustomerID().ToString("0000");
 
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
         }
 
         private void viewCustomersToolStripMenuItem_Click(object sender, EventArgs e)

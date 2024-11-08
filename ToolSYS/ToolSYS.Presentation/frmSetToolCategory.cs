@@ -8,34 +8,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ToolSYS.Business;
+using ToolSYS.Data;
+using ToolSYS.DTOs;
 
 namespace ToolSYS.Presentation
 {
     public partial class frmSetToolCategory : Form
     {
+        private RateService _rateService;
         public frmSetToolCategory()
         {
             InitializeComponent();
+            _rateService = new RateService();
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if (Rate.IsValidCategoryCode(txtCategoryCode))
+            try
             {
-                if (Rate.IsValidCategoryDesc(txtCategoryDesc))
+                Rate rate = new Rate
                 {
-                    if (Rate.IsValidRate(txtRate))
-                    {
-                        Rate newToolCategory = new Rate(txtCategoryCode.Text, txtCategoryDesc.Text, Decimal.Parse(txtRate.Text));
+                    categoryCode = txtCategoryCode.Text,
+                    categoryDesc = txtCategoryDesc.Text,
+                    rate = decimal.Parse(txtRate.Text)
+                };
 
-                        newToolCategory.SetToolCategory();
+                _rateService.AddRate(rate);
+                MessageBox.Show("Rate successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        MessageBox.Show("New Tool Category Has Been Successfully Added To The System", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txtCategoryCode.Clear();
-                        txtCategoryDesc.Clear();
-                        txtRate.Clear();
-                    }
-                }
+                txtCategoryCode.Clear();
+                txtCategoryDesc.Clear();
+                txtRate.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -7,22 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ToolSYS.Business;
+using ToolSYS.DTOs;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ToolSYS.Presentation
 {
     public partial class frmUpdateToolRate : Form
     {
-        Rate rate = new Rate();
+        private RateService _rateService;
 
         public frmUpdateToolRate()
         {
             InitializeComponent();
+            _rateService = new RateService();
         }
 
         private void FrmUpdateToolRate_Load(object sender, EventArgs e)
         {
-            //Retrieve tool categories from database
-            Rate.LoadCategories(cboCategories);
+            LoadCategories();
         }
 
         private void CboCategories_SelectedIndexChanged(object sender, EventArgs e)
@@ -34,12 +37,11 @@ namespace ToolSYS.Presentation
             }
             else
             {
-                //Retrieve  rate from database
-                String categoryCode = cboCategories.SelectedItem.ToString().Substring(0, 2);
-                rate.GetRateDetails(categoryCode);
+                string categoryCode = cboCategories.SelectedItem.ToString().Substring(0, 2);
+                Rate rate = _rateService.GetRateByCategoryCode(categoryCode);
 
-                txtCategoryDescription.Text = rate.getCategoryDesc();
-                txtRate.Text = rate.getRate().ToString();
+                txtCategoryDescription.Text = rate.categoryDesc;
+                txtRate.Text = rate.rate.ToString();
 
                 groupBox2.Visible = true;
             }
@@ -47,21 +49,40 @@ namespace ToolSYS.Presentation
     
         private void BtnConfirm_Click(object sender, EventArgs e)
         {
-            if (Rate.IsValidCategoryDesc(txtCategoryDescription))
+            try
             {
-                if (Rate.IsValidRate(txtRate))
+                Rate rate = new Rate
                 {
-                    rate.setCategoryCode(cboCategories.SelectedItem.ToString().Substring(0, 2));
-                    rate.setCategoryDesc(txtCategoryDescription.Text);
-                    rate.setRate(Convert.ToDecimal(txtRate.Text));
-                    rate.UpdateRate();
-                    
-                    MessageBox.Show("Tool Category Has Been Successfully Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    groupBox2.Visible = false;
-                    cboCategories.SelectedIndex = -1;
-                    cboCategories.Items.Clear();
-                    Rate.LoadCategories(cboCategories);
-                }
+                    categoryCode = cboCategories.SelectedItem.ToString().Substring(0, 2),
+                    categoryDesc = txtCategoryDescription.Text,
+                    rate = Convert.ToDecimal(txtRate.Text)
+                };
+
+                _rateService.UpdateRate(rate);
+
+                MessageBox.Show("Tool Category Has Been Successfully Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                groupBox2.Visible = false;
+                cboCategories.SelectedIndex = -1;
+
+                cboCategories.Items.Clear();
+                LoadCategories();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LoadCategories()
+        {
+            cboCategories.Items.Add("");
+            DataSet categories = _rateService.GetAllCategories();
+
+            foreach (DataRow row in categories.Tables[0].Rows)
+            {
+                string category = row["CategoryCode"] + " - " + row["CategoryDesc"];
+                cboCategories.Items.Add(category);
             }
         }
 
@@ -125,7 +146,6 @@ namespace ToolSYS.Presentation
         {
             Navigation.MainMenu(this);
         }
-
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 

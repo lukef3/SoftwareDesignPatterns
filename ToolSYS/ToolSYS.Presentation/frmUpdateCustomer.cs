@@ -7,35 +7,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ToolSYS.Business;
+using ToolSYS.DTOs;
 
 namespace ToolSYS.Presentation
 {
     public partial class frmUpdateCustomer : Form
     {
+        private CustomerService _customerService;
         public frmUpdateCustomer()
         {
             InitializeComponent();
+            _customerService = new CustomerService();
         }
-        Customer customer = new Customer();
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            String id = "";
-
-            if (!String.IsNullOrEmpty(txtCustomerID.Text))
+            try
             {
-                if (Customer.IsValidCustomerID(txtCustomerID.Text, txtCustomerID))
-                {
-                    id = txtCustomerID.Text;
-                }
-                else
-                {
-                    return;
-                }
+                string customerID = txtCustomerID.Text;
+                string forename = txtForename.Text;
+                string surname = txtSurname.Text;
+                string email = txtEmail.Text;
+                string phone = txtPhone.Text;
+                string eircode = txtEircode.Text;
+                string phrase = txtPhrase.Text;
+
+                DataSet results = _customerService.GetFilteredCustomers(customerID, forename, surname, email, phone, eircode, phrase);
+
+                dgvCustomers.DataSource = results.Tables["customer"];
+                dgvCustomers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvCustomers.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
-            dgvCustomers.DataSource = Customer.GetFilteredCustomers(id, txtForename.Text, txtSurname.Text, txtEmail.Text, txtPhone.Text, txtEircode.Text, txtPhrase.Text).Tables["customer"];
-            dgvCustomers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvCustomers.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -56,35 +63,31 @@ namespace ToolSYS.Presentation
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            customer.SetCustomerID(Convert.ToInt32(txtUpdCustomerID.Text));
-            if(Customer.IsValidForename(txtUpdForename.Text, txtUpdForename))
+            try
             {
-                customer.SetForename(txtUpdForename.Text);
-                if(Customer.IsValidSurname(txtUpdSurname.Text, txtUpdSurname))
-                {
-                    customer.SetSurname(txtUpdSurname.Text);
-                    if(Customer.IsValidEmail(txtUpdEmail.Text, txtUpdEmail))
-                    {
-                        customer.SetEmail(txtUpdEmail.Text);
-                        if(Customer.IsValidPhone(txtUpdPhone.Text, txtUpdPhone))
-                        {
-                            customer.SetPhone(txtUpdPhone.Text);
-                            if(Customer.IsValidEircode(txtUpdEircode.Text, txtUpdEircode))
-                            {
-                                customer.SetEircode(txtUpdEircode.Text);
-                                customer.UpdateCustomer();
-                                MessageBox.Show("Tool Has Been Successfully Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                txtUpdCustomerID.Clear();
-                                txtUpdForename.Clear();
-                                txtUpdSurname.Clear();
-                                txtUpdEmail.Clear();
-                                txtUpdPhone.Clear();
-                                txtUpdEircode.Clear();
-                            }
-                        }
-                    }
+                Customer customer = new Customer {
+                    customerID = Convert.ToInt32(txtUpdCustomerID.Text),
+                    forename = txtUpdForename.Text,
+                    surname = txtUpdSurname.Text,
+                    email = txtUpdEmail.Text,
+                    phone = txtUpdPhone.Text,
+                    eircode = txtUpdEircode.Text
+                };
 
-                }
+                _customerService.UpdateCustomer(customer);
+
+                MessageBox.Show("Customer has been successfully updated.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtUpdCustomerID.Clear();
+                txtUpdForename.Clear();
+                txtUpdSurname.Clear();
+                txtUpdEmail.Clear();
+                txtUpdPhone.Clear();
+                txtUpdEircode.Clear();
+            }
+            catch (Exception ex)
+            {
+                // Handle unexpected errors
+                MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

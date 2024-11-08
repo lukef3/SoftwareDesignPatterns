@@ -82,7 +82,7 @@ namespace ToolSYS.Presentation
         {
             this.rentalFee = rentalFee;
         }
-
+        /*
         public static decimal CalculateRentalFee(String categoryCode, DateTime from, DateTime to)
         {
             decimal rentalFee;
@@ -120,6 +120,6 @@ namespace ToolSYS.Presentation
             cmd.ExecuteNonQuery();
 
             conn.Close();
-        }
+        }*/
     }
 }

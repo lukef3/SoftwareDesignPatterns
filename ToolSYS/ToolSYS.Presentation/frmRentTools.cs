@@ -8,14 +8,21 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ToolSYS.Business;
 
 namespace ToolSYS.Presentation
 {
     public partial class frmRentTools : Form
     {
+        private ToolService _toolService;
+        private RateService _rateService;
+        private CustomerService _customerService;
         public frmRentTools()
         {
             InitializeComponent();
+            _toolService = new ToolService();   
+            _rateService = new RateService();   
+            _customerService = new CustomerService();
         }
 
         private void frmRentTools_Load(object sender, EventArgs e)
@@ -23,7 +30,14 @@ namespace ToolSYS.Presentation
             dtpFrom.MinDate = DateTime.Today;
             dtpTo.MinDate = DateTime.Today;
             txtRentalID.Text = Rental.GetNextRentalID().ToString();
-            Rate.LoadCategories(cboCategories);
+            cboCategories.Items.Add("");
+            DataSet categories = _rateService.GetAllCategories();
+
+            foreach (DataRow row in categories.Tables[0].Rows)
+            {
+                string category = row["CategoryCode"] + " - " + row["CategoryDesc"];
+                cboCategories.Items.Add(category);
+            }
             dgvRental.Columns.Add("ToolID", "ID");
             dgvRental.Columns.Add("CategoryCode", "Category Code");
             dgvRental.Columns.Add("ToolDescription", "Description");
@@ -35,7 +49,7 @@ namespace ToolSYS.Presentation
         }
         private void btnCustomerSearch_Click(object sender, EventArgs e)
         {
-            dgvCustomers.DataSource = Customer.SearchCustomers(txtCustomerSearch.Text).Tables["customer"];
+            dgvCustomers.DataSource = _customerService.SearchCustomers(txtCustomerSearch.Text).Tables["customer"];
             
             dgvCustomers.Columns[0].HeaderText = "ID";
             dgvCustomers.Columns[1].HeaderText = "Forename";
@@ -73,7 +87,7 @@ namespace ToolSYS.Presentation
 
         private void btnAddToRental_Click(object sender, EventArgs e)
         {
-            if (dgvTools.SelectedCells.Count == 1)
+            /*if (dgvTools.SelectedCells.Count == 1)
             {
                 String id = dgvTools.Rows[dgvTools.CurrentRow.Index].Cells[0].Value.ToString();
                 String categoryCode = dgvTools.Rows[dgvTools.CurrentRow.Index].Cells[1].Value.ToString();
@@ -112,12 +126,12 @@ namespace ToolSYS.Presentation
             else
             {
                 MessageBox.Show("PLease select a Tool", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
         }
 
         private void btnConfirmRental_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(txtCustomerID.Text))
+            /*if (!String.IsNullOrEmpty(txtCustomerID.Text))
             {
                 if (!String.IsNullOrEmpty(txtTotalFee.Text))
                 {
@@ -144,7 +158,7 @@ namespace ToolSYS.Presentation
                     MessageBox.Show("No Tools Have Been Added To The Rental", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
-                MessageBox.Show("Customer Must Be Selected", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Customer Must Be Selected", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);*/
         }
 
         private void RefreshForm()
@@ -171,7 +185,7 @@ namespace ToolSYS.Presentation
         {
             if (cboCategories.SelectedIndex >= 0)
             {
-                dgvTools.DataSource = Tool.GetRentableTools(cboCategories.SelectedItem.ToString().Substring(0, 2), dtpFrom, dtpTo).Tables["tool"];
+                dgvTools.DataSource = _toolService.GetRentableTools(cboCategories.SelectedItem.ToString().Substring(0, 2), Convert.ToDateTime(dtpFrom), Convert.ToDateTime(dtpTo)).Tables["tool"];
 
                 dgvTools.Columns[0].HeaderText = "ID";
                 dgvTools.Columns[1].HeaderText = "Category Code";

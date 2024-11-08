@@ -22,6 +22,11 @@ namespace ToolSYS.Business
             if (string.IsNullOrEmpty(tool.categoryCode))
                 throw new ArgumentException("Category code is required.");
 
+            if (string.IsNullOrEmpty(tool.toolManufacturer))
+            {
+                throw new ArgumentException("Manufacturer must be entered.");
+            }
+
             _ToolData.AddTool(tool);
         }
 

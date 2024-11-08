@@ -7,34 +7,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ToolSYS.Business;
 
 namespace ToolSYS.Presentation
 {
     public partial class frmViewCustomers : Form
     {
+        private CustomerService _customerService;
+
         public frmViewCustomers()
         {
             InitializeComponent();
+            _customerService = new CustomerService();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            String id = "";
-
-            if (!String.IsNullOrEmpty(txtCustomerID.Text))
+            try
             {
-                if (Customer.IsValidCustomerID(txtCustomerID.Text, txtCustomerID))
-                {
-                    id = txtCustomerID.Text;
-                }
-                else
-                {
-                    return;
-                }
+                string customerID = txtCustomerID.Text;
+                string forename = txtForename.Text;
+                string surname = txtSurname.Text;
+                string email = txtEmail.Text;
+                string phone = txtPhone.Text;
+                string eircode = txtEircode.Text;
+                string phrase = txtPhrase.Text;
+
+                DataSet results = _customerService.GetFilteredCustomers(customerID, forename, surname, email, phone, eircode, phrase);
+
+                dgvCustomers.DataSource = results.Tables["customer"];
+                dgvCustomers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvCustomers.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             }
-            dgvCustomers.DataSource = Customer.GetFilteredCustomers(id, txtForename.Text, txtSurname.Text, txtEmail.Text, txtPhone.Text, txtEircode.Text, txtPhrase.Text).Tables["customer"];
-            dgvCustomers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvCustomers.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void frmViewCustomers_Load(object sender, EventArgs e)

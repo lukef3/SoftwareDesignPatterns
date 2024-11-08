@@ -16,6 +16,18 @@ namespace ToolSYS.Business
 
         public void AddRate(Rate rate)
         {
+            ValidateRate(rate, isUpdate: false);
+            _rateData.AddRate(rate);
+        }
+
+        public void UpdateRate(Rate rate)
+        {
+            ValidateRate(rate, isUpdate: true);
+            _rateData.UpdateRate(rate);
+        }
+
+        private void ValidateRate(Rate rate, bool isUpdate)
+        {
             if (string.IsNullOrEmpty(rate.categoryCode) || rate.categoryCode.Length != 2)
                 throw new ArgumentException("Category Code must be exactly 2 characters long.");
 
@@ -25,10 +37,11 @@ namespace ToolSYS.Business
             if (rate.rate <= 0)
                 throw new ArgumentException("Rate must be greater than 0.");
 
-            if (_rateData.IsCategoryCodeExists(rate.categoryCode))
-                throw new ArgumentException("A category with this code already exists.");
+            if (!rate.categoryCode.All(char.IsLetter))
+                throw new ArgumentException("Category Code must consist of letters only.");
 
-            _rateData.AddRate(rate);
+            if (!isUpdate && _rateData.IsCategoryCodeExists(rate.categoryCode))
+                throw new ArgumentException("A category with this code already exists.");
         }
 
         public Rate GetRateByCategoryCode(string categoryCode)
@@ -37,23 +50,6 @@ namespace ToolSYS.Business
                 throw new ArgumentException("Category Code is required.");
 
             return _rateData.GetRateByCategoryCode(categoryCode);
-        }
-
-        public void UpdateRate(Rate rate)
-        {
-            if (string.IsNullOrEmpty(rate.categoryCode) || rate.categoryCode.Length != 2)
-                throw new ArgumentException("Category Code must be exactly 2 characters long.");
-
-            if (string.IsNullOrEmpty(rate.categoryDesc) || rate.categoryDesc.Length > 30)
-                throw new ArgumentException("Category Description must be between 1 and 30 characters.");
-
-            if (rate.rate <= 0)
-                throw new ArgumentException("Rate must be greater than 0.");
-
-            if (!_rateData.IsCategoryCodeExists(rate.categoryCode))
-                throw new ArgumentException("Category Code does not exist.");
-
-            _rateData.UpdateRate(rate);
         }
 
         public DataSet GetAllCategories()

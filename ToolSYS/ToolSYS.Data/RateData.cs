@@ -91,5 +91,21 @@ namespace ToolSYS.Data
                 return count > 0;
             }
         }
+
+        public bool DoesCategoryCodeExist(string categoryCode)
+        {
+            using (var conn = new OracleConnection(_connectionString))
+            {
+                string sqlQuery = "SELECT COUNT(*) FROM Rates WHERE CategoryCode = :categoryCode";
+                var cmd = new OracleCommand(sqlQuery, conn);
+                cmd.Parameters.Add(":categoryCode", OracleDbType.Varchar2).Value = categoryCode;
+
+                conn.Open();
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                conn.Close();
+
+                return count > 0;
+            }
+        }
     }
 }

@@ -8,7 +8,6 @@
         public string toolManufacturer { get; set; }
         public string toolStatus { get; set; }
 
-        // Constructors
         public Tool()
         {
             this.toolID = 0;
@@ -25,5 +24,7 @@
             this.toolManufacturer = toolManufacturer;
             this.toolStatus = "I";
         }
+
+
     }
 }
