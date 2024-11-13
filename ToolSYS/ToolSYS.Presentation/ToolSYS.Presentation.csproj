@@ -11,6 +11,8 @@
   <ItemGroup>
     <Compile Remove="Customer.cs" />
     <Compile Remove="Rate.cs" />
+    <Compile Remove="Rental.cs" />
+    <Compile Remove="RentalItem.cs" />
     <Compile Remove="Tool.cs" />
   </ItemGroup>
 

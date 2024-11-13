@@ -9,6 +9,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ToolSYS.Business;
+using ToolSYS.DTOs;
 
 namespace ToolSYS.Presentation
 {
@@ -17,19 +18,21 @@ namespace ToolSYS.Presentation
         private ToolService _toolService;
         private RateService _rateService;
         private CustomerService _customerService;
+        private RentalService _rentalService;
         public frmRentTools()
         {
             InitializeComponent();
             _toolService = new ToolService();   
             _rateService = new RateService();   
             _customerService = new CustomerService();
+            _rentalService = new RentalService();
         }
 
         private void frmRentTools_Load(object sender, EventArgs e)
         {
             dtpFrom.MinDate = DateTime.Today;
             dtpTo.MinDate = DateTime.Today;
-            txtRentalID.Text = Rental.GetNextRentalID().ToString();
+            txtRentalID.Text = _rentalService.GetNextRentalID().ToString();
             cboCategories.Items.Add("");
             DataSet categories = _rateService.GetAllCategories();
 
@@ -58,7 +61,6 @@ namespace ToolSYS.Presentation
             dgvCustomers.Columns[4].HeaderText = "Phone";
             dgvCustomers.Columns[5].HeaderText = "Eircode";
             Miscellaneous.SetDataGridViewProperties(dgvCustomers);
-
         }
         
 
@@ -87,17 +89,24 @@ namespace ToolSYS.Presentation
 
         private void btnAddToRental_Click(object sender, EventArgs e)
         {
-            /*if (dgvTools.SelectedCells.Count == 1)
+            try
             {
+                if (String.IsNullOrEmpty(txtCustomerID.Text))
+                    throw new Exception("Please select a customer.");
+                if (dgvTools.SelectedCells.Count == 0)
+                    throw new Exception("Please select a tool.");
+
                 String id = dgvTools.Rows[dgvTools.CurrentRow.Index].Cells[0].Value.ToString();
                 String categoryCode = dgvTools.Rows[dgvTools.CurrentRow.Index].Cells[1].Value.ToString();
                 String description = dgvTools.Rows[dgvTools.CurrentRow.Index].Cells[2].Value.ToString();
                 String manufacturer = dgvTools.Rows[dgvTools.CurrentRow.Index].Cells[3].Value.ToString();
                 String rentDate = String.Format("{0:dd-MMM-yy}", dtpFrom.Value);
                 String returnDate = String.Format("{0:dd-MMM-yy}", dtpTo.Value);
-                String rentalFee = RentalItem.CalculateRentalFee(categoryCode, dtpFrom.Value, dtpTo.Value).ToString();
 
-                if (dgvRental.Rows.Count >= 1) {
+                String rentalFee = _rentalService.CalculateRentalFee(categoryCode, dtpFrom.Value, dtpTo.Value).ToString();
+
+                if (dgvRental.Rows.Count >= 1)
+                {
                     foreach (DataGridViewRow row in dgvRental.Rows)
                     {
                         if (row.Cells["ToolID"].Value.ToString() == id)
@@ -109,60 +118,71 @@ namespace ToolSYS.Presentation
                     }
                 }
 
-                dgvRental.Rows.Add(id, categoryCode, description, manufacturer, rentDate, returnDate, rentalFee);
-
-                decimal sum = 0;
-                foreach (DataGridViewRow row in dgvRental.Rows)
-                {
-                    if (!row.IsNewRow && row.Cells[6].Value != null)
-                    {
-                        sum += Convert.ToDecimal(row.Cells[6].Value);
-                    }
-                }
-
-                txtTotalFee.Text = sum.ToString();
-                
+                dgvRental.Rows.Add(
+                    id, 
+                    categoryCode, 
+                    description, 
+                    manufacturer, 
+                    rentDate, 
+                    returnDate, 
+                    rentalFee
+                );
+                UpdateTotalFee();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("PLease select a Tool", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
+                MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void UpdateTotalFee()
+        {
+            txtTotalFee.Text = dgvRental.Rows.Cast<DataGridViewRow>()
+                                .Sum(row => Convert.ToDecimal(row.Cells["RentalFee"].Value))
+                                .ToString("0.00");
         }
 
         private void btnConfirmRental_Click(object sender, EventArgs e)
         {
-            /*if (!String.IsNullOrEmpty(txtCustomerID.Text))
+            try
             {
-                if (!String.IsNullOrEmpty(txtTotalFee.Text))
-                {
-                    Rental rental = new Rental(Convert.ToInt32(txtRentalID.Text), Convert.ToInt32(txtCustomerID.Text), DateTime.Today, Convert.ToDecimal(txtTotalFee.Text));
-                    rental.AddRental();
+                if (String.IsNullOrEmpty(txtCustomerID.Text))
+                    throw new Exception("Please select a customer.");
+                if (String.IsNullOrEmpty(txtTotalFee.Text))
+                    throw new Exception("No Tools Have Been Added To The Rental.");
 
-                    RentalItem rentalItem = new RentalItem();
-                    foreach (DataGridViewRow row in dgvRental.Rows)
+                Rental rental = new Rental 
+                { 
+                   rentalID = Convert.ToInt32(txtRentalID.Text),
+                   customerID = Convert.ToInt32(txtCustomerID.Text),
+                   transactionDate = DateTime.Today,
+                   totalFee = Convert.ToDecimal(txtTotalFee.Text)
+                };
+
+                List<RentalItem> rentalItems = dgvRental.Rows.Cast<DataGridViewRow>()
+                    .Select(row => new RentalItem
                     {
-                        rentalItem.SetRentallID(Convert.ToInt32(txtRentalID.Text));
-                        rentalItem.SetToolID(Convert.ToInt32(row.Cells[0].Value.ToString()));
-                        rentalItem.SetRentDate(Convert.ToDateTime(row.Cells[4].Value.ToString()));
-                        rentalItem.SetReturnDate(Convert.ToDateTime(row.Cells[5].Value.ToString()));
-                        rentalItem.SetRentalFee(Convert.ToDecimal(row.Cells[6].Value.ToString()));
-                        rentalItem.AddRentalItem();
-                        MessageBox.Show("Rental Succesful", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        RefreshForm();
+                        toolID = Convert.ToInt32(row.Cells["ToolID"].Value),
+                        rentalID = Convert.ToInt32(txtRentalID.Text),
+                        rentDate = DateTime.Parse(row.Cells["RentDate"].Value.ToString()),
+                        returnDate = DateTime.Parse(row.Cells["ReturnDate"].Value.ToString()),
+                        rentalFee = Convert.ToDecimal(row.Cells["RentalFee"].Value)
+                    }).ToList();
 
-                    }
+                _rentalService.ConfirmRental(rental, rentalItems);
 
-
-                }
-                else
-                    MessageBox.Show("No Tools Have Been Added To The Rental", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Rental Succesful", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                RefreshForm();
             }
-            else
-                MessageBox.Show("Customer Must Be Selected", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);*/
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void RefreshForm()
         {
+            txtRentalID.Text = _rentalService.GetNextRentalID().ToString();
             txtCustomerSearch.Clear();
             txtCustomerID.Clear();
             txtForename.Clear();
@@ -183,9 +203,9 @@ namespace ToolSYS.Presentation
 
         private void cboCategories_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboCategories.SelectedIndex >= 0)
+            if (cboCategories.SelectedIndex >= 1)
             {
-                dgvTools.DataSource = _toolService.GetRentableTools(cboCategories.SelectedItem.ToString().Substring(0, 2), Convert.ToDateTime(dtpFrom), Convert.ToDateTime(dtpTo)).Tables["tool"];
+                dgvTools.DataSource = _toolService.GetRentableTools(cboCategories.SelectedItem.ToString().Substring(0, 2), dtpFrom.Value, dtpTo.Value).Tables["tool"];
 
                 dgvTools.Columns[0].HeaderText = "ID";
                 dgvTools.Columns[1].HeaderText = "Category Code";
@@ -193,7 +213,6 @@ namespace ToolSYS.Presentation
                 dgvTools.Columns[3].HeaderText = "Manufacturer";
                 dgvTools.Columns[4].HeaderText = "Status";
                 Miscellaneous.SetDataGridViewProperties(dgvTools);
-
             }
         }
         private void SetToolCategoryToolStripMenuItem_Click(object sender, EventArgs e)

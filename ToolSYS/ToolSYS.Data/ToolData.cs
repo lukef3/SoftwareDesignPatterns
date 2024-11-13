@@ -164,28 +164,33 @@ namespace ToolSYS.Data
         {
             using (OracleConnection conn = new OracleConnection(connectionString))
             {
-                string sqlQuery = "SELECT * FROM Tools " +
-                                    "WHERE CategoryCode = :categoryCode AND ToolStatus = 'I' " +
-                                    "AND ToolID NOT IN (SELECT ToolID FROM RentalItems " +
-                                    "WHERE (RentDate <= :toDate AND ReturnDate >= :toDate) " +
-                                    "OR (RentDate <= :fromDate AND ReturnDate >= :fromDate) " +
-                                    "OR (RentDate >= :fromDate AND RentDate <= :toDate) " +
-                                    "OR (ReturnDate >= :fromDate AND ReturnDate <= :toDate))";
+                string sqlQuery = @"
+                    SELECT * FROM Tools
+                    WHERE CategoryCode = :categoryCode
+                    AND ToolStatus = 'I'
+                    AND ToolID NOT IN (
+                    SELECT ToolID FROM RentalItems
+                    WHERE (:fromDate BETWEEN RentDate AND ReturnDate)
+                         OR (:toDate BETWEEN RentDate AND ReturnDate)
+                         OR (RentDate BETWEEN :fromDate AND :toDate)
+                         OR (ReturnDate BETWEEN :fromDate AND :toDate)
+              )";
 
-                OracleCommand cmd = new OracleCommand(sqlQuery, conn);
-                cmd.Parameters.Add(":categoryCode", categoryCode);
-                cmd.Parameters.Add(":fromDate", from.ToString("dd-MMM-yy"));
-                cmd.Parameters.Add(":toDate", to.ToString("dd-MMM-yy"));
+                using (OracleCommand cmd = new OracleCommand(sqlQuery, conn))
+                {
+                    cmd.Parameters.Add(new OracleParameter(":categoryCode", categoryCode));
+                    cmd.Parameters.Add(new OracleParameter(":fromDate", from.ToString("dd-MMM-yy")));
+                    cmd.Parameters.Add(new OracleParameter(":toDate", to.ToString("dd-MMM-yy")));
 
-                OracleDataAdapter da = new OracleDataAdapter(cmd);
+                    OracleDataAdapter da = new OracleDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds, "tool");
 
-                DataSet ds = new DataSet();
-                da.Fill(ds, "tool");
-
-                return ds;
-
+                    return ds;
+                }
             }
         }
+
 
         public bool DoesToolIDExist(int toolID)
         {

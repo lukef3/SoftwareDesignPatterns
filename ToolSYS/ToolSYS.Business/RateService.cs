@@ -26,6 +26,19 @@ namespace ToolSYS.Business
             _rateData.UpdateRate(rate);
         }
 
+        public Rate GetRateByCategoryCode(string categoryCode)
+        {
+            if (string.IsNullOrEmpty(categoryCode))
+                throw new ArgumentException("Category Code is required.");
+
+            return _rateData.GetRateByCategoryCode(categoryCode);
+        }
+
+        public DataSet GetAllCategories()
+        {
+            return _rateData.GetAllCategories();
+        }
+
         private void ValidateRate(Rate rate, bool isUpdate)
         {
             if (string.IsNullOrEmpty(rate.categoryCode) || rate.categoryCode.Length != 2)
@@ -42,19 +55,6 @@ namespace ToolSYS.Business
 
             if (!isUpdate && _rateData.IsCategoryCodeExists(rate.categoryCode))
                 throw new ArgumentException("A category with this code already exists.");
-        }
-
-        public Rate GetRateByCategoryCode(string categoryCode)
-        {
-            if (string.IsNullOrEmpty(categoryCode))
-                throw new ArgumentException("Category Code is required.");
-
-            return _rateData.GetRateByCategoryCode(categoryCode);
-        }
-
-        public DataSet GetAllCategories()
-        {
-            return _rateData.GetAllCategories();
         }
     }
 }
