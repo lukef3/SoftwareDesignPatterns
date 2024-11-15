@@ -1,12 +1,12 @@
 ﻿using System.Data;
 using Oracle.ManagedDataAccess.Client;
-using ToolSYS.DTOs;
+using ToolSYS.Entities;
 
 namespace ToolSYS.Data
 {
     public class RateData
     {
-        private readonly string _connectionString = DBConnect.oradb;
+        private string _connectionString = DBConnect.oradb;
 
         public void AddRate(Rate rate)
         {

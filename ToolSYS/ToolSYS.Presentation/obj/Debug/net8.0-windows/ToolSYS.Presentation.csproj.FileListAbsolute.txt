@@ -97,10 +97,8 @@ C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\bin\Debug\net8.0-w
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.DirectoryServices.Protocols.dll
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\bin\Debug\net8.0-windows\ToolSYS.Business.dll
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\bin\Debug\net8.0-windows\ToolSYS.Data.dll
-C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\bin\Debug\net8.0-windows\ToolSYS.DTOs.dll
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\bin\Debug\net8.0-windows\ToolSYS.Business.pdb
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\bin\Debug\net8.0-windows\ToolSYS.Data.pdb
-C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\bin\Debug\net8.0-windows\ToolSYS.DTOs.pdb
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\obj\Debug\net8.0-windows\ToolSYS..60BBE19B.Up2Date
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\obj\Debug\net8.0-windows\ToolSYS.Presentation.genruntimeconfig.cache
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\obj\Debug\net8.0-windows\ref\ToolSYS.Presentation.dll
@@ -120,3 +118,7 @@ C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\obj\Debug\net8.0-w
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\obj\Debug\net8.0-windows\ToolSYS.Presentation.frmViewCustomers.resources
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\obj\Debug\net8.0-windows\ToolSYS.Presentation.frmViewRentals.resources
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\obj\Debug\net8.0-windows\ToolSYS.Presentation.frmViewTools.resources
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\bin\Debug\net8.0-windows\ToolSYS.Entities.dll
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\bin\Debug\net8.0-windows\ToolSYS.Entities.pdb
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\bin\Debug\net8.0-windows\ScottPlot.dll
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\bin\Debug\net8.0-windows\ScottPlot.WinForms.dll

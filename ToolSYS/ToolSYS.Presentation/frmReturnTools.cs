@@ -7,83 +7,78 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ToolSYS.Business.Services;
 
 namespace ToolSYS.Presentation
 {
     public partial class frmReturnTools : Form
     {
+        private RentalService _rentalService;
         public frmReturnTools()
         {
             InitializeComponent();
+            _rentalService = new RentalService();
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if (IsValidRentalID(txtRentalID.Text))
+            if (int.TryParse(txtRentalID.Text, out int rentalID))
             {
-                gbxReturnTool.Visible = true;
-                txtToolID.Focus();
-                gbxRentalID.Enabled = false;
-            }
-        }
-
-        private bool IsValidRentalID(string rentId)
-        {
-            Boolean result = false;
-            if (!rentId.Equals("")){
-                foreach(char c in rentId)
+                try
                 {
-                    if (!Char.IsDigit(c))
-                    {
-                        MessageBox.Show("Rental ID Must Be Numeric", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        txtRentalID.Focus();
-                        return false;
-                    }
-                    result = true;
+                    DataTable rentalItems = _rentalService.GetRentalItems(rentalID);
+
+                    dgvRentalItems.DataSource = rentalItems;
+                    dgvRentalItems.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dgvRentalItems.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+                    gbxReturnTool.Visible = true;
+                    txtToolID.Focus();
+                    gbxRentalID.Enabled = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Rental ID Must Be Entered", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Rental ID must be a valid number.", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtRentalID.Focus();
-                result = false;
             }
-            return result;
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            if (IsValidToolID(txtToolID.Text))
+            if (int.TryParse(txtRentalID.Text, out int rentalID) && int.TryParse(txtToolID.Text, out int toolID))
             {
-                MessageBox.Show("Tool Succesfully Returned", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtToolID.Clear();
-                txtToolID.Focus();
-            }
-        }
-
-        private bool IsValidToolID(string toolId)
-        {
-            Boolean result = false;
-            if (!toolId.Equals(""))
-            {
-                foreach (char c in toolId)
+                try
                 {
-                    if (!Char.IsDigit(c))
-                    {
-                        MessageBox.Show("Tool ID Must Be Numeric", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        txtToolID.Focus();
-                        return false;
-                    }
-                    result = true;
+                    // Return the tool
+                    _rentalService.ReturnTool(rentalID, toolID);
+
+                    MessageBox.Show("Tool successfully returned.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Refresh the DataGridView
+                    DataTable rentalItems = _rentalService.GetRentalItems(rentalID);
+
+                    dgvRentalItems.DataSource = rentalItems;
+                    dgvRentalItems.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dgvRentalItems.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+                    txtToolID.Clear();
+                    txtToolID.Focus();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Tool ID Must Be Entered", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select a valid tool", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtToolID.Focus();
-                result = false;
             }
-            return result;
         }
 
         private void btnFinish_Click(object sender, EventArgs e)
@@ -92,6 +87,11 @@ namespace ToolSYS.Presentation
             txtRentalID.Clear();
             gbxReturnTool.Visible = false;
             gbxRentalID.Enabled = true;
+        }
+
+        private void dgvRentalItems_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtToolID.Text = dgvRentalItems.Rows[dgvRentalItems.CurrentRow.Index].Cells[0].Value.ToString();
         }
 
         private void frmReturnTools_Load(object sender, EventArgs e)
@@ -159,5 +159,12 @@ namespace ToolSYS.Presentation
         {
             Navigation.MainMenu(this);
         }
+
+        private void dgvRentalItems_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+
     }
 }

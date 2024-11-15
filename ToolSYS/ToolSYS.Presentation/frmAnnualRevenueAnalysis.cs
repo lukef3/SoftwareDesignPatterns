@@ -1,84 +1,86 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Oracle.ManagedDataAccess.Client;
+using ToolSYS.Business.Services;
 
 namespace ToolSYS.Presentation
 {
     public partial class frmAnnualRevenueAnalysis : Form
     {
+        private readonly AnalysisService analysisService;
+
         public frmAnnualRevenueAnalysis()
         {
             InitializeComponent();
+            analysisService = new AnalysisService();
         }
 
         private void frmAnnualRevenueAnalysis_Load(object sender, EventArgs e)
         {
+            LoadYears();
         }
 
-        public String getMonth(int month)
+        private void LoadYears()
         {
-            String[] months = { "OTH", "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC" };
-            if (month >= 1 && month <= 12)
+            try
             {
-                return months[month];
+                DataTable yearsTable = analysisService.GetDistinctYears();
+                cboYears.Items.Clear();
+
+                foreach (DataRow row in yearsTable.Rows)
+                {
+                    cboYears.Items.Add(row["Year"].ToString());
+                }
+
+                if (cboYears.Items.Count > 0)
+                {
+                    cboYears.SelectedIndex = 0;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return months[0];
+                MessageBox.Show($"Error loading years: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void chtData_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void cboYears_SelectedIndexChanged(object sender, EventArgs e)
         {
-            FillChart(Convert.ToInt32(cboYears.SelectedItem.ToString().Substring(2, 2)));
-
+            if (cboYears.SelectedItem != null)
+            {
+                try
+                {
+                    int selectedYear = int.Parse(cboYears.SelectedItem.ToString());
+                    FillChart(selectedYear);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error loading revenue data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void FillChart(int year)
         {
-
-            String sqlQuery = "SELECT to_Char(TransactionDate,'MM') , SUM(TotalFee) FROM Rentals WHERE TransactionDate LIKE '%" + year + "' GROUP BY to_Char(TransactionDate, 'MM') ORDER BY to_Char(TransactionDate, 'MM')";
-
-            //"SELECT SUM(TotalFee), to_Char(TransactionDate,'MM') FROM Rentals GROUP BY to_Char(TransactionDate,'MM') ORDER BY to_Char(TransactionDate,'MM')";
-
-            DataTable dt = new DataTable();
-
-            OracleConnection conn = new OracleConnection(DBConnect.oradb);
-
-            OracleCommand cmd = new OracleCommand(sqlQuery, conn);
-
-            OracleDataAdapter da = new OracleDataAdapter(cmd);
-
-            da.Fill(dt);
-
-            conn.Close();
-
-            //Array size 12 since there are 12 months in a year
-            string[] Months = new string[12];
-            decimal[] Amounts = new decimal[12];
-
-            //pre-fill each array; Months[] with month name; Amounts[] with zero values
-            for (int i = 0; i < 12; i++)
+            try
             {
-                Months[i] = getMonth(i + 1);
-                Amounts[i] = 0;
+                var (months, revenues) = analysisService.GetMonthlyRevenues(year);
+
+                formsPlot1.Plot.Clear();
+                formsPlot1.Plot.AddBar(revenues);
+
+                double[] xPositions = Enumerable.Range(0, 12).Select(i => (double)i).ToArray();
+                formsPlot1.Plot.XTicks(xPositions, months);
+
+                formsPlot1.Plot.Title($"Revenue Analysis for {year}");
+                formsPlot1.Plot.YLabel("Revenue");
+                formsPlot1.Plot.XLabel("Months");
+
+                formsPlot1.Refresh();
             }
-            //Next, save the amounts returned in Query to the appropriate element in Amounts[]
-            for (int i = 0; i < dt.Rows.Count; i++)
+            catch (Exception ex)
             {
-                Amounts[i] = Convert.ToDecimal(dt.Rows[i][1]);
+                MessageBox.Show($"Error plotting data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

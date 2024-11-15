@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Data;
 using ToolSYS.Data;
-using ToolSYS.DTOs;
+using ToolSYS.Entities;
 
-namespace ToolSYS.Business
+namespace ToolSYS.Business.Services
 {
     public class RateService
     {
-        private readonly RateData _rateData;
+        private RateData _rateData;
 
         public RateService()
         {

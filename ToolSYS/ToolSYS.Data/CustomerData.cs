@@ -5,13 +5,13 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ToolSYS.DTOs;
+using ToolSYS.Entities;
 
 namespace ToolSYS.Data
 {
     public class CustomerData
     {
-        private readonly string _connectionString = DBConnect.oradb;
+        private string _connectionString = DBConnect.oradb;
 
         public int GetNextCustomerID()
         {

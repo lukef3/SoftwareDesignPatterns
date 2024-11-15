@@ -1,12 +1,12 @@
 ﻿using Oracle.ManagedDataAccess.Client;
 using System;
-using ToolSYS.DTOs;
+using ToolSYS.Entities;
 
 namespace ToolSYS.Data
 {
     public class RentalItemData
     {
-        private readonly string _connectionString = DBConnect.oradb;
+        private string _connectionString = DBConnect.oradb;
 
         public void AddRentalItem(RentalItem rentalItem)
         {
@@ -28,9 +28,9 @@ namespace ToolSYS.Data
                 cmd.ExecuteNonQuery();
 
                 // Update tool status to 'Out'
-                string sqlUpdateTool = "UPDATE Tools SET ToolStatus = 'O' WHERE ToolID = :toolID";
+                string sqlUpdateStatus = "UPDATE Tools SET ToolStatus = 'O' WHERE ToolID = :toolID";
 
-                cmd = new OracleCommand(sqlUpdateTool, conn);
+                cmd = new OracleCommand(sqlUpdateStatus, conn);
                 cmd.Parameters.Add(":toolID", OracleDbType.Int32).Value = rentalItem.toolID;
 
                 cmd.ExecuteNonQuery();

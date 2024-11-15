@@ -9,10 +9,18 @@
       "ToolSYS.Presentation/1.0.0": {
         "dependencies": {
           "Oracle.ManagedDataAccess.Core": "23.5.1",
-          "ToolSYS.Business": "1.0.0"
+          "ScottPlot.WinForms": "4.1.51",
+          "ToolSYS.Business": "1.0.0",
+          "ToolSYS.Entities": "1.0.0"
         },
         "runtime": {
           "ToolSYS.Presentation.dll": {}
+        }
+      },
+      "Microsoft.NETCore.Platforms/3.0.0": {},
+      "Microsoft.Win32.SystemEvents/4.6.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.0.0"
         }
       },
       "Oracle.ManagedDataAccess.Core/23.5.1": {
@@ -26,6 +34,29 @@
           "lib/netstandard2.1/Oracle.ManagedDataAccess.dll": {
             "assemblyVersion": "23.1.0.0",
             "fileVersion": "23.1.0.0"
+          }
+        }
+      },
+      "ScottPlot/4.1.51": {
+        "dependencies": {
+          "System.Drawing.Common": "4.6.1",
+          "System.Numerics.Vectors": "4.5.0"
+        },
+        "runtime": {
+          "lib/net5.0/ScottPlot.dll": {
+            "assemblyVersion": "4.1.51.0",
+            "fileVersion": "4.1.51.0"
+          }
+        }
+      },
+      "ScottPlot.WinForms/4.1.51": {
+        "dependencies": {
+          "ScottPlot": "4.1.51"
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/ScottPlot.WinForms.dll": {
+            "assemblyVersion": "4.1.51.0",
+            "fileVersion": "4.1.51.0"
           }
         }
       },
@@ -69,7 +100,14 @@
           }
         }
       },
+      "System.Drawing.Common/4.6.1": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.0.0",
+          "Microsoft.Win32.SystemEvents": "4.6.0"
+        }
+      },
       "System.Formats.Asn1/8.0.1": {},
+      "System.Numerics.Vectors/4.5.0": {},
       "System.Security.Cryptography.Pkcs/8.0.0": {
         "dependencies": {
           "System.Formats.Asn1": "8.0.1"
@@ -79,8 +117,8 @@
       "ToolSYS.Business/1.0.0": {
         "dependencies": {
           "Oracle.ManagedDataAccess.Core": "23.5.1",
-          "ToolSYS.DTOs": "1.0.0",
-          "ToolSYS.Data": "1.0.0"
+          "ToolSYS.Data": "1.0.0",
+          "ToolSYS.Entities": "1.0.0"
         },
         "runtime": {
           "ToolSYS.Business.dll": {
@@ -92,7 +130,7 @@
       "ToolSYS.Data/1.0.0": {
         "dependencies": {
           "Oracle.ManagedDataAccess.Core": "23.5.1",
-          "ToolSYS.DTOs": "1.0.0"
+          "ToolSYS.Entities": "1.0.0"
         },
         "runtime": {
           "ToolSYS.Data.dll": {
@@ -101,9 +139,9 @@
           }
         }
       },
-      "ToolSYS.DTOs/1.0.0": {
+      "ToolSYS.Entities/1.0.0": {
         "runtime": {
-          "ToolSYS.DTOs.dll": {
+          "ToolSYS.Entities.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -117,12 +155,40 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Microsoft.NETCore.Platforms/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TsETIgVJb/AKoYfSP+iCxkuly5d3inZjTdx/ItZLk2CxY85v8083OBS3uai84kK3/baLnS5/b5XGs6zR7SuuHQ==",
+      "path": "microsoft.netcore.platforms/3.0.0",
+      "hashPath": "microsoft.netcore.platforms.3.0.0.nupkg.sha512"
+    },
+    "Microsoft.Win32.SystemEvents/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Edg+pFW5C8WJb680Za2kTV8TqUi6Ahl/WldRVoOVJ23UQLpDHFspa+umgFjkWZw24ETsU99Cg+ErZz683M4chg==",
+      "path": "microsoft.win32.systemevents/4.6.0",
+      "hashPath": "microsoft.win32.systemevents.4.6.0.nupkg.sha512"
+    },
     "Oracle.ManagedDataAccess.Core/23.5.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-OYcTrQeUh3CEUYuUA0rSzdnqjVDvbQRByfeIxQub4WJShlbeY/o2NdKUuP87rU8TlGADf2ZPKsxqUdke90KNNg==",
       "path": "oracle.manageddataaccess.core/23.5.1",
       "hashPath": "oracle.manageddataaccess.core.23.5.1.nupkg.sha512"
+    },
+    "ScottPlot/4.1.51": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Jwfk3/nYrUYzYcSEGs5Vl52Ebtl54YmhYHcmfio7182dJTWoHS9G0GWKUuirhQaXjjx4zBAlCdsWIoYT+IIbnw==",
+      "path": "scottplot/4.1.51",
+      "hashPath": "scottplot.4.1.51.nupkg.sha512"
+    },
+    "ScottPlot.WinForms/4.1.51": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1384ZR+fo4XxW9EcMQklW11eVcShO6ME700NyWfB2iY4uWpyMf4TWHdtxy5qgukkJK+rAqe+MxCGESpkQus7xg==",
+      "path": "scottplot.winforms/4.1.51",
+      "hashPath": "scottplot.winforms.4.1.51.nupkg.sha512"
     },
     "System.Configuration.ConfigurationManager/8.0.0": {
       "type": "package",
@@ -152,12 +218,26 @@
       "path": "system.directoryservices.protocols/8.0.0",
       "hashPath": "system.directoryservices.protocols.8.0.0.nupkg.sha512"
     },
+    "System.Drawing.Common/4.6.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TFAADvBEUhdDb2Lteq/BUeG0J1y7a0GyFdpB8yE/eAcbiN0R5MII1nXExXsrtRZiO8C/L9SozL2wGqkRlhiv6A==",
+      "path": "system.drawing.common/4.6.1",
+      "hashPath": "system.drawing.common.4.6.1.nupkg.sha512"
+    },
     "System.Formats.Asn1/8.0.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-XqKba7Mm/koKSjKMfW82olQdmfbI5yqeoLV/tidRp7fbh5rmHAQ5raDI/7SU0swTzv+jgqtUGkzmFxuUg0it1A==",
       "path": "system.formats.asn1/8.0.1",
       "hashPath": "system.formats.asn1.8.0.1.nupkg.sha512"
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "path": "system.numerics.vectors/4.5.0",
+      "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
     },
     "System.Security.Cryptography.Pkcs/8.0.0": {
       "type": "package",
@@ -183,7 +263,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "ToolSYS.DTOs/1.0.0": {
+    "ToolSYS.Entities/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

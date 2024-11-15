@@ -8,11 +8,11 @@ C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\bin\Debug\net8.0\ToolS
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\bin\Debug\net8.0\ToolSYS.Business.dll
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\bin\Debug\net8.0\ToolSYS.Business.pdb
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\bin\Debug\net8.0\ToolSYS.Data.dll
-C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\bin\Debug\net8.0\ToolSYS.DTOs.dll
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\bin\Debug\net8.0\ToolSYS.Data.pdb
-C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\bin\Debug\net8.0\ToolSYS.DTOs.pdb
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\obj\Debug\net8.0\ToolSYS..D87C1DA3.Up2Date
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\obj\Debug\net8.0\ToolSYS.Business.dll
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\obj\Debug\net8.0\refint\ToolSYS.Business.dll
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\obj\Debug\net8.0\ToolSYS.Business.pdb
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\obj\Debug\net8.0\ref\ToolSYS.Business.dll
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\bin\Debug\net8.0\ToolSYS.Entities.dll
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\bin\Debug\net8.0\ToolSYS.Entities.pdb

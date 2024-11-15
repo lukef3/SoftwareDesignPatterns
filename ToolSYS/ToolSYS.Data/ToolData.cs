@@ -1,12 +1,12 @@
 ﻿using System.Data;
 using Oracle.ManagedDataAccess.Client;
-using ToolSYS.DTOs;
+using ToolSYS.Entities;
 
 namespace ToolSYS.Data
 {
     public class ToolData
     {
-        private readonly string connectionString = DBConnect.oradb;
+        private string connectionString = DBConnect.oradb;
 
         public void AddTool(Tool tool)
         {

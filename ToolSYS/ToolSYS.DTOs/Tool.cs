@@ -1,4 +1,4 @@
-﻿namespace ToolSYS.DTOs
+﻿namespace ToolSYS.Entities
 {
     public class Tool
     {

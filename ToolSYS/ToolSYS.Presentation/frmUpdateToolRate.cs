@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ToolSYS.Business;
-using ToolSYS.DTOs;
+using ToolSYS.Business.Services;
+using ToolSYS.Entities;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ToolSYS.Presentation

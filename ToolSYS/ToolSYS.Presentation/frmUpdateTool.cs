@@ -1,26 +1,26 @@
 ﻿using System.Data;
-using ToolSYS.Business;
-using ToolSYS.DTOs;
+using ToolSYS.Business.Services;
+using ToolSYS.Entities;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ToolSYS.Presentation
 {
     public partial class frmUpdateTool : Form
     {
-        private readonly ToolService _toolService;
-        private readonly RateService _rateService;
+        private readonly ToolService toolService;
+        private readonly RateService rateService;
 
         public frmUpdateTool()
         {
             InitializeComponent();
-            _toolService = new ToolService();
-            _rateService = new RateService();
+            toolService = new ToolService();
+            rateService = new RateService();
         }
 
         private void frmUpdateTool_Load(object sender, EventArgs e)
         {
             cboCategories.Items.Add(""); 
-            DataSet categories = _rateService.GetAllCategories(); 
+            DataSet categories = rateService.GetAllCategories(); 
 
             foreach (DataRow row in categories.Tables[0].Rows)
             {
@@ -50,7 +50,7 @@ namespace ToolSYS.Presentation
                 string status = cboStatus.SelectedItem != null ? cboStatus.SelectedItem.ToString() : string.Empty;
                 string phrase = txtPhrase.Text;
 
-                DataSet results = _toolService.GetFilteredTools(toolID, categoryCode, description, manufacturer, status, phrase);
+                DataSet results = toolService.GetFilteredTools(toolID, categoryCode, description, manufacturer, status, phrase);
 
                 dgvTools.DataSource = results.Tables["tool"];
                 dgvTools.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -85,16 +85,14 @@ namespace ToolSYS.Presentation
         {
             try
             {
-                Tool tool = new Tool
-                {
-                    toolID = int.Parse(txtUpdToolID.Text),
-                    categoryCode = cboUpdCategories.SelectedItem.ToString().Substring(0, 2),
-                    toolDescription = txtUpdDescription.Text,
-                    toolManufacturer = txtUpdManufacturer.Text,
-                    toolStatus = cboUpdStatus.SelectedItem.ToString().Substring(0, 1)
-                };
+                int toolID = int.Parse(txtUpdToolID.Text);
+                string categoryCode = cboUpdCategories.SelectedItem.ToString().Substring(0, 2);
+                string description = txtUpdDescription.Text;
+                string manufacturer = txtUpdManufacturer.Text;
+                string status = cboUpdStatus.SelectedItem.ToString().Substring(0, 1);
 
-                _toolService.UpdateTool(tool);
+                toolService.UpdateTool(toolID, categoryCode, description, manufacturer, status);
+
                 MessageBox.Show("Tool has been successfully updated", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 ClearUpdateInputs();

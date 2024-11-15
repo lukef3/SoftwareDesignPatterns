@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ToolSYS.Data\ToolSYS.Data.csproj" />
-    <ProjectReference Include="..\ToolSYS.DTOs\ToolSYS.DTOs.csproj" />
+    <ProjectReference Include="..\ToolSYS.DTOs\ToolSYS.Entities.csproj" />
   </ItemGroup>
 
 </Project>

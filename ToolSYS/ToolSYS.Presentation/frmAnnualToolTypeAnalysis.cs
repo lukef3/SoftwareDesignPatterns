@@ -1,108 +1,103 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Oracle.ManagedDataAccess.Client;
-using ToolSYS.Business;
+using ToolSYS.Business.Services;
 
 namespace ToolSYS.Presentation
 {
     public partial class frmAnnualToolTypeAnalysis : Form
     {
-        private RateService _rateService;
+        private AnalysisService analysisService;
+        private RateService rateService;
+
         public frmAnnualToolTypeAnalysis()
         {
             InitializeComponent();
-            _rateService = new RateService();
+            analysisService = new AnalysisService();
+            rateService = new RateService();
         }
+
         private void frmAnnualToolTypeAnalysis_Load(object sender, EventArgs e)
         {
-            cboCategories.Items.Add("");
-            DataSet categories = _rateService.GetAllCategories();
+            LoadCategories();
+            LoadYears();
+        }
+
+        private void LoadCategories()
+        {
+            cboCategories.Items.Clear();
+            DataSet categories = rateService.GetAllCategories();
 
             foreach (DataRow row in categories.Tables[0].Rows)
             {
                 string category = row["CategoryCode"] + " - " + row["CategoryDesc"];
                 cboCategories.Items.Add(category);
             }
-            cboYears.Items.Add("2023");
-            cboYears.Items.Add("2024");
-            cboYears.Items.Add("2025");
-            this.AcceptButton = btnConfirm;
+        }
+
+        private void LoadYears()
+        {
+            try
+            {
+                DataTable yearsTable = analysisService.GetDistinctYears();
+                cboYears.Items.Clear();
+
+                foreach (DataRow row in yearsTable.Rows)
+                {
+                    cboYears.Items.Add(row["Year"].ToString());
+                }
+
+                if (cboYears.Items.Count > 0)
+                {
+                    cboYears.SelectedIndex = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading years: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if(cboCategories.SelectedIndex >=0 && cboYears.SelectedIndex >= 0)
+            if (cboCategories.SelectedIndex >= 0 && cboYears.SelectedIndex >= 0)
             {
-                FillChart(Convert.ToInt32(cboYears.SelectedItem.ToString().Substring(2, 2)), cboCategories.SelectedItem.ToString().Substring(0, 2));
+                int year = int.Parse(cboYears.SelectedItem.ToString());
+                string categoryCode = cboCategories.SelectedItem.ToString().Substring(0, 2);
+                FillChart(year, categoryCode);
             }
             else
             {
-                MessageBox.Show("Please enter year and category", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select both year and tool category.", "Invalid Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-        private void FillChart(int year, String categoryCode)
+        private void FillChart(int year, string categoryCode)
         {
-
-            String sqlQuery = "SELECT TO_CHAR(TransactionDate, 'YYYY-MM') AS Month, COUNT(*) AS NumRentals FROM Rentals " +
-                "JOIN RentalItems ON Rentals.RentalID = RentalItems.RentalID " +
-                "JOIN Tools ON RentalItems.ToolID = Tools.ToolID " +
-                "WHERE TransactionDate LIKE '%" + year + "' AND Tools.CategoryCode = '" + categoryCode + "'" +
-                "GROUP BY TO_CHAR(TransactionDate, 'YYYY-MM') " +
-                "ORDER BY Month";
-
-            DataTable dt = new DataTable();
-
-            OracleConnection conn = new OracleConnection(DBConnect.oradb);
-
-            OracleCommand cmd = new OracleCommand(sqlQuery, conn);
-
-            OracleDataAdapter da = new OracleDataAdapter(cmd);
-
-            da.Fill(dt);
-
-            conn.Close();
-
-            //Array size 12 since there are 12 months in a year
-            string[] Months = new string[12];
-            decimal[] Amounts = new decimal[12];
-
-            //pre-fill each array; Months[] with month name; Amounts[] with zero values
-            for (int i = 0; i < 12; i++)
+            try
             {
-                Months[i] = getMonth(i + 1);
-                Amounts[i] = 0;
+                var (months, rentals) = analysisService.GetMonthlyToolRentals(year, categoryCode);
+
+                // Clear and update the chart using ScottPlot
+                formsPlot1.Plot.Clear();
+                formsPlot1.Plot.AddBar(rentals);
+
+                // Generate X-axis positions as double[]
+                double[] xPositions = Enumerable.Range(0, 12).Select(i => (double)i).ToArray();
+                formsPlot1.Plot.XTicks(xPositions, months);
+
+                formsPlot1.Plot.Title($"Tool Rentals in {year} for Category {categoryCode}");
+                formsPlot1.Plot.YLabel("Number of Rentals");
+                formsPlot1.Plot.XLabel("Months");
+
+                formsPlot1.Refresh();
             }
-            //Next, save the amounts returned in Query to the appropriate element in Amounts[]
-            for (int i = 0; i < dt.Rows.Count; i++)
+            catch (Exception ex)
             {
-                Amounts[i] = Convert.ToDecimal(dt.Rows[i][1]);
+                MessageBox.Show($"Error generating chart: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        public String getMonth(int month)
-        {
-            String[] months = { "OTH", "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC" };
-            if (month >= 1 && month <= 12)
-            {
-                return months[month];
-            }
-            else
-            {
-                return months[0];
-            }
-        }
-
-
-
-
         private void SetToolCategoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Navigation.SetToolCategory(this);

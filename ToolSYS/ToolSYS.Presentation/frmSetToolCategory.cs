@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ToolSYS.Business;
+using ToolSYS.Business.Services;
 using ToolSYS.Data;
-using ToolSYS.DTOs;
+using ToolSYS.Entities;
 
 namespace ToolSYS.Presentation
 {

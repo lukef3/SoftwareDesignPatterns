@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using ToolSYS.Data;
-using ToolSYS.DTOs;
+using ToolSYS.Entities;
 
-namespace ToolSYS.Business
+namespace ToolSYS.Business.Services
 {
     public class RentalService
     {
-        private readonly RentalData _rentalData;
-        private readonly RentalItemData _rentalItemData;
-        private readonly RateData _rateData;
+        private RentalData _rentalData;
+        private RentalItemData _rentalItemData;
+        private RateData _rateData;
 
         public RentalService()
         {
@@ -46,5 +46,23 @@ namespace ToolSYS.Business
                 _rentalItemData.AddRentalItem(rentalItem);
             }
         }
+
+        public DataTable GetRentalItems(int rentalID)
+        {
+            if (rentalID <= 0)
+                throw new ArgumentException("Invalid Rental ID.");
+
+            return _rentalData.GetRentalItemsByRentalID(rentalID);
+        }
+
+        public void ReturnTool(int rentalID, int toolID)
+        {
+            if (rentalID <= 0 || toolID <= 0)
+                throw new ArgumentException("Rental ID and Tool ID must be valid numbers.");
+
+            _rentalData.ReturnTool(rentalID, toolID);
+        }
+
+
     }
 }

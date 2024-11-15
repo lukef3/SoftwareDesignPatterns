@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Analysis.cs" />
     <Compile Remove="Customer.cs" />
     <Compile Remove="Rate.cs" />
     <Compile Remove="Rental.cs" />
@@ -18,10 +19,12 @@
 
   <ItemGroup>
     <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="23.5.1" />
+    <PackageReference Include="ScottPlot.WinForms" Version="4.1.51" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ToolSYS.Business\ToolSYS.Business.csproj" />
+    <ProjectReference Include="..\ToolSYS.DTOs\ToolSYS.Entities.csproj" />
   </ItemGroup>
 
 </Project>

@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\ToolSYS.DTOs.csproj",
-      "projectName": "ToolSYS.DTOs",
-      "projectPath": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\ToolSYS.DTOs.csproj",
+      "projectUniqueName": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\ToolSYS.Entities.csproj",
+      "projectName": "ToolSYS.Entities",
+      "projectPath": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\ToolSYS.Entities.csproj",
       "packagesPath": "C:\\Users\\lukef\\.nuget\\packages\\",
       "outputPath": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\obj\\",
       "projectStyle": "PackageReference",

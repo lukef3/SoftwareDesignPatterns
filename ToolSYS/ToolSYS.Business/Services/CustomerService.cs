@@ -6,13 +6,13 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using ToolSYS.Data;
-using ToolSYS.DTOs;
+using ToolSYS.Entities;
 
-namespace ToolSYS.Business
+namespace ToolSYS.Business.Services
 {
     public class CustomerService
     {
-        private readonly CustomerData _customerData;
+        private CustomerData _customerData;
 
         public CustomerService()
         {

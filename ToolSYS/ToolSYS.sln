@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolSYS.Business", "ToolSYS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolSYS.Data", "ToolSYS.Data\ToolSYS.Data.csproj", "{688AD2ED-70AA-4881-81FE-16AC8B2C5C8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolSYS.DTOs", "ToolSYS.DTOs\ToolSYS.DTOs.csproj", "{605D721C-D4D1-4C31-B2FF-F3650851AD52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolSYS.Entities", "ToolSYS.DTOs\ToolSYS.Entities.csproj", "{605D721C-D4D1-4C31-B2FF-F3650851AD52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

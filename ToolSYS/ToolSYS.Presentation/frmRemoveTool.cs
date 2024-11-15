@@ -8,17 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
-using ToolSYS.Business;
+using ToolSYS.Business.Services;
 
 namespace ToolSYS.Presentation
 {
     public partial class frmRemoveTool : Form
     {
-        private ToolService _toolService;
+        private ToolService toolService;
         public frmRemoveTool()
         {
             InitializeComponent();
-            _toolService = new ToolService();   
+            toolService = new ToolService();   
         }
 
         private void frmRemoveTool_Load(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace ToolSYS.Presentation
             {
                 try
                 {
-                    _toolService.RemoveTool(Convert.ToInt32(txtToolID.Text));
+                    toolService.RemoveTool(Convert.ToInt32(txtToolID.Text));
                     MessageBox.Show("Tool Successfully Removed", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtToolID.Clear();
                     RefreshGridView();
@@ -49,7 +49,7 @@ namespace ToolSYS.Presentation
 
         private void RefreshGridView()
         {
-            dgvTools.DataSource = _toolService.GetAvailableTools().Tables["tool"];
+            dgvTools.DataSource = toolService.GetAvailableTools().Tables["tool"];
             dgvTools.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvTools.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
         }
@@ -62,14 +62,25 @@ namespace ToolSYS.Presentation
 
         private void dgvTools_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DialogResult confirmRemove = MessageBox.Show("Are you sure you want to remove this tool?", "Confirm", MessageBoxButtons.YesNo);
-
-            if (confirmRemove == DialogResult.Yes)
+            if (dgvTools.CurrentRow != null)
             {
-                _toolService.RemoveTool(Convert.ToInt32(txtToolID.Text));
-                MessageBox.Show("Tool Successfully Removed", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtToolID.Clear();
-                RefreshGridView();
+                DialogResult confirmRemove = MessageBox.Show("Are you sure you want to remove this tool?", "Confirm", MessageBoxButtons.YesNo);
+
+                if (confirmRemove == DialogResult.Yes)
+                {
+                    try
+                    {
+                        int toolID = int.Parse(dgvTools.CurrentRow.Cells[0].Value.ToString());
+                        toolService.RemoveTool(toolID);
+
+                        MessageBox.Show("Tool Successfully Removed", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        RefreshGridView();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error: {ex.Message}", "Remove Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
         }
         private void SetToolCategoryToolStripMenuItem_Click(object sender, EventArgs e)

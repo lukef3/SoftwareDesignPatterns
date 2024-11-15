@@ -180,7 +180,7 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Oracle.ManagedDataAccess.Core": "23.5.1",
-          "ToolSYS.DTOs": "1.0.0"
+          "ToolSYS.Entities": "1.0.0"
         },
         "compile": {
           "bin/placeholder/ToolSYS.Data.dll": {}
@@ -189,14 +189,14 @@
           "bin/placeholder/ToolSYS.Data.dll": {}
         }
       },
-      "ToolSYS.DTOs/1.0.0": {
+      "ToolSYS.Entities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
-          "bin/placeholder/ToolSYS.DTOs.dll": {}
+          "bin/placeholder/ToolSYS.Entities.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ToolSYS.DTOs.dll": {}
+          "bin/placeholder/ToolSYS.Entities.dll": {}
         }
       }
     }
@@ -477,17 +477,17 @@
       "path": "../ToolSYS.Data/ToolSYS.Data.csproj",
       "msbuildProject": "../ToolSYS.Data/ToolSYS.Data.csproj"
     },
-    "ToolSYS.DTOs/1.0.0": {
+    "ToolSYS.Entities/1.0.0": {
       "type": "project",
-      "path": "../ToolSYS.DTOs/ToolSYS.DTOs.csproj",
-      "msbuildProject": "../ToolSYS.DTOs/ToolSYS.DTOs.csproj"
+      "path": "../ToolSYS.DTOs/ToolSYS.Entities.csproj",
+      "msbuildProject": "../ToolSYS.DTOs/ToolSYS.Entities.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Oracle.ManagedDataAccess.Core >= 23.5.1",
-      "ToolSYS.DTOs >= 1.0.0",
-      "ToolSYS.Data >= 1.0.0"
+      "ToolSYS.Data >= 1.0.0",
+      "ToolSYS.Entities >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -520,8 +520,8 @@
             "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\ToolSYS.Data.csproj": {
               "projectPath": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\ToolSYS.Data.csproj"
             },
-            "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\ToolSYS.DTOs.csproj": {
-              "projectPath": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\ToolSYS.DTOs.csproj"
+            "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\ToolSYS.Entities.csproj": {
+              "projectPath": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\ToolSYS.Entities.csproj"
             }
           }
         }

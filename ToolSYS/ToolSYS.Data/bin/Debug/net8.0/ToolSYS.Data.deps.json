@@ -9,7 +9,7 @@
       "ToolSYS.Data/1.0.0": {
         "dependencies": {
           "Oracle.ManagedDataAccess.Core": "23.5.1",
-          "ToolSYS.DTOs": "1.0.0"
+          "ToolSYS.Entities": "1.0.0"
         },
         "runtime": {
           "ToolSYS.Data.dll": {}
@@ -138,9 +138,9 @@
           }
         }
       },
-      "ToolSYS.DTOs/1.0.0": {
+      "ToolSYS.Entities/1.0.0": {
         "runtime": {
-          "ToolSYS.DTOs.dll": {
+          "ToolSYS.Entities.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -210,7 +210,7 @@
       "path": "system.security.cryptography.protecteddata/8.0.0",
       "hashPath": "system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
     },
-    "ToolSYS.DTOs/1.0.0": {
+    "ToolSYS.Entities/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

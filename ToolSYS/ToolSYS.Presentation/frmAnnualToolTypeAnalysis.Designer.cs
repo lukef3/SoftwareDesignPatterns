@@ -29,284 +29,280 @@ namespace ToolSYS.Presentation
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cboYears = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ratesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setToolCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateToolRateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.customersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewCustomersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rentalsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rentToolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.returnToolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewRentalsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adminReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.annualRevenueAnalysisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MainMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cboCategories = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnConfirm = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            this.SuspendLayout();
+            groupBox1 = new GroupBox();
+            btnConfirm = new Button();
+            label2 = new Label();
+            cboCategories = new ComboBox();
+            cboYears = new ComboBox();
+            label1 = new Label();
+            menuStrip1 = new MenuStrip();
+            ratesToolStripMenuItem = new ToolStripMenuItem();
+            setToolCategoryToolStripMenuItem = new ToolStripMenuItem();
+            updateToolRateToolStripMenuItem = new ToolStripMenuItem();
+            toolsToolStripMenuItem = new ToolStripMenuItem();
+            addToolStripMenuItem = new ToolStripMenuItem();
+            updateToolsToolStripMenuItem = new ToolStripMenuItem();
+            removeToolsToolStripMenuItem = new ToolStripMenuItem();
+            viewToolsToolStripMenuItem = new ToolStripMenuItem();
+            customersToolStripMenuItem = new ToolStripMenuItem();
+            addCustomerToolStripMenuItem = new ToolStripMenuItem();
+            updateCustomerToolStripMenuItem = new ToolStripMenuItem();
+            viewCustomersToolStripMenuItem = new ToolStripMenuItem();
+            rentalsToolStripMenuItem = new ToolStripMenuItem();
+            rentToolToolStripMenuItem = new ToolStripMenuItem();
+            returnToolsToolStripMenuItem = new ToolStripMenuItem();
+            viewRentalsToolStripMenuItem = new ToolStripMenuItem();
+            adminReportsToolStripMenuItem = new ToolStripMenuItem();
+            annualRevenueAnalysisToolStripMenuItem = new ToolStripMenuItem();
+            MainMenuToolStripMenuItem = new ToolStripMenuItem();
+            formsPlot1 = new ScottPlot.FormsPlot();
+            groupBox1.SuspendLayout();
+            menuStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnConfirm);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.cboCategories);
-            this.groupBox1.Controls.Add(this.cboYears);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 52);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(776, 162);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Select Year For Revenue Analysis";
-            // 
-            // cboYears
-            // 
-            this.cboYears.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboYears.FormattingEnabled = true;
-            this.cboYears.Location = new System.Drawing.Point(117, 46);
-            this.cboYears.Name = "cboYears";
-            this.cboYears.Size = new System.Drawing.Size(153, 28);
-            this.cboYears.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Year:";
-            // 
-            // chtData
-            // 
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.menuStrip1.Font = new System.Drawing.Font("Lucida Console", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ratesToolStripMenuItem,
-            this.toolsToolStripMenuItem,
-            this.customersToolStripMenuItem,
-            this.rentalsToolStripMenuItem,
-            this.adminReportsToolStripMenuItem,
-            this.MainMenuToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(801, 26);
-            this.menuStrip1.TabIndex = 10;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // ratesToolStripMenuItem
-            // 
-            this.ratesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.setToolCategoryToolStripMenuItem,
-            this.updateToolRateToolStripMenuItem});
-            this.ratesToolStripMenuItem.Name = "ratesToolStripMenuItem";
-            this.ratesToolStripMenuItem.Size = new System.Drawing.Size(79, 22);
-            this.ratesToolStripMenuItem.Text = "Rates";
-            // 
-            // setToolCategoryToolStripMenuItem
-            // 
-            this.setToolCategoryToolStripMenuItem.Name = "setToolCategoryToolStripMenuItem";
-            this.setToolCategoryToolStripMenuItem.Size = new System.Drawing.Size(293, 34);
-            this.setToolCategoryToolStripMenuItem.Text = "Set Tool Category";
-            this.setToolCategoryToolStripMenuItem.Click += new System.EventHandler(this.SetToolCategoryToolStripMenuItem_Click);
-            // 
-            // updateToolRateToolStripMenuItem
-            // 
-            this.updateToolRateToolStripMenuItem.Name = "updateToolRateToolStripMenuItem";
-            this.updateToolRateToolStripMenuItem.Size = new System.Drawing.Size(293, 34);
-            this.updateToolRateToolStripMenuItem.Text = "Update Tool Rate";
-            this.updateToolRateToolStripMenuItem.Click += new System.EventHandler(this.UpdateToolRateToolStripMenuItem_Click);
-            // 
-            // toolsToolStripMenuItem
-            // 
-            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addToolStripMenuItem,
-            this.updateToolsToolStripMenuItem,
-            this.removeToolsToolStripMenuItem,
-            this.viewToolsToolStripMenuItem});
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(79, 22);
-            this.toolsToolStripMenuItem.Text = "Tools";
-            // 
-            // addToolStripMenuItem
-            // 
-            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(238, 34);
-            this.addToolStripMenuItem.Text = "Add Tools";
-            this.addToolStripMenuItem.Click += new System.EventHandler(this.AddToolStripMenuItem_Click);
-            // 
-            // updateToolsToolStripMenuItem
-            // 
-            this.updateToolsToolStripMenuItem.Name = "updateToolsToolStripMenuItem";
-            this.updateToolsToolStripMenuItem.Size = new System.Drawing.Size(238, 34);
-            this.updateToolsToolStripMenuItem.Text = "Update Tools";
-            this.updateToolsToolStripMenuItem.Click += new System.EventHandler(this.UpdateToolsToolStripMenuItem_Click);
-            // 
-            // removeToolsToolStripMenuItem
-            // 
-            this.removeToolsToolStripMenuItem.Name = "removeToolsToolStripMenuItem";
-            this.removeToolsToolStripMenuItem.Size = new System.Drawing.Size(238, 34);
-            this.removeToolsToolStripMenuItem.Text = "Remove Tools";
-            this.removeToolsToolStripMenuItem.Click += new System.EventHandler(this.RemoveToolsToolStripMenuItem_Click);
-            // 
-            // viewToolsToolStripMenuItem
-            // 
-            this.viewToolsToolStripMenuItem.Name = "viewToolsToolStripMenuItem";
-            this.viewToolsToolStripMenuItem.Size = new System.Drawing.Size(238, 34);
-            this.viewToolsToolStripMenuItem.Text = "View Tools";
-            this.viewToolsToolStripMenuItem.Click += new System.EventHandler(this.ViewToolsToolStripMenuItem_Click);
-            // 
-            // customersToolStripMenuItem
-            // 
-            this.customersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addCustomerToolStripMenuItem,
-            this.updateCustomerToolStripMenuItem,
-            this.viewCustomersToolStripMenuItem});
-            this.customersToolStripMenuItem.Name = "customersToolStripMenuItem";
-            this.customersToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.customersToolStripMenuItem.Text = "Customers";
-            // 
-            // addCustomerToolStripMenuItem
-            // 
-            this.addCustomerToolStripMenuItem.Name = "addCustomerToolStripMenuItem";
-            this.addCustomerToolStripMenuItem.Size = new System.Drawing.Size(271, 34);
-            this.addCustomerToolStripMenuItem.Text = "Add Customer";
-            this.addCustomerToolStripMenuItem.Click += new System.EventHandler(this.AddCustomerToolStripMenuItem_Click);
-            // 
-            // updateCustomerToolStripMenuItem
-            // 
-            this.updateCustomerToolStripMenuItem.Name = "updateCustomerToolStripMenuItem";
-            this.updateCustomerToolStripMenuItem.Size = new System.Drawing.Size(271, 34);
-            this.updateCustomerToolStripMenuItem.Text = "Update Customer";
-            this.updateCustomerToolStripMenuItem.Click += new System.EventHandler(this.UpdateCustomerToolStripMenuItem_Click);
-            // 
-            // viewCustomersToolStripMenuItem
-            // 
-            this.viewCustomersToolStripMenuItem.Name = "viewCustomersToolStripMenuItem";
-            this.viewCustomersToolStripMenuItem.Size = new System.Drawing.Size(271, 34);
-            this.viewCustomersToolStripMenuItem.Text = "View Customers";
-            this.viewCustomersToolStripMenuItem.Click += new System.EventHandler(this.viewCustomersToolStripMenuItem_Click);
-            // 
-            // rentalsToolStripMenuItem
-            // 
-            this.rentalsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rentToolToolStripMenuItem,
-            this.returnToolsToolStripMenuItem,
-            this.viewRentalsToolStripMenuItem});
-            this.rentalsToolStripMenuItem.Name = "rentalsToolStripMenuItem";
-            this.rentalsToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
-            this.rentalsToolStripMenuItem.Text = "Rentals";
-            // 
-            // rentToolToolStripMenuItem
-            // 
-            this.rentToolToolStripMenuItem.Name = "rentToolToolStripMenuItem";
-            this.rentToolToolStripMenuItem.Size = new System.Drawing.Size(238, 34);
-            this.rentToolToolStripMenuItem.Text = "Rent Tools";
-            this.rentToolToolStripMenuItem.Click += new System.EventHandler(this.RentToolToolStripMenuItem_Click);
-            // 
-            // returnToolsToolStripMenuItem
-            // 
-            this.returnToolsToolStripMenuItem.Name = "returnToolsToolStripMenuItem";
-            this.returnToolsToolStripMenuItem.Size = new System.Drawing.Size(238, 34);
-            this.returnToolsToolStripMenuItem.Text = "Return Tools";
-            this.returnToolsToolStripMenuItem.Click += new System.EventHandler(this.ReturnToolsToolStripMenuItem_Click);
-            // 
-            // viewRentalsToolStripMenuItem
-            // 
-            this.viewRentalsToolStripMenuItem.Name = "viewRentalsToolStripMenuItem";
-            this.viewRentalsToolStripMenuItem.Size = new System.Drawing.Size(238, 34);
-            this.viewRentalsToolStripMenuItem.Text = "View Rentals";
-            this.viewRentalsToolStripMenuItem.Click += new System.EventHandler(this.ViewRentalsToolStripMenuItem_Click);
-            // 
-            // adminReportsToolStripMenuItem
-            // 
-            this.adminReportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.annualRevenueAnalysisToolStripMenuItem});
-            this.adminReportsToolStripMenuItem.Name = "adminReportsToolStripMenuItem";
-            this.adminReportsToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
-            this.adminReportsToolStripMenuItem.Text = "Admin Reports";
-            // 
-            // annualRevenueAnalysisToolStripMenuItem
-            // 
-            this.annualRevenueAnalysisToolStripMenuItem.Name = "annualRevenueAnalysisToolStripMenuItem";
-            this.annualRevenueAnalysisToolStripMenuItem.Size = new System.Drawing.Size(359, 34);
-            this.annualRevenueAnalysisToolStripMenuItem.Text = "Annual Revenue Analysis";
-            this.annualRevenueAnalysisToolStripMenuItem.Click += new System.EventHandler(this.AnnualRevenueAnalysisToolStripMenuItem_Click);
-            // 
-            // MainMenuToolStripMenuItem
-            // 
-            this.MainMenuToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.MainMenuToolStripMenuItem.Name = "MainMenuToolStripMenuItem";
-            this.MainMenuToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.MainMenuToolStripMenuItem.Text = "Main Menu";
-            this.MainMenuToolStripMenuItem.Click += new System.EventHandler(this.MainMenuToolStripMenuItem_Click);
-            // 
-            // cboCategories
-            // 
-            this.cboCategories.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCategories.FormattingEnabled = true;
-            this.cboCategories.Location = new System.Drawing.Point(393, 46);
-            this.cboCategories.Name = "cboCategories";
-            this.cboCategories.Size = new System.Drawing.Size(277, 28);
-            this.cboCategories.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(276, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 20);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Tool Category:";
+            groupBox1.Controls.Add(btnConfirm);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(cboCategories);
+            groupBox1.Controls.Add(cboYears);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Location = new Point(9, 39);
+            groupBox1.Margin = new Padding(2, 2, 2, 2);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(2, 2, 2, 2);
+            groupBox1.Size = new Size(944, 122);
+            groupBox1.TabIndex = 6;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Select Year For Revenue Analysis";
             // 
             // btnConfirm
             // 
-            this.btnConfirm.BackColor = System.Drawing.Color.Gold;
-            this.btnConfirm.Location = new System.Drawing.Point(322, 100);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(111, 41);
-            this.btnConfirm.TabIndex = 9;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.UseVisualStyleBackColor = false;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            btnConfirm.BackColor = Color.Gold;
+            btnConfirm.Location = new Point(469, 76);
+            btnConfirm.Margin = new Padding(2, 2, 2, 2);
+            btnConfirm.Name = "btnConfirm";
+            btnConfirm.Size = new Size(86, 31);
+            btnConfirm.TabIndex = 9;
+            btnConfirm.Text = "Confirm";
+            btnConfirm.UseVisualStyleBackColor = false;
+            btnConfirm.Click += btnConfirm_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(434, 38);
+            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(83, 15);
+            label2.TabIndex = 5;
+            label2.Text = "Tool Category:";
+            // 
+            // cboCategories
+            // 
+            cboCategories.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboCategories.FormattingEnabled = true;
+            cboCategories.Location = new Point(525, 35);
+            cboCategories.Margin = new Padding(2, 2, 2, 2);
+            cboCategories.Name = "cboCategories";
+            cboCategories.Size = new Size(216, 23);
+            cboCategories.TabIndex = 4;
+            // 
+            // cboYears
+            // 
+            cboYears.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboYears.FormattingEnabled = true;
+            cboYears.Location = new Point(310, 35);
+            cboYears.Margin = new Padding(2, 2, 2, 2);
+            cboYears.Name = "cboYears";
+            cboYears.Size = new Size(120, 23);
+            cboYears.TabIndex = 3;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(260, 38);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(32, 15);
+            label1.TabIndex = 2;
+            label1.Text = "Year:";
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.BackColor = SystemColors.AppWorkspace;
+            menuStrip1.Font = new Font("Lucida Console", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            menuStrip1.ImageScalingSize = new Size(24, 24);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { ratesToolStripMenuItem, toolsToolStripMenuItem, customersToolStripMenuItem, rentalsToolStripMenuItem, adminReportsToolStripMenuItem, MainMenuToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Padding = new Padding(5, 2, 0, 2);
+            menuStrip1.Size = new Size(966, 24);
+            menuStrip1.TabIndex = 10;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // ratesToolStripMenuItem
+            // 
+            ratesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { setToolCategoryToolStripMenuItem, updateToolRateToolStripMenuItem });
+            ratesToolStripMenuItem.Name = "ratesToolStripMenuItem";
+            ratesToolStripMenuItem.Size = new Size(52, 20);
+            ratesToolStripMenuItem.Text = "Rates";
+            // 
+            // setToolCategoryToolStripMenuItem
+            // 
+            setToolCategoryToolStripMenuItem.Name = "setToolCategoryToolStripMenuItem";
+            setToolCategoryToolStripMenuItem.Size = new Size(189, 22);
+            setToolCategoryToolStripMenuItem.Text = "Set Tool Category";
+            setToolCategoryToolStripMenuItem.Click += SetToolCategoryToolStripMenuItem_Click;
+            // 
+            // updateToolRateToolStripMenuItem
+            // 
+            updateToolRateToolStripMenuItem.Name = "updateToolRateToolStripMenuItem";
+            updateToolRateToolStripMenuItem.Size = new Size(189, 22);
+            updateToolRateToolStripMenuItem.Text = "Update Tool Rate";
+            updateToolRateToolStripMenuItem.Click += UpdateToolRateToolStripMenuItem_Click;
+            // 
+            // toolsToolStripMenuItem
+            // 
+            toolsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addToolStripMenuItem, updateToolsToolStripMenuItem, removeToolsToolStripMenuItem, viewToolsToolStripMenuItem });
+            toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            toolsToolStripMenuItem.Size = new Size(52, 20);
+            toolsToolStripMenuItem.Text = "Tools";
+            // 
+            // addToolStripMenuItem
+            // 
+            addToolStripMenuItem.Name = "addToolStripMenuItem";
+            addToolStripMenuItem.Size = new Size(154, 22);
+            addToolStripMenuItem.Text = "Add Tools";
+            addToolStripMenuItem.Click += AddToolStripMenuItem_Click;
+            // 
+            // updateToolsToolStripMenuItem
+            // 
+            updateToolsToolStripMenuItem.Name = "updateToolsToolStripMenuItem";
+            updateToolsToolStripMenuItem.Size = new Size(154, 22);
+            updateToolsToolStripMenuItem.Text = "Update Tools";
+            updateToolsToolStripMenuItem.Click += UpdateToolsToolStripMenuItem_Click;
+            // 
+            // removeToolsToolStripMenuItem
+            // 
+            removeToolsToolStripMenuItem.Name = "removeToolsToolStripMenuItem";
+            removeToolsToolStripMenuItem.Size = new Size(154, 22);
+            removeToolsToolStripMenuItem.Text = "Remove Tools";
+            removeToolsToolStripMenuItem.Click += RemoveToolsToolStripMenuItem_Click;
+            // 
+            // viewToolsToolStripMenuItem
+            // 
+            viewToolsToolStripMenuItem.Name = "viewToolsToolStripMenuItem";
+            viewToolsToolStripMenuItem.Size = new Size(154, 22);
+            viewToolsToolStripMenuItem.Text = "View Tools";
+            viewToolsToolStripMenuItem.Click += ViewToolsToolStripMenuItem_Click;
+            // 
+            // customersToolStripMenuItem
+            // 
+            customersToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addCustomerToolStripMenuItem, updateCustomerToolStripMenuItem, viewCustomersToolStripMenuItem });
+            customersToolStripMenuItem.Name = "customersToolStripMenuItem";
+            customersToolStripMenuItem.Size = new Size(80, 20);
+            customersToolStripMenuItem.Text = "Customers";
+            // 
+            // addCustomerToolStripMenuItem
+            // 
+            addCustomerToolStripMenuItem.Name = "addCustomerToolStripMenuItem";
+            addCustomerToolStripMenuItem.Size = new Size(175, 22);
+            addCustomerToolStripMenuItem.Text = "Add Customer";
+            addCustomerToolStripMenuItem.Click += AddCustomerToolStripMenuItem_Click;
+            // 
+            // updateCustomerToolStripMenuItem
+            // 
+            updateCustomerToolStripMenuItem.Name = "updateCustomerToolStripMenuItem";
+            updateCustomerToolStripMenuItem.Size = new Size(175, 22);
+            updateCustomerToolStripMenuItem.Text = "Update Customer";
+            updateCustomerToolStripMenuItem.Click += UpdateCustomerToolStripMenuItem_Click;
+            // 
+            // viewCustomersToolStripMenuItem
+            // 
+            viewCustomersToolStripMenuItem.Name = "viewCustomersToolStripMenuItem";
+            viewCustomersToolStripMenuItem.Size = new Size(175, 22);
+            viewCustomersToolStripMenuItem.Text = "View Customers";
+            viewCustomersToolStripMenuItem.Click += viewCustomersToolStripMenuItem_Click;
+            // 
+            // rentalsToolStripMenuItem
+            // 
+            rentalsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { rentToolToolStripMenuItem, returnToolsToolStripMenuItem, viewRentalsToolStripMenuItem });
+            rentalsToolStripMenuItem.Name = "rentalsToolStripMenuItem";
+            rentalsToolStripMenuItem.Size = new Size(66, 20);
+            rentalsToolStripMenuItem.Text = "Rentals";
+            // 
+            // rentToolToolStripMenuItem
+            // 
+            rentToolToolStripMenuItem.Name = "rentToolToolStripMenuItem";
+            rentToolToolStripMenuItem.Size = new Size(154, 22);
+            rentToolToolStripMenuItem.Text = "Rent Tools";
+            rentToolToolStripMenuItem.Click += RentToolToolStripMenuItem_Click;
+            // 
+            // returnToolsToolStripMenuItem
+            // 
+            returnToolsToolStripMenuItem.Name = "returnToolsToolStripMenuItem";
+            returnToolsToolStripMenuItem.Size = new Size(154, 22);
+            returnToolsToolStripMenuItem.Text = "Return Tools";
+            returnToolsToolStripMenuItem.Click += ReturnToolsToolStripMenuItem_Click;
+            // 
+            // viewRentalsToolStripMenuItem
+            // 
+            viewRentalsToolStripMenuItem.Name = "viewRentalsToolStripMenuItem";
+            viewRentalsToolStripMenuItem.Size = new Size(154, 22);
+            viewRentalsToolStripMenuItem.Text = "View Rentals";
+            viewRentalsToolStripMenuItem.Click += ViewRentalsToolStripMenuItem_Click;
+            // 
+            // adminReportsToolStripMenuItem
+            // 
+            adminReportsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { annualRevenueAnalysisToolStripMenuItem });
+            adminReportsToolStripMenuItem.Name = "adminReportsToolStripMenuItem";
+            adminReportsToolStripMenuItem.Size = new Size(108, 20);
+            adminReportsToolStripMenuItem.Text = "Admin Reports";
+            // 
+            // annualRevenueAnalysisToolStripMenuItem
+            // 
+            annualRevenueAnalysisToolStripMenuItem.Name = "annualRevenueAnalysisToolStripMenuItem";
+            annualRevenueAnalysisToolStripMenuItem.Size = new Size(231, 22);
+            annualRevenueAnalysisToolStripMenuItem.Text = "Annual Revenue Analysis";
+            annualRevenueAnalysisToolStripMenuItem.Click += AnnualRevenueAnalysisToolStripMenuItem_Click;
+            // 
+            // MainMenuToolStripMenuItem
+            // 
+            MainMenuToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
+            MainMenuToolStripMenuItem.Name = "MainMenuToolStripMenuItem";
+            MainMenuToolStripMenuItem.Size = new Size(80, 20);
+            MainMenuToolStripMenuItem.Text = "Main Menu";
+            MainMenuToolStripMenuItem.Click += MainMenuToolStripMenuItem_Click;
+            // 
+            // formsPlot1
+            // 
+            formsPlot1.Location = new Point(9, 166);
+            formsPlot1.Margin = new Padding(4, 3, 4, 3);
+            formsPlot1.Name = "formsPlot1";
+            formsPlot1.Size = new Size(944, 395);
+            formsPlot1.TabIndex = 11;
             // 
             // frmAnnualToolTypeAnalysis
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 764);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "frmAnnualToolTypeAnalysis";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Annual Tool Type Analysis";
-            this.Load += new System.EventHandler(this.frmAnnualToolTypeAnalysis_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(966, 573);
+            Controls.Add(formsPlot1);
+            Controls.Add(menuStrip1);
+            Controls.Add(groupBox1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Margin = new Padding(2, 2, 2, 2);
+            Name = "frmAnnualToolTypeAnalysis";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Annual Tool Type Analysis";
+            Load += frmAnnualToolTypeAnalysis_Load;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -336,5 +332,6 @@ namespace ToolSYS.Presentation
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cboCategories;
         private System.Windows.Forms.Button btnConfirm;
+        private ScottPlot.FormsPlot formsPlot1;
     }
 }
