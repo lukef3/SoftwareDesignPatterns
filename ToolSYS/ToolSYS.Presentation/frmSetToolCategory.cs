@@ -35,7 +35,8 @@ namespace ToolSYS.Presentation
                 };
 
                 _rateService.AddRate(rate);
-                MessageBox.Show("Rate successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Rate successfully added!", "Success", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
 
                 txtCategoryCode.Clear();
                 txtCategoryDesc.Clear();
@@ -45,11 +46,6 @@ namespace ToolSYS.Presentation
             {
                 MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void frmSetToolCategory_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void SetToolCategoryToolStripMenuItem_Click(object sender, EventArgs e)

@@ -11,6 +11,7 @@
   <ItemGroup>
     <Compile Remove="Analysis.cs" />
     <Compile Remove="Customer.cs" />
+    <Compile Remove="DBConnect.cs" />
     <Compile Remove="Rate.cs" />
     <Compile Remove="Rental.cs" />
     <Compile Remove="RentalItem.cs" />

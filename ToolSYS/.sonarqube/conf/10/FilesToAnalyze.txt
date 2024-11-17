@@ -1,0 +1,6 @@
+﻿C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Factories\CustomerFactory.cs
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Services\AnalysisService.cs
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Services\CustomerService.cs
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Services\RateService.cs
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Services\RentalService.cs
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Services\ToolService.cs

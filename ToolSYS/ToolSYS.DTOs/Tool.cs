@@ -14,6 +14,7 @@
             this.categoryCode = "";
             this.toolDescription = "";
             this.toolManufacturer = "";
+            this.toolManufacturer = "";
         }
 
         public Tool(int toolID, string categoryCode, string toolDescription, string toolManufacturer)

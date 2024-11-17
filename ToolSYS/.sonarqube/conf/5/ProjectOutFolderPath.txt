@@ -1,0 +1,1 @@
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\.sonarqube\out\5

@@ -11,7 +11,7 @@ namespace ToolSYS.Data
 {
     public class CustomerData
     {
-        private string _connectionString = DBConnect.oradb;
+        private readonly string _connectionString = DBConnect.oradb;
 
         public int GetNextCustomerID()
         {
@@ -89,7 +89,7 @@ namespace ToolSYS.Data
         }
 
 
-        public DataSet GetFilteredCustomers(String custIDAsString, String forename, String surname, String email, String phone, String eircode, String phrase)
+        public static DataSet GetFilteredCustomers(String custIDAsString, String forename, String surname, String email, String phone, String eircode, String phrase)
         {
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
 
@@ -107,7 +107,7 @@ namespace ToolSYS.Data
             return ds;
 
         }
-        private String DetermineSQLQuery(String custIDAsString, String forename, String surname, String email, String phone, String eircode, String phrase)
+        private static String DetermineSQLQuery(String custIDAsString, String forename, String surname, String email, String phone, String eircode, String phrase)
         {
             String sqlQuery = "";
 
@@ -162,6 +162,47 @@ namespace ToolSYS.Data
                 }
             }
             return sqlQuery;
+        }
+
+        public Customer GetCustomerData(int customerID)
+        {
+            using (var conn = new OracleConnection(_connectionString))
+            {
+                string sqlQuery = "SELECT * FROM Customers WHERE CustomerID = :customerID";
+                OracleCommand cmd = new OracleCommand(sqlQuery, conn);
+                cmd.Parameters.Add(name: ":customerID", customerID);
+
+                conn.Open();
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        return new RegularCustomer
+                        {
+                            customerID = reader.GetInt32(0),
+                            forename = reader.GetString(1),
+                            surname = reader.GetString(2),
+                            email = reader.GetString(3),
+                            phone = reader.GetString(4),
+                            eircode = reader.GetString(5)
+                        };
+                    }
+                }
+            }
+            throw new ArgumentException("Customer not found.");
+        }
+
+        public int GetRentalFrequency(int customerID)
+        {   
+            using (var conn = new OracleConnection(_connectionString))
+            {
+                string sqlQuery = "SELECT COUNT(*) FROM Rentals WHERE CustomerID = :customerID";
+                OracleCommand cmd = new OracleCommand(sqlQuery, conn);
+                cmd.Parameters.Add(":customerID", customerID);
+
+                conn.Open();
+                return Convert.ToInt32(cmd.ExecuteScalar());
+            }
         }
     }
 }

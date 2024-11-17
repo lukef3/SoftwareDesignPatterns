@@ -33,7 +33,7 @@ namespace ToolSYS.Presentation
                 string eircode = txtEircode.Text;
                 string phrase = txtPhrase.Text;
 
-                DataSet results = _customerService.GetFilteredCustomers(customerID, forename, surname, email, phone, eircode, phrase);
+                DataSet results = CustomerService.GetFilteredCustomers(customerID, forename, surname, email, phone, eircode, phrase);
 
                 dgvCustomers.DataSource = results.Tables["customer"];
                 dgvCustomers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -56,16 +56,11 @@ namespace ToolSYS.Presentation
             txtPhrase.Clear();
         }
 
-        private void frmUpdateCustomer_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
             {
-                Customer customer = new Customer {
+                Customer customer = new RegularCustomer() {
                     customerID = Convert.ToInt32(txtUpdCustomerID.Text),
                     forename = txtUpdForename.Text,
                     surname = txtUpdSurname.Text,

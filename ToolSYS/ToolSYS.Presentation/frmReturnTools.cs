@@ -26,7 +26,7 @@ namespace ToolSYS.Presentation
             {
                 try
                 {
-                    DataTable rentalItems = _rentalService.GetRentalItems(rentalID);
+                    DataTable rentalItems = RentalService.GetRentalItems(rentalID);
 
                     dgvRentalItems.DataSource = rentalItems;
                     dgvRentalItems.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -55,12 +55,12 @@ namespace ToolSYS.Presentation
                 try
                 {
                     // Return the tool
-                    _rentalService.ReturnTool(rentalID, toolID);
+                    RentalService.ReturnTool(rentalID, toolID);
 
                     MessageBox.Show("Tool successfully returned.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Refresh the DataGridView
-                    DataTable rentalItems = _rentalService.GetRentalItems(rentalID);
+                    DataTable rentalItems = RentalService.GetRentalItems(rentalID);
 
                     dgvRentalItems.DataSource = rentalItems;
                     dgvRentalItems.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -92,11 +92,6 @@ namespace ToolSYS.Presentation
         private void dgvRentalItems_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtToolID.Text = dgvRentalItems.Rows[dgvRentalItems.CurrentRow.Index].Cells[0].Value.ToString();
-        }
-
-        private void frmReturnTools_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void SetToolCategoryToolStripMenuItem_Click(object sender, EventArgs e)
@@ -158,11 +153,6 @@ namespace ToolSYS.Presentation
         private void MainMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Navigation.MainMenu(this);
-        }
-
-        private void dgvRentalItems_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
 

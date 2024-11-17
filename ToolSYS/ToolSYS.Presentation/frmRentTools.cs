@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ToolSYS.Business.Builders;
 using ToolSYS.Business.Services;
 using ToolSYS.Entities;
 
@@ -32,7 +33,7 @@ namespace ToolSYS.Presentation
         {
             dtpFrom.MinDate = DateTime.Today;
             dtpTo.MinDate = DateTime.Today;
-            txtRentalID.Text = _rentalService.GetNextRentalID().ToString();
+            txtRentalID.Text = RentalService.GetNextRentalID().ToString();
             cboCategories.Items.Add("");
             DataSet categories = _rateService.GetAllCategories();
 
@@ -92,18 +93,20 @@ namespace ToolSYS.Presentation
             try
             {
                 if (String.IsNullOrEmpty(txtCustomerID.Text))
-                    throw new Exception("Please select a customer.");
+                    throw new ArgumentException("Please select a customer.");
                 if (dgvTools.SelectedCells.Count == 0)
-                    throw new Exception("Please select a tool.");
+                    throw new ArgumentException("Please select a tool.");
 
+                int customerID = Convert.ToInt32(txtCustomerID.Text);
                 String id = dgvTools.Rows[dgvTools.CurrentRow.Index].Cells[0].Value.ToString();
                 String categoryCode = dgvTools.Rows[dgvTools.CurrentRow.Index].Cells[1].Value.ToString();
                 String description = dgvTools.Rows[dgvTools.CurrentRow.Index].Cells[2].Value.ToString();
                 String manufacturer = dgvTools.Rows[dgvTools.CurrentRow.Index].Cells[3].Value.ToString();
-                String rentDate = String.Format("{0:dd-MMM-yy}", dtpFrom.Value);
-                String returnDate = String.Format("{0:dd-MMM-yy}", dtpTo.Value);
+                DateTime rentDate = dtpFrom.Value;
+                DateTime returnDate = dtpTo.Value;
 
-                String rentalFee = _rentalService.CalculateRentalFee(categoryCode, dtpFrom.Value, dtpTo.Value).ToString();
+                // Calculate the rental fee with discounts applied
+                decimal rentalFee = _rentalService.CalculateRentalFee(customerID, categoryCode, rentDate, returnDate);
 
                 if (dgvRental.Rows.Count >= 1)
                 {
@@ -114,19 +117,19 @@ namespace ToolSYS.Presentation
                             MessageBox.Show("Tool Has Already Been Added To Rental", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
-
                     }
                 }
 
                 dgvRental.Rows.Add(
-                    id, 
-                    categoryCode, 
-                    description, 
-                    manufacturer, 
-                    rentDate, 
-                    returnDate, 
-                    rentalFee
+                    id,
+                    categoryCode,
+                    description,
+                    manufacturer,
+                    rentDate.ToString("dd-MMM-yy"),
+                    returnDate.ToString("dd-MMM-yy"),
+                    rentalFee.ToString("0.00")
                 );
+
                 UpdateTotalFee();
             }
             catch (Exception ex)
@@ -147,31 +150,36 @@ namespace ToolSYS.Presentation
             try
             {
                 if (String.IsNullOrEmpty(txtCustomerID.Text))
-                    throw new Exception("Please select a customer.");
-                if (String.IsNullOrEmpty(txtTotalFee.Text))
-                    throw new Exception("No Tools Have Been Added To The Rental.");
+                    throw new ArgumentException("Please select a customer.");
 
-                Rental rental = new Rental 
-                { 
-                   rentalID = Convert.ToInt32(txtRentalID.Text),
-                   customerID = Convert.ToInt32(txtCustomerID.Text),
-                   transactionDate = DateTime.Today,
-                   totalFee = Convert.ToDecimal(txtTotalFee.Text)
-                };
+                if (dgvRental.Rows.Count == 0)
+                    throw new ArgumentException("No tools have been added to the rental.");
 
-                List<RentalItem> rentalItems = dgvRental.Rows.Cast<DataGridViewRow>()
-                    .Select(row => new RentalItem
+                var rentalBuilder = new RentalBuilder()
+                    .SetRentalID(Convert.ToInt32(txtRentalID.Text))
+                    .SetCustomerID(Convert.ToInt32(txtCustomerID.Text))
+                    .SetTransactionDate(DateTime.Today)
+                    .SetTotalFee(Convert.ToDecimal(txtTotalFee.Text));
+
+                foreach (DataGridViewRow row in dgvRental.Rows)
+                {
+                    var rentalItem = new RentalItem
                     {
-                        toolID = Convert.ToInt32(row.Cells["ToolID"].Value),
                         rentalID = Convert.ToInt32(txtRentalID.Text),
+                        toolID = Convert.ToInt32(row.Cells["ToolID"].Value),
                         rentDate = DateTime.Parse(row.Cells["RentDate"].Value.ToString()),
                         returnDate = DateTime.Parse(row.Cells["ReturnDate"].Value.ToString()),
                         rentalFee = Convert.ToDecimal(row.Cells["RentalFee"].Value)
-                    }).ToList();
+                    };
 
-                _rentalService.ConfirmRental(rental, rentalItems);
+                    rentalBuilder.AddRentalItem(rentalItem);
+                }
 
-                MessageBox.Show("Rental Succesful", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Rental rental = rentalBuilder.Build();
+
+                _rentalService.ConfirmRental(rental);
+
+                MessageBox.Show("Rental Successful", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 RefreshForm();
             }
             catch (Exception ex)
@@ -182,7 +190,7 @@ namespace ToolSYS.Presentation
 
         private void RefreshForm()
         {
-            txtRentalID.Text = _rentalService.GetNextRentalID().ToString();
+            txtRentalID.Text = RentalService.GetNextRentalID().ToString();
             txtCustomerSearch.Clear();
             txtCustomerID.Clear();
             txtForename.Clear();

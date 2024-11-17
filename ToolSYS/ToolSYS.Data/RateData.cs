@@ -6,7 +6,7 @@ namespace ToolSYS.Data
 {
     public class RateData
     {
-        private string _connectionString = DBConnect.oradb;
+        private readonly string _connectionString = DBConnect.oradb;
 
         public void AddRate(Rate rate)
         {
@@ -43,8 +43,10 @@ namespace ToolSYS.Data
                         rate = dr.GetDecimal(2)
                     };
                 }
-
-                return null;
+                else
+                {
+                    return null;
+                }
             }
         }
 

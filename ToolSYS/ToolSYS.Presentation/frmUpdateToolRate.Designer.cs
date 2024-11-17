@@ -77,7 +77,6 @@ namespace ToolSYS.Presentation
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Enter Changes:";
             this.groupBox2.Visible = false;
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // label3
             // 

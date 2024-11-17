@@ -7,7 +7,7 @@ namespace ToolSYS.Business.Services
 {
     public class RateService
     {
-        private RateData _rateData;
+        private readonly RateData _rateData;
 
         public RateService()
         {

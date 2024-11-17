@@ -569,7 +569,6 @@ namespace ToolSYS.Presentation
             this.Name = "frmUpdateCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUpdateCustomer";
-            this.Load += new System.EventHandler(this.frmUpdateCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

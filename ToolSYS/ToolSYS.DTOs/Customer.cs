@@ -1,33 +1,37 @@
 ﻿namespace ToolSYS.Entities
 {
-    public class Customer
+    // Base Customer class
+    public abstract class Customer
     {
         public int customerID { get; set; }
-        public String forename { get; set; }
-        public String surname { get; set; }
-        public String email { get; set; }
-        public String phone { get; set; }
-        public String eircode { get; set; }
+        public string forename { get; set; }
+        public string surname { get; set; }
+        public string email { get; set; }
+        public string phone { get; set; }
+        public string eircode { get; set; }
 
+        public abstract decimal ApplyDiscount(decimal baseFee);
+    }
 
-        public Customer(int customerID, String forename, String surname, String email, String phone, String eircode)
+    public class RegularCustomer : Customer
+    {
+        public override decimal ApplyDiscount(decimal baseFee)
         {
-            this.customerID = customerID;
-            this.forename = forename;
-            this.surname = surname;
-            this.email = email;
-            this.phone = phone;
-            this.eircode = eircode;
-        }
-
-        public Customer()
-        {
-            this.customerID = 0;
-            this.forename = "";
-            this.surname = "";
-            this.email = "";
-            this.phone = "";
-            this.eircode = "";
+            // Regular customers don't receive discounts
+            return baseFee;
         }
     }
+
+    public class VipCustomer : Customer
+    {
+        public int rentalFrequency { get; set; }
+
+        public override decimal ApplyDiscount(decimal baseFee)
+        {
+            // VIP customers get a discount of 5% per rental up to a maximum of 20%
+            int discountPercentage = Math.Min(20, rentalFrequency * 5);
+            return baseFee * (1 - discountPercentage / 100m);
+        }
+    }
+
 }

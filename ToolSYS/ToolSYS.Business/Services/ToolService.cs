@@ -8,35 +8,29 @@ namespace ToolSYS.Business.Services
 {
     public class ToolService
     {
-        private ToolData toolData;
-        private ToolFactory toolFactory;
+        private readonly ToolData toolData;
 
         public ToolService()
         {
             toolData = new ToolData();
-            toolFactory = new GeneralToolFactory();
         }
 
-        public void AddTool(int toolID, string categoryCode, string description, string manufacturer)
+        public void AddTool(Tool tool)
         {
-            var tool = toolFactory.CreateTool(toolID, categoryCode, description, manufacturer);
 
             ValidateTool(tool, isUpdate: false);
-
             toolData.AddTool(tool);
         }
 
-        public void UpdateTool(int toolID, string categoryCode, string description, string manufacturer, string status)
+        public void UpdateTool(Tool tool)
         {
-            var tool = toolFactory.CreateTool(toolID, categoryCode, description, manufacturer, status);
-
             ValidateTool(tool, isUpdate: true);
             toolData.UpdateTool(tool);
         }
 
         public void RemoveTool(int toolID)
         {
-            if (!toolData.DoesToolIDExist(toolID))
+            if (!ToolData.DoesToolIDExist(toolID))
                 throw new ArgumentException("Invalid Tool ID.");
 
             toolData.RemoveTool(toolID);
@@ -62,7 +56,7 @@ namespace ToolSYS.Business.Services
             return toolData.GetNextToolID();
         }
 
-        private void ValidateTool(Tool tool, bool isUpdate)
+        private static void ValidateTool(Tool tool, bool isUpdate)
         {
             if (string.IsNullOrEmpty(tool.toolDescription) || tool.toolDescription.Length > 50)
                 throw new ArgumentException("Tool description must be between 1 and 50 characters.");
@@ -76,7 +70,7 @@ namespace ToolSYS.Business.Services
             if (string.IsNullOrEmpty(tool.toolManufacturer) || tool.toolManufacturer.Length > 50)
                 throw new ArgumentException("Tool manufacturer must be between 1 and 50 characters.");
 
-            if (!isUpdate && toolData.DoesToolIDExist(tool.toolID))
+            if (!isUpdate && ToolData.DoesToolIDExist(tool.toolID))
                 throw new ArgumentException("A tool with this ID already exists.");
         }
     }

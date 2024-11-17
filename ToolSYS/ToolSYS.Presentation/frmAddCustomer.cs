@@ -86,7 +86,7 @@ namespace ToolSYS.Presentation
         {
             try
             {
-                Customer customer = new Customer
+                Customer customer = new RegularCustomer
                 {
                     customerID = Convert.ToInt32(txtCustomerID.Text),
                     forename = txtForename.Text,

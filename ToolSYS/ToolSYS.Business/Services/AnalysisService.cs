@@ -6,21 +6,21 @@ namespace ToolSYS.Business.Services
 {
     public class AnalysisService
     {
-        private AnalysisData analysisData;
+        private readonly AnalysisData _analysisData;
 
         public AnalysisService()
         {
-            analysisData = new AnalysisData();
+            _analysisData = new AnalysisData();
         }
 
         public DataTable GetDistinctYears()
         {
-            return analysisData.GetDistinctYears();
+            return _analysisData.GetDistinctYears();
         }
 
         public (string[] Months, double[] Revenues) GetMonthlyRevenues(int year)
         {
-            DataTable revenueTable = analysisData.GetMonthlyRevenues(year);
+            DataTable revenueTable = _analysisData.GetMonthlyRevenues(year);
 
             string[] months = new string[12];
             double[] revenues = new double[12];
@@ -42,7 +42,7 @@ namespace ToolSYS.Business.Services
 
         public (string[] Months, double[] Rentals) GetMonthlyToolRentals(int year, string categoryCode)
         {
-            DataTable dt = analysisData.GetMonthlyRentalsByCategory(year, categoryCode);
+            DataTable dt = _analysisData.GetMonthlyRentalsByCategory(year, categoryCode);
 
             string[] months = new string[12];
             double[] rentals = new double[12];
@@ -62,7 +62,7 @@ namespace ToolSYS.Business.Services
             return (months, rentals);
         }
 
-        private string GetMonthName(int month)
+        private static string GetMonthName(int month)
         {
             string[] monthNames = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
             return month >= 1 && month <= 12 ? monthNames[month - 1] : "Invalid";

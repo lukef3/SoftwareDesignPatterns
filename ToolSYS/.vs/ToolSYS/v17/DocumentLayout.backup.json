@@ -3,96 +3,120 @@
   "WorkspaceRootPath": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\frmreturntools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\frmreturntools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.business\\builders\\irentalbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|solutionrelative:toolsys.business\\builders\\irentalbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\frmreturntools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\frmreturntools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.business\\factories\\customerfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|solutionrelative:toolsys.business\\factories\\customerfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\frmrenttools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\frmrenttools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.business\\builders\\rentalbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|solutionrelative:toolsys.business\\builders\\rentalbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\frmrenttools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\frmrenttools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{688AD2ED-70AA-4881-81FE-16AC8B2C5C8D}|ToolSYS.Data\\ToolSYS.Data.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.data\\rentaldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{688AD2ED-70AA-4881-81FE-16AC8B2C5C8D}|ToolSYS.Data\\ToolSYS.Data.csproj|solutionrelative:toolsys.data\\rentaldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.business\\services\\rentalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|solutionrelative:toolsys.business\\services\\rentalservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\frmsettoolcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\frmsettoolcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\frmupdatecustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\frmupdatecustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{605D721C-D4D1-4C31-B2FF-F3650851AD52}|ToolSYS.DTOs\\ToolSYS.Entities.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.dtos\\rentalitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{605D721C-D4D1-4C31-B2FF-F3650851AD52}|ToolSYS.DTOs\\ToolSYS.Entities.csproj|solutionrelative:toolsys.dtos\\rentalitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.business\\services\\rateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|solutionrelative:toolsys.business\\services\\rateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{688AD2ED-70AA-4881-81FE-16AC8B2C5C8D}|ToolSYS.Data\\ToolSYS.Data.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.data\\rentalitemdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{688AD2ED-70AA-4881-81FE-16AC8B2C5C8D}|ToolSYS.Data\\ToolSYS.Data.csproj|solutionrelative:toolsys.data\\rentalitemdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{688AD2ED-70AA-4881-81FE-16AC8B2C5C8D}|ToolSYS.Data\\ToolSYS.Data.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.data\\tooldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{688AD2ED-70AA-4881-81FE-16AC8B2C5C8D}|ToolSYS.Data\\ToolSYS.Data.csproj|solutionrelative:toolsys.data\\tooldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.business\\services\\analysisservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|solutionrelative:toolsys.business\\services\\analysisservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.business\\services\\toolservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|solutionrelative:toolsys.business\\services\\toolservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.business\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|solutionrelative:toolsys.business\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{605D721C-D4D1-4C31-B2FF-F3650851AD52}|ToolSYS.DTOs\\ToolSYS.Entities.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.dtos\\rate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{605D721C-D4D1-4C31-B2FF-F3650851AD52}|ToolSYS.DTOs\\ToolSYS.Entities.csproj|solutionrelative:toolsys.dtos\\rate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{605D721C-D4D1-4C31-B2FF-F3650851AD52}|ToolSYS.DTOs\\ToolSYS.Entities.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.dtos\\rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{605D721C-D4D1-4C31-B2FF-F3650851AD52}|ToolSYS.DTOs\\ToolSYS.Entities.csproj|solutionrelative:toolsys.dtos\\rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{688AD2ED-70AA-4881-81FE-16AC8B2C5C8D}|ToolSYS.Data\\ToolSYS.Data.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.data\\ratedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{688AD2ED-70AA-4881-81FE-16AC8B2C5C8D}|ToolSYS.Data\\ToolSYS.Data.csproj|solutionrelative:toolsys.data\\ratedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{688AD2ED-70AA-4881-81FE-16AC8B2C5C8D}|ToolSYS.Data\\ToolSYS.Data.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.data\\rentaldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{688AD2ED-70AA-4881-81FE-16AC8B2C5C8D}|ToolSYS.Data\\ToolSYS.Data.csproj|solutionrelative:toolsys.data\\rentaldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.business\\toolsys.business.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|solutionrelative:toolsys.business\\toolsys.business.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{688AD2ED-70AA-4881-81FE-16AC8B2C5C8D}|ToolSYS.Data\\ToolSYS.Data.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.data\\customerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{688AD2ED-70AA-4881-81FE-16AC8B2C5C8D}|ToolSYS.Data\\ToolSYS.Data.csproj|solutionrelative:toolsys.data\\customerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{688AD2ED-70AA-4881-81FE-16AC8B2C5C8D}|ToolSYS.Data\\ToolSYS.Data.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.data\\analysisdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{688AD2ED-70AA-4881-81FE-16AC8B2C5C8D}|ToolSYS.Data\\ToolSYS.Data.csproj|solutionrelative:toolsys.data\\analysisdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.business\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|solutionrelative:toolsys.business\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\frmannualtooltypeanalysis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\frmannualtooltypeanalysis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.business\\services\\toolservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|solutionrelative:toolsys.business\\services\\toolservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{688AD2ED-70AA-4881-81FE-16AC8B2C5C8D}|ToolSYS.Data\\ToolSYS.Data.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.data\\dbconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{688AD2ED-70AA-4881-81FE-16AC8B2C5C8D}|ToolSYS.Data\\ToolSYS.Data.csproj|solutionrelative:toolsys.data\\dbconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\frmviewcustomers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\frmviewcustomers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\frmupdatecustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\frmupdatecustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\frmreturntools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\frmreturntools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\frmviewrentals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\frmviewrentals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\frmviewrentals.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\frmviewrentals.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\frmupdatetoolrate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\frmupdatetoolrate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\frmupdatetoolrate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\frmupdatetoolrate.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\frmsettoolcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\frmsettoolcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\frmsettoolcategory.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\frmsettoolcategory.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\frmreturntools.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\frmreturntools.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.business\\services\\analysisservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|solutionrelative:toolsys.business\\services\\analysisservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\frmaddtool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\frmaddtool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605D721C-D4D1-4C31-B2FF-F3650851AD52}|ToolSYS.DTOs\\ToolSYS.Entities.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.dtos\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605D721C-D4D1-4C31-B2FF-F3650851AD52}|ToolSYS.DTOs\\ToolSYS.Entities.csproj|solutionrelative:toolsys.dtos\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\frmannualrevenueanalysis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\frmannualrevenueanalysis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\frmannualtooltypeanalysis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\frmannualtooltypeanalysis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{688AD2ED-70AA-4881-81FE-16AC8B2C5C8D}|ToolSYS.Data\\ToolSYS.Data.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.data\\tooldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{688AD2ED-70AA-4881-81FE-16AC8B2C5C8D}|ToolSYS.Data\\ToolSYS.Data.csproj|solutionrelative:toolsys.data\\tooldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{605D721C-D4D1-4C31-B2FF-F3650851AD52}|ToolSYS.DTOs\\ToolSYS.Entities.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.dtos\\tool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{605D721C-D4D1-4C31-B2FF-F3650851AD52}|ToolSYS.DTOs\\ToolSYS.Entities.csproj|solutionrelative:toolsys.dtos\\tool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\frmannualtooltypeanalysis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\frmannualtooltypeanalysis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -102,7 +126,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 193,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -110,15 +134,105 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmRentTools.cs [Design]",
-              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmRentTools.cs",
-              "RelativeDocumentMoniker": "ToolSYS.Presentation\\frmRentTools.cs",
-              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmRentTools.cs [Design]",
-              "RelativeToolTip": "ToolSYS.Presentation\\frmRentTools.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "IRentalBuilder.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Builders\\IRentalBuilder.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Business\\Builders\\IRentalBuilder.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Builders\\IRentalBuilder.cs",
+              "RelativeToolTip": "ToolSYS.Business\\Builders\\IRentalBuilder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T16:37:38.632Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-17T20:06:49.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Rental.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\Rental.cs",
+              "RelativeDocumentMoniker": "ToolSYS.DTOs\\Rental.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\Rental.cs",
+              "RelativeToolTip": "ToolSYS.DTOs\\Rental.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T20:03:00.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RentalBuilder.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Builders\\RentalBuilder.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Business\\Builders\\RentalBuilder.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Builders\\RentalBuilder.cs",
+              "RelativeToolTip": "ToolSYS.Business\\Builders\\RentalBuilder.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowCIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T20:01:04.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ToolSYS.Business",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\ToolSYS.Business.csproj",
+              "RelativeDocumentMoniker": "ToolSYS.Business\\ToolSYS.Business.csproj",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\ToolSYS.Business.csproj",
+              "RelativeToolTip": "ToolSYS.Business\\ToolSYS.Business.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-17T20:00:43.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "frmViewCustomers.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmViewCustomers.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Presentation\\frmViewCustomers.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmViewCustomers.cs",
+              "RelativeToolTip": "ToolSYS.Presentation\\frmViewCustomers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T19:07:40.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "frmSetToolCategory.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmSetToolCategory.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Presentation\\frmSetToolCategory.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmSetToolCategory.cs",
+              "RelativeToolTip": "ToolSYS.Presentation\\frmSetToolCategory.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T19:04:17.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "frmReturnTools.Designer.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmReturnTools.Designer.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Presentation\\frmReturnTools.Designer.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmReturnTools.Designer.cs",
+              "RelativeToolTip": "ToolSYS.Presentation\\frmReturnTools.Designer.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAewHwAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T19:03:38.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "frmReturnTools.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmReturnTools.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Presentation\\frmReturnTools.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmReturnTools.cs",
+              "RelativeToolTip": "ToolSYS.Presentation\\frmReturnTools.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAMwD4AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T19:03:32.96Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -128,281 +242,259 @@
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\frmRentTools.cs",
               "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmRentTools.cs",
               "RelativeToolTip": "ToolSYS.Presentation\\frmRentTools.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAowEQAAABsAAAAAAAAAA==",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAmwK4AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T16:31:52.153Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "frmUpdateCustomer.cs",
-              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmUpdateCustomer.cs",
-              "RelativeDocumentMoniker": "ToolSYS.Presentation\\frmUpdateCustomer.cs",
-              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmUpdateCustomer.cs",
-              "RelativeToolTip": "ToolSYS.Presentation\\frmUpdateCustomer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAABfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T16:19:09.103Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmSetToolCategory.cs",
-              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmSetToolCategory.cs",
-              "RelativeDocumentMoniker": "ToolSYS.Presentation\\frmSetToolCategory.cs",
-              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmSetToolCategory.cs",
-              "RelativeToolTip": "ToolSYS.Presentation\\frmSetToolCategory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T16:19:02.284Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RentalData.cs",
-              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\RentalData.cs",
-              "RelativeDocumentMoniker": "ToolSYS.Data\\RentalData.cs",
-              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\RentalData.cs",
-              "RelativeToolTip": "ToolSYS.Data\\RentalData.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAiwCIAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T16:12:52.888Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmReturnTools.cs [Design]",
-              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmReturnTools.cs",
-              "RelativeDocumentMoniker": "ToolSYS.Presentation\\frmReturnTools.cs",
-              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmReturnTools.cs [Design]",
-              "RelativeToolTip": "ToolSYS.Presentation\\frmReturnTools.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T16:05:56.709Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmReturnTools.cs",
-              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmReturnTools.cs",
-              "RelativeDocumentMoniker": "ToolSYS.Presentation\\frmReturnTools.cs",
-              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmReturnTools.cs",
-              "RelativeToolTip": "ToolSYS.Presentation\\frmReturnTools.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAADwv1cAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T16:01:16.087Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "RentalItem.cs",
-              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\RentalItem.cs",
-              "RelativeDocumentMoniker": "ToolSYS.DTOs\\RentalItem.cs",
-              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\RentalItem.cs",
-              "RelativeToolTip": "ToolSYS.DTOs\\RentalItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T15:59:09.919Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Rental.cs",
-              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\Rental.cs",
-              "RelativeDocumentMoniker": "ToolSYS.DTOs\\Rental.cs",
-              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\Rental.cs",
-              "RelativeToolTip": "ToolSYS.DTOs\\Rental.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T15:58:59.528Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ToolData.cs",
-              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\ToolData.cs",
-              "RelativeDocumentMoniker": "ToolSYS.Data\\ToolData.cs",
-              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\ToolData.cs",
-              "RelativeToolTip": "ToolSYS.Data\\ToolData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T15:58:52.248Z",
+              "WhenOpened": "2024-11-17T19:03:13.317Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "RentalItemData.cs",
-              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\RentalItemData.cs",
-              "RelativeDocumentMoniker": "ToolSYS.Data\\RentalItemData.cs",
-              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\RentalItemData.cs",
-              "RelativeToolTip": "ToolSYS.Data\\RentalItemData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T15:58:48.954Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "RateData.cs",
-              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\RateData.cs",
-              "RelativeDocumentMoniker": "ToolSYS.Data\\RateData.cs",
-              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\RateData.cs",
-              "RelativeToolTip": "ToolSYS.Data\\RateData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T15:58:43.389Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "CustomerData.cs",
-              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\CustomerData.cs",
-              "RelativeDocumentMoniker": "ToolSYS.Data\\CustomerData.cs",
-              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\CustomerData.cs",
-              "RelativeToolTip": "ToolSYS.Data\\CustomerData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T15:58:38.093Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Rate.cs",
-              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\Rate.cs",
-              "RelativeDocumentMoniker": "ToolSYS.DTOs\\Rate.cs",
-              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\Rate.cs",
-              "RelativeToolTip": "ToolSYS.DTOs\\Rate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T15:57:08.474Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
               "Title": "ToolService.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Services\\ToolService.cs",
               "RelativeDocumentMoniker": "ToolSYS.Business\\Services\\ToolService.cs",
               "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Services\\ToolService.cs",
               "RelativeToolTip": "ToolSYS.Business\\Services\\ToolService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwCEAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAQwDgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T14:45:07.314Z",
+              "WhenOpened": "2024-11-17T16:43:18.47Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
+              "Title": "DBConnect.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\DBConnect.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Data\\DBConnect.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\DBConnect.cs",
+              "RelativeToolTip": "ToolSYS.Data\\DBConnect.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T17:16:24.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "RentalService.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Services\\RentalService.cs",
               "RelativeDocumentMoniker": "ToolSYS.Business\\Services\\RentalService.cs",
               "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Services\\RentalService.cs",
               "RelativeToolTip": "ToolSYS.Business\\Services\\RentalService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAADYAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAC8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T14:45:06.896Z",
+              "WhenOpened": "2024-11-17T17:44:47.732Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "RateService.cs",
-              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Services\\RateService.cs",
-              "RelativeDocumentMoniker": "ToolSYS.Business\\Services\\RateService.cs",
-              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Services\\RateService.cs",
-              "RelativeToolTip": "ToolSYS.Business\\Services\\RateService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAQAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "CustomerFactory.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Factories\\CustomerFactory.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Business\\Factories\\CustomerFactory.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Factories\\CustomerFactory.cs",
+              "RelativeToolTip": "ToolSYS.Business\\Factories\\CustomerFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T14:45:06.158Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CustomerService.cs",
-              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Services\\CustomerService.cs",
-              "RelativeDocumentMoniker": "ToolSYS.Business\\Services\\CustomerService.cs",
-              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Services\\CustomerService.cs",
-              "RelativeToolTip": "ToolSYS.Business\\Services\\CustomerService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T14:45:05.308Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "frmAnnualRevenueAnalysis.cs",
-              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmAnnualRevenueAnalysis.cs",
-              "RelativeDocumentMoniker": "ToolSYS.Presentation\\frmAnnualRevenueAnalysis.cs",
-              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmAnnualRevenueAnalysis.cs",
-              "RelativeToolTip": "ToolSYS.Presentation\\frmAnnualRevenueAnalysis.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T14:42:52.919Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AnalysisService.cs",
-              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Services\\AnalysisService.cs",
-              "RelativeDocumentMoniker": "ToolSYS.Business\\Services\\AnalysisService.cs",
-              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Services\\AnalysisService.cs",
-              "RelativeToolTip": "ToolSYS.Business\\Services\\AnalysisService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T14:39:33.905Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "AnalysisData.cs",
-              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\AnalysisData.cs",
-              "RelativeDocumentMoniker": "ToolSYS.Data\\AnalysisData.cs",
-              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\AnalysisData.cs",
-              "RelativeToolTip": "ToolSYS.Data\\AnalysisData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T14:39:09.505Z",
+              "WhenOpened": "2024-11-17T17:37:34.475Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
+              "Title": "frmSetToolCategory.Designer.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmSetToolCategory.Designer.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Presentation\\frmSetToolCategory.Designer.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmSetToolCategory.Designer.cs",
+              "RelativeToolTip": "ToolSYS.Presentation\\frmSetToolCategory.Designer.cs",
+              "ViewState": "AgIAABgBAAAAAAAAAAAewDsBAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T19:04:21.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RentalData.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\RentalData.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Data\\RentalData.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\RentalData.cs",
+              "RelativeToolTip": "ToolSYS.Data\\RentalData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T19:02:42.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CustomerService.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Services\\CustomerService.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Business\\Services\\CustomerService.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Services\\CustomerService.cs",
+              "RelativeToolTip": "ToolSYS.Business\\Services\\CustomerService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowEkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T17:17:08.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CustomerData.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\CustomerData.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Data\\CustomerData.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\CustomerData.cs",
+              "RelativeToolTip": "ToolSYS.Data\\CustomerData.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwv6YAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T17:16:21.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "frmUpdateToolRate.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmUpdateToolRate.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Presentation\\frmUpdateToolRate.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmUpdateToolRate.cs",
+              "RelativeToolTip": "ToolSYS.Presentation\\frmUpdateToolRate.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAkwJMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T19:04:38.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "frmUpdateToolRate.Designer.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmUpdateToolRate.Designer.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Presentation\\frmUpdateToolRate.Designer.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmUpdateToolRate.Designer.cs",
+              "RelativeToolTip": "ToolSYS.Presentation\\frmUpdateToolRate.Designer.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAewE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T19:04:46.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "frmViewRentals.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmViewRentals.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Presentation\\frmViewRentals.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmViewRentals.cs",
+              "RelativeToolTip": "ToolSYS.Presentation\\frmViewRentals.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAA4wE4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T19:05:03.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "frmViewRentals.Designer.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmViewRentals.Designer.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Presentation\\frmViewRentals.Designer.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmViewRentals.Designer.cs",
+              "RelativeToolTip": "ToolSYS.Presentation\\frmViewRentals.Designer.cs",
+              "ViewState": "AgIAAEUCAAAAAAAAAAAewGgCAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T19:05:08.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "frmUpdateCustomer.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmUpdateCustomer.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Presentation\\frmUpdateCustomer.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmUpdateCustomer.cs",
+              "RelativeToolTip": "ToolSYS.Presentation\\frmUpdateCustomer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T19:07:35.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\Customer.cs",
+              "RelativeDocumentMoniker": "ToolSYS.DTOs\\Customer.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\Customer.cs",
+              "RelativeToolTip": "ToolSYS.DTOs\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T17:39:18.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "frmAddTool.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmAddTool.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Presentation\\frmAddTool.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmAddTool.cs",
+              "RelativeToolTip": "ToolSYS.Presentation\\frmAddTool.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAA1wD4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T16:43:32.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ToolData.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\ToolData.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Data\\ToolData.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\ToolData.cs",
+              "RelativeToolTip": "ToolSYS.Data\\ToolData.cs",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAIwNUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T16:43:23.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Tool.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\Tool.cs",
+              "RelativeDocumentMoniker": "ToolSYS.DTOs\\Tool.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\Tool.cs",
+              "RelativeToolTip": "ToolSYS.DTOs\\Tool.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T16:43:11.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AnalysisService.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Services\\AnalysisService.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Business\\Services\\AnalysisService.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Services\\AnalysisService.cs",
+              "RelativeToolTip": "ToolSYS.Business\\Services\\AnalysisService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T16:28:35.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
               "Title": "frmAnnualToolTypeAnalysis.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmAnnualToolTypeAnalysis.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\frmAnnualToolTypeAnalysis.cs",
               "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmAnnualToolTypeAnalysis.cs",
               "RelativeToolTip": "ToolSYS.Presentation\\frmAnnualToolTypeAnalysis.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwE0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T14:38:19.547Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-17T16:28:08.669Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "frmAnnualToolTypeAnalysis.cs [Design]",
-              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmAnnualToolTypeAnalysis.cs",
-              "RelativeDocumentMoniker": "ToolSYS.Presentation\\frmAnnualToolTypeAnalysis.cs",
-              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmAnnualToolTypeAnalysis.cs [Design]",
-              "RelativeToolTip": "ToolSYS.Presentation\\frmAnnualToolTypeAnalysis.cs [Design]",
+              "DocumentIndex": 25,
+              "Title": "frmAnnualRevenueAnalysis.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmAnnualRevenueAnalysis.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Presentation\\frmAnnualRevenueAnalysis.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\frmAnnualRevenueAnalysis.cs",
+              "RelativeToolTip": "ToolSYS.Presentation\\frmAnnualRevenueAnalysis.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T14:37:29.101Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-17T16:27:16.117Z"
             }
           ]
         }

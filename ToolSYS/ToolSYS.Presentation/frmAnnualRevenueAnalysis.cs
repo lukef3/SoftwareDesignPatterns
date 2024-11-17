@@ -51,7 +51,7 @@ namespace ToolSYS.Presentation
                 try
                 {
                     int selectedYear = int.Parse(cboYears.SelectedItem.ToString());
-                    FillChart(selectedYear);
+                    PerformAnalysis(selectedYear);
                 }
                 catch (Exception ex)
                 {
@@ -60,19 +60,21 @@ namespace ToolSYS.Presentation
             }
         }
 
-        private void FillChart(int year)
+        private void PerformAnalysis(int year)
         {
             try
             {
                 var (months, revenues) = analysisService.GetMonthlyRevenues(year);
 
+                // Clear and update the chart using ScottPlot
                 formsPlot1.Plot.Clear();
                 formsPlot1.Plot.AddBar(revenues);
 
+                // Generate X-axis positions as double[]
                 double[] xPositions = Enumerable.Range(0, 12).Select(i => (double)i).ToArray();
                 formsPlot1.Plot.XTicks(xPositions, months);
 
-                formsPlot1.Plot.Title($"Revenue Analysis for {year}");
+                formsPlot1.Plot.Title($"Revenue per month {year}");
                 formsPlot1.Plot.YLabel("Revenue");
                 formsPlot1.Plot.XLabel("Months");
 
@@ -80,7 +82,7 @@ namespace ToolSYS.Presentation
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error plotting data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error generating chart: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

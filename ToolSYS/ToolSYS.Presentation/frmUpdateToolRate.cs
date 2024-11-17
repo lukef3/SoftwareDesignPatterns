@@ -146,9 +146,5 @@ namespace ToolSYS.Presentation
         {
             Navigation.MainMenu(this);
         }
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }

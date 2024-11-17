@@ -123,7 +123,6 @@ namespace ToolSYS.Presentation
             dgvRentalItems.Size = new Size(762, 224);
             dgvRentalItems.TabIndex = 19;
             dgvRentalItems.CellClick += dgvRentalItems_CellClick;
-            dgvRentalItems.CellContentClick += dgvRentalItems_CellContentClick;
             // 
             // gbxReturnTool
             // 
@@ -344,7 +343,6 @@ namespace ToolSYS.Presentation
             Name = "frmReturnTools";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Return Tools";
-            Load += frmReturnTools_Load;
             gbxRentalID.ResumeLayout(false);
             gbxRentalID.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvRentalItems).EndInit();

@@ -6,7 +6,7 @@ namespace ToolSYS.Data
 {
     public class ToolData
     {
-        private string connectionString = DBConnect.oradb;
+        private readonly string connectionString = DBConnect.oradb;
 
         public void AddTool(Tool tool)
         {
@@ -192,7 +192,7 @@ namespace ToolSYS.Data
         }
 
 
-        public bool DoesToolIDExist(int toolID)
+        public static bool DoesToolIDExist(int toolID)
         {
             using (var conn = new OracleConnection(DBConnect.oradb))
             {

@@ -1,0 +1,10 @@
+v
+kC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\obj\Debug\net8.0\ToolSYS.Business.AssemblyInfo.csutf-8„
+yC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8x
+mC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\obj\Debug\net8.0\ToolSYS.Business.GlobalUsings.g.csutf-8Z
+QC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Services\ToolService.csutf-8\
+SC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Services\RentalService.csutf-8^
+UC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Services\CustomerService.csutf-8Z
+QC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Services\RateService.csutf-8^
+UC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Services\AnalysisService.csutf-8_
+VC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Factories\CustomerFactory.csutf-8

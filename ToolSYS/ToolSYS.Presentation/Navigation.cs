@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace ToolSYS.Presentation
 {
-    class Navigation
+    static class Navigation
     {
         public static void SetToolCategory(Form form)
         {

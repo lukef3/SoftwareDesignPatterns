@@ -1,0 +1,5 @@
+﻿C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\Customer.cs
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\Rate.cs
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\Rental.cs
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\RentalItem.cs
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\Tool.cs

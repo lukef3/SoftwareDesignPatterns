@@ -16,10 +16,6 @@ namespace ToolSYS.Presentation
         {
             InitializeComponent();
         }
-        private void frmMainMenu_Load(object sender, EventArgs e)
-        {
-
-        }
         private void SetToolCategoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Navigation.SetToolCategory(this);

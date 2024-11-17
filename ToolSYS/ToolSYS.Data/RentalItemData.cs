@@ -6,7 +6,7 @@ namespace ToolSYS.Data
 {
     public class RentalItemData
     {
-        private string _connectionString = DBConnect.oradb;
+        private readonly string _connectionString = DBConnect.oradb;
 
         public void AddRentalItem(RentalItem rentalItem)
         {

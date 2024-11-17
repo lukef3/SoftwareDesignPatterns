@@ -49,14 +49,20 @@ namespace ToolSYS.Presentation
                     return;
                 }
 
+                int toolID = Convert.ToInt32(txtToolID.Text);
                 string categoryCode = cboCategories.SelectedItem.ToString().Substring(0, 2);
+                string description = txtDescription.Text;
+                string manufacturer = txtManufacturer.Text;
 
-                toolService.AddTool(
-                    toolID: Convert.ToInt32(txtToolID.Text),
-                    categoryCode: categoryCode,
-                    description: txtDescription.Text,
-                    manufacturer: txtManufacturer.Text
-                );
+                Tool tool = new Tool
+                {
+                    toolID = toolID,
+                    categoryCode = categoryCode,
+                    toolDescription = description,
+                    toolManufacturer = manufacturer
+                };
+
+                toolService.AddTool(tool);
 
                 MessageBox.Show("Tool Successfully Added To The System", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

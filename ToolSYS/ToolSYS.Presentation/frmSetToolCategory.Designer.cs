@@ -314,7 +314,6 @@ namespace ToolSYS.Presentation
             Name = "frmSetToolCategory";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Set Tool Category";
-            Load += frmSetToolCategory_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             menuStrip1.ResumeLayout(false);

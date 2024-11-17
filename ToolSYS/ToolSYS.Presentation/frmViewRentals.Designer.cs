@@ -100,7 +100,6 @@ namespace ToolSYS.Presentation
             this.btnFilter.TabIndex = 11;
             this.btnFilter.Text = "Filter";
             this.btnFilter.UseVisualStyleBackColor = false;
-            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // txtEmail
             // 
@@ -616,7 +615,6 @@ namespace ToolSYS.Presentation
             this.Name = "frmViewRentals";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "View Rentals";
-            this.Load += new System.EventHandler(this.frmViewRentals_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -5,11 +5,11 @@ namespace ToolSYS.Data
 {
     public class AnalysisData
     {
-        private string connectionString = DBConnect.oradb;
+        private readonly string _connectionString = DBConnect.oradb;
 
         public DataTable GetDistinctYears()
         {
-            using (var conn = new OracleConnection(connectionString))
+            using (var conn = new OracleConnection(_connectionString))
             {
                 string sqlQuery = "SELECT DISTINCT TO_CHAR(TransactionDate, 'YYYY') AS Year FROM Rentals ORDER BY Year";
                 OracleCommand cmd = new OracleCommand(sqlQuery, conn);
@@ -34,7 +34,7 @@ namespace ToolSYS.Data
                     GROUP BY TO_CHAR(TransactionDate, 'MM')
                     ORDER BY TO_CHAR(TransactionDate, 'MM')";
 
-            using (var conn = new OracleConnection(connectionString))
+            using (var conn = new OracleConnection(_connectionString))
             {
                 OracleCommand cmd = new OracleCommand(sqlQuery, conn);
                 cmd.Parameters.Add(":year", year.ToString());
@@ -60,7 +60,7 @@ namespace ToolSYS.Data
                 GROUP BY TO_CHAR(TransactionDate, 'YYYY-MM')
                 ORDER BY Month";
 
-            using (var conn = new OracleConnection(connectionString))
+            using (var conn = new OracleConnection(_connectionString))
             {
                 OracleCommand cmd = new OracleCommand(sqlQuery, conn);
                 cmd.Parameters.Add(":year", year.ToString());
