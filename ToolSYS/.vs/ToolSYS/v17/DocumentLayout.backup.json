@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.business\\builders\\rentalbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|solutionrelative:toolsys.business\\builders\\rentalbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.business\\builders\\irentalbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|solutionrelative:toolsys.business\\builders\\irentalbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.business\\factories\\customerfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|solutionrelative:toolsys.business\\factories\\customerfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.business\\builders\\rentalbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|solutionrelative:toolsys.business\\builders\\rentalbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\frmrenttools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -126,7 +126,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 193,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -134,13 +134,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "IRentalBuilder.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Builders\\IRentalBuilder.cs",
               "RelativeDocumentMoniker": "ToolSYS.Business\\Builders\\IRentalBuilder.cs",
               "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Builders\\IRentalBuilder.cs",
               "RelativeToolTip": "ToolSYS.Business\\Builders\\IRentalBuilder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-17T20:06:49.847Z",
               "EditorCaption": ""
@@ -160,13 +160,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "RentalBuilder.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Builders\\RentalBuilder.cs",
               "RelativeDocumentMoniker": "ToolSYS.Business\\Builders\\RentalBuilder.cs",
               "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Builders\\RentalBuilder.cs",
               "RelativeToolTip": "ToolSYS.Business\\Builders\\RentalBuilder.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowCIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-17T20:01:04.388Z",
               "EditorCaption": ""
@@ -288,7 +288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CustomerFactory.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Factories\\CustomerFactory.cs",
               "RelativeDocumentMoniker": "ToolSYS.Business\\Factories\\CustomerFactory.cs",
