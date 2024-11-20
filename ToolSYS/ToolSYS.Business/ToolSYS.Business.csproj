@@ -15,4 +15,8 @@
     <ProjectReference Include="..\ToolSYS.DTOs\ToolSYS.Entities.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Strategies\" />
+  </ItemGroup>
+
 </Project>

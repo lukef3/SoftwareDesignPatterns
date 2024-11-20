@@ -105,8 +105,6 @@ C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\obj\Debug\net8.0-w
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\obj\Debug\net8.0-windows\ToolSYS.Presentation.Presentation.Form1.resources
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\obj\Debug\net8.0-windows\ToolSYS.Presentation.frmAddCustomer.resources
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\obj\Debug\net8.0-windows\ToolSYS.Presentation.frmAddTool.resources
-C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\obj\Debug\net8.0-windows\ToolSYS.Presentation.frmAnnualRevenueAnalysis.resources
-C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\obj\Debug\net8.0-windows\ToolSYS.Presentation.frmAnnualToolTypeAnalysis.resources
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\obj\Debug\net8.0-windows\ToolSYS.Presentation.frmMainMenu.resources
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\obj\Debug\net8.0-windows\ToolSYS.Presentation.frmRemoveTool.resources
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\obj\Debug\net8.0-windows\ToolSYS.Presentation.frmRentTools.resources
@@ -122,3 +120,4 @@ C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\bin\Debug\net8.0-w
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\bin\Debug\net8.0-windows\ToolSYS.Entities.pdb
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\bin\Debug\net8.0-windows\ScottPlot.dll
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\bin\Debug\net8.0-windows\ScottPlot.WinForms.dll
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\obj\Debug\net8.0-windows\ToolSYS.Presentation.frmAnalysis.resources

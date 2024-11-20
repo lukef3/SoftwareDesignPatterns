@@ -10,12 +10,6 @@
     <Compile Update="frmAddTool.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmAnnualRevenueAnalysis.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="frmAnnualToolTypeAnalysis.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="frmMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>

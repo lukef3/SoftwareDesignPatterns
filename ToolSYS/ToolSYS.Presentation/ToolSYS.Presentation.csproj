@@ -28,4 +28,10 @@
     <ProjectReference Include="..\ToolSYS.DTOs\ToolSYS.Entities.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="frmAnalysis - Copy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>

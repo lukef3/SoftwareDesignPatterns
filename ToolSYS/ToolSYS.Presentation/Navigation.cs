@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace ToolSYS.Presentation
+﻿namespace ToolSYS.Presentation
 {
     static class Navigation
     {
@@ -103,15 +96,13 @@ namespace ToolSYS.Presentation
         public static void RevenueAnalysis(Form form)
         {
             form.Hide();
-            frmAnnualRevenueAnalysis nextForm = new frmAnnualRevenueAnalysis();
-            nextForm.ShowDialog();
             form.Close();
         }
 
         public static void ToolTypeAnalysis(Form form)
         {
             form.Hide();
-            frmAnnualToolTypeAnalysis nextForm = new frmAnnualToolTypeAnalysis();
+            frmAnalysis nextForm = new frmAnalysis();
             nextForm.ShowDialog();
             form.Close();
         }
