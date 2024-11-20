@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ToolSYS.Entities")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9a281988051663ba4dbfa08a36af2e15f71bd65")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d66bad051395952e188e9c7be4cd7e95755b76a7")]
 [assembly: System.Reflection.AssemblyProductAttribute("ToolSYS.Entities")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ToolSYS.Entities")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

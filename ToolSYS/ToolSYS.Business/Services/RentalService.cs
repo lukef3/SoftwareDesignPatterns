@@ -15,8 +15,8 @@ namespace ToolSYS.Business.Services
 
         public RentalService()
         {
-            _rentalItemData = new RentalItemData();
-            _rateData = new RateData();
+            _rentalItemData = new RentalItemData();     
+            _rateData = new RateData();     
             _customerService = new CustomerService();   
         }
 
@@ -30,14 +30,12 @@ namespace ToolSYS.Business.Services
             if (rentDate > returnDate)
                 throw new ArgumentException("Rent date cannot be later than return date.");
 
-            Customer customer = _customerService.GetCustomer(customerID);
-
             int daysRented = (returnDate - rentDate).Days + 1;
             Rate rate = _rateData.GetRateByCategoryCode(categoryCode);
             decimal dailyRate = rate.rate;
-            decimal baseFee = dailyRate * daysRented;
+            decimal fee = dailyRate * daysRented;
 
-            return customer.ApplyDiscount(baseFee);
+            return fee;
         }
 
         public void ConfirmRental(Rental rental)

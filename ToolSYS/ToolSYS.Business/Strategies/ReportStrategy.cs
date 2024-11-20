@@ -13,9 +13,9 @@ namespace ToolSYS.Business.Strategies
     {
         private readonly AnalysisService _analysisService;
 
-        public RevenueReport(AnalysisService analysisService)
+        public RevenueReport()
         {
-            _analysisService = analysisService;
+            _analysisService = new AnalysisService();
         }
 
         public bool NeedsCategory => false;
@@ -35,9 +35,9 @@ namespace ToolSYS.Business.Strategies
     {
         private readonly AnalysisService _analysisService;
 
-        public ToolRentalReport(AnalysisService analysisService)
+        public ToolRentalReport()
         {
-            _analysisService = analysisService;
+            _analysisService = new AnalysisService();
         }
 
         public bool NeedsCategory => true;

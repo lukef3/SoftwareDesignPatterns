@@ -9,7 +9,7 @@ using ToolSYS.Entities;
 
 namespace ToolSYS.Data
 {
-    public static class RentalData
+    public  class RentalData
     {
         public static int GetNextRentalID()
         {

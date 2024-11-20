@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using ToolSYS.Business.Factories;
 using ToolSYS.Data;
 using ToolSYS.Entities;
 
@@ -42,9 +41,9 @@ namespace ToolSYS.Business.Services
             return _customerData.SearchCustomers(searchPhrase);
         }
 
-        public static DataSet GetFilteredCustomers(string customerID, string forename, string surname, string email, string phone, string eircode, string phrase)
+        public DataSet GetFilteredCustomers(string customerID, string forename, string surname, string email, string phone, string eircode, string phrase)
         {
-            return CustomerData.GetFilteredCustomers(customerID, forename, surname, email, phone, eircode, phrase);
+            return _customerData.GetFilteredCustomers(customerID, forename, surname, email, phone, eircode, phrase);
         }
 
         private static void ValidateCustomer(Customer customer)
@@ -69,24 +68,6 @@ namespace ToolSYS.Business.Services
             Regex eircodeRegex = new Regex(@"^([AC-FHKNPRTV-Y]{1}[0-9]{2}|D6W)[ ]?[0-9AC-FHKNPRTV-Y]{4}$", RegexOptions.IgnoreCase);
             if (!eircodeRegex.IsMatch(customer.eircode))
                 throw new ArgumentException("Invalid Eircode.");
-        }
-
-        public Customer GetCustomer(int customerID)
-        {
-            // Get customer data and rental frequency from the database
-            var customerData = _customerData.GetCustomerData(customerID);
-            int rentalFrequency = _customerData.GetRentalFrequency(customerID);
-
-            // Use the factory to create the appropriate customer type
-            return CustomerFactory.CreateCustomer(
-                customerData.customerID,
-                customerData.forename,
-                customerData.surname,
-                customerData.email,
-                customerData.phone,
-                customerData.eircode,
-                rentalFrequency
-            );
         }
     }
 }

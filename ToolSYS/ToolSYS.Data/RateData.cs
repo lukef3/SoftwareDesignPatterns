@@ -79,21 +79,6 @@ namespace ToolSYS.Data
             }
         }
 
-        public bool IsCategoryCodeExists(string categoryCode)
-        {
-            using (var conn = new OracleConnection(_connectionString))
-            {
-                string sqlQuery = "SELECT COUNT(*) FROM Rates WHERE CategoryCode = :categoryCode";
-                OracleCommand cmd = new OracleCommand(sqlQuery, conn);
-                cmd.Parameters.Add(":categoryCode", categoryCode);
-
-                conn.Open();
-                int count = Convert.ToInt32(cmd.ExecuteScalar());
-
-                return count > 0;
-            }
-        }
-
         public bool DoesCategoryCodeExist(string categoryCode)
         {
             using (var conn = new OracleConnection(_connectionString))

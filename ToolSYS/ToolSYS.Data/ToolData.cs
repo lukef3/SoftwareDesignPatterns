@@ -4,7 +4,19 @@ using ToolSYS.Entities;
 
 namespace ToolSYS.Data
 {
-    public class ToolData
+    public interface IToolData
+    {
+        void AddTool(Tool tool);
+        void UpdateTool(Tool tool);
+        void RemoveTool(int toolID);
+        int GetNextToolID();
+        DataSet GetFilteredTools(string toolIDAsString, string categoryCode, string description, string manufacturer, string status, string phrase);
+        DataSet GetAvailableTools();
+        DataSet GetRentableTools(string categoryCode, DateTime from, DateTime to);
+        bool ToolExists (int toolID);
+    }
+
+    public class ToolData : IToolData
     {
         private readonly string connectionString = DBConnect.oradb;
 
@@ -190,11 +202,9 @@ namespace ToolSYS.Data
                 }
             }
         }
-
-
-        public static bool DoesToolIDExist(int toolID)
+        public bool ToolExists(int toolID)
         {
-            using (var conn = new OracleConnection(DBConnect.oradb))
+            using (OracleConnection conn = new OracleConnection(connectionString))
             {
                 string sqlQuery = "SELECT COUNT(*) FROM Tools WHERE ToolID = :toolID AND ToolStatus = 'I'";
                 OracleCommand cmd = new OracleCommand(sqlQuery, conn);

@@ -53,7 +53,7 @@ namespace ToolSYS.Business.Services
             if (!rate.categoryCode.All(char.IsLetter))
                 throw new ArgumentException("Category Code must consist of letters only.");
 
-            if (!isUpdate && _rateData.IsCategoryCodeExists(rate.categoryCode))
+            if (!isUpdate && _rateData.DoesCategoryCodeExist(rate.categoryCode))
                 throw new ArgumentException("A category with this code already exists.");
         }
     }

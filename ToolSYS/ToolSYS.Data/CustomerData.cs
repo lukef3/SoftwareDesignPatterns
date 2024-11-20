@@ -89,7 +89,7 @@ namespace ToolSYS.Data
         }
 
 
-        public static DataSet GetFilteredCustomers(String custIDAsString, String forename, String surname, String email, String phone, String eircode, String phrase)
+        public DataSet GetFilteredCustomers(String custIDAsString, String forename, String surname, String email, String phone, String eircode, String phrase)
         {
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
 

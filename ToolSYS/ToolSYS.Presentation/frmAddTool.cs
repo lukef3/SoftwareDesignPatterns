@@ -15,18 +15,18 @@ namespace ToolSYS.Presentation
 
     public partial class frmAddTool : Form
     {
-        private ToolService toolService;
+        private IToolService _toolService;
         private RateService rateService;
-        public frmAddTool()
+        public frmAddTool(IToolService toolService)
         {
             InitializeComponent();
-            toolService = new ToolService();
+            _toolService = toolService;
             rateService = new RateService();
         }
 
         private void frmAddTool_Load(object sender, EventArgs e)
         {
-            txtToolID.Text = toolService.GetNextToolID().ToString("000");
+            txtToolID.Text = _toolService.GetNextToolID().ToString("000");
 
             cboCategories.Items.Add("");
             DataSet categories = rateService.GetAllCategories();
@@ -62,14 +62,14 @@ namespace ToolSYS.Presentation
                     toolManufacturer = manufacturer
                 };
 
-                toolService.AddTool(tool);
+                _toolService.AddTool(tool);
 
                 MessageBox.Show("Tool Successfully Added To The System", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 txtDescription.Clear();
                 txtManufacturer.Clear();
                 cboCategories.SelectedIndex = -1;
-                txtToolID.Text = toolService.GetNextToolID().ToString("000");
+                txtToolID.Text = _toolService.GetNextToolID().ToString("000");
             }
             catch (Exception ex)
             {

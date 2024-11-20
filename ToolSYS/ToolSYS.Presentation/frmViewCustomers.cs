@@ -33,7 +33,7 @@ namespace ToolSYS.Presentation
                 string eircode = txtEircode.Text;
                 string phrase = txtPhrase.Text;
 
-                DataSet results = CustomerService.GetFilteredCustomers(customerID, forename, surname, email, phone, eircode, phrase);
+                DataSet results = _customerService.GetFilteredCustomers(customerID, forename, surname, email, phone, eircode, phrase);
 
                 dgvCustomers.DataSource = results.Tables["customer"];
                 dgvCustomers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
