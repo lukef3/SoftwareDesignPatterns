@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using ToolSYS.Entities;
+﻿using ToolSYS.Entities;
 
 namespace ToolSYS.Business.Builders
 {
     public interface IRentalBuilder
     {
-        IRentalBuilder SetRentalID(int rentalID);
-        IRentalBuilder SetCustomerID(int customerID);
+        IRentalBuilder SetRentalId(int rentalId);
+        IRentalBuilder SetCustomerId(int customerId);
         IRentalBuilder SetTransactionDate(DateTime date);
         IRentalBuilder SetTotalFee(decimal totalFee);
         IRentalBuilder AddRentalItem(RentalItem rentalItem);
@@ -24,15 +22,15 @@ namespace ToolSYS.Business.Builders
             _rental = new Rental();
         }
 
-        public IRentalBuilder SetRentalID(int rentalID)
+        public IRentalBuilder SetRentalId(int rentalId)
         {
-            _rental.rentalID = rentalID;
+            _rental.rentalId = rentalId;
             return this;
         }
 
-        public IRentalBuilder SetCustomerID(int customerID)
+        public IRentalBuilder SetCustomerId(int customerId)
         {
-            _rental.customerID = customerID;
+            _rental.customerId = customerId;
             return this;
         }
 
@@ -50,10 +48,10 @@ namespace ToolSYS.Business.Builders
 
         public IRentalBuilder AddRentalItem(RentalItem rentalItem)
         {
-            if (_rental.RentalItems == null)
-                _rental.RentalItems = new List<RentalItem>();
+            if (_rental.rentalItems == null)
+                _rental.rentalItems = new List<RentalItem>();
 
-            _rental.RentalItems.Add(rentalItem);
+            _rental.rentalItems.Add(rentalItem);
             return this;
         }
 
@@ -65,10 +63,10 @@ namespace ToolSYS.Business.Builders
 
         private void ValidateRental()
         {
-            if (_rental.rentalID <= 0)
+            if (_rental.rentalId <= 0)
                 throw new ArgumentException("Rental ID must be greater than zero.");
 
-            if (_rental.customerID <= 0)
+            if (_rental.customerId <= 0)
                 throw new ArgumentException("Customer ID must be greater than zero.");
 
             if (_rental.transactionDate == DateTime.MinValue)
@@ -77,7 +75,7 @@ namespace ToolSYS.Business.Builders
             if (_rental.totalFee <= 0)
                 throw new ArgumentException("Total fee must be greater than zero.");
 
-            if (_rental.RentalItems == null || _rental.RentalItems.Count == 0)
+            if (_rental.rentalItems == null || _rental.rentalItems.Count == 0)
                 throw new ArgumentException("At least one rental item must be added.");
         }
     }

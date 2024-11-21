@@ -1,5 +1,4 @@
-﻿using Oracle.ManagedDataAccess.Client;
-using System.Data;
+﻿using System.Data;
 using ToolSYS.Data;
 using ToolSYS.Entities;
 
@@ -9,11 +8,11 @@ namespace ToolSYS.Business.Services
     {
         void AddTool(Tool tool);
         void UpdateTool(Tool tool);
-        void RemoveTool(int toolID);
-        DataSet GetFilteredTools(string toolIDAsString, string categoryCode, string description, string manufacturer, string status, string phrase);
+        void RemoveTool(int toolId);
+        DataSet GetFilteredTools(string toolIdAsString, string categoryCode, string description, string manufacturer, string status, string phrase);
         DataSet GetAvailableTools();
         DataSet GetRentableTools(string categoryCode, DateTime from, DateTime to);
-        int GetNextToolID();
+        int GetNextToolId();
     }
 
     public class ToolService : IToolService
@@ -38,17 +37,17 @@ namespace ToolSYS.Business.Services
             _toolData.UpdateTool(tool);
         }
 
-        public void RemoveTool(int toolID)
+        public void RemoveTool(int toolId)
         {
-            if (!_toolData.ToolExists(toolID))
+            if (!_toolData.ToolExists(toolId))
                 throw new ArgumentException("Invalid Tool ID.");
 
-            _toolData.RemoveTool(toolID);
+            _toolData.RemoveTool(toolId);
         }
 
-        public DataSet GetFilteredTools(string toolIDAsString, string categoryCode, string description, string manufacturer, string status, string phrase)
+        public DataSet GetFilteredTools(string toolIdAsString, string categoryCode, string description, string manufacturer, string status, string phrase)
         {
-            return _toolData.GetFilteredTools(toolIDAsString, categoryCode, description, manufacturer, status, phrase);
+            return _toolData.GetFilteredTools(toolIdAsString, categoryCode, description, manufacturer, status, phrase);
         }
 
         public DataSet GetAvailableTools()
@@ -61,9 +60,9 @@ namespace ToolSYS.Business.Services
             return _toolData.GetRentableTools(categoryCode, from, to);
         }
 
-        public int GetNextToolID()
+        public int GetNextToolId()
         {
-            return _toolData.GetNextToolID();
+            return _toolData.GetNextToolId();
         }
 
         private void ValidateTool(Tool tool, bool isUpdate)
@@ -80,7 +79,7 @@ namespace ToolSYS.Business.Services
             if (string.IsNullOrEmpty(tool.toolManufacturer) || tool.toolManufacturer.Length > 50)
                 throw new ArgumentException("Tool manufacturer must be between 1 and 50 characters.");
 
-            if (!isUpdate && _toolData.ToolExists(tool.toolID))
+            if (!isUpdate && _toolData.ToolExists(tool.toolId))
                 throw new ArgumentException("A tool with this ID already exists.");
         }
     }

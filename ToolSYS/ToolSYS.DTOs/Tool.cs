@@ -2,7 +2,7 @@
 {
     public class Tool
     {
-        public int toolID { get; set; }
+        public int toolId { get; set; }
         public string categoryCode { get; set; }
         public string toolDescription { get; set; }
         public string toolManufacturer { get; set; }
@@ -10,16 +10,16 @@
 
         public Tool()
         {
-            this.toolID = 0;
+            this.toolId = 0;
             this.categoryCode = "";
             this.toolDescription = "";
             this.toolManufacturer = "";
-            this.toolManufacturer = "";
+            this.toolStatus = "I";
         }
 
-        public Tool(int toolID, string categoryCode, string toolDescription, string toolManufacturer)
+        public Tool(int toolId, string categoryCode, string toolDescription, string toolManufacturer)
         {
-            this.toolID = toolID;
+            this.toolId = toolId;
             this.categoryCode = categoryCode;
             this.toolDescription = toolDescription;
             this.toolManufacturer = toolManufacturer;

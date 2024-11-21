@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ToolSYS.Business.Services;
 using ToolSYS.Data;
+using ToolSYS.Presentation.Forms;
+using ToolSYS.Presentation.Nav;
 
 namespace ToolSYS.Presentation
 {
@@ -19,14 +21,14 @@ namespace ToolSYS.Presentation
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            //IToolData toolData = new ToolData();
+            IToolData toolData = new ToolData();
             // Similarly, instantiate other repositories if needed:
             // IRateRepository rateRepository = new RateRepository();
             // IRentalItemRepository rentalItemRepository = new RentalItemData();
             // ...
 
             // Instantiate services with injected repositories
-            //IToolService toolService = new ToolService(toolData);
+            IToolService toolService = new ToolService(toolData);
             // Similarly, instantiate other services if needed:
             // IRateService rateService = new RateService(rateRepository);
             // IRentalService rentalService = new RentalService(rentalItemRepository, customerService);
@@ -35,8 +37,10 @@ namespace ToolSYS.Presentation
             // Instantiate forms with injected services
             //ToolsForm toolsForm = new ToolsForm(toolService);
 
+            INavigation navigation = new Navigation(toolService);
 
-            Application.Run(new frmMainMenu());
+
+            Application.Run(new FrmMainMenu(navigation));
         }
     }
 }

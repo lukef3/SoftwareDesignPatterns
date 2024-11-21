@@ -1,46 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="Form1.cs">
+    <Compile Update="Forms\frmAddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmAddCustomer.cs">
+    <Compile Update="Forms\frmAddTool.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmAddTool.cs">
+    <Compile Update="Forms\frmMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmMainMenu.cs">
+    <Compile Update="Forms\frmRemoveTool.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmRemoveTool.cs">
+    <Compile Update="Forms\frmRentTools.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmRentTools.cs">
+    <Compile Update="Forms\frmReturnTools.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmReturnTools.cs">
+    <Compile Update="Forms\frmSetToolCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmSetToolCategory.cs">
+    <Compile Update="Forms\frmUpdateCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmUpdateCustomer.cs">
+    <Compile Update="Forms\frmUpdateTool.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmUpdateTool.cs">
+    <Compile Update="Forms\frmUpdateToolRate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmUpdateToolRate.cs">
+    <Compile Update="Forms\frmViewCustomers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmViewCustomers.cs">
+    <Compile Update="Forms\frmViewRentals.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmViewRentals.cs">
+    <Compile Update="Forms\frmViewTools.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmViewTools.cs">
+    <Compile Update="Nav\NavForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

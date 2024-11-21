@@ -8,22 +8,35 @@
         "version": "4.11.0.0",
         "fileVersion": "4.11.0-3.24365.8 (9e9c7c1d)",
         "semanticVersion": "4.11.0",
-        "language": "en-GB"
+        "language": "en-US"
       },
       "results": [
         {
-          "ruleId": "CS8604",
+          "ruleId": "CS8618",
           "level": "warning",
-          "message": "Possible null reference argument for parameter 'item' in 'int ObjectCollection.Add(object item)'.",
+          "message": "Non-nullable field 'report' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmAnnualRevenueAnalysis.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
                 "region": {
-                  "startLine": 33,
-                  "startColumn": 40,
-                  "endLine": 33,
-                  "endColumn": 62
+                  "startLine": 17,
+                  "startColumn": 16,
+                  "endLine": 17,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 33,
+                  "endLine": 15,
+                  "endColumn": 39
                 }
               }
             }
@@ -39,11 +52,11 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmAnnualToolTypeAnalysis.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
                 "region": {
-                  "startLine": 48,
+                  "startLine": 67,
                   "startColumn": 40,
-                  "endLine": 48,
+                  "endLine": 67,
                   "endColumn": 62
                 }
               }
@@ -52,189 +65,6 @@
           "properties": {
             "warningLevel": 1
           }
-        },
-        {
-          "ruleId": "CS8604",
-          "level": "warning",
-          "message": "Possible null reference argument for parameter 's' in 'int int.Parse(string s)'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmAnnualRevenueAnalysis.cs",
-                "region": {
-                  "startLine": 53,
-                  "startColumn": 50,
-                  "endLine": 53,
-                  "endColumn": 82
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmAnnualToolTypeAnalysis.cs",
-                "region": {
-                  "startLine": 66,
-                  "startColumn": 38,
-                  "endLine": 66,
-                  "endColumn": 59
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8604",
-          "level": "warning",
-          "message": "Possible null reference argument for parameter 's' in 'int int.Parse(string s)'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmAnnualToolTypeAnalysis.cs",
-                "region": {
-                  "startLine": 66,
-                  "startColumn": 38,
-                  "endLine": 66,
-                  "endColumn": 70
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmAnnualToolTypeAnalysis.cs",
-                "region": {
-                  "startLine": 67,
-                  "startColumn": 39,
-                  "endLine": 67,
-                  "endColumn": 65
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmAnnualToolTypeAnalysis.cs",
-                "region": {
-                  "startLine": 67,
-                  "startColumn": 39,
-                  "endLine": 67,
-                  "endColumn": 76
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmAddTool.cs",
-                "region": {
-                  "startLine": 53,
-                  "startColumn": 39,
-                  "endLine": 53,
-                  "endColumn": 65
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmAddTool.cs",
-                "region": {
-                  "startLine": 53,
-                  "startColumn": 39,
-                  "endLine": 53,
-                  "endColumn": 76
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS0176",
-          "level": "error",
-          "message": "Member 'RentalService.GetNextRentalID()' cannot be accessed with an instance reference; qualify it with a type name instead",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmRentTools.cs",
-                "region": {
-                  "startLine": 35,
-                  "startColumn": 32,
-                  "endLine": 35,
-                  "endColumn": 62
-                }
-              }
-            }
-          ]
-        },
-        {
-          "ruleId": "CS0176",
-          "level": "error",
-          "message": "Member 'CustomerService.GetFilteredCustomers(string, string, string, string, string, string, string)' cannot be accessed with an instance reference; qualify it with a type name instead",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmViewCustomers.cs",
-                "region": {
-                  "startLine": 36,
-                  "startColumn": 35,
-                  "endLine": 36,
-                  "endColumn": 72
-                }
-              }
-            }
-          ]
         },
         {
           "ruleId": "CS8600",
@@ -243,7 +73,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmUpdateTool.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmUpdateTool.cs",
                 "region": {
                   "startLine": 47,
                   "startColumn": 39,
@@ -264,7 +94,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmUpdateTool.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmUpdateTool.cs",
                 "region": {
                   "startLine": 50,
                   "startColumn": 33,
@@ -281,11 +111,11 @@
         {
           "ruleId": "CS8604",
           "level": "warning",
-          "message": "Possible null reference argument for parameter 'categoryCode' in 'DataSet ToolService.GetFilteredTools(string toolIDAsString, string categoryCode, string description, string manufacturer, string status, string phrase)'.",
+          "message": "Possible null reference argument for parameter 'categoryCode' in 'DataSet IToolService.GetFilteredTools(string toolIDAsString, string categoryCode, string description, string manufacturer, string status, string phrase)'.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmUpdateTool.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmUpdateTool.cs",
                 "region": {
                   "startLine": 53,
                   "startColumn": 73,
@@ -302,11 +132,11 @@
         {
           "ruleId": "CS8604",
           "level": "warning",
-          "message": "Possible null reference argument for parameter 'status' in 'DataSet ToolService.GetFilteredTools(string toolIDAsString, string categoryCode, string description, string manufacturer, string status, string phrase)'.",
+          "message": "Possible null reference argument for parameter 'status' in 'DataSet IToolService.GetFilteredTools(string toolIDAsString, string categoryCode, string description, string manufacturer, string status, string phrase)'.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmUpdateTool.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmUpdateTool.cs",
                 "region": {
                   "startLine": 53,
                   "startColumn": 114,
@@ -319,183 +149,6 @@
           "properties": {
             "warningLevel": 1
           }
-        },
-        {
-          "ruleId": "CS0176",
-          "level": "error",
-          "message": "Member 'RentalService.GetRentalItems(int)' cannot be accessed with an instance reference; qualify it with a type name instead",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmReturnTools.cs",
-                "region": {
-                  "startLine": 29,
-                  "startColumn": 45,
-                  "endLine": 29,
-                  "endColumn": 74
-                }
-              }
-            }
-          ]
-        },
-        {
-          "ruleId": "CS8604",
-          "level": "warning",
-          "message": "Possible null reference argument for parameter 's' in 'int int.Parse(string s)'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmRemoveTool.cs",
-                "region": {
-                  "startLine": 73,
-                  "startColumn": 48,
-                  "endLine": 73,
-                  "endColumn": 93
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS0176",
-          "level": "error",
-          "message": "Member 'RentalService.ReturnTool(int, int)' cannot be accessed with an instance reference; qualify it with a type name instead",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmReturnTools.cs",
-                "region": {
-                  "startLine": 58,
-                  "startColumn": 21,
-                  "endLine": 58,
-                  "endColumn": 46
-                }
-              }
-            }
-          ]
-        },
-        {
-          "ruleId": "CS0176",
-          "level": "error",
-          "message": "Member 'RentalService.GetRentalItems(int)' cannot be accessed with an instance reference; qualify it with a type name instead",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmReturnTools.cs",
-                "region": {
-                  "startLine": 63,
-                  "startColumn": 45,
-                  "endLine": 63,
-                  "endColumn": 74
-                }
-              }
-            }
-          ]
-        },
-        {
-          "ruleId": "CS8600",
-          "level": "warning",
-          "message": "Converting null literal or possible null value to non-nullable type.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmViewTools.cs",
-                "region": {
-                  "startLine": 50,
-                  "startColumn": 39,
-                  "endLine": 50,
-                  "endColumn": 128
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8600",
-          "level": "warning",
-          "message": "Converting null literal or possible null value to non-nullable type.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmViewTools.cs",
-                "region": {
-                  "startLine": 53,
-                  "startColumn": 33,
-                  "endLine": 53,
-                  "endColumn": 114
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8604",
-          "level": "warning",
-          "message": "Possible null reference argument for parameter 'categoryCode' in 'DataSet ToolService.GetFilteredTools(string toolIDAsString, string categoryCode, string description, string manufacturer, string status, string phrase)'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmViewTools.cs",
-                "region": {
-                  "startLine": 56,
-                  "startColumn": 73,
-                  "endLine": 56,
-                  "endColumn": 85
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8604",
-          "level": "warning",
-          "message": "Possible null reference argument for parameter 'status' in 'DataSet ToolService.GetFilteredTools(string toolIDAsString, string categoryCode, string description, string manufacturer, string status, string phrase)'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmViewTools.cs",
-                "region": {
-                  "startLine": 56,
-                  "startColumn": 114,
-                  "endLine": 56,
-                  "endColumn": 120
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS0176",
-          "level": "error",
-          "message": "Member 'CustomerService.GetFilteredCustomers(string, string, string, string, string, string, string)' cannot be accessed with an instance reference; qualify it with a type name instead",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmUpdateCustomer.cs",
-                "region": {
-                  "startLine": 36,
-                  "startColumn": 35,
-                  "endLine": 36,
-                  "endColumn": 72
-                }
-              }
-            }
-          ]
         },
         {
           "ruleId": "CS8602",
@@ -504,11 +157,11 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmUpdateToolRate.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAddTool.cs",
                 "region": {
-                  "startLine": 40,
+                  "startLine": 46,
                   "startColumn": 39,
-                  "endLine": 40,
+                  "endLine": 46,
                   "endColumn": 65
                 }
               }
@@ -525,11 +178,11 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmUpdateToolRate.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAddTool.cs",
                 "region": {
-                  "startLine": 40,
+                  "startLine": 46,
                   "startColumn": 39,
-                  "endLine": 40,
+                  "endLine": 46,
                   "endColumn": 76
                 }
               }
@@ -546,12 +199,33 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmUpdateToolRate.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
                 "region": {
-                  "startLine": 56,
-                  "startColumn": 36,
-                  "endLine": 56,
-                  "endColumn": 62
+                  "startLine": 78,
+                  "startColumn": 17,
+                  "endLine": 78,
+                  "endColumn": 43
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 's' in 'int int.Parse(string s)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmRemoveTool.cs",
+                "region": {
+                  "startLine": 74,
+                  "startColumn": 48,
+                  "endLine": 74,
+                  "endColumn": 93
                 }
               }
             }
@@ -567,54 +241,12 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmUpdateToolRate.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmUpdateToolRate.cs",
                 "region": {
-                  "startLine": 56,
-                  "startColumn": 36,
-                  "endLine": 56,
-                  "endColumn": 73
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8600",
-          "level": "warning",
-          "message": "Converting null literal or possible null value to non-nullable type.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmRentTools.cs",
-                "region": {
-                  "startLine": 100,
-                  "startColumn": 29,
-                  "endLine": 100,
-                  "endColumn": 95
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8600",
-          "level": "warning",
-          "message": "Converting null literal or possible null value to non-nullable type.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmRentTools.cs",
-                "region": {
-                  "startLine": 101,
+                  "startLine": 41,
                   "startColumn": 39,
-                  "endLine": 101,
-                  "endColumn": 105
+                  "endLine": 41,
+                  "endColumn": 65
                 }
               }
             }
@@ -624,60 +256,18 @@
           }
         },
         {
-          "ruleId": "CS8600",
+          "ruleId": "CS8602",
           "level": "warning",
-          "message": "Converting null literal or possible null value to non-nullable type.",
+          "message": "Dereference of a possibly null reference.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmRentTools.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmUpdateToolRate.cs",
                 "region": {
-                  "startLine": 102,
-                  "startColumn": 38,
-                  "endLine": 102,
-                  "endColumn": 104
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8600",
-          "level": "warning",
-          "message": "Converting null literal or possible null value to non-nullable type.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmRentTools.cs",
-                "region": {
-                  "startLine": 103,
+                  "startLine": 41,
                   "startColumn": 39,
-                  "endLine": 103,
-                  "endColumn": 105
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8604",
-          "level": "warning",
-          "message": "Possible null reference argument for parameter 'categoryCode' in 'decimal RentalService.CalculateRentalFee(int customerID, string categoryCode, DateTime rentDate, DateTime returnDate)'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmRentTools.cs",
-                "region": {
-                  "startLine": 108,
-                  "startColumn": 83,
-                  "endLine": 108,
-                  "endColumn": 95
+                  "endLine": 41,
+                  "endColumn": 76
                 }
               }
             }
@@ -693,7 +283,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmUpdateTool.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmUpdateTool.cs",
                 "region": {
                   "startLine": 71,
                   "startColumn": 39,
@@ -714,7 +304,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmUpdateTool.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmUpdateTool.cs",
                 "region": {
                   "startLine": 73,
                   "startColumn": 61,
@@ -735,7 +325,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmUpdateTool.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmUpdateTool.cs",
                 "region": {
                   "startLine": 78,
                   "startColumn": 33,
@@ -756,7 +346,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmUpdateTool.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmUpdateTool.cs",
                 "region": {
                   "startLine": 80,
                   "startColumn": 61,
@@ -777,7 +367,49 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmUpdateTool.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmUpdateToolRate.cs",
+                "region": {
+                  "startLine": 57,
+                  "startColumn": 36,
+                  "endLine": 57,
+                  "endColumn": 62
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmUpdateToolRate.cs",
+                "region": {
+                  "startLine": 57,
+                  "startColumn": 36,
+                  "endLine": 57,
+                  "endColumn": 73
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmUpdateTool.cs",
                 "region": {
                   "startLine": 89,
                   "startColumn": 39,
@@ -798,7 +430,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmUpdateTool.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmUpdateTool.cs",
                 "region": {
                   "startLine": 89,
                   "startColumn": 39,
@@ -819,7 +451,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmUpdateTool.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmUpdateTool.cs",
                 "region": {
                   "startLine": 92,
                   "startColumn": 33,
@@ -840,7 +472,7 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmUpdateTool.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmUpdateTool.cs",
                 "region": {
                   "startLine": 92,
                   "startColumn": 33,
@@ -855,18 +487,81 @@
           }
         },
         {
-          "ruleId": "CS8604",
+          "ruleId": "CS8600",
           "level": "warning",
-          "message": "Possible null reference argument for parameter 's' in 'DateTime DateTime.Parse(string s)'.",
+          "message": "Converting null literal or possible null value to non-nullable type.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmRentTools.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmRentTools.cs",
                 "region": {
-                  "startLine": 169,
-                  "startColumn": 51,
-                  "endLine": 169,
-                  "endColumn": 89
+                  "startLine": 102,
+                  "startColumn": 29,
+                  "endLine": 102,
+                  "endColumn": 95
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8600",
+          "level": "warning",
+          "message": "Converting null literal or possible null value to non-nullable type.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmRentTools.cs",
+                "region": {
+                  "startLine": 103,
+                  "startColumn": 39,
+                  "endLine": 103,
+                  "endColumn": 105
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8600",
+          "level": "warning",
+          "message": "Converting null literal or possible null value to non-nullable type.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmRentTools.cs",
+                "region": {
+                  "startLine": 104,
+                  "startColumn": 38,
+                  "endLine": 104,
+                  "endColumn": 104
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8600",
+          "level": "warning",
+          "message": "Converting null literal or possible null value to non-nullable type.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmRentTools.cs",
+                "region": {
+                  "startLine": 105,
+                  "startColumn": 39,
+                  "endLine": 105,
+                  "endColumn": 105
                 }
               }
             }
@@ -878,54 +573,15 @@
         {
           "ruleId": "CS8604",
           "level": "warning",
-          "message": "Possible null reference argument for parameter 's' in 'DateTime DateTime.Parse(string s)'.",
+          "message": "Possible null reference argument for parameter 'categoryCode' in 'decimal RentalService.CalculateRentalFee(int customerID, string categoryCode, DateTime rentDate, DateTime returnDate)'.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmRentTools.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmRentTools.cs",
                 "region": {
-                  "startLine": 170,
-                  "startColumn": 53,
-                  "endLine": 170,
-                  "endColumn": 93
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS0176",
-          "level": "error",
-          "message": "Member 'RentalService.GetNextRentalID()' cannot be accessed with an instance reference; qualify it with a type name instead",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmRentTools.cs",
-                "region": {
-                  "startLine": 187,
-                  "startColumn": 32,
-                  "endLine": 187,
-                  "endColumn": 62
-                }
-              }
-            }
-          ]
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmRentTools.cs",
-                "region": {
-                  "startLine": 210,
-                  "startColumn": 69,
-                  "endLine": 210,
+                  "startLine": 110,
+                  "startColumn": 83,
+                  "endLine": 110,
                   "endColumn": 95
                 }
               }
@@ -942,12 +598,721 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmRentTools.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
                 "region": {
-                  "startLine": 210,
+                  "startLine": 124,
+                  "startColumn": 46,
+                  "endLine": 124,
+                  "endColumn": 67
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 's' in 'int int.Parse(string s)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
+                "region": {
+                  "startLine": 124,
+                  "startColumn": 46,
+                  "endLine": 124,
+                  "endColumn": 78
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8600",
+          "level": "warning",
+          "message": "Converting null literal or possible null value to non-nullable type.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
+                "region": {
+                  "startLine": 125,
+                  "startColumn": 39,
+                  "endLine": 125,
+                  "endColumn": 43
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
+                "region": {
+                  "startLine": 129,
+                  "startColumn": 36,
+                  "endLine": 129,
+                  "endColumn": 73
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'category' in '(string[] Labels, double[] Values) IReportStrategy.GetData(int year, string category = null)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
+                "region": {
+                  "startLine": 131,
                   "startColumn": 69,
-                  "endLine": 210,
-                  "endColumn": 106
+                  "endLine": 131,
+                  "endColumn": 81
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8600",
+          "level": "warning",
+          "message": "Converting null literal or possible null value to non-nullable type.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmViewTools.cs",
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 39,
+                  "endLine": 51,
+                  "endColumn": 128
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8600",
+          "level": "warning",
+          "message": "Converting null literal or possible null value to non-nullable type.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmViewTools.cs",
+                "region": {
+                  "startLine": 54,
+                  "startColumn": 33,
+                  "endLine": 54,
+                  "endColumn": 114
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'categoryCode' in 'DataSet IToolService.GetFilteredTools(string toolIDAsString, string categoryCode, string description, string manufacturer, string status, string phrase)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmViewTools.cs",
+                "region": {
+                  "startLine": 57,
+                  "startColumn": 73,
+                  "endLine": 57,
+                  "endColumn": 85
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'status' in 'DataSet IToolService.GetFilteredTools(string toolIDAsString, string categoryCode, string description, string manufacturer, string status, string phrase)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmViewTools.cs",
+                "region": {
+                  "startLine": 57,
+                  "startColumn": 114,
+                  "endLine": 57,
+                  "endColumn": 120
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 's' in 'DateTime DateTime.Parse(string s)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmRentTools.cs",
+                "region": {
+                  "startLine": 171,
+                  "startColumn": 51,
+                  "endLine": 171,
+                  "endColumn": 89
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 's' in 'DateTime DateTime.Parse(string s)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmRentTools.cs",
+                "region": {
+                  "startLine": 172,
+                  "startColumn": 53,
+                  "endLine": 172,
+                  "endColumn": 93
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmRentTools.cs",
+                "region": {
+                  "startLine": 218,
+                  "startColumn": 39,
+                  "endLine": 218,
+                  "endColumn": 65
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmRentTools.cs",
+                "region": {
+                  "startLine": 218,
+                  "startColumn": 39,
+                  "endLine": 218,
+                  "endColumn": 76
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8622",
+          "level": "warning",
+          "message": "Nullability of reference types in type of parameter 'sender' of 'void NavForm.SetToolCategoryToolStripMenuItem_Click(object sender, EventArgs e)' doesn't match the target delegate 'EventHandler' (possibly because of nullability attributes).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Nav/NavForm.cs",
+                "region": {
+                  "startLine": 93,
+                  "startColumn": 51,
+                  "endLine": 93,
+                  "endColumn": 89
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8622",
+          "level": "warning",
+          "message": "Nullability of reference types in type of parameter 'sender' of 'void NavForm.UpdateToolRateToolStripMenuItem_Click(object sender, EventArgs e)' doesn't match the target delegate 'EventHandler' (possibly because of nullability attributes).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Nav/NavForm.cs",
+                "region": {
+                  "startLine": 100,
+                  "startColumn": 50,
+                  "endLine": 100,
+                  "endColumn": 87
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8622",
+          "level": "warning",
+          "message": "Nullability of reference types in type of parameter 'sender' of 'void NavForm.AddToolStripMenuItem_Click(object sender, EventArgs e)' doesn't match the target delegate 'EventHandler' (possibly because of nullability attributes).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Nav/NavForm.cs",
+                "region": {
+                  "startLine": 114,
+                  "startColumn": 39,
+                  "endLine": 114,
+                  "endColumn": 65
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8622",
+          "level": "warning",
+          "message": "Nullability of reference types in type of parameter 'sender' of 'void NavForm.UpdateToolsToolStripMenuItem_Click(object sender, EventArgs e)' doesn't match the target delegate 'EventHandler' (possibly because of nullability attributes).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Nav/NavForm.cs",
+                "region": {
+                  "startLine": 121,
+                  "startColumn": 47,
+                  "endLine": 121,
+                  "endColumn": 81
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8622",
+          "level": "warning",
+          "message": "Nullability of reference types in type of parameter 'sender' of 'void NavForm.RemoveToolsToolStripMenuItem_Click(object sender, EventArgs e)' doesn't match the target delegate 'EventHandler' (possibly because of nullability attributes).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Nav/NavForm.cs",
+                "region": {
+                  "startLine": 128,
+                  "startColumn": 47,
+                  "endLine": 128,
+                  "endColumn": 81
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8622",
+          "level": "warning",
+          "message": "Nullability of reference types in type of parameter 'sender' of 'void NavForm.ViewToolsToolStripMenuItem_Click(object sender, EventArgs e)' doesn't match the target delegate 'EventHandler' (possibly because of nullability attributes).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Nav/NavForm.cs",
+                "region": {
+                  "startLine": 135,
+                  "startColumn": 45,
+                  "endLine": 135,
+                  "endColumn": 77
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8622",
+          "level": "warning",
+          "message": "Nullability of reference types in type of parameter 'sender' of 'void NavForm.AddCustomerToolStripMenuItem_Click(object sender, EventArgs e)' doesn't match the target delegate 'EventHandler' (possibly because of nullability attributes).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Nav/NavForm.cs",
+                "region": {
+                  "startLine": 149,
+                  "startColumn": 47,
+                  "endLine": 149,
+                  "endColumn": 81
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8622",
+          "level": "warning",
+          "message": "Nullability of reference types in type of parameter 'sender' of 'void NavForm.UpdateCustomerToolStripMenuItem_Click(object sender, EventArgs e)' doesn't match the target delegate 'EventHandler' (possibly because of nullability attributes).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Nav/NavForm.cs",
+                "region": {
+                  "startLine": 156,
+                  "startColumn": 50,
+                  "endLine": 156,
+                  "endColumn": 87
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8622",
+          "level": "warning",
+          "message": "Nullability of reference types in type of parameter 'sender' of 'void NavForm.viewCustomersToolStripMenuItem_Click(object sender, EventArgs e)' doesn't match the target delegate 'EventHandler' (possibly because of nullability attributes).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Nav/NavForm.cs",
+                "region": {
+                  "startLine": 163,
+                  "startColumn": 49,
+                  "endLine": 163,
+                  "endColumn": 85
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8622",
+          "level": "warning",
+          "message": "Nullability of reference types in type of parameter 'sender' of 'void NavForm.RentToolToolStripMenuItem_Click(object sender, EventArgs e)' doesn't match the target delegate 'EventHandler' (possibly because of nullability attributes).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Nav/NavForm.cs",
+                "region": {
+                  "startLine": 177,
+                  "startColumn": 44,
+                  "endLine": 177,
+                  "endColumn": 75
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8622",
+          "level": "warning",
+          "message": "Nullability of reference types in type of parameter 'sender' of 'void NavForm.ReturnToolsToolStripMenuItem_Click(object sender, EventArgs e)' doesn't match the target delegate 'EventHandler' (possibly because of nullability attributes).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Nav/NavForm.cs",
+                "region": {
+                  "startLine": 184,
+                  "startColumn": 47,
+                  "endLine": 184,
+                  "endColumn": 81
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8622",
+          "level": "warning",
+          "message": "Nullability of reference types in type of parameter 'sender' of 'void NavForm.ViewRentalsToolStripMenuItem_Click(object sender, EventArgs e)' doesn't match the target delegate 'EventHandler' (possibly because of nullability attributes).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Nav/NavForm.cs",
+                "region": {
+                  "startLine": 191,
+                  "startColumn": 47,
+                  "endLine": 191,
+                  "endColumn": 81
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8622",
+          "level": "warning",
+          "message": "Nullability of reference types in type of parameter 'sender' of 'void NavForm.AnalysisToolStripMenuItem_Click(object sender, EventArgs e)' doesn't match the target delegate 'EventHandler' (possibly because of nullability attributes).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Nav/NavForm.cs",
+                "region": {
+                  "startLine": 205,
+                  "startColumn": 44,
+                  "endLine": 205,
+                  "endColumn": 75
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8622",
+          "level": "warning",
+          "message": "Nullability of reference types in type of parameter 'sender' of 'void NavForm.MainMenuToolStripMenuItem_Click(object sender, EventArgs e)' doesn't match the target delegate 'EventHandler' (possibly because of nullability attributes).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Nav/NavForm.cs",
+                "region": {
+                  "startLine": 213,
+                  "startColumn": 44,
+                  "endLine": 213,
+                  "endColumn": 75
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8622",
+          "level": "warning",
+          "message": "Nullability of reference types in type of parameter 'sender' of 'void NavForm.ExitSystemToolStripMenuItem_Click(object sender, EventArgs e)' doesn't match the target delegate 'EventHandler' (possibly because of nullability attributes).",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Nav/NavForm.cs",
+                "region": {
+                  "startLine": 221,
+                  "startColumn": 46,
+                  "endLine": 221,
+                  "endColumn": 79
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S4487",
+          "level": "warning",
+          "message": "Remove this unread private field '_rentalService' or refactor the code to use its value.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmReturnTools.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 31,
+                  "endLine": 17,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3260",
+          "level": "warning",
+          "message": "Private classes which are not derived in the current assembly should be marked as 'sealed'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Nav/NavForm.cs",
+                "region": {
+                  "startLine": 316,
+                  "startColumn": 19,
+                  "endLine": 316,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Program.cs",
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 13,
+                  "endLine": 25,
+                  "endColumn": 70
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Program.cs",
+                "region": {
+                  "startLine": 32,
+                  "startColumn": 13,
+                  "endLine": 32,
+                  "endColumn": 75
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1066",
+          "level": "warning",
+          "message": "Merge this if statement with the enclosing one.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
+                "region": {
+                  "startLine": 112,
+                  "startColumn": 17,
+                  "endLine": 112,
+                  "endColumn": 19
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
+                "region": {
+                  "startLine": 110,
+                  "startColumn": 13,
+                  "endLine": 110,
+                  "endColumn": 15
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null
+            }
+          }
+        },
+        {
+          "ruleId": "S3427",
+          "level": "warning",
+          "message": "This method signature overlaps the one defined on line 37, the default parameter value can't be used.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Nav/NavForm.cs",
+                "region": {
+                  "startLine": 31,
+                  "startColumn": 20,
+                  "endLine": 31,
+                  "endColumn": 50
                 }
               }
             }
@@ -963,11 +1328,11 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmRentTools.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmRentTools.cs",
                 "region": {
-                  "startLine": 169,
+                  "startLine": 171,
                   "startColumn": 36,
-                  "endLine": 169,
+                  "endLine": 171,
                   "endColumn": 90
                 }
               }
@@ -984,11 +1349,11 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/frmRentTools.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmRentTools.cs",
                 "region": {
-                  "startLine": 170,
+                  "startLine": 172,
                   "startColumn": 38,
-                  "endLine": 170,
+                  "endLine": 172,
                   "endColumn": 94
                 }
               }
@@ -1000,20 +1365,6 @@
         }
       ],
       "rules": {
-        "CS0176": {
-          "id": "CS0176",
-          "defaultLevel": "error",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS0176)",
-          "properties": {
-            "category": "Compiler",
-            "isEnabledByDefault": true,
-            "tags": [
-              "Compiler",
-              "Telemetry",
-              "NotConfigurable"
-            ]
-          }
-        },
         "CS8600": {
           "id": "CS8600",
           "shortDescription": "Converting null literal or possible null value to non-nullable type.",
@@ -1053,6 +1404,118 @@
             "tags": [
               "Compiler",
               "Telemetry"
+            ]
+          }
+        },
+        "CS8618": {
+          "id": "CS8618",
+          "shortDescription": "Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8618)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8622": {
+          "id": "CS8622",
+          "shortDescription": "Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8622)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "S1066": {
+          "id": "S1066",
+          "shortDescription": "Mergeable \"if\" statements should be combined",
+          "fullDescription": "Nested code - blocks of code inside blocks of code - is eventually necessary, but increases complexity. This is why keeping the code as flat as possible, by avoiding unnecessary nesting, is considered a good practice.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1066",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S125": {
+          "id": "S125",
+          "shortDescription": "Sections of code should not be commented out",
+          "fullDescription": "Commented-out code distracts the focus from the actual executed code. It creates a noise that increases maintenance code. And because it is never executed, it quickly becomes out of date and invalid.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-125",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S3260": {
+          "id": "S3260",
+          "shortDescription": "Non-derived \"private\" classes and records should be \"sealed\"",
+          "fullDescription": "Classes and records with either private or file access modifiers aren’t visible outside of their assemblies or files, so if they’re not extended inside their scope, they should be made explicitly non-extensible with the addition of the sealed keyword.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3260",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S3427": {
+          "id": "S3427",
+          "shortDescription": "Method overloads with default parameter values should not overlap",
+          "fullDescription": "The rules for method resolution can be complex and may not be fully understood by all developers. The situation becomes even more challenging when dealing with method overloads that have optional parameter values.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3427",
+          "properties": {
+            "category": "Blocker Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S4487": {
+          "id": "S4487",
+          "shortDescription": "Unread \"private\" fields should be removed",
+          "fullDescription": "Private fields which are written but never read are a case of \"dead store\". Changing the value of such a field is useless and most probably indicates an error in the code.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-4487",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
             ]
           }
         },

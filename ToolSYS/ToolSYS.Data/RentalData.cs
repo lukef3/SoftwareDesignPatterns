@@ -1,19 +1,14 @@
 ﻿using Oracle.ManagedDataAccess.Client;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ToolSYS.Entities;
 
 namespace ToolSYS.Data
 {
     public  class RentalData
     {
-        public static int GetNextRentalID()
+        public static int GetNextRentalId()
         {
-            using (var conn = new OracleConnection(DBConnect.oradb))
+            using (var conn = new OracleConnection(DbConnect.Oradb))
             {
                 conn.Open();
                 string sqlQuery = "SELECT NVL(MAX(RentalID), 0) + 1 FROM Rentals";
@@ -24,7 +19,7 @@ namespace ToolSYS.Data
 
         public static void AddRental(Rental rental)
         {
-            using (var conn = new OracleConnection(DBConnect.oradb))
+            using (var conn = new OracleConnection(DbConnect.Oradb))
             {
                 conn.Open();
                 string sqlQuery = @"
@@ -32,17 +27,17 @@ namespace ToolSYS.Data
                     VALUES (:rentalID, :customerID, :transactionDate, :totalFee)";
 
                 var cmd = new OracleCommand(sqlQuery, conn);
-                cmd.Parameters.Add(":rentalID", rental.rentalID);
-                cmd.Parameters.Add(":customerID", rental.customerID);
+                cmd.Parameters.Add(":rentalID", rental.rentalId);
+                cmd.Parameters.Add(":customerID", rental.customerId);
                 cmd.Parameters.Add(":transactionDate", rental.transactionDate);
                 cmd.Parameters.Add(":totalFee", rental.totalFee);
                 cmd.ExecuteNonQuery();
             }
         }
 
-        public static DataTable GetRentalItemsByRentalID(int rentalID)
+        public static DataTable GetRentalItemsByRentalId(int rentalId)
         {
-            using (var conn = new OracleConnection(DBConnect.oradb))
+            using (var conn = new OracleConnection(DbConnect.Oradb))
             {
                 string query = @"
                     SELECT RentalItems.ToolID, Tools.CategoryCode, Tools.ToolDescription, Tools.ToolManufacturer, 
@@ -52,7 +47,7 @@ namespace ToolSYS.Data
                     WHERE RentalItems.RentalID = :rentalID AND Tools.ToolStatus = 'O'";
 
                 OracleCommand cmd = new OracleCommand(query, conn);
-                cmd.Parameters.Add(":rentalID", rentalID);
+                cmd.Parameters.Add(":rentalID", rentalId);
 
                 OracleDataAdapter adapter = new OracleDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -62,15 +57,15 @@ namespace ToolSYS.Data
             }
         }
 
-        public static void ReturnTool(int rentalID, int toolID)
+        public static void ReturnTool(int rentalId, int toolId)
         {
-            using (var conn = new OracleConnection(DBConnect.oradb))
+            using (var conn = new OracleConnection(DbConnect.Oradb))
             {
                 conn.Open();
 
                 string updateToolQuery = "UPDATE Tools SET ToolStatus = 'I' WHERE ToolID = :toolID";
                 OracleCommand updateToolCmd = new OracleCommand(updateToolQuery, conn);
-                updateToolCmd.Parameters.Add(":toolID", toolID);
+                updateToolCmd.Parameters.Add(":toolID", toolId);
                 updateToolCmd.ExecuteNonQuery();
 
                 string updateRentalItemQuery = @"
@@ -78,8 +73,8 @@ namespace ToolSYS.Data
                     SET ReturnDate = SYSDATE
                     WHERE RentalID = :rentalID AND ToolID = :toolID";
                 OracleCommand updateRentalCmd = new OracleCommand(updateRentalItemQuery, conn);
-                updateRentalCmd.Parameters.Add(":rentalID", rentalID);
-                updateRentalCmd.Parameters.Add(":toolID", toolID);
+                updateRentalCmd.Parameters.Add(":rentalID", rentalId);
+                updateRentalCmd.Parameters.Add(":toolID", toolId);
                 updateRentalCmd.ExecuteNonQuery();
             }
         }

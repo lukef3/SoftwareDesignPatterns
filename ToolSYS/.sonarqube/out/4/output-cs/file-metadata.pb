@@ -1,9 +1,0 @@
-r
-gC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\obj\Debug\net8.0\ToolSYS.Entities.AssemblyInfo.csutf-8€
-uC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8t
-iC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\obj\Debug\net8.0\ToolSYS.Entities.GlobalUsings.g.csutf-8F
-=C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\Tool.csutf-8L
-CC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\RentalItem.csutf-8H
-?C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\Rental.csutf-8F
-=C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\Rate.csutf-8J
-AC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\Customer.csutf-8

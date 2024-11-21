@@ -1,32 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace ToolSYS.Entities
+﻿namespace ToolSYS.Entities
 {
     public class Rental
     {
-        public int rentalID { get; set; }
-        public int customerID { get; set; }
+        public int rentalId { get; set; }
+        public int customerId { get; set; }
         public DateTime transactionDate { get; set; }
         public decimal totalFee { get; set; }
-        public List<RentalItem> RentalItems { get; set; }
+        public List<RentalItem> rentalItems { get; set; }
 
-        public Rental(int rentalID, int customerID, DateTime transactionDate, decimal totalFee)
+        public Rental(int rentalId, int customerId, DateTime transactionDate, decimal totalFee)
         {
-            this.rentalID = rentalID;
-            this.customerID = customerID;
+            this.rentalId = rentalId;
+            this.customerId = customerId;
             this.transactionDate = transactionDate;
             this.totalFee = totalFee;
-            this.RentalItems = new List<RentalItem>();
+            this.rentalItems = new List<RentalItem>();
         }
 
         public Rental()
         {
-            rentalID = 0;
-            customerID = 0;
+            rentalId = 0;
+            customerId = 0;
             transactionDate = DateTime.MinValue;
             totalFee = 0;
-            RentalItems = new List<RentalItem>();
+            rentalItems = new List<RentalItem>();
         }
     }
 }

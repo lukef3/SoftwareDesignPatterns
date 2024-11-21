@@ -1,23 +1,13 @@
 ﻿namespace ToolSYS.Entities
 {
-    public class Rate
+    public class Rate(string categoryCode, string categoryDesc, decimal rate)
     {
-        public string categoryCode { get; set; }
-        public string categoryDesc { get; set; }
-        public decimal rate { get; set; }
+        public string categoryCode { get; set; } = categoryCode;
+        public string categoryDesc { get; set; } = categoryDesc;
+        public decimal rate { get; set; } = rate;
 
-        public Rate()
+        public Rate() : this("", "", 0)
         {
-            this.categoryCode = "";
-            this.categoryDesc = "";
-            this.rate = 0;
         }
-
-        public Rate(string categoryCode, string categoryDesc, decimal rate)
-        {
-            this.categoryCode = categoryCode;
-            this.categoryDesc = categoryDesc;
-            this.rate = rate;
-        }   
     }
 }

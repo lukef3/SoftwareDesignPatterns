@@ -1,0 +1,5 @@
+dotnet sonarscanner begin /k:"MyToolHireSystem" /d:sonar.host.url="http://localhost:9000" /d:sonar.login="squ_sqp_232d37844808943026e48ddd059e020c61d5ad51"
+
+dotnet build
+
+dotnet sonarscanner end /d:sonar.login="sqp_232d37844808943026e48ddd059e020c61d5ad51"

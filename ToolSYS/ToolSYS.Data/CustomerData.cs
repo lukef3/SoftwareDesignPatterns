@@ -1,19 +1,14 @@
 ﻿using Oracle.ManagedDataAccess.Client;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ToolSYS.Entities;
 
 namespace ToolSYS.Data
 {
     public class CustomerData
     {
-        private readonly string _connectionString = DBConnect.oradb;
+        private readonly string _connectionString = DbConnect.Oradb;
 
-        public int GetNextCustomerID()
+        public int GetNextCustomerId()
         {
             using (var conn = new OracleConnection(_connectionString))
             {
@@ -21,10 +16,10 @@ namespace ToolSYS.Data
                 var cmd = new OracleCommand(sqlQuery, conn);
 
                 conn.Open();
-                int nextCustomerID = cmd.ExecuteScalar() == DBNull.Value ? 1 : Convert.ToInt32(cmd.ExecuteScalar()) + 1;
+                int nextCustomerId = cmd.ExecuteScalar() == DBNull.Value ? 1 : Convert.ToInt32(cmd.ExecuteScalar()) + 1;
                 conn.Close();
 
-                return nextCustomerID;
+                return nextCustomerId;
             }
         }
 
@@ -36,7 +31,7 @@ namespace ToolSYS.Data
                                   "VALUES (:customerID, :forename, :surname, :email, :phone, :eircode)";
 
                 var cmd = new OracleCommand(sqlQuery, conn);
-                cmd.Parameters.Add(":customerID", OracleDbType.Int32).Value = customer.customerID;
+                cmd.Parameters.Add(":customerID", OracleDbType.Int32).Value = customer.customerId;
                 cmd.Parameters.Add(":forename", OracleDbType.Varchar2).Value = customer.forename;
                 cmd.Parameters.Add(":surname", OracleDbType.Varchar2).Value = customer.surname;
                 cmd.Parameters.Add(":email", OracleDbType.Varchar2).Value = customer.email;
@@ -57,7 +52,7 @@ namespace ToolSYS.Data
                                   "WHERE CustomerID = :customerID";
 
                 var cmd = new OracleCommand(sqlQuery, conn);
-                cmd.Parameters.Add(":customerID", OracleDbType.Int32).Value = customer.customerID;
+                cmd.Parameters.Add(":customerID", OracleDbType.Int32).Value = customer.customerId;
                 cmd.Parameters.Add(":forename", OracleDbType.Varchar2).Value = customer.forename;
                 cmd.Parameters.Add(":surname", OracleDbType.Varchar2).Value = customer.surname;
                 cmd.Parameters.Add(":email", OracleDbType.Varchar2).Value = customer.email;
@@ -89,11 +84,11 @@ namespace ToolSYS.Data
         }
 
 
-        public DataSet GetFilteredCustomers(String custIDAsString, String forename, String surname, String email, String phone, String eircode, String phrase)
+        public DataSet GetFilteredCustomers(String custIdAsString, String forename, String surname, String email, String phone, String eircode, String phrase)
         {
-            OracleConnection conn = new OracleConnection(DBConnect.oradb);
+            OracleConnection conn = new OracleConnection(DbConnect.Oradb);
 
-            String sqlQuery = DetermineSQLQuery(custIDAsString, forename, surname, email, phone, eircode, phrase);
+            String sqlQuery = DetermineSqlQuery(custIdAsString, forename, surname, email, phone, eircode, phrase);
 
             OracleCommand cmd = new OracleCommand(sqlQuery, conn);
 
@@ -107,25 +102,25 @@ namespace ToolSYS.Data
             return ds;
 
         }
-        private static String DetermineSQLQuery(String custIDAsString, String forename, String surname, String email, String phone, String eircode, String phrase)
+        private static String DetermineSqlQuery(String custIdAsString, String forename, String surname, String email, String phone, String eircode, String phrase)
         {
             String sqlQuery = "";
 
-            if (string.IsNullOrEmpty(custIDAsString) && String.IsNullOrEmpty(forename) && string.IsNullOrEmpty(surname) && string.IsNullOrEmpty(email) && string.IsNullOrEmpty(phone) && string.IsNullOrEmpty(eircode) && string.IsNullOrEmpty(phrase))
+            if (string.IsNullOrEmpty(custIdAsString) && String.IsNullOrEmpty(forename) && string.IsNullOrEmpty(surname) && string.IsNullOrEmpty(email) && string.IsNullOrEmpty(phone) && string.IsNullOrEmpty(eircode) && string.IsNullOrEmpty(phrase))
             {
                 sqlQuery = "SELECT CustomerID, Forename, Surname, Email, Phone, Eircode FROM Customers";
             }
-            else if (!string.IsNullOrEmpty(custIDAsString) || !string.IsNullOrEmpty(forename) || !string.IsNullOrEmpty(surname) || !string.IsNullOrEmpty(email) || !string.IsNullOrEmpty(phone) || !string.IsNullOrEmpty(eircode) || !string.IsNullOrEmpty(phrase))
+            else if (!string.IsNullOrEmpty(custIdAsString) || !string.IsNullOrEmpty(forename) || !string.IsNullOrEmpty(surname) || !string.IsNullOrEmpty(email) || !string.IsNullOrEmpty(phone) || !string.IsNullOrEmpty(eircode) || !string.IsNullOrEmpty(phrase))
             {
                 sqlQuery = "SELECT CustomerID, Forename, Surname, Email, Phone, Eircode FROM Customers WHERE 1 = 1";
 
-                if (!string.IsNullOrEmpty(custIDAsString))
+                if (!string.IsNullOrEmpty(custIdAsString))
                 {
-                    int custID;
-                    if (Decimal.TryParse(custIDAsString, out _))
+                    int custId;
+                    if (Decimal.TryParse(custIdAsString, out _))
                     {
-                        custID = Convert.ToInt32(custIDAsString);
-                        sqlQuery += " AND CustomerID = " + custID;
+                        custId = Convert.ToInt32(custIdAsString);
+                        sqlQuery += " AND CustomerID = " + custId;
                     }
                 }
 
@@ -162,47 +157,6 @@ namespace ToolSYS.Data
                 }
             }
             return sqlQuery;
-        }
-
-        public Customer GetCustomerData(int customerID)
-        {
-            using (var conn = new OracleConnection(_connectionString))
-            {
-                string sqlQuery = "SELECT * FROM Customers WHERE CustomerID = :customerID";
-                OracleCommand cmd = new OracleCommand(sqlQuery, conn);
-                cmd.Parameters.Add(name: ":customerID", customerID);
-
-                conn.Open();
-                using (var reader = cmd.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        return new RegularCustomer
-                        {
-                            customerID = reader.GetInt32(0),
-                            forename = reader.GetString(1),
-                            surname = reader.GetString(2),
-                            email = reader.GetString(3),
-                            phone = reader.GetString(4),
-                            eircode = reader.GetString(5)
-                        };
-                    }
-                }
-            }
-            throw new ArgumentException("Customer not found.");
-        }
-
-        public int GetRentalFrequency(int customerID)
-        {   
-            using (var conn = new OracleConnection(_connectionString))
-            {
-                string sqlQuery = "SELECT COUNT(*) FROM Rentals WHERE CustomerID = :customerID";
-                OracleCommand cmd = new OracleCommand(sqlQuery, conn);
-                cmd.Parameters.Add(":customerID", customerID);
-
-                conn.Open();
-                return Convert.ToInt32(cmd.ExecuteScalar());
-            }
         }
     }
 }

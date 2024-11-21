@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
+﻿using System.Data;
 using ToolSYS.Data;
 using ToolSYS.Entities;
 
@@ -11,21 +8,19 @@ namespace ToolSYS.Business.Services
     {
         private readonly RentalItemData _rentalItemData;
         private readonly RateData _rateData;
-        private readonly CustomerService _customerService;
 
         public RentalService()
         {
             _rentalItemData = new RentalItemData();     
             _rateData = new RateData();     
-            _customerService = new CustomerService();   
         }
 
-        public static int GetNextRentalID()
+        public static int GetNextRentalId()
         {
-            return RentalData.GetNextRentalID();
+            return RentalData.GetNextRentalId();
         }
 
-        public decimal CalculateRentalFee(int customerID, string categoryCode, DateTime rentDate, DateTime returnDate)
+        public decimal CalculateRentalFee(int customerId, string categoryCode, DateTime rentDate, DateTime returnDate)
         {
             if (rentDate > returnDate)
                 throw new ArgumentException("Rent date cannot be later than return date.");
@@ -42,26 +37,26 @@ namespace ToolSYS.Business.Services
         {
             RentalData.AddRental(rental);
 
-            foreach (var rentalItem in rental.RentalItems)
+            foreach (var rentalItem in rental.rentalItems)
             {
                 _rentalItemData.AddRentalItem(rentalItem);
             }
         }
 
-        public static DataTable GetRentalItems(int rentalID)
+        public static DataTable GetRentalItems(int rentalId)
         {
-            if (rentalID <= 0)
+            if (rentalId <= 0)
                 throw new ArgumentException("Invalid Rental ID.");
 
-            return RentalData.GetRentalItemsByRentalID(rentalID);
+            return RentalData.GetRentalItemsByRentalId(rentalId);
         }
 
-        public static void ReturnTool(int rentalID, int toolID)
+        public static void ReturnTool(int rentalId, int toolId)
         {
-            if (rentalID <= 0 || toolID <= 0)
+            if (rentalId <= 0 || toolId <= 0)
                 throw new ArgumentException("Rental ID and Tool ID must be valid numbers.");
 
-            RentalData.ReturnTool(rentalID, toolID);
+            RentalData.ReturnTool(rentalId, toolId);
         }
 
 

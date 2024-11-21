@@ -8,27 +8,27 @@ namespace ToolSYS.Data
     {
         void AddTool(Tool tool);
         void UpdateTool(Tool tool);
-        void RemoveTool(int toolID);
-        int GetNextToolID();
-        DataSet GetFilteredTools(string toolIDAsString, string categoryCode, string description, string manufacturer, string status, string phrase);
+        void RemoveTool(int toolId);
+        int GetNextToolId();
+        DataSet GetFilteredTools(string toolIdAsString, string categoryCode, string description, string manufacturer, string status, string phrase);
         DataSet GetAvailableTools();
         DataSet GetRentableTools(string categoryCode, DateTime from, DateTime to);
-        bool ToolExists (int toolID);
+        bool ToolExists (int toolId);
     }
 
     public class ToolData : IToolData
     {
-        private readonly string connectionString = DBConnect.oradb;
+        private readonly string _connectionString = DbConnect.Oradb;
 
         public void AddTool(Tool tool)
         {
-            using (OracleConnection conn = new OracleConnection(connectionString))
+            using (OracleConnection conn = new OracleConnection(_connectionString))
             {
                 string sqlQuery = "INSERT INTO Tools (ToolID, CategoryCode, ToolDescription, ToolManufacturer, ToolStatus) " +
                                     "VALUES (:toolID, :categoryCode, :toolDescription, :toolManufacturer, :toolStatus)";
 
                 OracleCommand cmd = new OracleCommand(sqlQuery, conn);
-                cmd.Parameters.Add(":toolID", tool.toolID);
+                cmd.Parameters.Add(":toolID", tool.toolId);
                 cmd.Parameters.Add(":categoryCode", tool.categoryCode.Substring(0, 2));
                 cmd.Parameters.Add(":toolDescription", tool.toolDescription);
                 cmd.Parameters.Add(":toolManufacturer", tool.toolManufacturer);
@@ -41,7 +41,7 @@ namespace ToolSYS.Data
 
         public void UpdateTool(Tool tool)
         {
-            using (OracleConnection conn = new OracleConnection(connectionString))
+            using (OracleConnection conn = new OracleConnection(_connectionString))
             {
                 string sqlQuery = "UPDATE Tools SET " +
                                     "CategoryCode = :categoryCode, " +
@@ -55,29 +55,29 @@ namespace ToolSYS.Data
                 cmd.Parameters.Add(":toolDescription", tool.toolDescription);
                 cmd.Parameters.Add(":toolManufacturer", tool.toolManufacturer);
                 cmd.Parameters.Add(":toolStatus", tool.toolStatus);
-                cmd.Parameters.Add(":toolID", tool.toolID);
+                cmd.Parameters.Add(":toolID", tool.toolId);
 
                 conn.Open();
                 cmd.ExecuteNonQuery();
             }
         }
 
-        public void RemoveTool(int toolID)
+        public void RemoveTool(int toolId)
         {
-            using (OracleConnection conn = new OracleConnection(connectionString))
+            using (OracleConnection conn = new OracleConnection(_connectionString))
             {
                 string sqlQuery = "UPDATE Tools SET ToolStatus = 'U' WHERE ToolID = :toolID";
                 OracleCommand cmd = new OracleCommand(sqlQuery, conn);
-                cmd.Parameters.Add(":toolID", toolID);
+                cmd.Parameters.Add(":toolID", toolId);
 
                 conn.Open();
                 cmd.ExecuteNonQuery();
             }
         }
 
-        public int GetNextToolID()
+        public int GetNextToolId()
         {
-            using (OracleConnection conn = new OracleConnection(connectionString))
+            using (OracleConnection conn = new OracleConnection(_connectionString))
             {
                 string sqlQuery = "SELECT MAX(ToolID) FROM Tools";
                 OracleCommand cmd = new OracleCommand(sqlQuery, conn);
@@ -88,11 +88,11 @@ namespace ToolSYS.Data
             }
         }
 
-        public DataSet GetFilteredTools(string toolIDAsString, string categoryCode, string description, string manufacturer, string status, string phrase)
+        public DataSet GetFilteredTools(string toolIdAsString, string categoryCode, string description, string manufacturer, string status, string phrase)
         {
-            using (OracleConnection conn = new OracleConnection(connectionString))
+            using (OracleConnection conn = new OracleConnection(_connectionString))
             {
-                string sqlQuery = DetermineSQLQuery(toolIDAsString, categoryCode, description, manufacturer, status, phrase);
+                string sqlQuery = DetermineSqlQuery(toolIdAsString, categoryCode, description, manufacturer, status, phrase);
 
                 OracleCommand cmd = new OracleCommand(sqlQuery, conn);
                 OracleDataAdapter da = new OracleDataAdapter(cmd);
@@ -104,22 +104,22 @@ namespace ToolSYS.Data
             }
         }
 
-        private static String DetermineSQLQuery(String toolIDAsString, String categoryCode, String description, String manufacturer, String status, String phrase)
+        private static String DetermineSqlQuery(String toolIdAsString, String categoryCode, String description, String manufacturer, String status, String phrase)
         {
             String sqlQuery = "";
 
-            if (string.IsNullOrEmpty(toolIDAsString) && String.IsNullOrEmpty(categoryCode) && string.IsNullOrEmpty(description) && string.IsNullOrEmpty(manufacturer) && string.IsNullOrEmpty(status) && string.IsNullOrEmpty(phrase))
+            if (string.IsNullOrEmpty(toolIdAsString) && String.IsNullOrEmpty(categoryCode) && string.IsNullOrEmpty(description) && string.IsNullOrEmpty(manufacturer) && string.IsNullOrEmpty(status) && string.IsNullOrEmpty(phrase))
             {
                 sqlQuery = "SELECT ToolID, CategoryCode, ToolDescription, ToolManufacturer, ToolStatus FROM Tools";
             }
-            else if (!string.IsNullOrEmpty(toolIDAsString) || !string.IsNullOrEmpty(categoryCode) || !string.IsNullOrEmpty(description) || !string.IsNullOrEmpty(manufacturer) || !string.IsNullOrEmpty(status) || !string.IsNullOrEmpty(phrase))
+            else if (!string.IsNullOrEmpty(toolIdAsString) || !string.IsNullOrEmpty(categoryCode) || !string.IsNullOrEmpty(description) || !string.IsNullOrEmpty(manufacturer) || !string.IsNullOrEmpty(status) || !string.IsNullOrEmpty(phrase))
             {
                 sqlQuery = "SELECT ToolID, CategoryCode, ToolDescription, ToolManufacturer, ToolStatus FROM Tools WHERE 1 = 1";
 
-                if (!string.IsNullOrEmpty(toolIDAsString))
+                if (!string.IsNullOrEmpty(toolIdAsString))
                 {
-                    int toolID = Convert.ToInt32(toolIDAsString);
-                    sqlQuery += " AND ToolID = " + toolID;
+                    int toolId = Convert.ToInt32(toolIdAsString);
+                    sqlQuery += " AND ToolID = " + toolId;
                 }
 
                 if (!string.IsNullOrEmpty(categoryCode))
@@ -157,7 +157,7 @@ namespace ToolSYS.Data
 
         public DataSet GetAvailableTools()
         {
-            using (OracleConnection conn = new OracleConnection(connectionString))
+            using (OracleConnection conn = new OracleConnection(_connectionString))
             {
                 string sqlQuery = "SELECT ToolID, CategoryCode, ToolDescription, ToolManufacturer FROM Tools " +
                 "WHERE ToolStatus = 'I'";
@@ -174,7 +174,7 @@ namespace ToolSYS.Data
 
         public DataSet GetRentableTools(string categoryCode, DateTime from, DateTime to)
         {
-            using (OracleConnection conn = new OracleConnection(connectionString))
+            using (OracleConnection conn = new OracleConnection(_connectionString))
             {
                 string sqlQuery = @"
                     SELECT * FROM Tools
@@ -202,13 +202,13 @@ namespace ToolSYS.Data
                 }
             }
         }
-        public bool ToolExists(int toolID)
+        public bool ToolExists(int toolId)
         {
-            using (OracleConnection conn = new OracleConnection(connectionString))
+            using (OracleConnection conn = new OracleConnection(_connectionString))
             {
                 string sqlQuery = "SELECT COUNT(*) FROM Tools WHERE ToolID = :toolID AND ToolStatus = 'I'";
                 OracleCommand cmd = new OracleCommand(sqlQuery, conn);
-                cmd.Parameters.Add(":toolID", toolID);
+                cmd.Parameters.Add(":toolID", toolId);
 
                 conn.Open();
                 int count = Convert.ToInt32(cmd.ExecuteScalar());

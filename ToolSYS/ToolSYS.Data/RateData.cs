@@ -6,7 +6,7 @@ namespace ToolSYS.Data
 {
     public class RateData
     {
-        private readonly string _connectionString = DBConnect.oradb;
+        private readonly string _connectionString = DbConnect.Oradb;
 
         public void AddRate(Rate rate)
         {
@@ -27,26 +27,21 @@ namespace ToolSYS.Data
         {
             using (var conn = new OracleConnection(_connectionString))
             {
-                string sqlQuery = "SELECT CategoryCode, CategoryDesc, Rate FROM Rates WHERE CategoryCode = :categoryCode";
+                string sqlQuery =
+                    "SELECT CategoryCode, CategoryDesc, Rate FROM Rates WHERE CategoryCode = :categoryCode";
                 OracleCommand cmd = new OracleCommand(sqlQuery, conn);
                 cmd.Parameters.Add(":categoryCode", categoryCode);
 
                 conn.Open();
                 OracleDataReader dr = cmd.ExecuteReader();
 
-                if (dr.Read())
+                dr.Read();
+                return new Rate
                 {
-                    return new Rate
-                    {
-                        categoryCode = dr.GetString(0),
-                        categoryDesc = dr.GetString(1),
-                        rate = dr.GetDecimal(2)
-                    };
-                }
-                else
-                {
-                    return null;
-                }
+                    categoryCode = dr.GetString(0),
+                    categoryDesc = dr.GetString(1),
+                    rate = dr.GetDecimal(2)
+                };
             }
         }
 

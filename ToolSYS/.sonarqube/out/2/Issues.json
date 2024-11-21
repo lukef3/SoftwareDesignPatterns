@@ -8,9 +8,93 @@
         "version": "4.11.0.0",
         "fileVersion": "4.11.0-3.24365.8 (9e9c7c1d)",
         "semanticVersion": "4.11.0",
-        "language": "en-GB"
+        "language": "en-US"
       },
       "results": [
+        {
+          "ruleId": "CS8625",
+          "level": "warning",
+          "message": "Cannot convert null literal to non-nullable reference type.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Business/Strategies/ReportStrategy.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 53,
+                  "endLine": 7,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8625",
+          "level": "warning",
+          "message": "Cannot convert null literal to non-nullable reference type.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Business/Strategies/ReportStrategy.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 80,
+                  "endLine": 8,
+                  "endColumn": 84
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8625",
+          "level": "warning",
+          "message": "Cannot convert null literal to non-nullable reference type.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Business/Strategies/ReportStrategy.cs",
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 60,
+                  "endLine": 23,
+                  "endColumn": 64
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8625",
+          "level": "warning",
+          "message": "Cannot convert null literal to non-nullable reference type.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Business/Strategies/ReportStrategy.cs",
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 87,
+                  "endLine": 28,
+                  "endColumn": 91
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
         {
           "ruleId": "CS8604",
           "level": "warning",
@@ -54,6 +138,69 @@
           }
         },
         {
+          "ruleId": "S4487",
+          "level": "warning",
+          "message": "Remove this unread private field '_customerService' or refactor the code to use its value.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Business/Services/RentalService.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 42,
+                  "endLine": 14,
+                  "endColumn": 58
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1006",
+          "level": "warning",
+          "message": "Add the default parameter value defined in the overridden method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Business/Strategies/ReportStrategy.cs",
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 49,
+                  "endLine": 45,
+                  "endColumn": 57
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1006",
+          "level": "warning",
+          "message": "Add the default parameter value defined in the overridden method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Business/Strategies/ReportStrategy.cs",
+                "region": {
+                  "startLine": 50,
+                  "startColumn": 76,
+                  "endLine": 50,
+                  "endColumn": 84
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
           "ruleId": "S6444",
           "level": "warning",
           "message": "Pass a timeout to limit the execution time.",
@@ -62,9 +209,9 @@
               "resultFile": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Business/Services/CustomerService.cs",
                 "region": {
-                  "startLine": 62,
+                  "startLine": 61,
                   "startColumn": 32,
-                  "endLine": 62,
+                  "endLine": 61,
                   "endColumn": 85
                 }
               }
@@ -83,9 +230,9 @@
               "resultFile": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Business/Services/CustomerService.cs",
                 "region": {
-                  "startLine": 69,
+                  "startLine": 68,
                   "startColumn": 34,
-                  "endLine": 69,
+                  "endLine": 68,
                   "endColumn": 132
                 }
               }
@@ -104,9 +251,9 @@
               "resultFile": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Business/Services/CustomerService.cs",
                 "region": {
-                  "startLine": 62,
+                  "startLine": 61,
                   "startColumn": 32,
-                  "endLine": 62,
+                  "endLine": 61,
                   "endColumn": 85
                 }
               }
@@ -125,9 +272,9 @@
               "resultFile": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Business/Services/CustomerService.cs",
                 "region": {
-                  "startLine": 69,
+                  "startLine": 68,
                   "startColumn": 34,
-                  "endLine": 69,
+                  "endLine": 68,
                   "endColumn": 132
                 }
               }
@@ -164,6 +311,54 @@
             "tags": [
               "Compiler",
               "Telemetry"
+            ]
+          }
+        },
+        "CS8625": {
+          "id": "CS8625",
+          "shortDescription": "Cannot convert null literal to non-nullable reference type.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8625)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "S1006": {
+          "id": "S1006",
+          "shortDescription": "Method overrides should not change parameter defaults",
+          "fullDescription": "Default arguments are determined by the static type of the object.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1006",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S4487": {
+          "id": "S4487",
+          "shortDescription": "Unread \"private\" fields should be removed",
+          "fullDescription": "Private fields which are written but never read are a case of \"dead store\". Changing the value of such a field is useless and most probably indicates an error in the code.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-4487",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
             ]
           }
         },

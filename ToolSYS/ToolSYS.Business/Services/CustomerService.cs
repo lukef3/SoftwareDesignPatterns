@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
+﻿using System.Data;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using ToolSYS.Data;
 using ToolSYS.Entities;
 
@@ -19,9 +14,9 @@ namespace ToolSYS.Business.Services
             _customerData = new CustomerData();
         }
 
-        public int GetNextCustomerID()
+        public int GetNextCustomerId()
         {
-            return _customerData.GetNextCustomerID();
+            return _customerData.GetNextCustomerId();
         }
 
         public void AddCustomer(Customer customer)
@@ -41,9 +36,9 @@ namespace ToolSYS.Business.Services
             return _customerData.SearchCustomers(searchPhrase);
         }
 
-        public DataSet GetFilteredCustomers(string customerID, string forename, string surname, string email, string phone, string eircode, string phrase)
+        public DataSet GetFilteredCustomers(string customerId, string forename, string surname, string email, string phone, string eircode, string phrase)
         {
-            return _customerData.GetFilteredCustomers(customerID, forename, surname, email, phone, eircode, phrase);
+            return _customerData.GetFilteredCustomers(customerId, forename, surname, email, phone, eircode, phrase);
         }
 
         private static void ValidateCustomer(Customer customer)

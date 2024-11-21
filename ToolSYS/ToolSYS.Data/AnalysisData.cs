@@ -5,7 +5,7 @@ namespace ToolSYS.Data
 {
     public class AnalysisData
     {
-        private readonly string _connectionString = DBConnect.oradb;
+        private readonly string _connectionString = DbConnect.Oradb;
 
         public DataTable GetDistinctYears()
         {

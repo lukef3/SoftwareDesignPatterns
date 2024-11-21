@@ -1,29 +1,15 @@
 ﻿namespace ToolSYS.Entities
 {
-    public class RentalItem
+    public class RentalItem(int rentallId, int toolId, DateTime rentDate, DateTime returnDate, decimal rentalFee)
     {
-        public int rentalID { get; set; }
-        public int toolID { get; set; }
-        public DateTime rentDate { get; set; }
-        public DateTime returnDate { get; set; }
-        public decimal rentalFee { get; set; }
+        public int rentalId { get; set; } = rentallId;
+        public int toolId { get; set; } = toolId;
+        public DateTime rentDate { get; set; } = rentDate;
+        public DateTime returnDate { get; set; } = returnDate;
+        public decimal rentalFee { get; set; } = rentalFee;
 
-        public RentalItem(int rentallID, int toolID, DateTime rentDate, DateTime returnDate, decimal rentalFee)
+        public RentalItem() : this(0, 0, DateTime.MinValue, DateTime.MinValue, 0)
         {
-            this.rentalID = rentallID;
-            this.toolID = toolID;
-            this.rentDate = rentDate;
-            this.returnDate = returnDate;
-            this.rentalFee = rentalFee;
-        }
-
-        public RentalItem()
-        {
-            this.rentalID = 0;
-            this.toolID = 0;
-            this.rentDate = DateTime.MinValue;
-            this.returnDate = DateTime.MinValue;
-            this.rentalFee = 0;
         }
     }
 }
