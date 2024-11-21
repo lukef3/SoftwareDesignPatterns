@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\rentalitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\rentalitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\tool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\tool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\forms\\frmremovetool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\forms\\frmremovetool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.business\\services\\analysisservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,10 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\nav\\navigation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\nav\\navigation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\forms\\frmsettoolcategory.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -266,7 +278,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 193,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -274,20 +286,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "frmMainMenu.Designer.cs",
-              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmMainMenu.Designer.cs",
-              "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmMainMenu.Designer.cs",
-              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmMainMenu.Designer.cs",
-              "RelativeToolTip": "ToolSYS.Presentation\\Forms\\frmMainMenu.Designer.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAABcAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Rental.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Rental.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Presentation\\Rental.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Rental.cs",
+              "RelativeToolTip": "ToolSYS.Presentation\\Rental.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAE0AAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T12:58:10.688Z",
+              "WhenOpened": "2024-11-21T16:05:24.118Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 1,
+              "Title": "RentalItem.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\RentalItem.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Presentation\\RentalItem.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\RentalItem.cs",
+              "RelativeToolTip": "ToolSYS.Presentation\\RentalItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T16:05:23.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Tool.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Tool.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Presentation\\Tool.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Tool.cs",
+              "RelativeToolTip": "ToolSYS.Presentation\\Tool.cs",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T16:05:15.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "frmAnalysis.Designer.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmAnalysis.Designer.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmAnalysis.Designer.cs",
@@ -300,7 +338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "frmUpdateToolRate.Designer.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmUpdateToolRate.Designer.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmUpdateToolRate.Designer.cs",
@@ -313,7 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "frmSetToolCategory.Designer.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmSetToolCategory.Designer.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmSetToolCategory.Designer.cs",
@@ -326,7 +364,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "Navigation.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Nav\\Navigation.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Nav\\Navigation.cs",
@@ -339,7 +377,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "frmAddCustomer.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmAddCustomer.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmAddCustomer.cs",
@@ -352,7 +390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "frmAddTool.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmAddTool.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmAddTool.cs",
@@ -365,7 +403,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "frmAnalysis.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmAnalysis.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmAnalysis.cs",
@@ -378,7 +416,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "frmRentTools.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmRentTools.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmRentTools.cs",
@@ -391,7 +429,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "frmUpdateTool.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmUpdateTool.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmUpdateTool.cs",
@@ -404,7 +442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "AnalysisService.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Services\\AnalysisService.cs",
               "RelativeDocumentMoniker": "ToolSYS.Business\\Services\\AnalysisService.cs",
@@ -417,20 +455,50 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "frmRemoveTool.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmRemoveTool.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmRemoveTool.cs",
-              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmRemoveTool.cs*",
-              "RelativeToolTip": "ToolSYS.Presentation\\Forms\\frmRemoveTool.cs*",
-              "ViewState": "AgIAACYAAAAAAAAAAAAnwEcAAABFAAAAAAAAAA==",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmRemoveTool.cs",
+              "RelativeToolTip": "ToolSYS.Presentation\\Forms\\frmRemoveTool.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAIwFUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T12:54:34.679Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Presentation\\Program.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Program.cs",
+              "RelativeToolTip": "ToolSYS.Presentation\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T15:33:21.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "frmMainMenu.Designer.cs",
+              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmMainMenu.Designer.cs",
+              "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmMainMenu.Designer.cs",
+              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmMainMenu.Designer.cs",
+              "RelativeToolTip": "ToolSYS.Presentation\\Forms\\frmMainMenu.Designer.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAABcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T12:58:10.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "frmUpdateTool.Designer.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmUpdateTool.Designer.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmUpdateTool.Designer.cs",
@@ -443,7 +511,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "frmViewRentals.Designer.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmViewRentals.Designer.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmViewRentals.Designer.cs",
@@ -456,7 +524,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "frmMainMenu.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmMainMenu.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmMainMenu.cs",
@@ -469,24 +537,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Program.cs",
-              "RelativeDocumentMoniker": "ToolSYS.Presentation\\Program.cs",
-              "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Program.cs",
-              "RelativeToolTip": "ToolSYS.Presentation\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T15:33:21.667Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "Tool.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\Tool.cs",
               "RelativeDocumentMoniker": "ToolSYS.DTOs\\Tool.cs",
@@ -499,7 +550,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "frmUpdateCustomer.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmUpdateCustomer.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmUpdateCustomer.cs",
@@ -512,7 +563,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "frmRemoveTool.Designer.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmRemoveTool.Designer.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmRemoveTool.Designer.cs",
@@ -525,7 +576,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "frmViewTools.Designer.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmViewTools.Designer.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmViewTools.Designer.cs",
@@ -538,7 +589,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "frmAddCustomer.Designer.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmAddCustomer.Designer.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmAddCustomer.Designer.cs",
@@ -551,7 +602,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "frmViewCustomers.Designer.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmViewCustomers.Designer.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmViewCustomers.Designer.cs",
@@ -564,7 +615,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "frmUpdateToolRate.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmUpdateToolRate.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmUpdateToolRate.cs",
@@ -577,7 +628,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "frmUpdateCustomer.Designer.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmUpdateCustomer.Designer.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmUpdateCustomer.Designer.cs",
@@ -590,7 +641,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "frmViewRentals.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmViewRentals.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmViewRentals.cs",
@@ -603,7 +654,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "frmReturnTools.Designer.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmReturnTools.Designer.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmReturnTools.Designer.cs",
@@ -616,7 +667,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "frmViewTools.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmViewTools.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmViewTools.cs",
@@ -629,7 +680,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "frmRentTools.Designer.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmRentTools.Designer.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmRentTools.Designer.cs",
@@ -642,7 +693,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "frmAddTool.Designer.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmAddTool.Designer.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmAddTool.Designer.cs",
@@ -655,7 +706,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "frmSetToolCategory.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmSetToolCategory.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmSetToolCategory.cs",
@@ -668,7 +719,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "frmViewCustomers.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmViewCustomers.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmViewCustomers.cs",
@@ -681,7 +732,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "RentalItem.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\RentalItem.cs",
               "RelativeDocumentMoniker": "ToolSYS.DTOs\\RentalItem.cs",
@@ -694,7 +745,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "Rental.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\Rental.cs",
               "RelativeDocumentMoniker": "ToolSYS.DTOs\\Rental.cs",
@@ -707,7 +758,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "Rate.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\Rate.cs",
               "RelativeDocumentMoniker": "ToolSYS.DTOs\\Rate.cs",
@@ -720,7 +771,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "Customer.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.DTOs\\Customer.cs",
               "RelativeDocumentMoniker": "ToolSYS.DTOs\\Customer.cs",
@@ -733,7 +784,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "ToolData.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\ToolData.cs",
               "RelativeDocumentMoniker": "ToolSYS.Data\\ToolData.cs",
@@ -746,7 +797,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "RentalItemData.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\RentalItemData.cs",
               "RelativeDocumentMoniker": "ToolSYS.Data\\RentalItemData.cs",
@@ -759,7 +810,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "RentalData.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\RentalData.cs",
               "RelativeDocumentMoniker": "ToolSYS.Data\\RentalData.cs",
@@ -772,7 +823,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "DBConnect.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\DBConnect.cs",
               "RelativeDocumentMoniker": "ToolSYS.Data\\DBConnect.cs",
@@ -785,7 +836,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 46,
               "Title": "RentalBuilder.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Builders\\RentalBuilder.cs",
               "RelativeDocumentMoniker": "ToolSYS.Business\\Builders\\RentalBuilder.cs",
@@ -798,7 +849,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 47,
               "Title": "ToolService.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Services\\ToolService.cs",
               "RelativeDocumentMoniker": "ToolSYS.Business\\Services\\ToolService.cs",
@@ -811,7 +862,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 48,
               "Title": "CustomerService.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Services\\CustomerService.cs",
               "RelativeDocumentMoniker": "ToolSYS.Business\\Services\\CustomerService.cs",
@@ -824,7 +875,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 49,
               "Title": "RateService.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Services\\RateService.cs",
               "RelativeDocumentMoniker": "ToolSYS.Business\\Services\\RateService.cs",
@@ -837,7 +888,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 50,
               "Title": "RentalService.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Services\\RentalService.cs",
               "RelativeDocumentMoniker": "ToolSYS.Business\\Services\\RentalService.cs",
@@ -850,7 +901,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 51,
               "Title": "frmReturnTools.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmReturnTools.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmReturnTools.cs",
@@ -863,7 +914,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 52,
               "Title": "NavForm.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Nav\\NavForm.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Nav\\NavForm.cs",
@@ -876,7 +927,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 54,
               "Title": "frmViewRentals.cs [Design]",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmViewRentals.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmViewRentals.cs",
@@ -888,7 +939,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 45,
               "Title": "ReportStrategy.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Strategies\\ReportStrategy.cs",
               "RelativeDocumentMoniker": "ToolSYS.Business\\Strategies\\ReportStrategy.cs",
@@ -901,7 +952,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "AnalysisData.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\AnalysisData.cs",
               "RelativeDocumentMoniker": "ToolSYS.Data\\AnalysisData.cs",
@@ -914,7 +965,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "RateData.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\RateData.cs",
               "RelativeDocumentMoniker": "ToolSYS.Data\\RateData.cs",
@@ -927,7 +978,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "CustomerData.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Data\\CustomerData.cs",
               "RelativeDocumentMoniker": "ToolSYS.Data\\CustomerData.cs",
@@ -940,7 +991,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 53,
               "Title": "frmViewTools.cs [Design]",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmViewTools.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmViewTools.cs",
@@ -952,7 +1003,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 58,
               "Title": "frmUpdateCustomer.cs [Design]",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmUpdateCustomer.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmUpdateCustomer.cs",
@@ -964,7 +1015,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 57,
               "Title": "frmUpdateTool.cs [Design]",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmUpdateTool.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmUpdateTool.cs",
@@ -976,7 +1027,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 56,
               "Title": "frmUpdateToolRate.cs [Design]",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmUpdateToolRate.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmUpdateToolRate.cs",
@@ -988,7 +1039,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 55,
               "Title": "frmViewCustomers.cs [Design]",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmViewCustomers.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmViewCustomers.cs",
@@ -1000,7 +1051,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 59,
               "Title": "frmRentTools.cs [Design]",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmRentTools.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmRentTools.cs",
@@ -1011,7 +1062,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 60,
               "Title": "frmAddTool.cs [Design]",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmAddTool.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmAddTool.cs",
@@ -1023,7 +1074,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 61,
               "Title": "frmAddCustomer.cs [Design]",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmAddCustomer.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmAddCustomer.cs",
@@ -1035,7 +1086,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 62,
               "Title": "frmReturnTools.cs [Design]",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmReturnTools.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmReturnTools.cs",
@@ -1047,7 +1098,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 63,
               "Title": "frmRemoveTool.cs [Design]",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmRemoveTool.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmRemoveTool.cs",
@@ -1058,7 +1109,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 64,
               "Title": "frmMainMenu.cs [Design]",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmMainMenu.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmMainMenu.cs",
@@ -1070,7 +1121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 65,
               "Title": "frmSetToolCategory.cs [Design]",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmSetToolCategory.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmSetToolCategory.cs",
@@ -1082,7 +1133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 66,
               "Title": "frmAnalysis.cs [Design]",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmAnalysis.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmAnalysis.cs",
