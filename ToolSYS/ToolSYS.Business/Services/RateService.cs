@@ -4,13 +4,21 @@ using ToolSYS.Entities;
 
 namespace ToolSYS.Business.Services
 {
-    public class RateService
+    public interface IRateService
     {
-        private readonly RateData _rateData;
+        void AddRate(Rate rate);
+        void UpdateRate(Rate rate);
+        Rate GetRateByCategoryCode(string categoryCode);
+        DataSet GetAllCategories();
+    }
 
-        public RateService()
+    public class RateService : IRateService
+    {
+        private readonly IRateData _rateData;
+
+        public RateService(IRateData rateData)
         {
-            _rateData = new RateData();
+            _rateData = rateData;
         }
 
         public void AddRate(Rate rate)

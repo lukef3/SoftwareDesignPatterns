@@ -3,7 +3,14 @@ using System.Data;
 
 namespace ToolSYS.Data
 {
-    public class AnalysisData
+    public interface IAnalysisData
+    {
+        DataTable GetDistinctYears();
+        DataTable GetMonthlyRevenues(int year);
+        DataTable GetMonthlyRentalsByCategory(int year, string categoryCode);
+    }
+
+    public class AnalysisData : IAnalysisData
     {
         private readonly string _connectionString = DbConnect.Oradb;
 

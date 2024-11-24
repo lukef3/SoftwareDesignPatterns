@@ -12,18 +12,18 @@
       },
       "results": [
         {
-          "ruleId": "S2068",
+          "ruleId": "S1118",
           "level": "warning",
-          "message": "\"password\" detected here, make sure this is not a hard-coded credential.",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/DBConnect.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/RentalData.cs",
                 "region": {
-                  "startLine": 13,
-                  "startColumn": 29,
-                  "endLine": 13,
-                  "endColumn": 122
+                  "startLine": 7,
+                  "startColumn": 19,
+                  "endLine": 7,
+                  "endColumn": 29
                 }
               }
             }
@@ -33,18 +33,18 @@
           }
         },
         {
-          "ruleId": "S1118",
+          "ruleId": "S2068",
           "level": "warning",
-          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "message": "\"password\" detected here, make sure this is not a hard-coded credential.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/RentalData.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/DBConnect.cs",
                 "region": {
-                  "startLine": 12,
-                  "startColumn": 19,
-                  "endLine": 12,
-                  "endColumn": 29
+                  "startLine": 9,
+                  "startColumn": 29,
+                  "endLine": 9,
+                  "endColumn": 122
                 }
               }
             }
@@ -123,9 +123,9 @@
               "resultFile": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/DBConnect.cs",
                 "region": {
-                  "startLine": 10,
+                  "startLine": 6,
                   "startColumn": 9,
-                  "endLine": 10,
+                  "endLine": 6,
                   "endColumn": 114
                 }
               }
@@ -350,9 +350,9 @@
               "resultFile": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/CustomerData.cs",
                 "region": {
-                  "startLine": 92,
+                  "startLine": 87,
                   "startColumn": 24,
-                  "endLine": 92,
+                  "endLine": 87,
                   "endColumn": 44
                 }
               }
@@ -371,9 +371,9 @@
               "resultFile": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/CustomerData.cs",
                 "region": {
-                  "startLine": 110,
+                  "startLine": 105,
                   "startColumn": 31,
-                  "endLine": 110,
+                  "endLine": 105,
                   "endColumn": 48
                 }
               }
@@ -384,9 +384,9 @@
               "physicalLocation": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/CustomerData.cs",
                 "region": {
-                  "startLine": 114,
+                  "startLine": 109,
                   "startColumn": 13,
-                  "endLine": 114,
+                  "endLine": 109,
                   "endColumn": 15
                 }
               }
@@ -395,9 +395,9 @@
               "physicalLocation": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/CustomerData.cs",
                 "region": {
-                  "startLine": 114,
+                  "startLine": 109,
                   "startColumn": 54,
-                  "endLine": 114,
+                  "endLine": 109,
                   "endColumn": 56
                 }
               }
@@ -406,9 +406,9 @@
               "physicalLocation": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/CustomerData.cs",
                 "region": {
-                  "startLine": 118,
+                  "startLine": 113,
                   "startColumn": 13,
-                  "endLine": 118,
+                  "endLine": 113,
                   "endColumn": 17
                 }
               }
@@ -417,9 +417,9 @@
               "physicalLocation": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/CustomerData.cs",
                 "region": {
-                  "startLine": 118,
+                  "startLine": 113,
                   "startColumn": 60,
-                  "endLine": 118,
+                  "endLine": 113,
                   "endColumn": 62
                 }
               }
@@ -428,9 +428,9 @@
               "physicalLocation": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/CustomerData.cs",
                 "region": {
-                  "startLine": 122,
+                  "startLine": 117,
                   "startColumn": 17,
-                  "endLine": 122,
+                  "endLine": 117,
                   "endColumn": 19
                 }
               }
@@ -439,10 +439,21 @@
               "physicalLocation": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/CustomerData.cs",
                 "region": {
-                  "startLine": 125,
+                  "startLine": 120,
                   "startColumn": 21,
-                  "endLine": 125,
+                  "endLine": 120,
                   "endColumn": 23
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/CustomerData.cs",
+                "region": {
+                  "startLine": 127,
+                  "startColumn": 17,
+                  "endLine": 127,
+                  "endColumn": 19
                 }
               }
             },
@@ -483,9 +494,9 @@
               "physicalLocation": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/CustomerData.cs",
                 "region": {
-                  "startLine": 147,
+                  "startLine": 146,
                   "startColumn": 17,
-                  "endLine": 147,
+                  "endLine": 146,
                   "endColumn": 19
                 }
               }
@@ -494,20 +505,9 @@
               "physicalLocation": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/CustomerData.cs",
                 "region": {
-                  "startLine": 151,
+                  "startLine": 150,
                   "startColumn": 17,
-                  "endLine": 151,
-                  "endColumn": 19
-                }
-              }
-            },
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/CustomerData.cs",
-                "region": {
-                  "startLine": 155,
-                  "startColumn": 17,
-                  "endLine": 155,
+                  "endLine": 150,
                   "endColumn": 19
                 }
               }
@@ -540,9 +540,9 @@
               "resultFile": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/CustomerData.cs",
                 "region": {
-                  "startLine": 92,
+                  "startLine": 87,
                   "startColumn": 24,
-                  "endLine": 92,
+                  "endLine": 87,
                   "endColumn": 44
                 }
               }

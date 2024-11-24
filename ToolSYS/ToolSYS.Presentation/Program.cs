@@ -22,22 +22,19 @@ namespace ToolSYS.Presentation
             Application.SetCompatibleTextRenderingDefault(false);
 
             IToolData toolData = new ToolData();
-            // Similarly, instantiate other repositories if needed:
-            // IRateRepository rateRepository = new RateRepository();
-            // IRentalItemRepository rentalItemRepository = new RentalItemData();
-            // ...
-
-            // Instantiate services with injected repositories
             IToolService toolService = new ToolService(toolData);
-            // Similarly, instantiate other services if needed:
-            // IRateService rateService = new RateService(rateRepository);
-            // IRentalService rentalService = new RentalService(rentalItemRepository, customerService);
-            // ...
 
-            // Instantiate forms with injected services
-            //ToolsForm toolsForm = new ToolsForm(toolService);
+            IRateData rateData = new RateData();
+            IRateService rateService = new RateService(rateData);
 
-            INavigation navigation = new Navigation(toolService);
+            ICustomerData customerData = new CustomerData();
+            ICustomerService customerService = new CustomerService(customerData);
+
+            IAnalysisData analysisData = new AnalysisData();
+            IAnalysisService analysisService = new AnalysisService(analysisData);
+
+
+            INavigation navigation = new Navigation(toolService, rateService, customerService, analysisService);
 
 
             Application.Run(new FrmMainMenu(navigation));

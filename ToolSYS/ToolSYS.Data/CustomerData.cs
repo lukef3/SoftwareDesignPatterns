@@ -4,7 +4,16 @@ using ToolSYS.Entities;
 
 namespace ToolSYS.Data
 {
-    public class CustomerData
+    public interface ICustomerData
+    {
+        int GetNextCustomerId();
+        void AddCustomer(Customer customer);
+        void UpdateCustomer(Customer customer);
+        DataSet SearchCustomers(string searchPhrase);
+        DataSet GetFilteredCustomers(string custIdAsString, string forename, string surname, string email, string phone, string eircode, string phrase);
+    }
+
+    public class CustomerData : ICustomerData
     {
         private readonly string _connectionString = DbConnect.Oradb;
 

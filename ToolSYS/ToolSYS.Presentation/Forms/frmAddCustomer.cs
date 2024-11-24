@@ -6,11 +6,11 @@ namespace ToolSYS.Presentation.Forms
 {
     public partial class FrmAddCustomer : NavForm
     {
-        private readonly CustomerService _customerService;
-        public FrmAddCustomer(INavigation navigation) : base (navigation)
+        private readonly ICustomerService _customerService;
+        public FrmAddCustomer(INavigation navigation, ICustomerService customerService) : base (navigation)
         {
             InitializeComponent();
-            _customerService = new CustomerService();
+            _customerService = customerService;
         }
 
         private void frmAddCustomer_Load(object sender, EventArgs e)

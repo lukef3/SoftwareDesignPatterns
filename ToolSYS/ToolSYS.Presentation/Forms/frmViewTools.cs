@@ -6,14 +6,14 @@ namespace ToolSYS.Presentation.Forms
 {
     public partial class FrmViewTools : NavForm
     {
-        private IToolService _toolService;
-        private RateService _rateService;
+        private readonly IToolService _toolService;
+        private readonly IRateService _rateService;
 
-        public FrmViewTools(INavigation navigation, IToolService toolService) : base(navigation)
+        public FrmViewTools(INavigation navigation, IToolService toolService, IRateService rateService) : base(navigation)
         {
             InitializeComponent();
             _toolService = toolService;
-            _rateService = new RateService();
+            _rateService = rateService;
         }
 
         private void frmViewTools_Load(object sender, EventArgs e)

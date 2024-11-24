@@ -5,13 +5,22 @@ using ToolSYS.Entities;
 
 namespace ToolSYS.Business.Services
 {
-    public class CustomerService
+    public interface ICustomerService
     {
-        private readonly CustomerData _customerData;
+        int GetNextCustomerId();
+        void AddCustomer(Customer customer);
+        void UpdateCustomer(Customer customer);
+        DataSet SearchCustomers(string searchPhrase);
+        DataSet GetFilteredCustomers(string customerId, string forename, string surname, string email, string phone, string eircode, string phrase);
+    }
 
-        public CustomerService()
+    public class CustomerService : ICustomerService
+    {
+        private readonly ICustomerData _customerData;
+
+        public CustomerService(ICustomerData customerData)
         {
-            _customerData = new CustomerData();
+            _customerData = customerData;
         }
 
         public int GetNextCustomerId()

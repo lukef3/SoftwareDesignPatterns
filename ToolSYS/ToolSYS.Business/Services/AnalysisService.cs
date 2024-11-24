@@ -3,13 +3,20 @@ using ToolSYS.Data;
 
 namespace ToolSYS.Business.Services
 {
-    public class AnalysisService
+    public interface IAnalysisService
     {
-        private readonly AnalysisData _analysisData;
+        DataTable GetDistinctYears();
+        (string[] Months, double[] Revenues) GetMonthlyRevenues(int year);
+        (string[] Months, double[] Rentals) GetMonthlyToolRentals(int year, string categoryCode);
+    }
 
-        public AnalysisService()
+    public class AnalysisService : IAnalysisService
+    {
+        private readonly IAnalysisData _analysisData;
+
+        public AnalysisService(IAnalysisData analysisData)
         {
-            _analysisData = new AnalysisData();
+            _analysisData = analysisData;
         }
 
         public DataTable GetDistinctYears()

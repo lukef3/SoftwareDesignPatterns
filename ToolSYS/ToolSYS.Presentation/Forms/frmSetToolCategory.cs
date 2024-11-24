@@ -6,11 +6,11 @@ namespace ToolSYS.Presentation.Forms
 {
     public partial class FrmSetToolCategory : NavForm
     {
-        private RateService _rateService;
-        public FrmSetToolCategory(INavigation navigation) : base(navigation)
+        private readonly IRateService _rateService;
+        public FrmSetToolCategory(INavigation navigation, IRateService rateService) : base(navigation)
         {
             InitializeComponent();
-            _rateService = new RateService();
+            _rateService = rateService;
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)

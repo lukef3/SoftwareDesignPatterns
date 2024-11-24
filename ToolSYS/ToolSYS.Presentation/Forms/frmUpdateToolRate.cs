@@ -7,12 +7,12 @@ namespace ToolSYS.Presentation.Forms
 {
     public partial class FrmUpdateToolRate : NavForm
     {
-        private RateService _rateService;
+        private readonly IRateService _rateService;
 
-        public FrmUpdateToolRate(INavigation navigation) : base(navigation)
+        public FrmUpdateToolRate(INavigation navigation, IRateService rateService) : base(navigation)
         {
             InitializeComponent();
-            _rateService = new RateService();
+            _rateService = rateService;
         }
 
         private void FrmUpdateToolRate_Load(object sender, EventArgs e)

@@ -7,11 +7,11 @@ namespace ToolSYS.Presentation.Forms
 {
     public partial class FrmUpdateCustomer : NavForm
     {
-        private CustomerService _customerService;
-        public FrmUpdateCustomer(INavigation navigation) : base(navigation)
+        private readonly ICustomerService _customerService;
+        public FrmUpdateCustomer(INavigation navigation, ICustomerService customerService) : base(navigation)
         {
             InitializeComponent();
-            _customerService = new CustomerService();
+            _customerService = customerService;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

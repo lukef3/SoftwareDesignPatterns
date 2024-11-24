@@ -4,7 +4,16 @@ using ToolSYS.Entities;
 
 namespace ToolSYS.Data
 {
-    public class RateData
+    public interface IRateData
+    {
+        void AddRate(Rate rate);
+        Rate GetRateByCategoryCode(string categoryCode);
+        void UpdateRate(Rate rate);
+        DataSet GetAllCategories();
+        bool DoesCategoryCodeExist(string categoryCode);
+    }
+
+    public class RateData : IRateData
     {
         private readonly string _connectionString = DbConnect.Oradb;
 

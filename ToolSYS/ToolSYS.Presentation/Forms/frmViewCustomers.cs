@@ -6,12 +6,12 @@ namespace ToolSYS.Presentation.Forms
 {
     public partial class FrmViewCustomers : NavForm
     {
-        private CustomerService _customerService;
+        private readonly ICustomerService _customerService;
 
-        public FrmViewCustomers(INavigation navigation) : base(navigation)
+        public FrmViewCustomers(INavigation navigation, ICustomerService customerService) : base(navigation)
         {
             InitializeComponent();
-            _customerService = new CustomerService();
+            _customerService = customerService;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

@@ -25,23 +25,29 @@ namespace ToolSYS.Presentation.Nav
     public class Navigation : INavigation
     {
         private readonly IToolService _toolService;
+        private readonly IRateService _rateService;
+        private readonly ICustomerService _customerService;
+        private readonly IAnalysisService _analysisService;
 
-        public Navigation(IToolService toolService)
+        public Navigation(IToolService toolService, IRateService rateService, ICustomerService customerService, IAnalysisService analysisService)
         {
             _toolService = toolService;
+            _rateService = rateService;
+            _customerService = customerService;
+            _analysisService = analysisService;
         }
 
         public void NavigateToSetToolCategory(Form form)
         {
             form.Hide();
-            FrmSetToolCategory nextForm = new FrmSetToolCategory(this);
+            FrmSetToolCategory nextForm = new FrmSetToolCategory(this, _rateService);
             nextForm.ShowDialog();
             form.Close();
         }
         public void NavigateToUpdateRate(Form form)
         {
             form.Hide();
-            FrmUpdateToolRate nextForm = new FrmUpdateToolRate(this);
+            FrmUpdateToolRate nextForm = new FrmUpdateToolRate(this, _rateService);
             nextForm.ShowDialog();
             form.Close();
         }
@@ -49,7 +55,7 @@ namespace ToolSYS.Presentation.Nav
         public void NavigateToAddTool(Form form)
         {
             form.Hide();
-            FrmAddTool nextForm = new FrmAddTool(this, _toolService);
+            FrmAddTool nextForm = new FrmAddTool(this, _toolService, _rateService);
             nextForm.ShowDialog();
             form.Close();
         }
@@ -57,7 +63,7 @@ namespace ToolSYS.Presentation.Nav
         public void NavigateToUpdateTool(Form form)
         {
             form.Hide();
-            FrmUpdateTool nextForm = new FrmUpdateTool(this, _toolService);
+            FrmUpdateTool nextForm = new FrmUpdateTool(this, _toolService, _rateService);
             nextForm.ShowDialog();
             form.Close();
         }
@@ -72,7 +78,7 @@ namespace ToolSYS.Presentation.Nav
         public void NavigateToViewTools(Form form)
         {
             form.Hide();
-            FrmViewTools nextForm = new FrmViewTools(this, _toolService);
+            FrmViewTools nextForm = new FrmViewTools(this, _toolService, _rateService);
             nextForm.ShowDialog();
             form.Close();
         }
@@ -80,7 +86,7 @@ namespace ToolSYS.Presentation.Nav
         public void NavigateToRentTools(Form form)
         {
             form.Hide();
-            FrmRentTools nextForm = new FrmRentTools(this, _toolService);
+            FrmRentTools nextForm = new FrmRentTools(this, _toolService, _rateService, _customerService);
             nextForm.ShowDialog();
             form.Close();
         }
@@ -103,21 +109,21 @@ namespace ToolSYS.Presentation.Nav
         public void NavigateToAddCustomer(Form form)
         {
             form.Hide();
-            FrmAddCustomer nextForm = new FrmAddCustomer(this);
+            FrmAddCustomer nextForm = new FrmAddCustomer(this, _customerService);
             nextForm.ShowDialog();
             form.Close();
         }
         public void NavigateToUpdateCustomer(Form form)
         {
             form.Hide();
-            FrmUpdateCustomer nextForm = new FrmUpdateCustomer(this);
+            FrmUpdateCustomer nextForm = new FrmUpdateCustomer(this, _customerService);
             nextForm.ShowDialog();
             form.Close();
         }
         public void NavigateToViewCustomers(Form form)
         {
             form.Hide();
-            FrmViewCustomers nextForm = new FrmViewCustomers(this);
+            FrmViewCustomers nextForm = new FrmViewCustomers(this, _customerService);
             nextForm.ShowDialog();
             form.Close();
         }
@@ -125,7 +131,7 @@ namespace ToolSYS.Presentation.Nav
         public void NavigateToAnalysis(Form form)
         {
             form.Hide();
-            FrmAnalysis nextForm = new FrmAnalysis(this);
+            FrmAnalysis nextForm = new FrmAnalysis(this, _rateService, _analysisService);
             nextForm.ShowDialog();
             form.Close();
         }

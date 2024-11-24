@@ -7,15 +7,15 @@ namespace ToolSYS.Presentation.Forms
 {
     public partial class FrmAnalysis : NavForm
     {
-        private readonly AnalysisService _analysisService;
-        private readonly RateService _rateService;
+        private readonly IAnalysisService _analysisService;
+        private readonly IRateService _rateService;
         private IReportStrategy _report;
 
-        public FrmAnalysis(INavigation navigation) : base(navigation)
+        public FrmAnalysis(INavigation navigation, IRateService rateService, IAnalysisService analysisService) : base(navigation)
         {
             InitializeComponent();
-            _analysisService = new AnalysisService();
-            _rateService = new RateService();
+            _analysisService = analysisService;
+            _rateService = rateService;
         }
 
         private void frmAnalysis_Load(object sender, EventArgs e)
@@ -72,7 +72,7 @@ namespace ToolSYS.Presentation.Forms
 
         private void SetReportType()
         {
-            if (cboReportType.SelectedItem.ToString() == "Revenue Analysis")
+            if (cboReportType.SelectedItem != null && cboReportType.SelectedItem.ToString() == "Revenue Analysis")
             {
                 _report = new RevenueReport(_analysisService);
             }
@@ -115,6 +115,11 @@ namespace ToolSYS.Presentation.Forms
         }
 
         private void UpdateChart()
+        {
+            UpdateChart(cboCategories);
+        }
+
+        private void UpdateChart(ComboBox cboCategories)
         {
             try
             {

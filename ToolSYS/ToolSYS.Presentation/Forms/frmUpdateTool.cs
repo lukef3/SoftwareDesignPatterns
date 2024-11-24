@@ -8,13 +8,13 @@ namespace ToolSYS.Presentation.Forms
     public partial class FrmUpdateTool : NavForm
     {
         private readonly IToolService _toolService;
-        private readonly RateService _rateService;
+        private readonly IRateService _rateService;
 
-        public FrmUpdateTool(INavigation navigation, IToolService toolService) : base(navigation)
+        public FrmUpdateTool(INavigation navigation, IToolService toolService, IRateService rateService) : base(navigation)
         {
             InitializeComponent();
             _toolService = toolService;
-            _rateService = new RateService();
+            _rateService = rateService;
         }
 
         private void frmUpdateTool_Load(object sender, EventArgs e)

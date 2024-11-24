@@ -11,9 +11,9 @@ namespace ToolSYS.Business.Strategies
 
     public class RevenueReport : IReportStrategy
     {
-        private readonly AnalysisService _analysisService;
+        private readonly IAnalysisService _analysisService;
 
-        public RevenueReport(AnalysisService analysisService)
+        public RevenueReport(IAnalysisService analysisService)
         {
             _analysisService = analysisService;
         }
@@ -33,9 +33,9 @@ namespace ToolSYS.Business.Strategies
 
     public class ToolRentalReport : IReportStrategy
     {
-        private readonly AnalysisService _analysisService;
+        private readonly IAnalysisService _analysisService;
 
-        public ToolRentalReport(AnalysisService analysisService)
+        public ToolRentalReport(IAnalysisService analysisService)
         {
             _analysisService = analysisService;
         }

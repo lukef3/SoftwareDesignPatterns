@@ -9,15 +9,15 @@ namespace ToolSYS.Presentation.Forms
     public partial class FrmRentTools : NavForm
     {
         private readonly IToolService _toolService;
-        private readonly RateService _rateService;
-        private readonly CustomerService _customerService;
+        private readonly IRateService _rateService;
+        private readonly ICustomerService _customerService;
         private readonly RentalService _rentalService;
-        public FrmRentTools(INavigation navigation, IToolService toolService) : base(navigation)
+        public FrmRentTools(INavigation navigation, IToolService toolService, IRateService rateService, ICustomerService customerService) : base(navigation)
         {
             InitializeComponent();
             _toolService = toolService;  
-            _rateService = new RateService();   
-            _customerService = new CustomerService();
+            _rateService = rateService;   
+            _customerService = customerService;
             _rentalService = new RentalService();
         }
 

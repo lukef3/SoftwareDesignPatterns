@@ -9,12 +9,12 @@ namespace ToolSYS.Presentation.Forms
     public partial class FrmAddTool : NavForm
     {
         private readonly IToolService _toolService;
-        private readonly RateService _rateService;
-        public FrmAddTool(INavigation navigation, IToolService toolService) : base(navigation)
+        private readonly IRateService _rateService;
+        public FrmAddTool(INavigation navigation, IToolService toolService, IRateService rateService) : base(navigation)
         {
             InitializeComponent();
             _toolService = toolService;
-            _rateService = new RateService();
+            _rateService = rateService;
         }
 
         private void frmAddTool_Load(object sender, EventArgs e)
