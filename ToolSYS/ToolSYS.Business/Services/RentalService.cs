@@ -4,20 +4,30 @@ using ToolSYS.Entities;
 
 namespace ToolSYS.Business.Services
 {
-    public class RentalService
+    public interface IRentalService
     {
-        private readonly RentalItemData _rentalItemData;
-        private readonly RateData _rateData;
+        int GetNextRentalId();
+        decimal CalculateRentalFee(int customerId, string categoryCode, DateTime rentDate, DateTime returnDate);
+        void ConfirmRental(Rental rental);
+        DataTable GetRentalItems(int rentalId);
+        void ReturnTool(int rentalId, int toolId);
+    }
+    public class RentalService : IRentalService
+    {
+        private readonly IRentalData _rentalData;
+        private readonly IRentalItemData _rentalItemData;
+        private readonly IRateData _rateData;
 
-        public RentalService()
+        public RentalService(IRentalData rentalData, IRentalItemData rentalItemData, IRateData rateData)
         {
-            _rentalItemData = new RentalItemData();     
-            _rateData = new RateData();     
+            _rentalData = rentalData;
+            _rentalItemData = rentalItemData;     
+            _rateData = rateData;     
         }
 
-        public static int GetNextRentalId()
+        public int GetNextRentalId()
         {
-            return RentalData.GetNextRentalId();
+            return _rentalData.GetNextRentalId();
         }
 
         public decimal CalculateRentalFee(int customerId, string categoryCode, DateTime rentDate, DateTime returnDate)
@@ -35,7 +45,7 @@ namespace ToolSYS.Business.Services
 
         public void ConfirmRental(Rental rental)
         {
-            RentalData.AddRental(rental);
+            _rentalData.AddRental(rental);
 
             foreach (var rentalItem in rental.rentalItems)
             {
@@ -43,20 +53,20 @@ namespace ToolSYS.Business.Services
             }
         }
 
-        public static DataTable GetRentalItems(int rentalId)
+        public DataTable GetRentalItems(int rentalId)
         {
             if (rentalId <= 0)
                 throw new ArgumentException("Invalid Rental ID.");
 
-            return RentalData.GetRentalItemsByRentalId(rentalId);
+            return _rentalData.GetRentalItemsByRentalId(rentalId);
         }
 
-        public static void ReturnTool(int rentalId, int toolId)
+        public void ReturnTool(int rentalId, int toolId)
         {
             if (rentalId <= 0 || toolId <= 0)
                 throw new ArgumentException("Rental ID and Tool ID must be valid numbers.");
 
-            RentalData.ReturnTool(rentalId, toolId);
+            _rentalData.ReturnTool(rentalId, toolId);
         }
 
 

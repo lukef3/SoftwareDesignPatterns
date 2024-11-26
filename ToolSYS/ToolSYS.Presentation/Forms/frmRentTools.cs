@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using ToolSYS.Business.Builders;
+using ToolSYS.Business.Facades;
 using ToolSYS.Business.Services;
 using ToolSYS.Entities;
 using ToolSYS.Presentation.Nav;
@@ -8,28 +9,32 @@ namespace ToolSYS.Presentation.Forms
 {
     public partial class FrmRentTools : NavForm
     {
-        private readonly IToolService _toolService;
+        /*private readonly IToolService _toolService;
         private readonly IRateService _rateService;
         private readonly ICustomerService _customerService;
-        private readonly RentalService _rentalService;
-        public FrmRentTools(INavigation navigation, IToolService toolService, IRateService rateService, ICustomerService customerService) : base(navigation)
+        private readonly IRentalService _rentalService;*/
+
+        private readonly IRentalFacade _rentalFacade;
+        public FrmRentTools(INavigation navigation, IRentalFacade rentalFacade) : base(navigation)
         {
             InitializeComponent();
-            _toolService = toolService;  
-            _rateService = rateService;   
+            _rentalFacade = rentalFacade;
+
+            /*_toolService = toolService;
+            _rateService = rateService;
             _customerService = customerService;
-            _rentalService = new RentalService();
+            _rentalService = rentalService;*/
         }
 
         private void frmRentTools_Load(object sender, EventArgs e)
         {
             dtpFrom.MinDate = DateTime.Today;
             dtpTo.MinDate = DateTime.Today;
-            txtRentalID.Text = RentalService.GetNextRentalId().ToString();
+            txtRentalID.Text = "";
             cboCategories.Items.Add("");
-            DataSet categories = _rateService.GetAllCategories();
+            DataTable categories = _rentalFacade.GetCategories();
 
-            foreach (DataRow row in categories.Tables[0].Rows)
+            foreach (DataRow row in categories.Rows)
             {
                 string category = row["CategoryCode"] + " - " + row["CategoryDesc"];
                 cboCategories.Items.Add(category);
@@ -45,7 +50,7 @@ namespace ToolSYS.Presentation.Forms
         }
         private void btnCustomerSearch_Click(object sender, EventArgs e)
         {
-            dgvCustomers.DataSource = _customerService.SearchCustomers(txtCustomerSearch.Text).Tables["customer"];
+            dgvCustomers.DataSource = _rentalFacade.SearchCustomers(txtCustomerSearch.Text);
             
             dgvCustomers.Columns[0].HeaderText = @"ID";
             dgvCustomers.Columns[1].HeaderText = @"Forename";
@@ -61,12 +66,16 @@ namespace ToolSYS.Presentation.Forms
         {
             if (dgvCustomers.CurrentRow != null)
             {
-                txtCustomerID.Text = dgvCustomers.Rows[dgvCustomers.CurrentRow.Index].Cells[0].Value.ToString();
-                txtForename.Text = dgvCustomers.Rows[dgvCustomers.CurrentRow.Index].Cells[1].Value.ToString();
-                txtSurname.Text = dgvCustomers.Rows[dgvCustomers.CurrentRow.Index].Cells[2].Value.ToString();
-                txtEmail.Text = dgvCustomers.Rows[dgvCustomers.CurrentRow.Index].Cells[3].Value.ToString();
-                txtPhone.Text = dgvCustomers.Rows[dgvCustomers.CurrentRow.Index].Cells[4].Value.ToString();
-                txtEircode.Text = dgvCustomers.Rows[dgvCustomers.CurrentRow.Index].Cells[5].Value.ToString();
+                int customerId = Convert.ToInt32(dgvCustomers.CurrentRow.Cells[0].Value);
+                _rentalFacade.StartNewRental(customerId);
+
+                txtRentalID.Text = _rentalFacade.GetCurrentRental().rentalId.ToString("000");
+                txtCustomerID.Text = dgvCustomers.CurrentRow.Cells[0].Value.ToString();
+                txtForename.Text = dgvCustomers.CurrentRow.Cells[1].Value.ToString();
+                txtSurname.Text = dgvCustomers.CurrentRow.Cells[2].Value.ToString();
+                txtEmail.Text = dgvCustomers.CurrentRow.Cells[3].Value.ToString();
+                txtPhone.Text = dgvCustomers.CurrentRow.Cells[4].Value.ToString();
+                txtEircode.Text = dgvCustomers.CurrentRow.Cells[5].Value.ToString();
             }
         }
 
@@ -93,20 +102,18 @@ namespace ToolSYS.Presentation.Forms
                 int customerId = Convert.ToInt32(txtCustomerID.Text);
                 if (dgvTools.CurrentRow != null)
                 {
-                    string id = dgvTools.Rows[dgvTools.CurrentRow.Index].Cells[0].Value?.ToString() ?? throw new ArgumentException("Tool ID is missing.");
-                    string categoryCode = dgvTools.Rows[dgvTools.CurrentRow.Index].Cells[1].Value?.ToString() ?? throw new ArgumentException("Category Code is missing.");
-                    string description = dgvTools.Rows[dgvTools.CurrentRow.Index].Cells[2].Value?.ToString() ?? throw new ArgumentException("Description is missing.");
-                    string manufacturer = dgvTools.Rows[dgvTools.CurrentRow.Index].Cells[3].Value?.ToString() ?? throw new ArgumentException("Manufacturer is missing.");
+                    int toolId = Convert.ToInt32(dgvTools.CurrentRow.Cells[0].Value);
+                    string categoryCode = dgvTools.CurrentRow.Cells[1].Value.ToString() ?? throw new ArgumentException("Category Code is missing.");
+                    string description = dgvTools.CurrentRow.Cells[2].Value.ToString() ?? throw new ArgumentException("Description is missing.");
+                    string manufacturer = dgvTools.CurrentRow.Cells[3].Value.ToString() ?? throw new ArgumentException("Manufacturer is missing.");
                     DateTime rentDate = dtpFrom.Value;
                     DateTime returnDate = dtpTo.Value;
-
-                    decimal rentalFee = _rentalService.CalculateRentalFee(customerId, categoryCode, rentDate, returnDate);
 
                     if (dgvRental.Rows.Count >= 1)
                     {
                         foreach (DataGridViewRow row in dgvRental.Rows)
                         {
-                            if (row.Cells["ToolID"].Value?.ToString() == id)
+                            if (Convert.ToInt32(dgvTools.CurrentRow.Cells["ID"].Value) == toolId)
                             {
                                 MessageBox.Show(@"Tool Has Already Been Added To Rental", @"Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 return;
@@ -114,8 +121,13 @@ namespace ToolSYS.Presentation.Forms
                         }
                     }
 
+                    _rentalFacade.AddToolToRental(toolId, categoryCode, description, manufacturer, rentDate, returnDate);
+
+                    decimal rentalFee = _rentalFacade.GetCurrentRental().rentalItems
+                        .First(item => item.toolId == toolId).rentalFee;
+
                     dgvRental.Rows.Add(
-                        id,
+                        toolId,
                         categoryCode,
                         description,
                         manufacturer,
@@ -148,7 +160,9 @@ namespace ToolSYS.Presentation.Forms
         {
             try
             {
-                if (string.IsNullOrEmpty(txtCustomerID.Text))
+                _rentalFacade.ConfirmRental();
+
+                /*if (string.IsNullOrEmpty(txtCustomerID.Text))
                     throw new ArgumentException("Please select a customer.");
 
                 if (dgvRental.Rows.Count == 0)
@@ -185,7 +199,7 @@ namespace ToolSYS.Presentation.Forms
                 Rental rental = rentalBuilder.Build();
 
                 _rentalService.ConfirmRental(rental);
-
+                */
                 MessageBox.Show(@"Rental Successful", @"Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 RefreshForm();
             }
@@ -197,7 +211,7 @@ namespace ToolSYS.Presentation.Forms
 
         private void RefreshForm()
         {
-            txtRentalID.Text = RentalService.GetNextRentalId().ToString();
+            txtRentalID.Text = "";
             txtCustomerSearch.Clear();
             txtCustomerID.Clear();
             txtForename.Clear();
@@ -222,9 +236,8 @@ namespace ToolSYS.Presentation.Forms
             {
                 string categoryCode = cboCategories.SelectedItem.ToString()![..2];
 
-                dgvTools.DataSource = _toolService
-                    .GetRentableTools(categoryCode: categoryCode, dtpFrom.Value, dtpTo.Value)
-                    .Tables["tool"];
+                dgvTools.DataSource = _rentalFacade
+                    .GetRentableTools(categoryCode: categoryCode, dtpFrom.Value, dtpTo.Value);
 
                 dgvTools.Columns[0].HeaderText = @"ID";
                 dgvTools.Columns[1].HeaderText = @"Category Code";

@@ -6,11 +6,11 @@ namespace ToolSYS.Presentation.Forms
 {
     public partial class FrmReturnTools : NavForm
     {
-        private RentalService _rentalService;
-        public FrmReturnTools(INavigation navigation) : base(navigation)
+        private readonly IRentalService _rentalService;
+        public FrmReturnTools(INavigation navigation, IRentalService rentalService) : base(navigation)
         {
             InitializeComponent();
-            _rentalService = new RentalService();
+            _rentalService = rentalService;
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -19,7 +19,7 @@ namespace ToolSYS.Presentation.Forms
             {
                 try
                 {
-                    DataTable rentalItems = RentalService.GetRentalItems(rentalId);
+                    DataTable rentalItems = _rentalService.GetRentalItems(rentalId);
 
                     dgvRentalItems.DataSource = rentalItems;
                     dgvRentalItems.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -48,12 +48,12 @@ namespace ToolSYS.Presentation.Forms
                 try
                 {
                     // Return the tool
-                    RentalService.ReturnTool(rentalId, toolId);
+                    _rentalService.ReturnTool(rentalId, toolId);
 
                     MessageBox.Show(@"Tool successfully returned.", @"Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Refresh the DataGridView
-                    DataTable rentalItems = RentalService.GetRentalItems(rentalId);
+                    DataTable rentalItems = _rentalService.GetRentalItems(rentalId);
 
                     dgvRentalItems.DataSource = rentalItems;
                     dgvRentalItems.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;

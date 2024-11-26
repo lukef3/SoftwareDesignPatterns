@@ -4,9 +4,17 @@ using ToolSYS.Entities;
 
 namespace ToolSYS.Data
 {
-    public  class RentalData
+    public interface IRentalData
     {
-        public static int GetNextRentalId()
+        int GetNextRentalId();
+        void AddRental(Rental rental);
+        DataTable GetRentalItemsByRentalId(int rentalId);
+        void ReturnTool(int rentalId, int toolId);
+    }
+    
+    public class RentalData : IRentalData
+    {
+        public int GetNextRentalId()
         {
             using (var conn = new OracleConnection(DbConnect.Oradb))
             {
@@ -17,7 +25,7 @@ namespace ToolSYS.Data
             }
         }
 
-        public static void AddRental(Rental rental)
+        public void AddRental(Rental rental)
         {
             using (var conn = new OracleConnection(DbConnect.Oradb))
             {
@@ -35,7 +43,7 @@ namespace ToolSYS.Data
             }
         }
 
-        public static DataTable GetRentalItemsByRentalId(int rentalId)
+        public DataTable GetRentalItemsByRentalId(int rentalId)
         {
             using (var conn = new OracleConnection(DbConnect.Oradb))
             {
@@ -57,7 +65,7 @@ namespace ToolSYS.Data
             }
         }
 
-        public static void ReturnTool(int rentalId, int toolId)
+        public void ReturnTool(int rentalId, int toolId)
         {
             using (var conn = new OracleConnection(DbConnect.Oradb))
             {

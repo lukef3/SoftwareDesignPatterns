@@ -3,7 +3,12 @@ using ToolSYS.Entities;
 
 namespace ToolSYS.Data
 {
-    public class RentalItemData
+    public interface IRentalItemData
+    {
+        void AddRentalItem(RentalItem rentalItem);
+    }
+    
+    public class RentalItemData : IRentalItemData
     {
         private readonly string _connectionString = DbConnect.Oradb;
 
@@ -26,7 +31,6 @@ namespace ToolSYS.Data
 
                 cmd.ExecuteNonQuery();
 
-                // Update tool status to 'Out'
                 string sqlUpdateStatus = "UPDATE Tools SET ToolStatus = 'O' WHERE ToolID = :toolID";
 
                 cmd = new OracleCommand(sqlUpdateStatus, conn);

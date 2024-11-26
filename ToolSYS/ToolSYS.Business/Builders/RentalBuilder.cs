@@ -10,7 +10,8 @@ namespace ToolSYS.Business.Builders
         IRentalBuilder SetTotalFee(decimal totalFee);
         IRentalBuilder AddRentalItem(RentalItem rentalItem);
         Rental Build();
-   }
+        Rental GetRental();
+    }
 
 
     public class RentalBuilder : IRentalBuilder
@@ -48,9 +49,7 @@ namespace ToolSYS.Business.Builders
 
         public IRentalBuilder AddRentalItem(RentalItem rentalItem)
         {
-            if (_rental.rentalItems == null)
-                _rental.rentalItems = new List<RentalItem>();
-
+            _rental.rentalItems ??= new List<RentalItem>();
             _rental.rentalItems.Add(rentalItem);
             return this;
         }
@@ -58,6 +57,11 @@ namespace ToolSYS.Business.Builders
         public Rental Build()
         {
             ValidateRental();
+            return _rental;
+        }
+
+        public Rental GetRental()
+        {
             return _rental;
         }
 
@@ -75,7 +79,7 @@ namespace ToolSYS.Business.Builders
             if (_rental.totalFee <= 0)
                 throw new ArgumentException("Total fee must be greater than zero.");
 
-            if (_rental.rentalItems == null || _rental.rentalItems.Count == 0)
+            if (_rental.rentalItems == null || !_rental.rentalItems.Any())
                 throw new ArgumentException("At least one rental item must be added.");
         }
     }

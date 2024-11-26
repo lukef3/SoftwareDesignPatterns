@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using ToolSYS.Business.Facades;
 using ToolSYS.Business.Services;
 using ToolSYS.Presentation.Forms;
 
@@ -28,13 +29,17 @@ namespace ToolSYS.Presentation.Nav
         private readonly IRateService _rateService;
         private readonly ICustomerService _customerService;
         private readonly IAnalysisService _analysisService;
+        private readonly IRentalService _rentalService;
+        private readonly IRentalFacade _rentalFacade;
 
-        public Navigation(IToolService toolService, IRateService rateService, ICustomerService customerService, IAnalysisService analysisService)
+        public Navigation(IToolService toolService, IRateService rateService, ICustomerService customerService, IAnalysisService analysisService, IRentalService rentalService, IRentalFacade rentalFacade)
         {
             _toolService = toolService;
             _rateService = rateService;
             _customerService = customerService;
             _analysisService = analysisService;
+            _rentalService = rentalService;
+            _rentalFacade = rentalFacade;
         }
 
         public void NavigateToSetToolCategory(Form form)
@@ -86,7 +91,7 @@ namespace ToolSYS.Presentation.Nav
         public void NavigateToRentTools(Form form)
         {
             form.Hide();
-            FrmRentTools nextForm = new FrmRentTools(this, _toolService, _rateService, _customerService);
+            FrmRentTools nextForm = new FrmRentTools(this, _rentalFacade);
             nextForm.ShowDialog();
             form.Close();
         }
@@ -94,7 +99,7 @@ namespace ToolSYS.Presentation.Nav
         public void NavigateToReturnTools(Form form)
         {
             form.Hide();
-            FrmReturnTools nextForm = new FrmReturnTools(this);
+            FrmReturnTools nextForm = new FrmReturnTools(this, _rentalService);
             nextForm.ShowDialog();
             form.Close();
         }

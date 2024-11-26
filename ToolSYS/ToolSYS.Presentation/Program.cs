@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ToolSYS.Business.Facades;
 using ToolSYS.Business.Services;
 using ToolSYS.Data;
 using ToolSYS.Presentation.Forms;
@@ -33,8 +34,13 @@ namespace ToolSYS.Presentation
             IAnalysisData analysisData = new AnalysisData();
             IAnalysisService analysisService = new AnalysisService(analysisData);
 
+            IRentalData rentalData = new RentalData();
+            IRentalItemData rentalItemData = new RentalItemData();
+            IRentalService rentalService = new RentalService(rentalData, rentalItemData, rateData);
 
-            INavigation navigation = new Navigation(toolService, rateService, customerService, analysisService);
+            IRentalFacade rentalFacade = new RentalFacade(toolService, rateService, customerService, rentalService);
+
+            INavigation navigation = new Navigation(toolService, rateService, customerService, analysisService, rentalService, rentalFacade);
 
 
             Application.Run(new FrmMainMenu(navigation));
