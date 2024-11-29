@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\forms\\frmrenttools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\forms\\frmrenttools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.business\\facades\\rentalfacade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{52FC2CF2-BDF3-4543-A054-692018345D50}|ToolSYS.Business\\ToolSYS.Business.csproj|solutionrelative:toolsys.business\\facades\\rentalfacade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\forms\\frmrenttools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|solutionrelative:toolsys.presentation\\forms\\frmrenttools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DA25EA1E-5B06-41F4-8960-6C45641754E3}|ToolSYS.Presentation\\ToolSYS.Presentation.csproj|c:\\github\\softwaredesignpatterns\\toolsys\\toolsys.presentation\\nav\\navigation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -294,30 +294,34 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{99a11807-c5db-4877-ad35-09b56a044002}"
+              "Name": "ST:0:0:{99a11807-c5db-4877-ad35-09b56a044005}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{99a11807-c5db-4877-ad35-09b56a044004}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "RentalFacade.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Facades\\RentalFacade.cs",
               "RelativeDocumentMoniker": "ToolSYS.Business\\Facades\\RentalFacade.cs",
               "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Business\\Facades\\RentalFacade.cs",
               "RelativeToolTip": "ToolSYS.Business\\Facades\\RentalFacade.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAA9wC4AAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAACLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T16:35:16.662Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "frmRentTools.cs",
               "DocumentMoniker": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmRentTools.cs",
               "RelativeDocumentMoniker": "ToolSYS.Presentation\\Forms\\frmRentTools.cs",
               "ToolTip": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\Forms\\frmRentTools.cs",
               "RelativeToolTip": "ToolSYS.Presentation\\Forms\\frmRentTools.cs",
-              "ViewState": "AgIAANAAAAAAAAAAAAAmwOkAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAANAAAAAAAAAAAAAmwOYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T12:54:44.818Z",
               "EditorCaption": ""
@@ -332,8 +336,7 @@
               "RelativeToolTip": "ToolSYS.Business\\Strategies\\ReportStrategy.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAowCcAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T13:10:59.312Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T13:10:59.312Z"
             },
             {
               "$type": "Document",
@@ -345,8 +348,7 @@
               "RelativeToolTip": "ToolSYS.Business\\Services\\RentalService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAuwBkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T13:18:56.618Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T13:18:56.618Z"
             },
             {
               "$type": "Document",
@@ -358,8 +360,7 @@
               "RelativeToolTip": "ToolSYS.Business\\Services\\RateService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T13:10:11.519Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T13:10:11.519Z"
             },
             {
               "$type": "Document",
@@ -371,8 +372,7 @@
               "RelativeToolTip": "ToolSYS.Business\\Services\\CustomerService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T13:18:46.886Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T13:18:46.886Z"
             },
             {
               "$type": "Document",
@@ -384,8 +384,7 @@
               "RelativeToolTip": "ToolSYS.Business\\Builders\\RentalBuilder.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T15:25:30.384Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T15:25:30.384Z"
             },
             {
               "$type": "Document",
@@ -397,8 +396,7 @@
               "RelativeToolTip": "ToolSYS.DTOs\\Rental.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T13:14:53.519Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T13:14:53.519Z"
             },
             {
               "$type": "Document",
@@ -410,8 +408,7 @@
               "RelativeToolTip": "ToolSYS.DTOs\\RentalItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T13:14:56.16Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T13:14:56.16Z"
             },
             {
               "$type": "Document",
@@ -423,8 +420,7 @@
               "RelativeToolTip": "ToolSYS.Data\\RentalItemData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T15:29:56.859Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T15:29:56.859Z"
             },
             {
               "$type": "Document",
@@ -436,8 +432,7 @@
               "RelativeToolTip": "ToolSYS.Data\\ToolData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T15:30:02.245Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T15:30:02.245Z"
             },
             {
               "$type": "Document",
@@ -449,8 +444,7 @@
               "RelativeToolTip": "ToolSYS.Data\\RentalData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T15:29:46.023Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T15:29:46.023Z"
             },
             {
               "$type": "Document",
@@ -475,8 +469,7 @@
               "RelativeToolTip": "ToolSYS.Presentation\\Nav\\Navigation.cs",
               "ViewState": "AgIAAH8AAAAAAAAAAIA0wJgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T13:12:47.075Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T13:12:47.075Z"
             },
             {
               "$type": "Document",
@@ -488,8 +481,7 @@
               "RelativeToolTip": "ToolSYS.Presentation\\Program.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAArwC8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T15:33:21.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T15:33:21.667Z"
             },
             {
               "$type": "Document",
@@ -501,8 +493,7 @@
               "RelativeToolTip": "ToolSYS.Business\\Services\\AnalysisService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T13:10:54.534Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T13:10:54.534Z"
             },
             {
               "$type": "Document",
@@ -514,8 +505,7 @@
               "RelativeToolTip": "ToolSYS.Business\\Services\\ToolService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T15:22:06.346Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T15:22:06.346Z"
             },
             {
               "$type": "Document",
@@ -527,8 +517,7 @@
               "RelativeToolTip": "ToolSYS.Data\\AnalysisData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T13:19:19.804Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T13:19:19.804Z"
             },
             {
               "$type": "Document",
@@ -540,8 +529,7 @@
               "RelativeToolTip": "ToolSYS.Data\\CustomerData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T13:18:13.264Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T13:18:13.264Z"
             },
             {
               "$type": "Document",
@@ -553,8 +541,7 @@
               "RelativeToolTip": "ToolSYS.Data\\DBConnect.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T15:28:44.352Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T15:28:44.352Z"
             },
             {
               "$type": "Document",
@@ -566,8 +553,7 @@
               "RelativeToolTip": "ToolSYS.Data\\RateData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T13:08:48.577Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T13:08:48.577Z"
             },
             {
               "$type": "Document",
@@ -579,8 +565,7 @@
               "RelativeToolTip": "ToolSYS.DTOs\\Customer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T13:08:36.422Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T13:08:36.422Z"
             },
             {
               "$type": "Document",
@@ -592,8 +577,7 @@
               "RelativeToolTip": "ToolSYS.DTOs\\Rate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T13:14:37.169Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T13:14:37.169Z"
             },
             {
               "$type": "Document",
@@ -605,8 +589,7 @@
               "RelativeToolTip": "ToolSYS.DTOs\\Tool.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T13:14:57.603Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T13:14:57.603Z"
             },
             {
               "$type": "Document",
