@@ -11,7 +11,7 @@ namespace ToolSYS.Business.Strategies
 
     public class RevenueReport : IReportStrategy
     {
-        private readonly IAnalysisService _analysisService;
+        private readonly IAnalysisService _analysisService; 
 
         public RevenueReport(IAnalysisService analysisService)
         {

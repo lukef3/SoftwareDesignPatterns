@@ -121,3 +121,4 @@ C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\obj\Debug\net8.0-w
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\obj\Debug\net8.0-windows\ToolSYS.Presentation.Forms.FrmViewCustomers.resources
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\obj\Debug\net8.0-windows\ToolSYS.Presentation.Forms.FrmViewRentals.resources
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\obj\Debug\net8.0-windows\ToolSYS.Presentation.Forms.FrmViewTools.resources
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\bin\Debug\net8.0-windows\FluentValidation.dll

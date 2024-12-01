@@ -24,7 +24,7 @@ public class RentalFacade : IRentalFacade
     private readonly IRateService _rateService;
     private readonly ICustomerService _customerService;
     private readonly IRentalService _rentalService;
-    private IRentalBuilder _rentalBuilder;
+    private IRentalBuilder? _rentalBuilder;
 
     public RentalFacade(
         IToolService toolService,

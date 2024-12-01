@@ -1,5 +1,10 @@
-dotnet sonarscanner begin /k:"MyToolHireSystem" /d:sonar.host.url="http://localhost:9000" /d:sonar.login="sqp_232d37844808943026e48ddd059e020c61d5ad51" /d:sonar.exclusions="NDependOut/**"
+dotnet sonarscanner begin /k:"MyToolHireSystem" /d:sonar.host.url="http://localhost:9000" /d:sonar.login="sqa_1da906a306354bec471a242ba2b87800217d1c7d" /d:sonar.exclusions="NDependOut/**"
 
 dotnet build
 
-dotnet sonarscanner end /d:sonar.login="sqp_232d37844808943026e48ddd059e020c61d5ad51"
+dotnet sonarscanner end /d:sonar.login="sqa_1da906a306354bec471a242ba2b87800217d1c7d"
+
+
+
+Laptop token: sqa_1da906a306354bec471a242ba2b87800217d1c7d
+Desktop token: sqp_232d37844808943026e48ddd059e020c61d5ad51

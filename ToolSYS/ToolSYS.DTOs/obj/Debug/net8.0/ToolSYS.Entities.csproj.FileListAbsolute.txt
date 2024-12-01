@@ -10,3 +10,4 @@ C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\obj\Debug\net8.0\ToolSYS.E
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\obj\Debug\net8.0\refint\ToolSYS.Entities.dll
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\obj\Debug\net8.0\ToolSYS.Entities.pdb
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\obj\Debug\net8.0\ref\ToolSYS.Entities.dll
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\obj\Debug\net8.0\ToolSYS.Entities.csproj.AssemblyReference.cache

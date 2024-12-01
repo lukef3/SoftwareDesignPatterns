@@ -79,7 +79,7 @@ namespace ToolSYS.Business.Builders
             if (_rental.totalFee <= 0)
                 throw new ArgumentException("Total fee must be greater than zero.");
 
-            if (_rental.rentalItems == null || !_rental.rentalItems.Any())
+            if (_rental.rentalItems == null || _rental.rentalItems.Count == 0)
                 throw new ArgumentException("At least one rental item must be added.");
         }
     }

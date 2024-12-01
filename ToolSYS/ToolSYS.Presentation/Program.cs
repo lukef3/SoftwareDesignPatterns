@@ -1,11 +1,14 @@
-﻿using System;
+﻿using FluentValidation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ToolSYS.Business.Facades;
 using ToolSYS.Business.Services;
+using ToolSYS.Business.Validators;
 using ToolSYS.Data;
+using ToolSYS.Entities;
 using ToolSYS.Presentation.Forms;
 using ToolSYS.Presentation.Nav;
 
@@ -28,8 +31,10 @@ namespace ToolSYS.Presentation
             IRateData rateData = new RateData();
             IRateService rateService = new RateService(rateData);
 
+            
             ICustomerData customerData = new CustomerData();
-            ICustomerService customerService = new CustomerService(customerData);
+            IValidator<Customer> customerValidator = new CustomerValidator();
+            ICustomerService customerService = new CustomerService(customerData, customerValidator);
 
             IAnalysisData analysisData = new AnalysisData();
             IAnalysisService analysisService = new AnalysisService(analysisData);

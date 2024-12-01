@@ -21,11 +21,16 @@ namespace ToolSYS.Data
         {
             using (var conn = new OracleConnection(_connectionString))
             {
-                string sqlQuery = "SELECT MAX(CustomerID) FROM Customers";
-                var cmd = new OracleCommand(sqlQuery, conn);
+                var cmd = new OracleCommand("GetNextCustomerId", conn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                cmd.Parameters.Add("p_NextCustomerId", OracleDbType.Int32, ParameterDirection.Output);
 
                 conn.Open();
-                int nextCustomerId = cmd.ExecuteScalar() == DBNull.Value ? 1 : Convert.ToInt32(cmd.ExecuteScalar()) + 1;
+                cmd.ExecuteNonQuery();
+                int nextCustomerId = Convert.ToInt32(cmd.Parameters["p_NextCustomerId"].Value.ToString());
                 conn.Close();
 
                 return nextCustomerId;
@@ -36,16 +41,17 @@ namespace ToolSYS.Data
         {
             using (var conn = new OracleConnection(_connectionString))
             {
-                string sqlQuery = "INSERT INTO Customers (CustomerID, Forename, Surname, Email, Phone, Eircode) " +
-                                  "VALUES (:customerID, :forename, :surname, :email, :phone, :eircode)";
+                var cmd = new OracleCommand("AddCustomer", conn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
-                var cmd = new OracleCommand(sqlQuery, conn);
-                cmd.Parameters.Add(":customerID", OracleDbType.Int32).Value = customer.customerId;
-                cmd.Parameters.Add(":forename", OracleDbType.Varchar2).Value = customer.forename;
-                cmd.Parameters.Add(":surname", OracleDbType.Varchar2).Value = customer.surname;
-                cmd.Parameters.Add(":email", OracleDbType.Varchar2).Value = customer.email;
-                cmd.Parameters.Add(":phone", OracleDbType.Varchar2).Value = customer.phone;
-                cmd.Parameters.Add(":eircode", OracleDbType.Varchar2).Value = customer.eircode;
+                cmd.Parameters.Add("p_CustomerID", OracleDbType.Int32).Value = customer.customerId;
+                cmd.Parameters.Add("p_Forename", OracleDbType.Varchar2).Value = customer.forename;
+                cmd.Parameters.Add("p_Surname", OracleDbType.Varchar2).Value = customer.surname;
+                cmd.Parameters.Add("p_Email", OracleDbType.Varchar2).Value = customer.email;
+                cmd.Parameters.Add("p_Phone", OracleDbType.Varchar2).Value = customer.phone;
+                cmd.Parameters.Add("p_Eircode", OracleDbType.Varchar2).Value = customer.eircode;
 
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -57,16 +63,17 @@ namespace ToolSYS.Data
         {
             using (var conn = new OracleConnection(_connectionString))
             {
-                string sqlQuery = "UPDATE Customers SET Forename = :forename, Surname = :surname, Email = :email, Phone = :phone, Eircode = :eircode " +
-                                  "WHERE CustomerID = :customerID";
+                var cmd = new OracleCommand("UpdateCustomer", conn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
-                var cmd = new OracleCommand(sqlQuery, conn);
-                cmd.Parameters.Add(":customerID", OracleDbType.Int32).Value = customer.customerId;
-                cmd.Parameters.Add(":forename", OracleDbType.Varchar2).Value = customer.forename;
-                cmd.Parameters.Add(":surname", OracleDbType.Varchar2).Value = customer.surname;
-                cmd.Parameters.Add(":email", OracleDbType.Varchar2).Value = customer.email;
-                cmd.Parameters.Add(":phone", OracleDbType.Varchar2).Value = customer.phone;
-                cmd.Parameters.Add(":eircode", OracleDbType.Varchar2).Value = customer.eircode;
+                cmd.Parameters.Add("p_CustomerID", OracleDbType.Int32).Value = customer.customerId;
+                cmd.Parameters.Add("p_Forename", OracleDbType.Varchar2).Value = customer.forename;
+                cmd.Parameters.Add("p_Surname", OracleDbType.Varchar2).Value = customer.surname;
+                cmd.Parameters.Add("p_Email", OracleDbType.Varchar2).Value = customer.email;
+                cmd.Parameters.Add("p_Phone", OracleDbType.Varchar2).Value = customer.phone;
+                cmd.Parameters.Add("p_Eircode", OracleDbType.Varchar2).Value = customer.eircode;
 
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -78,94 +85,55 @@ namespace ToolSYS.Data
         {
             using (var conn = new OracleConnection(_connectionString))
             {
-                string sqlQuery = "SELECT CustomerID, Forename, Surname, Email, Phone, Eircode " +
-                                  "FROM Customers WHERE LOWER(Forename) LIKE LOWER(:phrase) OR LOWER(Surname) LIKE LOWER(:phrase) " +
-                                  "OR LOWER(Email) LIKE LOWER(:phrase) OR LOWER(Phone) LIKE LOWER(:phrase) OR LOWER(Eircode) LIKE LOWER(:phrase)";
+                var cmd = new OracleCommand("SearchCustomers", conn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
 
-                var cmd = new OracleCommand(sqlQuery, conn);
-                cmd.Parameters.Add(":phrase", OracleDbType.Varchar2).Value = $"%{searchPhrase}%";
+                cmd.Parameters.Add("p_SearchPhrase", OracleDbType.Varchar2).Value = searchPhrase;
+                cmd.Parameters.Add("p_Cursor", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
 
+                conn.Open();
                 OracleDataAdapter da = new OracleDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "customer");
+                conn.Close();
+
                 return ds;
             }
         }
 
-
-        public DataSet GetFilteredCustomers(String custIdAsString, String forename, String surname, String email, String phone, String eircode, String phrase)
+        public DataSet GetFilteredCustomers(string custIdAsString, string forename, string surname, string email, string phone, string eircode, string phrase)
         {
-            OracleConnection conn = new OracleConnection(DbConnect.Oradb);
-
-            String sqlQuery = DetermineSqlQuery(custIdAsString, forename, surname, email, phone, eircode, phrase);
-
-            OracleCommand cmd = new OracleCommand(sqlQuery, conn);
-
-            OracleDataAdapter da = new OracleDataAdapter(cmd);
-
-            DataSet ds = new DataSet();
-            da.Fill(ds, "customer");
-
-            conn.Close();
-
-            return ds;
-
-        }
-        private static String DetermineSqlQuery(String custIdAsString, String forename, String surname, String email, String phone, String eircode, String phrase)
-        {
-            String sqlQuery = "";
-
-            if (string.IsNullOrEmpty(custIdAsString) && String.IsNullOrEmpty(forename) && string.IsNullOrEmpty(surname) && string.IsNullOrEmpty(email) && string.IsNullOrEmpty(phone) && string.IsNullOrEmpty(eircode) && string.IsNullOrEmpty(phrase))
+            using (var conn = new OracleConnection(_connectionString))
             {
-                sqlQuery = "SELECT CustomerID, Forename, Surname, Email, Phone, Eircode FROM Customers";
+                var cmd = new OracleCommand("GetFilteredCustomers", conn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                // Handle nullable parameters
+                int? customerId = null;
+                if (int.TryParse(custIdAsString, out int parsedId))
+                    customerId = parsedId;
+
+                cmd.Parameters.Add("p_CustomerID", OracleDbType.Int32).Value = customerId.HasValue ? (object)customerId.Value : DBNull.Value;
+                cmd.Parameters.Add("p_Forename", OracleDbType.Varchar2).Value = string.IsNullOrEmpty(forename) ? DBNull.Value : (object)forename;
+                cmd.Parameters.Add("p_Surname", OracleDbType.Varchar2).Value = string.IsNullOrEmpty(surname) ? DBNull.Value : (object)surname;
+                cmd.Parameters.Add("p_Email", OracleDbType.Varchar2).Value = string.IsNullOrEmpty(email) ? DBNull.Value : (object)email;
+                cmd.Parameters.Add("p_Phone", OracleDbType.Varchar2).Value = string.IsNullOrEmpty(phone) ? DBNull.Value : (object)phone;
+                cmd.Parameters.Add("p_Eircode", OracleDbType.Varchar2).Value = string.IsNullOrEmpty(eircode) ? DBNull.Value : (object)eircode;
+                cmd.Parameters.Add("p_Phrase", OracleDbType.Varchar2).Value = string.IsNullOrEmpty(phrase) ? DBNull.Value : (object)phrase;
+                cmd.Parameters.Add("p_Cursor", OracleDbType.RefCursor).Direction = ParameterDirection.Output;
+
+                conn.Open();
+                OracleDataAdapter da = new OracleDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "customer");
+                conn.Close();
+
+                return ds;
             }
-            else if (!string.IsNullOrEmpty(custIdAsString) || !string.IsNullOrEmpty(forename) || !string.IsNullOrEmpty(surname) || !string.IsNullOrEmpty(email) || !string.IsNullOrEmpty(phone) || !string.IsNullOrEmpty(eircode) || !string.IsNullOrEmpty(phrase))
-            {
-                sqlQuery = "SELECT CustomerID, Forename, Surname, Email, Phone, Eircode FROM Customers WHERE 1 = 1";
-
-                if (!string.IsNullOrEmpty(custIdAsString))
-                {
-                    int custId;
-                    if (Decimal.TryParse(custIdAsString, out _))
-                    {
-                        custId = Convert.ToInt32(custIdAsString);
-                        sqlQuery += " AND CustomerID = " + custId;
-                    }
-                }
-
-                if (!string.IsNullOrEmpty(forename))
-                {
-                    sqlQuery += " AND LOWER(Forename) LIKE LOWER('%" + forename + "%')";      //https://stackoverflow.com/questions/2876789/how-can-i-search-case-insensitive-in-a-column-using-like-wildcard
-                }
-
-                if (!string.IsNullOrEmpty(surname))
-                {
-                    sqlQuery += " AND LOWER(Surname) LIKE LOWER('%" + surname + "%')";
-                }
-
-                if (!string.IsNullOrEmpty(email))
-                {
-                    sqlQuery += " AND LOWER(Email) LIKE LOWER('%" + email + "%')";
-                }
-
-                if (!string.IsNullOrEmpty(phone))
-                {
-                    sqlQuery += " AND Phone = '%" + phone + "%'";
-                }
-                if (!string.IsNullOrEmpty(eircode))
-                {
-                    sqlQuery += " AND LOWER(Eircode) LIKE LOWER('%" + eircode + "%')";
-                }
-                if (!string.IsNullOrEmpty(phrase))
-                {
-                    sqlQuery += " AND (LOWER(Forename) LIKE LOWER('%" + phrase + "%') " +
-                        "OR LOWER(Surname) LIKE LOWER('%" + phrase + "%') " +
-                        "OR LOWER(Email) LIKE LOWER('%" + phrase + "%') " +
-                        "OR LOWER(Phone) LIKE LOWER('%" + phrase + "%') " +
-                        "OR LOWER(Eircode) LIKE LOWER('%" + phrase + "%'))";
-                }
-            }
-            return sqlQuery;
         }
     }
 }

@@ -138,8 +138,8 @@
     <Property Name="sonaranalyzer-vbnet.pluginKey">vbnet</Property>
     <Property Name="sonar.java.jvmframeworkconfig.activate">true</Property>
     <Property Name="sonar.updatecenter.url">https://downloads.sonarsource.com/sonarqube/update/update-center.properties</Property>
-    <Property Name="sonar.core.id">147B411E-AZM3Zpnou0VzqruV68yr</Property>
-    <Property Name="sonar.core.startTime">24/11/2024 18:51:54</Property>
+    <Property Name="sonar.core.startTime">29/11/2024 14:15:44</Property>
+    <Property Name="sonar.core.id">147B411E-AZN4RxyCTLFpFvfoZxwV</Property>
   </ServerSettings>
   <LocalSettings>
     <Property Name="sonar.host.url">http://localhost:9000</Property>

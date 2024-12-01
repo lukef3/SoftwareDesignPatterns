@@ -2,6 +2,7 @@
 using ToolSYS.Business.Services;
 using ToolSYS.Entities;
 using ToolSYS.Presentation.Nav;
+using FluentValidation;
 
 namespace ToolSYS.Presentation.Forms
 {
@@ -31,6 +32,10 @@ namespace ToolSYS.Presentation.Forms
                 dgvCustomers.DataSource = results.Tables["customer"];
                 dgvCustomers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dgvCustomers.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }
+            catch (ValidationException ex)
+            {
+                MessageBox.Show($"Validation Error:\n{ex.Message}", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {

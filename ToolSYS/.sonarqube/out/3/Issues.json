@@ -46,27 +46,6 @@
           }
         },
         {
-          "ruleId": "CS8604",
-          "level": "warning",
-          "message": "Possible null reference argument for parameter 'item' in 'int ObjectCollection.Add(object item)'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
-                "region": {
-                  "startLine": 64,
-                  "startColumn": 40,
-                  "endLine": 64,
-                  "endColumn": 62
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "CS8600",
           "level": "warning",
           "message": "Converting null literal or possible null value to non-nullable type.",
@@ -151,18 +130,18 @@
           }
         },
         {
-          "ruleId": "CS8602",
+          "ruleId": "CS8604",
           "level": "warning",
-          "message": "Dereference of a possibly null reference.",
+          "message": "Possible null reference argument for parameter 'item' in 'int ObjectCollection.Add(object item)'.",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
                 "region": {
-                  "startLine": 75,
-                  "startColumn": 17,
-                  "endLine": 75,
-                  "endColumn": 43
+                  "startLine": 64,
+                  "startColumn": 40,
+                  "endLine": 64,
+                  "endColumn": 62
                 }
               }
             }
@@ -184,6 +163,90 @@
                   "startColumn": 48,
                   "endLine": 72,
                   "endColumn": 68
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
+                "region": {
+                  "startLine": 126,
+                  "startColumn": 46,
+                  "endLine": 126,
+                  "endColumn": 67
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 's' in 'int int.Parse(string s)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
+                "region": {
+                  "startLine": 126,
+                  "startColumn": 46,
+                  "endLine": 126,
+                  "endColumn": 78
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8600",
+          "level": "warning",
+          "message": "Converting null literal or possible null value to non-nullable type.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
+                "region": {
+                  "startLine": 127,
+                  "startColumn": 39,
+                  "endLine": 127,
+                  "endColumn": 43
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
+                "region": {
+                  "startLine": 131,
+                  "startColumn": 36,
+                  "endLine": 131,
+                  "endColumn": 73
                 }
               }
             }
@@ -226,6 +289,48 @@
                   "startColumn": 39,
                   "endLine": 32,
                   "endColumn": 76
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmUpdateToolRate.cs",
+                "region": {
+                  "startLine": 48,
+                  "startColumn": 36,
+                  "endLine": 48,
+                  "endColumn": 62
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmUpdateToolRate.cs",
+                "region": {
+                  "startLine": 48,
+                  "startColumn": 36,
+                  "endLine": 48,
+                  "endColumn": 73
                 }
               }
             }
@@ -310,48 +415,6 @@
                   "startColumn": 114,
                   "endLine": 53,
                   "endColumn": 120
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmUpdateToolRate.cs",
-                "region": {
-                  "startLine": 48,
-                  "startColumn": 36,
-                  "endLine": 48,
-                  "endColumn": 62
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmUpdateToolRate.cs",
-                "region": {
-                  "startLine": 48,
-                  "startColumn": 36,
-                  "endLine": 48,
-                  "endColumn": 73
                 }
               }
             }
@@ -529,18 +592,18 @@
           }
         },
         {
-          "ruleId": "CS8602",
+          "ruleId": "S125",
           "level": "warning",
-          "message": "Dereference of a possibly null reference.",
+          "message": "Remove this commented out code.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmRentTools.cs",
                 "region": {
-                  "startLine": 121,
-                  "startColumn": 46,
-                  "endLine": 121,
-                  "endColumn": 67
+                  "startLine": 12,
+                  "startColumn": 9,
+                  "endLine": 12,
+                  "endColumn": 54
                 }
               }
             }
@@ -550,102 +613,39 @@
           }
         },
         {
-          "ruleId": "CS8604",
+          "ruleId": "S125",
           "level": "warning",
-          "message": "Possible null reference argument for parameter 's' in 'int int.Parse(string s)'.",
+          "message": "Remove this commented out code.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmRentTools.cs",
                 "region": {
-                  "startLine": 121,
-                  "startColumn": 46,
-                  "endLine": 121,
+                  "startLine": 23,
+                  "startColumn": 13,
+                  "endLine": 23,
+                  "endColumn": 42
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S125",
+          "level": "warning",
+          "message": "Remove this commented out code.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmRentTools.cs",
+                "region": {
+                  "startLine": 166,
+                  "startColumn": 1,
+                  "endLine": 166,
                   "endColumn": 78
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8600",
-          "level": "warning",
-          "message": "Converting null literal or possible null value to non-nullable type.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
-                "region": {
-                  "startLine": 122,
-                  "startColumn": 39,
-                  "endLine": 122,
-                  "endColumn": 43
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
-                "region": {
-                  "startLine": 126,
-                  "startColumn": 36,
-                  "endLine": 126,
-                  "endColumn": 73
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S4487",
-          "level": "warning",
-          "message": "Remove this unread private field '_rentalService' or refactor the code to use its value.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmReturnTools.cs",
-                "region": {
-                  "startLine": 9,
-                  "startColumn": 31,
-                  "endLine": 9,
-                  "endColumn": 45
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S3427",
-          "level": "warning",
-          "message": "This method signature overlaps the one defined on line 34, the default parameter value can't be used.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Nav/NavForm.cs",
-                "region": {
-                  "startLine": 29,
-                  "startColumn": 20,
-                  "endLine": 29,
-                  "endColumn": 50
                 }
               }
             }
@@ -667,48 +667,6 @@
                   "startColumn": 19,
                   "endLine": 314,
                   "endColumn": 33
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S125",
-          "level": "warning",
-          "message": "Remove this commented out code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Program.cs",
-                "region": {
-                  "startLine": 26,
-                  "startColumn": 13,
-                  "endLine": 26,
-                  "endColumn": 70
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S125",
-          "level": "warning",
-          "message": "Remove this commented out code.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Program.cs",
-                "region": {
-                  "startLine": 33,
-                  "startColumn": 13,
-                  "endLine": 33,
-                  "endColumn": 75
                 }
               }
             }
@@ -755,18 +713,18 @@
           }
         },
         {
-          "ruleId": "S6580",
+          "ruleId": "S3427",
           "level": "warning",
-          "message": "Use a format provider when parsing date and time.",
+          "message": "This method signature overlaps the one defined on line 34, the default parameter value can't be used.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmRentTools.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Nav/NavForm.cs",
                 "region": {
-                  "startLine": 177,
-                  "startColumn": 36,
-                  "endLine": 177,
-                  "endColumn": 65
+                  "startLine": 29,
+                  "startColumn": 20,
+                  "endLine": 29,
+                  "endColumn": 50
                 }
               }
             }
@@ -776,18 +734,18 @@
           }
         },
         {
-          "ruleId": "S6580",
+          "ruleId": "S1481",
           "level": "warning",
-          "message": "Use a format provider when parsing date and time.",
+          "message": "Remove the unused local variable 'customerId'.",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmRentTools.cs",
                 "region": {
-                  "startLine": 178,
-                  "startColumn": 38,
-                  "endLine": 178,
-                  "endColumn": 69
+                  "startLine": 102,
+                  "startColumn": 21,
+                  "endLine": 102,
+                  "endColumn": 31
                 }
               }
             }
@@ -888,6 +846,23 @@
             ]
           }
         },
+        "S1481": {
+          "id": "S1481",
+          "shortDescription": "Unused local variables should be removed",
+          "fullDescription": "An unused local variable is a variable that has been declared but is not used anywhere in the block of code where it is defined. It is dead code, contributing to unnecessary complexity and leading to confusion when reading the code. Therefore, it should be removed from your code to maintain clarity and efficiency.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1481",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
         "S3260": {
           "id": "S3260",
           "shortDescription": "Non-derived \"private\" classes and records should be \"sealed\"",
@@ -912,40 +887,6 @@
           "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3427",
           "properties": {
             "category": "Blocker Code Smell",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
-              "TestSourceScope",
-              "SonarWay"
-            ]
-          }
-        },
-        "S4487": {
-          "id": "S4487",
-          "shortDescription": "Unread \"private\" fields should be removed",
-          "fullDescription": "Private fields which are written but never read are a case of \"dead store\". Changing the value of such a field is useless and most probably indicates an error in the code.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-4487",
-          "properties": {
-            "category": "Critical Code Smell",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
-              "TestSourceScope",
-              "SonarWay"
-            ]
-          }
-        },
-        "S6580": {
-          "id": "S6580",
-          "shortDescription": "Use a format provider when parsing date and time",
-          "fullDescription": "When converting a string representation of a date and time to a DateTime object or any other temporal type with one of the available system parsing methods, you should always provide an IFormatProvider parameter.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-6580",
-          "properties": {
-            "category": "Major Code Smell",
             "isEnabledByDefault": true,
             "tags": [
               "C#",

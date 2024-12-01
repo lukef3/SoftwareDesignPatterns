@@ -10,19 +10,7 @@
    
 ' 3  ,
 < K# 2
-T d$ 4Å
-?C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\Rental.cs
-
- 
-   
-   
- '   
-   
-		  +  
- " $
-( 2 (
-= L# 2
-V ^ $û
+T d$ 4û
 CC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\RentalItem.cs
 
  
@@ -40,7 +28,19 @@ CC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\RentalItem.cs
 
  "
 
-		  ±
+		  Å
+?C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\Rental.cs
+
+ 
+   
+   
+ '   
+   
+		  +  
+ " $
+( 2 (
+= L# 2
+V ^ $±
 =C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\Rate.cs
 
  

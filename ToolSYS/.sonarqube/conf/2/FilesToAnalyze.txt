@@ -1,4 +1,5 @@
 ﻿C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Builders\RentalBuilder.cs
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Facades\RentalFacade.cs
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Services\AnalysisService.cs
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Services\CustomerService.cs
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Services\RateService.cs

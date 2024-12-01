@@ -114,6 +114,90 @@ INSERT INTO RentalItems VALUES(11, 2, '25-NOV-23', '27-NOV-23', 250);
   
 COMMIT;
 
+CREATE OR REPLACE PROCEDURE GetNextCustomerId(
+    p_NextCustomerId OUT NUMBER
+) AS
+BEGIN
+    SELECT NVL(MAX(CustomerID), 0) + 1 INTO p_NextCustomerId FROM Customers;
+END;
+/
+CREATE OR REPLACE PROCEDURE AddCustomer(
+    p_CustomerID IN NUMBER,
+    p_Forename IN VARCHAR2,
+    p_Surname IN VARCHAR2,
+    p_Email IN VARCHAR2,
+    p_Phone IN VARCHAR2,
+    p_Eircode IN VARCHAR2
+) AS
+BEGIN
+    INSERT INTO Customers (CustomerID, Forename, Surname, Email, Phone, Eircode)
+    VALUES (p_CustomerID, p_Forename, p_Surname, p_Email, p_Phone, p_Eircode);
+END;
+/
+CREATE OR REPLACE PROCEDURE UpdateCustomer(
+    p_CustomerID IN NUMBER,
+    p_Forename IN VARCHAR2,
+    p_Surname IN VARCHAR2,
+    p_Email IN VARCHAR2,
+    p_Phone IN VARCHAR2,
+    p_Eircode IN VARCHAR2
+) AS
+BEGIN
+    UPDATE Customers
+    SET Forename = p_Forename,
+        Surname = p_Surname,
+        Email = p_Email,
+        Phone = p_Phone,
+        Eircode = p_Eircode
+    WHERE CustomerID = p_CustomerID;
+END;
+/
+
+CREATE OR REPLACE PROCEDURE SearchCustomers(
+    p_SearchPhrase IN VARCHAR2,
+    p_Cursor OUT SYS_REFCURSOR
+) AS
+BEGIN
+    OPEN p_Cursor FOR
+    SELECT CustomerID, Forename, Surname, Email, Phone, Eircode
+    FROM Customers
+    WHERE LOWER(Forename) LIKE LOWER('%' || p_SearchPhrase || '%')
+       OR LOWER(Surname) LIKE LOWER('%' || p_SearchPhrase || '%')
+       OR LOWER(Email) LIKE LOWER('%' || p_SearchPhrase || '%')
+       OR LOWER(Phone) LIKE LOWER('%' || p_SearchPhrase || '%')
+       OR LOWER(Eircode) LIKE LOWER('%' || p_SearchPhrase || '%');
+END;
+/
+
+CREATE OR REPLACE PROCEDURE GetFilteredCustomers(
+    p_CustomerID IN NUMBER DEFAULT NULL,
+    p_Forename IN VARCHAR2 DEFAULT NULL,
+    p_Surname IN VARCHAR2 DEFAULT NULL,
+    p_Email IN VARCHAR2 DEFAULT NULL,
+    p_Phone IN VARCHAR2 DEFAULT NULL,
+    p_Eircode IN VARCHAR2 DEFAULT NULL,
+    p_Phrase IN VARCHAR2 DEFAULT NULL,
+    p_Cursor OUT SYS_REFCURSOR
+) AS
+BEGIN
+    OPEN p_Cursor FOR
+    SELECT CustomerID, Forename, Surname, Email, Phone, Eircode
+    FROM Customers
+    WHERE (p_CustomerID IS NULL OR CustomerID = p_CustomerID)
+      AND (p_Forename IS NULL OR LOWER(Forename) LIKE LOWER('%' || p_Forename || '%'))
+      AND (p_Surname IS NULL OR LOWER(Surname) LIKE LOWER('%' || p_Surname || '%'))
+      AND (p_Email IS NULL OR LOWER(Email) LIKE LOWER('%' || p_Email || '%'))
+      AND (p_Phone IS NULL OR Phone LIKE '%' || p_Phone || '%')
+      AND (p_Eircode IS NULL OR LOWER(Eircode) LIKE LOWER('%' || p_Eircode || '%'))
+      AND (p_Phrase IS NULL OR (
+            LOWER(Forename) LIKE LOWER('%' || p_Phrase || '%') OR
+            LOWER(Surname) LIKE LOWER('%' || p_Phrase || '%') OR
+            LOWER(Email) LIKE LOWER('%' || p_Phrase || '%') OR
+            LOWER(Phone) LIKE LOWER('%' || p_Phrase || '%') OR
+            LOWER(Eircode) LIKE LOWER('%' || p_Phrase || '%')
+          ));
+END;
+/
 
 /*Testing Queries*/
 

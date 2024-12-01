@@ -12,9 +12,51 @@
       },
       "results": [
         {
+          "ruleId": "CS8603",
+          "level": "warning",
+          "message": "Possible null reference return.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Business/Facades/RentalFacade.cs",
+                "region": {
+                  "startLine": 44,
+                  "startColumn": 16,
+                  "endLine": 44,
+                  "endColumn": 44
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8603",
+          "level": "warning",
+          "message": "Possible null reference return.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Business/Facades/RentalFacade.cs",
+                "region": {
+                  "startLine": 56,
+                  "startColumn": 16,
+                  "endLine": 56,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
           "ruleId": "CS8604",
           "level": "warning",
-          "message": "Possible null reference argument for parameter 'categoryCode' in '(string[] Months, double[] Rentals) AnalysisService.GetMonthlyToolRentals(int year, string categoryCode)'.",
+          "message": "Possible null reference argument for parameter 'categoryCode' in '(string[] Months, double[] Rentals) IAnalysisService.GetMonthlyToolRentals(int year, string categoryCode)'.",
           "locations": [
             {
               "resultFile": {
@@ -41,9 +83,9 @@
               "resultFile": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Business/Services/AnalysisService.cs",
                 "region": {
-                  "startLine": 35,
+                  "startLine": 42,
                   "startColumn": 44,
-                  "endLine": 35,
+                  "endLine": 42,
                   "endColumn": 67
                 }
               }
@@ -62,10 +104,31 @@
               "resultFile": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Business/Services/AnalysisService.cs",
                 "region": {
-                  "startLine": 57,
+                  "startLine": 64,
                   "startColumn": 44,
-                  "endLine": 57,
+                  "endLine": 64,
                   "endColumn": 67
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Business/Facades/RentalFacade.cs",
+                "region": {
+                  "startLine": 125,
+                  "startColumn": 16,
+                  "endLine": 125,
+                  "endColumn": 30
                 }
               }
             }
@@ -125,9 +188,9 @@
               "resultFile": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Business/Services/CustomerService.cs",
                 "region": {
-                  "startLine": 56,
+                  "startLine": 65,
                   "startColumn": 32,
-                  "endLine": 56,
+                  "endLine": 65,
                   "endColumn": 85
                 }
               }
@@ -146,9 +209,9 @@
               "resultFile": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Business/Services/CustomerService.cs",
                 "region": {
-                  "startLine": 63,
+                  "startLine": 72,
                   "startColumn": 34,
-                  "endLine": 63,
+                  "endLine": 72,
                   "endColumn": 132
                 }
               }
@@ -156,6 +219,30 @@
           ],
           "properties": {
             "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1860",
+          "level": "note",
+          "message": "Prefer comparing 'Count' to 0 rather than using 'Any()', both for clarity and for performance",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Business/Facades/RentalFacade.cs",
+                "region": {
+                  "startLine": 98,
+                  "startColumn": 44,
+                  "endLine": 98,
+                  "endColumn": 68
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "DiagnosticPropertyKey": "Count"
+            }
           }
         },
         {
@@ -167,9 +254,9 @@
               "resultFile": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Business/Services/CustomerService.cs",
                 "region": {
-                  "startLine": 56,
+                  "startLine": 65,
                   "startColumn": 32,
-                  "endLine": 56,
+                  "endLine": 65,
                   "endColumn": 85
                 }
               }
@@ -188,9 +275,9 @@
               "resultFile": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Business/Services/CustomerService.cs",
                 "region": {
-                  "startLine": 63,
+                  "startLine": 72,
                   "startColumn": 34,
-                  "endLine": 63,
+                  "endLine": 72,
                   "endColumn": 132
                 }
               }
@@ -202,11 +289,40 @@
         }
       ],
       "rules": {
+        "CA1860": {
+          "id": "CA1860",
+          "shortDescription": "Avoid using 'Enumerable.Any()' extension method",
+          "fullDescription": "Prefer using 'IsEmpty', 'Count' or 'Length' properties whichever available, rather than calling 'Enumerable.Any()'. The intent is clearer and it is more performant than using 'Enumerable.Any()' extension method.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1860",
+          "properties": {
+            "category": "Performance",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
         "CS8602": {
           "id": "CS8602",
           "shortDescription": "Dereference of a possibly null reference.",
           "defaultLevel": "warning",
           "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8602)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8603": {
+          "id": "CS8603",
+          "shortDescription": "Possible null reference return.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8603)",
           "properties": {
             "category": "Compiler",
             "isEnabledByDefault": true,

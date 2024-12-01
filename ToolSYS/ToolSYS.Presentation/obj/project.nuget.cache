@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "kooQrRW2+Fg=",
+  "dgSpecHash": "iwGm9wW0h0Y=",
   "success": true,
   "projectFilePath": "C:\\GitHub\\SoftwareDesignPatterns\\ToolSYS\\ToolSYS.Presentation\\ToolSYS.Presentation.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\lukef\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512",
     "C:\\Users\\lukef\\.nuget\\packages\\microsoft.netcore.platforms\\3.0.0\\microsoft.netcore.platforms.3.0.0.nupkg.sha512",
     "C:\\Users\\lukef\\.nuget\\packages\\microsoft.win32.systemevents\\4.6.0\\microsoft.win32.systemevents.4.6.0.nupkg.sha512",
     "C:\\Users\\lukef\\.nuget\\packages\\oracle.manageddataaccess.core\\23.5.1\\oracle.manageddataaccess.core.23.5.1.nupkg.sha512",

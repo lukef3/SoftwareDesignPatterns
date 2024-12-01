@@ -1,6 +1,7 @@
 ﻿using ToolSYS.Business.Services;
 using ToolSYS.Entities;
 using ToolSYS.Presentation.Nav;
+using FluentValidation;
 
 namespace ToolSYS.Presentation.Forms
 {
@@ -42,6 +43,10 @@ namespace ToolSYS.Presentation.Forms
                 txtEircode.Clear();
                 txtCustomerID.Text = _customerService.GetNextCustomerId().ToString("0000");
 
+            }
+            catch (ValidationException ex)
+            {
+                MessageBox.Show($"Validation Error:\n{ex.Message}", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {

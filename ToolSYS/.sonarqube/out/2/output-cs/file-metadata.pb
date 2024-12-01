@@ -6,6 +6,7 @@ VC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Strategies\ReportStra
 QC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Services\ToolService.csutf-8\
 SC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Services\RentalService.csutf-8Z
 QC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Services\RateService.csutf-8^
-UC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Services\CustomerService.csutf-8^
+UC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Services\CustomerService.csutf-8Z
+QC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Facades\RentalFacade.csutf-8^
 UC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Services\AnalysisService.csutf-8\
 SC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Builders\RentalBuilder.csutf-8
