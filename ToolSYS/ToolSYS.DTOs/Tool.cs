@@ -25,7 +25,5 @@
             this.toolManufacturer = toolManufacturer;
             this.toolStatus = "I";
         }
-
-
     }
 }

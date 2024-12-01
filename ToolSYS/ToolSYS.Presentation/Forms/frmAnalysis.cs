@@ -1,6 +1,8 @@
-﻿using System.Data;
+﻿using ScottPlot;
+using System.Data;
 using ToolSYS.Business.Services;
 using ToolSYS.Business.Strategies;
+using ToolSYS.Entities;
 using ToolSYS.Presentation.Nav;
 
 namespace ToolSYS.Presentation.Forms
@@ -8,48 +10,26 @@ namespace ToolSYS.Presentation.Forms
     public partial class FrmAnalysis : NavForm
     {
         private readonly IAnalysisService _analysisService;
-        private readonly IRateService _rateService;
-        private IReportStrategy _report;
+        private IReportStrategy _reportStrategy;
 
-        public FrmAnalysis(INavigation navigation, IRateService rateService, IAnalysisService analysisService) : base(navigation)
+        public FrmAnalysis(INavigation navigation, IAnalysisService analysisService) : base(navigation)
         {
             InitializeComponent();
             _analysisService = analysisService;
-            _rateService = rateService;
         }
 
         private void frmAnalysis_Load(object sender, EventArgs e)
         {
             InitializeReportTypes();
             LoadYears();
-            LoadCategories();
-            SetReportType();
         }
 
         private void InitializeReportTypes()
         {
             cboReportType.Items.Add("Revenue Analysis");
             cboReportType.Items.Add("Tool Rental Analysis");
+            cboReportType.Items.Add("Tool Type Distribution");
             cboReportType.SelectedIndex = 0;
-        }
-
-        private void LoadCategories()
-        {
-            try
-            {
-                cboCategories.Items.Clear();
-                DataSet categories = _rateService.GetAllCategories();
-
-                foreach (DataRow row in categories.Tables[0].Rows)
-                {
-                    string category = $"{row["CategoryCode"]} - {row["CategoryDesc"]}";
-                    cboCategories.Items.Add(category);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($@"{ex.Message}", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void LoadYears()
@@ -70,31 +50,14 @@ namespace ToolSYS.Presentation.Forms
             }
         }
 
-        private void SetReportType()
-        {
-            if (cboReportType.SelectedItem != null && cboReportType.SelectedItem.ToString() == "Revenue Analysis")
-            {
-                _report = new RevenueReport(_analysisService);
-            }
-            else
-            {
-                _report = new ToolRentalReport(_analysisService);
-            }
-            lblCategory.Visible = _report.needsCategory;
-            cboCategories.Visible = _report.needsCategory;
-        }
-
-        private void cboReportType_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            SetReportType();
-        }
-
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             try
             {
                 ValidateSelections();
-                UpdateChart();
+                ReportData reportData =
+                    _analysisService.GetReportData(Convert.ToInt32(cboYears.Text), cboReportType.Text);
+                RenderGraph(reportData);
             }
             catch (Exception ex)
             {
@@ -104,47 +67,100 @@ namespace ToolSYS.Presentation.Forms
 
         private void ValidateSelections()
         {
-            if (_report.needsCategory)
-            {
-                if (cboCategories.SelectedIndex < 0)
-                    throw new ArgumentException("Please select a tool category.");
-            }
-
             if (cboYears.SelectedIndex < 0)
                 throw new ArgumentException("Please select a year.");
+            if (cboReportType.SelectedIndex < 0)
+                throw new ArgumentException("Please select a report.");
+
         }
 
-        private void UpdateChart()
+        private void RenderGraph(ReportData reportData)
         {
-            UpdateChart(cboCategories);
+            formsPlot1.Plot.Clear();
+            switch (reportData.ChartType)
+            {
+                case ChartType.Bar:
+                    RenderBarChart(reportData);
+                    break;
+
+                case ChartType.Line:
+                    RenderLineChart(reportData);
+                    break;
+
+                case ChartType.Scatter:
+                    RenderScatterChart(reportData);
+                    break;
+
+                case ChartType.Pie:
+                    RenderPieChart(reportData);
+                    break;
+
+                default:
+                    throw new NotSupportedException($"Chart type '{reportData.ChartType}' is not supported.");
+            }
+
+            formsPlot1.Plot.Title(reportData.Title);
+            formsPlot1.Plot.YLabel(reportData.YLabel);
+
+            formsPlot1.Refresh();
         }
 
-        private void UpdateChart(ComboBox cboCategories)
+        private void RenderBarChart(ReportData data)
         {
-            try
-            {
-                int selectedYear = int.Parse(cboYears.SelectedItem.ToString());
-                string categoryCode = null;
-
-                if (_report.needsCategory && cboCategories.SelectedItem != null)
-                {
-                    categoryCode = cboCategories.SelectedItem.ToString().Substring(0, 2);
-                }
-                var (labels, values) = _report.GetData(selectedYear, categoryCode);
-
-                formsPlot1.Plot.Clear();
-                formsPlot1.Plot.AddBar(values);
-                double[] xPositions = Enumerable.Range(0, labels.Length)
-                    .Select(i => (double)i).ToArray();
-                formsPlot1.Plot.XTicks(xPositions, labels);
-                formsPlot1.Plot.Title(_report.GetTitle(selectedYear, categoryCode));
-                formsPlot1.Plot.XLabel("Months");
-                formsPlot1.Refresh();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($@"Error in plotting chart: {ex.Message}", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            double[] ys = data.YValues.ToArray();
+            double[] xs = Enumerable.Range(0, ys.Length).Select(x => (double)x).ToArray();
+            var bar = formsPlot1.Plot.AddBar(ys);
+            bar.PositionOffset = 0;
+            bar.BarWidth = 0.6;
+            bar.FillColor = System.Drawing.Color.Blue;
+            bar.Label = "Revenue";
+            formsPlot1.Plot.XTicks(xs, data.XLabels.ToArray());
+            formsPlot1.Plot.Legend();
         }
+
+        private void RenderLineChart(ReportData data)
+        {
+            double[] ys = data.YValues.ToArray();
+            double[] xs = Enumerable.Range(0, ys.Length).Select(x => (double)x).ToArray();
+            var line = formsPlot1.Plot.AddScatter(xs, ys, label: "Revenue");
+            line.MarkerSize = 5;
+            line.LineWidth = 2;
+            formsPlot1.Plot.XTicks(xs, data.XLabels.ToArray());
+            formsPlot1.Plot.Legend();
+        }
+
+        private void RenderScatterChart(ReportData data)
+        {
+            double[] ys = data.YValues.ToArray();
+            double[] xs = Enumerable.Range(0, ys.Length).Select(x => (double)x).ToArray();
+            var scatter = formsPlot1.Plot.AddScatter(xs, ys, markerSize: 10, label: "Revenue");
+            scatter.MarkerShape = MarkerShape.filledCircle;
+            scatter.Color = System.Drawing.Color.Red;
+            formsPlot1.Plot.XTicks(xs, data.XLabels.ToArray());
+            formsPlot1.Plot.Legend();
+        }
+
+        private void RenderPieChart(ReportData data)
+        {
+            double[] ys = data.YValues.ToArray();
+            var pie = formsPlot1.Plot.AddPie(ys);
+            pie.SliceLabels = data.XLabels.ToArray();
+            pie.ShowLabels = true;
+            pie.DonutSize = 0.6;
+            }
+
+        /*private void RenderAreaChart(ReportData data)
+        {
+            double[] ys = data.YValues.ToArray();
+            double[] xs = Enumerable.Range(0, ys.Length).Select(x => (double)x).ToArray();
+
+            var area = formsPlot1.Plot.AddFilledCurve(xs, ys, 0, color: System.Drawing.Color.LightBlue);
+            area.Label = "Revenue";
+
+            // Set X-axis labels
+            formsPlot1.Plot.XTicks(xs, data.XLabels.ToArray());
+
+            formsPlot1.Plot.Legend();
+        }*/
     }
 }

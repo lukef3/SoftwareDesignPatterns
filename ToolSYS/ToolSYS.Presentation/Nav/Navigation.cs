@@ -136,7 +136,7 @@ namespace ToolSYS.Presentation.Nav
         public void NavigateToAnalysis(Form form)
         {
             form.Hide();
-            FrmAnalysis nextForm = new FrmAnalysis(this, _rateService, _analysisService);
+            FrmAnalysis nextForm = new FrmAnalysis(this, _analysisService);
             nextForm.ShowDialog();
             form.Close();
         }

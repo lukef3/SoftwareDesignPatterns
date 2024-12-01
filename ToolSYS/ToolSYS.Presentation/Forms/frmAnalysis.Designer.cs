@@ -33,8 +33,6 @@ namespace ToolSYS.Presentation.Forms
             label2 = new Label();
             cboReportType = new ComboBox();
             btnConfirm = new Button();
-            lblCategory = new Label();
-            cboCategories = new ComboBox();
             cboYears = new ComboBox();
             label1 = new Label();
             formsPlot1 = new ScottPlot.FormsPlot();
@@ -46,8 +44,6 @@ namespace ToolSYS.Presentation.Forms
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(cboReportType);
             groupBox1.Controls.Add(btnConfirm);
-            groupBox1.Controls.Add(lblCategory);
-            groupBox1.Controls.Add(cboCategories);
             groupBox1.Controls.Add(cboYears);
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(9, 39);
@@ -71,14 +67,10 @@ namespace ToolSYS.Presentation.Forms
             // 
             // cboReportType
             // 
-            cboReportType.DropDownStyle = ComboBoxStyle.DropDownList;
-            cboReportType.FormattingEnabled = true;
-            cboReportType.Location = new Point(121, 55);
-            cboReportType.Margin = new Padding(2);
+            cboReportType.Location = new Point(144, 55);
             cboReportType.Name = "cboReportType";
-            cboReportType.Size = new Size(216, 23);
-            cboReportType.TabIndex = 10;
-            cboReportType.SelectedIndexChanged += cboReportType_SelectedIndexChanged_1;
+            cboReportType.Size = new Size(170, 23);
+            cboReportType.TabIndex = 12;
             // 
             // btnConfirm
             // 
@@ -92,26 +84,6 @@ namespace ToolSYS.Presentation.Forms
             btnConfirm.UseVisualStyleBackColor = false;
             btnConfirm.Click += btnConfirm_Click;
             // 
-            // lblCategory
-            // 
-            lblCategory.AutoSize = true;
-            lblCategory.Location = new Point(604, 60);
-            lblCategory.Margin = new Padding(2, 0, 2, 0);
-            lblCategory.Name = "lblCategory";
-            lblCategory.Size = new Size(83, 15);
-            lblCategory.TabIndex = 5;
-            lblCategory.Text = "Tool Category:";
-            // 
-            // cboCategories
-            // 
-            cboCategories.DropDownStyle = ComboBoxStyle.DropDownList;
-            cboCategories.FormattingEnabled = true;
-            cboCategories.Location = new Point(691, 55);
-            cboCategories.Margin = new Padding(2);
-            cboCategories.Name = "cboCategories";
-            cboCategories.Size = new Size(216, 23);
-            cboCategories.TabIndex = 4;
-            // 
             // cboYears
             // 
             cboYears.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -119,7 +91,7 @@ namespace ToolSYS.Presentation.Forms
             cboYears.Location = new Point(420, 55);
             cboYears.Margin = new Padding(2);
             cboYears.Name = "cboYears";
-            cboYears.Size = new Size(120, 23);
+            cboYears.Size = new Size(170, 23);
             cboYears.TabIndex = 3;
             // 
             // label1
@@ -140,7 +112,7 @@ namespace ToolSYS.Presentation.Forms
             formsPlot1.Size = new Size(944, 395);
             formsPlot1.TabIndex = 11;
             // 
-            // frmAnalysis
+            // FrmAnalysis
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -165,8 +137,6 @@ namespace ToolSYS.Presentation.Forms
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cboYears;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblCategory;
-        private System.Windows.Forms.ComboBox cboCategories;
         private System.Windows.Forms.Button btnConfirm;
         private ScottPlot.FormsPlot formsPlot1;
         private ComboBox cboReportType;

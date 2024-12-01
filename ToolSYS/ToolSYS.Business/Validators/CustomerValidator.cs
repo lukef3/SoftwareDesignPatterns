@@ -20,8 +20,8 @@ namespace ToolSYS.Business.Validators
 
             RuleFor(c => c.email)
                 .NotEmpty().WithMessage("Email is required.")
-                .EmailAddress().WithMessage("Invalid email address.");
-
+                .Matches(@"^[^@\s]+@[^@\s]+\.[^@\s]+$").WithMessage("Email format is invalid.");
+            
             RuleFor(c => c.phone)
                 .NotEmpty().WithMessage("Phone number is required.")
                 .Length(6, 15).WithMessage("Phone number must be between 6 and 15 digits.")
@@ -29,8 +29,7 @@ namespace ToolSYS.Business.Validators
 
             RuleFor(c => c.eircode)
                 .NotEmpty().WithMessage("Eircode is required.")
-                .Matches(@"^([AC-FHKNPRTV-Y]{1}[0-9]{2}|D6W)[ ]?[0-9AC-FHKNPRTV-Y]{4}$", RegexOptions.IgnoreCase)
-                .WithMessage("Invalid Eircode.");
+                .Matches(@"^([AC-FHKNPRTV-Y]{1}[0-9]{2}|D6W)[ ]?[0-9AC-FHKNPRTV-Y]{4}$", RegexOptions.IgnoreCase).WithMessage("Invalid Eircode.");
         }
     }
 }

@@ -7,7 +7,8 @@ namespace ToolSYS.Data
     {
         DataTable GetDistinctYears();
         DataTable GetMonthlyRevenues(int year);
-        DataTable GetMonthlyRentalsByCategory(int year, string categoryCode);
+        DataTable GetMonthlyRentals(int year);
+        DataTable GetCategoryRentals(int year);
     }
 
     public class AnalysisData : IAnalysisData
@@ -56,22 +57,21 @@ namespace ToolSYS.Data
             }
         }
 
-        public DataTable GetMonthlyRentalsByCategory(int year, string categoryCode)
+        public DataTable GetMonthlyRentals(int year)
         {
             string sqlQuery = @"
-                SELECT TO_CHAR(TransactionDate, 'YYYY-MM') AS Month, COUNT(*) AS NumRentals
+                SELECT TO_CHAR(TransactionDate, 'MM') AS Month, COUNT(*) AS NumRentals
                 FROM Rentals
                 JOIN RentalItems ON Rentals.RentalID = RentalItems.RentalID
                 JOIN Tools ON RentalItems.ToolID = Tools.ToolID
-                WHERE TO_CHAR(TransactionDate, 'YYYY') = :year AND Tools.CategoryCode = :categoryCode
-                GROUP BY TO_CHAR(TransactionDate, 'YYYY-MM')
+                WHERE TO_CHAR(TransactionDate, 'YYYY') = :year
+                GROUP BY TO_CHAR(TransactionDate, 'MM')
                 ORDER BY Month";
 
             using (var conn = new OracleConnection(_connectionString))
             {
                 OracleCommand cmd = new OracleCommand(sqlQuery, conn);
                 cmd.Parameters.Add(":year", year.ToString());
-                cmd.Parameters.Add(":categoryCode", categoryCode);
 
                 OracleDataAdapter da = new OracleDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -80,6 +80,33 @@ namespace ToolSYS.Data
                 da.Fill(dt);
 
                 return dt;
+            }
+        }
+
+        public DataTable GetCategoryRentals(int year)
+        {
+            string sqlQuery = @"
+            SELECT r.CategoryDesc, COUNT(*) AS NumRentals
+            FROM RentalItems ri
+            JOIN Tools t ON ri.ToolID = t.ToolID
+            JOIN Rates r ON t.CategoryCode = r.CategoryCode
+            JOIN Rentals rl ON ri.RentalID = rl.RentalID
+            WHERE TO_CHAR(rl.TransactionDate, 'YYYY') = :year
+            GROUP BY r.CategoryDesc
+            ORDER BY r.CategoryDesc";
+
+            using (var conn = new OracleConnection(_connectionString))
+            {
+                OracleCommand cmd = new OracleCommand(sqlQuery, conn);
+                cmd.Parameters.Add(":year", year.ToString());
+
+                DataTable categoryRentalTable = new DataTable();
+                OracleDataAdapter da = new OracleDataAdapter(cmd);
+
+                conn.Open();
+                da.Fill(categoryRentalTable);
+
+                return categoryRentalTable;
             }
         }
     }
