@@ -1,13 +1,9 @@
 ﻿using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using ToolSYS.Business.Facades;
 using ToolSYS.Business.Services;
 using ToolSYS.Business.Validators;
 using ToolSYS.Data;
+using ToolSYS.Data.UnitOfWork;
 using ToolSYS.Entities;
 using ToolSYS.Presentation.Forms;
 using ToolSYS.Presentation.Nav;
@@ -30,7 +26,6 @@ namespace ToolSYS.Presentation
 
             IRateData rateData = new RateData();
             IRateService rateService = new RateService(rateData);
-
             
             ICustomerData customerData = new CustomerData();
             IValidator<Customer> customerValidator = new CustomerValidator();
@@ -39,15 +34,13 @@ namespace ToolSYS.Presentation
             IAnalysisData analysisData = new AnalysisData();
             IAnalysisService analysisService = new AnalysisService(analysisData);
 
-            IRentalData rentalData = new RentalData();
-            IRentalItemData rentalItemData = new RentalItemData();
-            IRentalService rentalService = new RentalService(rentalData, rentalItemData, rateData);
+            IUnitOfWork unitOfWork = new UnitOfWork(DbConnect.Oradb);
+            IRentalService rentalService = new RentalService(rateData, unitOfWork);
 
             IRentalFacade rentalFacade = new RentalFacade(toolService, rateService, customerService, rentalService);
 
             INavigation navigation = new Navigation(toolService, rateService, customerService, analysisService, rentalService, rentalFacade);
-
-
+            
             Application.Run(new FrmMainMenu(navigation));
         }
     }

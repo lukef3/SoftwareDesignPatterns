@@ -28,7 +28,21 @@ CC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\RentalItem.cs
 
  "
 
-		  Å
+		  £
+CC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\ReportData.cs
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+		 
+ 		 Å
 ?C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\Rental.cs
 
  
@@ -40,19 +54,7 @@ CC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\RentalItem.cs
  " $
 ( 2 (
 = L# 2
-V ^ $±
-=C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\Rate.cs
-
- 
- )3 ?
-2 >3 ?
-H L, 0
-
- "
-
- "
-
- ›
+V ^ $›
 AC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\Customer.cs
 
  
@@ -77,4 +79,16 @@ AC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\Customer.cs
 
 
 
- 
+ ±
+=C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.DTOs\Rate.cs
+
+ 
+ )3 ?
+2 >3 ?
+H L, 0
+
+ "
+
+ "
+
+ 

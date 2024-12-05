@@ -12,8 +12,7 @@ namespace ToolSYS.Business.Builders
         Rental Build();
         Rental GetRental();
     }
-
-
+    
     public class RentalBuilder : IRentalBuilder
     {
         private readonly Rental _rental;

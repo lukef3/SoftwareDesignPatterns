@@ -3,7 +3,7 @@ using ToolSYS.Data;
 
 namespace ToolSYS.Business.Factories;
 
-public class ReportStrategyFactory
+public class ReportStrategySimpleFactory
 {
     public static IReportStrategy GetStrategy(string reportType, IAnalysisData analysisData)
     {
@@ -16,3 +16,6 @@ public class ReportStrategyFactory
         };
     }
 }
+
+
+

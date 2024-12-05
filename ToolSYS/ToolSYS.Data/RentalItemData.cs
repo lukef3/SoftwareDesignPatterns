@@ -1,4 +1,5 @@
 ﻿using Oracle.ManagedDataAccess.Client;
+using System.Data.Common;
 using ToolSYS.Entities;
 
 namespace ToolSYS.Data
@@ -10,19 +11,26 @@ namespace ToolSYS.Data
     
     public class RentalItemData : IRentalItemData
     {
-        private readonly string _connectionString = DbConnect.Oradb;
+        private readonly OracleConnection _connection;
+        private OracleTransaction _transaction;
+        public RentalItemData(OracleConnection connection)
+        {
+            _connection = connection;
+        }
+
+        public void SetTransaction(OracleTransaction transaction)
+        {
+            _transaction = transaction;
+        }
 
         public void AddRentalItem(RentalItem rentalItem)
         {
-            using (var conn = new OracleConnection(_connectionString))
-            {
-                conn.Open();
-
-                string sqlInsert = @"
-                    INSERT INTO RentalItems (RentalID, ToolID, RentDate, ReturnDate, RentalFee) 
+            string sqlInsert = @"INSERT INTO RentalItems (RentalID, ToolID, RentDate, ReturnDate, RentalFee) 
                     VALUES (:rentalID, :toolID, :rentDate, :returnDate, :rentalFee)";
 
-                var cmd = new OracleCommand(sqlInsert, conn);
+            using (var cmd = new OracleCommand(sqlInsert, _connection))
+            {
+                cmd.Transaction = _transaction;
                 cmd.Parameters.Add(":rentalID", OracleDbType.Int32).Value = rentalItem.rentalId;
                 cmd.Parameters.Add(":toolID", OracleDbType.Int32).Value = rentalItem.toolId;
                 cmd.Parameters.Add(":rentDate", OracleDbType.Date).Value = rentalItem.rentDate;
@@ -30,10 +38,13 @@ namespace ToolSYS.Data
                 cmd.Parameters.Add(":rentalFee", OracleDbType.Decimal).Value = rentalItem.rentalFee;
 
                 cmd.ExecuteNonQuery();
+            }
 
-                string sqlUpdateStatus = "UPDATE Tools SET ToolStatus = 'O' WHERE ToolID = :toolID";
+            string sqlUpdateStatus = "UPDATE Tools SET ToolStatus = 'O' WHERE ToolID = :toolID";
 
-                cmd = new OracleCommand(sqlUpdateStatus, conn);
+            using (var cmd = new OracleCommand(sqlUpdateStatus, _connection))
+            {
+                cmd.Transaction = _transaction;
                 cmd.Parameters.Add(":toolID", OracleDbType.Int32).Value = rentalItem.toolId;
 
                 cmd.ExecuteNonQuery();

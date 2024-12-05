@@ -5,3 +5,4 @@ C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\RateData.cs
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\RentalData.cs
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\RentalItemData.cs
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\ToolData.cs
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\UnitOfWork\UnitOfWork.cs

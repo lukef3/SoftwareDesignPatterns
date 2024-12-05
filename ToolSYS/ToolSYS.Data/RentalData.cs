@@ -14,27 +14,38 @@ namespace ToolSYS.Data
     
     public class RentalData : IRentalData
     {
+        private readonly OracleConnection _connection;
+        private OracleTransaction _transaction;
+
+        public RentalData(OracleConnection connection)
+        {
+            _connection = connection;
+        }
+
+        public void SetTransaction(OracleTransaction transaction)
+        {
+            _transaction = transaction;
+        }
+
         public int GetNextRentalId()
         {
-            using (var conn = new OracleConnection(DbConnect.Oradb))
+            string sqlQuery = "SELECT NVL(MAX(RentalID), 0) + 1 FROM Rentals";
+            using (var cmd = new OracleCommand(sqlQuery, _connection))
             {
-                conn.Open();
-                string sqlQuery = "SELECT NVL(MAX(RentalID), 0) + 1 FROM Rentals";
-                var cmd = new OracleCommand(sqlQuery, conn);
+                cmd.Transaction = _transaction;
                 return Convert.ToInt32(cmd.ExecuteScalar());
             }
         }
 
         public void AddRental(Rental rental)
         {
-            using (var conn = new OracleConnection(DbConnect.Oradb))
-            {
-                conn.Open();
-                string sqlQuery = @"
+            string sqlQuery = @"
                     INSERT INTO Rentals (RentalID, CustomerID, TransactionDate, TotalFee) 
                     VALUES (:rentalID, :customerID, :transactionDate, :totalFee)";
 
-                var cmd = new OracleCommand(sqlQuery, conn);
+            using (var cmd = new OracleCommand(sqlQuery, _connection))
+            {
+                cmd.Transaction = _transaction;
                 cmd.Parameters.Add(":rentalID", rental.rentalId);
                 cmd.Parameters.Add(":customerID", rental.customerId);
                 cmd.Parameters.Add(":transactionDate", rental.transactionDate);
@@ -45,16 +56,16 @@ namespace ToolSYS.Data
 
         public DataTable GetRentalItemsByRentalId(int rentalId)
         {
-            using (var conn = new OracleConnection(DbConnect.Oradb))
-            {
-                string query = @"
+            string query = @"
                     SELECT RentalItems.ToolID, Tools.CategoryCode, Tools.ToolDescription, Tools.ToolManufacturer, 
                            RentalItems.RentDate, RentalItems.ReturnDate, RentalItems.RentalFee
                     FROM RentalItems
                     INNER JOIN Tools ON RentalItems.ToolID = Tools.ToolID
                     WHERE RentalItems.RentalID = :rentalID AND Tools.ToolStatus = 'O'";
 
-                OracleCommand cmd = new OracleCommand(query, conn);
+            using (var cmd = new OracleCommand(query, _connection))
+            {
+                cmd.Transaction = _transaction;
                 cmd.Parameters.Add(":rentalID", rentalId);
 
                 OracleDataAdapter adapter = new OracleDataAdapter(cmd);
@@ -67,23 +78,21 @@ namespace ToolSYS.Data
 
         public void ReturnTool(int rentalId, int toolId)
         {
-            using (var conn = new OracleConnection(DbConnect.Oradb))
+            string updateToolQuery = "UPDATE Tools SET ToolStatus = 'I' WHERE ToolID = :toolID";
+            using (var cmd = new OracleCommand(updateToolQuery, _connection))
             {
-                conn.Open();
+                cmd.Transaction = _transaction;
+                cmd.Parameters.Add(":toolID", toolId);
+                cmd.ExecuteNonQuery();
+            }
 
-                string updateToolQuery = "UPDATE Tools SET ToolStatus = 'I' WHERE ToolID = :toolID";
-                OracleCommand updateToolCmd = new OracleCommand(updateToolQuery, conn);
-                updateToolCmd.Parameters.Add(":toolID", toolId);
-                updateToolCmd.ExecuteNonQuery();
-
-                string updateRentalItemQuery = @"
-                    UPDATE RentalItems
-                    SET ReturnDate = SYSDATE
-                    WHERE RentalID = :rentalID AND ToolID = :toolID";
-                OracleCommand updateRentalCmd = new OracleCommand(updateRentalItemQuery, conn);
-                updateRentalCmd.Parameters.Add(":rentalID", rentalId);
-                updateRentalCmd.Parameters.Add(":toolID", toolId);
-                updateRentalCmd.ExecuteNonQuery();
+            string updateRentalItemQuery = @"UPDATE RentalItems SET ReturnDate = SYSDATE WHERE RentalID = :rentalID AND ToolID = :toolID";
+            using (var cmd = new OracleCommand(updateRentalItemQuery, _connection))
+            {
+                cmd.Transaction = _transaction;
+                cmd.Parameters.Add(":rentalID", rentalId);
+                cmd.Parameters.Add(":toolID", toolId);
+                cmd.ExecuteNonQuery();
             }
         }
     }

@@ -121,29 +121,24 @@ namespace ToolSYS.Data
                     int toolId = Convert.ToInt32(toolIdAsString);
                     sqlQuery += " AND ToolID = " + toolId;
                 }
-
                 if (!string.IsNullOrEmpty(categoryCode))
                 {
                     categoryCode = categoryCode.Substring(0, 2);
                     sqlQuery += " AND LOWER(CategoryCode) LIKE LOWER('" + categoryCode + "')";      //https://stackoverflow.com/questions/2876789/how-can-i-search-case-insensitive-in-a-column-using-like-wildcard
                 }
-
                 if (!string.IsNullOrEmpty(description))
                 {
                     sqlQuery += " AND LOWER(ToolDescription) LIKE LOWER('%" + description + "%')";
                 }
-
                 if (!string.IsNullOrEmpty(manufacturer))
                 {
                     sqlQuery += " AND LOWER(ToolManufacturer) LIKE LOWER('%" + manufacturer + "%')";
                 }
-
                 if (!string.IsNullOrEmpty(status))
                 {
                     status = status.Substring(0, 1);
                     sqlQuery += " AND ToolStatus = '" + status + "'";
                 }
-
                 if (!string.IsNullOrEmpty(phrase))
                 {
                     sqlQuery += " AND (LOWER(CategoryCode) LIKE LOWER('%" + phrase + "%') " +
@@ -153,7 +148,6 @@ namespace ToolSYS.Data
             }
             return sqlQuery;
         }
-
 
         public DataSet GetAvailableTools()
         {

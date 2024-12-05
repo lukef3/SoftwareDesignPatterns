@@ -26,9 +26,9 @@ public class NavForm : Form
     protected ToolStripMenuItem MainMenuToolStripMenuItem = new ToolStripMenuItem();
     protected ToolStripMenuItem ExitSystemToolStripMenuItem = new ToolStripMenuItem();
 
-    public NavForm(INavigation? navigation = null)
+    public NavForm(INavigation navigation)
     {
-        Navigation = navigation ?? new NoOpNavigation();
+        Navigation = navigation;
         InitializeComponent();
     }
     public NavForm() : this(new NoOpNavigation())
@@ -199,7 +199,7 @@ public class NavForm : Form
         // 
         AnalysisToolStripMenuItem.Name = "AnalysisToolStripMenuItem";
         AnalysisToolStripMenuItem.Size = new Size(231, 22);
-        AnalysisToolStripMenuItem.Text = @"Analysis";
+        AnalysisToolStripMenuItem.Text = @"Annual Reports";
         AnalysisToolStripMenuItem.Click += AnalysisToolStripMenuItem_Click;
         // 
         // mainMenuToolStripMenuItem

@@ -112,7 +112,6 @@ namespace ToolSYS.Data
                     CommandType = CommandType.StoredProcedure
                 };
 
-                // Handle nullable parameters
                 int? customerId = null;
                 if (int.TryParse(custIdAsString, out int parsedId))
                     customerId = parsedId;

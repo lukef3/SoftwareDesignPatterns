@@ -1,7 +1,8 @@
 n
 cC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\obj\Debug\net8.0\ToolSYS.Data.AssemblyInfo.csutf-8€
 uC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8p
-eC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\obj\Debug\net8.0\ToolSYS.Data.GlobalUsings.g.csutf-8J
+eC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\obj\Debug\net8.0\ToolSYS.Data.GlobalUsings.g.csutf-8W
+NC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\UnitOfWork\UnitOfWork.csutf-8J
 AC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\ToolData.csutf-8P
 GC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\RentalItemData.csutf-8L
 CC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Data\RentalData.csutf-8J

@@ -119,7 +119,7 @@ namespace ToolSYS.Business.Strategies
 
         public ToolTypeDistributionReport(IAnalysisData analysisData)
         {
-            _analysisData = analysisData ?? throw new ArgumentNullException(nameof(analysisData));
+            _analysisData = analysisData;
         }
 
         public ReportData GenerateReport(int year, string reportType)
@@ -156,99 +156,3 @@ namespace ToolSYS.Business.Strategies
         }
     }
 }
-
-
-
-/*
-public interface IReportStrategy
-{
-    string GetTitle(int year, string? category = null);
-    (string[] Labels, double[] Values) GetData(int year, string? category = null);
-    bool needsCategory { get; }
-}
-
-public class RevenueReport : IReportStrategy
-{
-    private readonly IAnalysisData _analysisData;
-
-    public RevenueReport(IAnalysisData analysisData)
-    {
-        _analysisData = analysisData;
-    }
-
-    public bool needsCategory => false;
-
-    public string GetTitle(int year, string? category = null)
-    {
-        return $"Revenue per Month for {year}";
-    }
-
-    public (string[] Labels, double[] Values) GetData(int year, string? category = null)
-    {
-        DataTable revenueTable = _analysisData.GetMonthlyRevenues(year);
-
-        string[] months = GetMonthNames();
-        double[] revenues = new double[12];
-
-        foreach (DataRow row in revenueTable.Rows)
-        {
-            int monthIndex = int.Parse(row["Month"].ToString()) - 1;
-            revenues[monthIndex] = Convert.ToDouble(row["Revenue"]);
-        }
-
-        return (months, revenues);
-    }
-
-    private string[] GetMonthNames()
-    {
-        return new string[]
-        {
-            "January", "February", "March", "April", "May", "June",
-            "July", "August", "September", "October", "November", "December"
-        };
-    }
-}
-
-
-public class ToolRentalReport : IReportStrategy
-{
-    private readonly IAnalysisData _analysisData;
-
-    public ToolRentalReport(IAnalysisData analysisData)
-    {
-        _analysisData = analysisData;
-    }
-
-    public bool needsCategory => true;
-
-    public string GetTitle(int year, string? category)
-    {
-        return $"Tool Rentals in {year} for Category {category}";
-    }
-
-    public (string[] Labels, double[] Values) GetData(int year, string? category)
-    {
-        DataTable dt = _analysisData.GetMonthlyRentalsByCategory(year, category);
-
-        string[] months = GetMonthNames();
-        double[] rentals = new double[12];
-
-        foreach (DataRow row in dt.Rows)
-        {
-            int monthIndex = int.Parse(row["Month"].ToString().Substring(5, 2)) - 1;
-            rentals[monthIndex] = Convert.ToDouble(row["NumRentals"]);
-        }
-
-        return (months, rentals);
-    }
-
-    private string[] GetMonthNames()
-    {
-        return new string[]
-        {
-            "January", "February", "March", "April", "May", "June",
-            "July", "August", "September", "October", "November", "December"
-        };
-    }
-}
-}*/

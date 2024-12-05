@@ -14,15 +14,15 @@
         {
           "ruleId": "CS8618",
           "level": "warning",
-          "message": "Non-nullable field '_report' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable.",
+          "message": "Non-nullable field '_reportStrategy' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable.",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
                 "region": {
-                  "startLine": 14,
+                  "startLine": 15,
                   "startColumn": 16,
-                  "endLine": 14,
+                  "endLine": 15,
                   "endColumn": 27
                 }
               }
@@ -33,10 +33,10 @@
               "physicalLocation": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
                 "region": {
-                  "startLine": 12,
+                  "startLine": 13,
                   "startColumn": 33,
-                  "endLine": 12,
-                  "endColumn": 40
+                  "endLine": 13,
+                  "endColumn": 48
                 }
               }
             }
@@ -138,9 +138,9 @@
               "resultFile": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
                 "region": {
-                  "startLine": 64,
+                  "startLine": 44,
                   "startColumn": 40,
-                  "endLine": 64,
+                  "endLine": 44,
                   "endColumn": 62
                 }
               }
@@ -163,90 +163,6 @@
                   "startColumn": 48,
                   "endLine": 72,
                   "endColumn": 68
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
-                "region": {
-                  "startLine": 126,
-                  "startColumn": 46,
-                  "endLine": 126,
-                  "endColumn": 67
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8604",
-          "level": "warning",
-          "message": "Possible null reference argument for parameter 's' in 'int int.Parse(string s)'.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
-                "region": {
-                  "startLine": 126,
-                  "startColumn": 46,
-                  "endLine": 126,
-                  "endColumn": 78
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8600",
-          "level": "warning",
-          "message": "Converting null literal or possible null value to non-nullable type.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
-                "region": {
-                  "startLine": 127,
-                  "startColumn": 39,
-                  "endLine": 127,
-                  "endColumn": 43
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
-                "region": {
-                  "startLine": 131,
-                  "startColumn": 36,
-                  "endLine": 131,
-                  "endColumn": 73
                 }
               }
             }
@@ -592,6 +508,27 @@
           }
         },
         {
+          "ruleId": "CS0169",
+          "level": "warning",
+          "message": "The field 'FrmAnalysis._reportStrategy' is never used",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 33,
+                  "endLine": 13,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        },
+        {
           "ruleId": "S125",
           "level": "warning",
           "message": "Remove this commented out code.",
@@ -600,9 +537,9 @@
               "resultFile": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmRentTools.cs",
                 "region": {
-                  "startLine": 12,
+                  "startLine": 9,
                   "startColumn": 9,
-                  "endLine": 12,
+                  "endLine": 9,
                   "endColumn": 54
                 }
               }
@@ -621,9 +558,9 @@
               "resultFile": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmRentTools.cs",
                 "region": {
-                  "startLine": 23,
+                  "startLine": 20,
                   "startColumn": 13,
-                  "endLine": 23,
+                  "endLine": 20,
                   "endColumn": 42
                 }
               }
@@ -642,9 +579,9 @@
               "resultFile": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmRentTools.cs",
                 "region": {
-                  "startLine": 166,
+                  "startLine": 163,
                   "startColumn": 1,
-                  "endLine": 166,
+                  "endLine": 163,
                   "endColumn": 78
                 }
               }
@@ -676,55 +613,18 @@
           }
         },
         {
-          "ruleId": "S1066",
+          "ruleId": "S1144",
           "level": "warning",
-          "message": "Merge this if statement with the enclosing one.",
+          "message": "Remove the unused private field '_reportStrategy'.",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
                 "region": {
-                  "startLine": 109,
-                  "startColumn": 17,
-                  "endLine": 109,
-                  "endColumn": 19
-                }
-              }
-            }
-          ],
-          "relatedLocations": [
-            {
-              "physicalLocation": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmAnalysis.cs",
-                "region": {
-                  "startLine": 107,
-                  "startColumn": 13,
-                  "endLine": 107,
-                  "endColumn": 15
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1,
-            "customProperties": {
-              "0": null
-            }
-          }
-        },
-        {
-          "ruleId": "S3427",
-          "level": "warning",
-          "message": "This method signature overlaps the one defined on line 34, the default parameter value can't be used.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Nav/NavForm.cs",
-                "region": {
-                  "startLine": 29,
-                  "startColumn": 20,
-                  "endLine": 29,
-                  "endColumn": 50
+                  "startLine": 13,
+                  "startColumn": 9,
+                  "endLine": 13,
+                  "endColumn": 49
                 }
               }
             }
@@ -742,9 +642,9 @@
               "resultFile": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Presentation/Forms/frmRentTools.cs",
                 "region": {
-                  "startLine": 102,
+                  "startLine": 99,
                   "startColumn": 21,
-                  "endLine": 102,
+                  "endLine": 99,
                   "endColumn": 31
                 }
               }
@@ -756,6 +656,20 @@
         }
       ],
       "rules": {
+        "CS0169": {
+          "id": "CS0169",
+          "shortDescription": "Field is never used",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS0169)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
         "CS8600": {
           "id": "CS8600",
           "shortDescription": "Converting null literal or possible null value to non-nullable type.",
@@ -812,12 +726,12 @@
             ]
           }
         },
-        "S1066": {
-          "id": "S1066",
-          "shortDescription": "Mergeable \"if\" statements should be combined",
-          "fullDescription": "Nested code - blocks of code inside blocks of code - is eventually necessary, but increases complexity. This is why keeping the code as flat as possible, by avoiding unnecessary nesting, is considered a good practice.",
+        "S1144": {
+          "id": "S1144",
+          "shortDescription": "Unused private types or members should be removed",
+          "fullDescription": "This rule raises an issue when a private/internal type or member is never referenced in the code.",
           "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1066",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1144",
           "properties": {
             "category": "Major Code Smell",
             "isEnabledByDefault": true,
@@ -875,23 +789,6 @@
             "tags": [
               "C#",
               "MainSourceScope",
-              "SonarWay"
-            ]
-          }
-        },
-        "S3427": {
-          "id": "S3427",
-          "shortDescription": "Method overloads with default parameter values should not overlap",
-          "fullDescription": "The rules for method resolution can be complex and may not be fully understood by all developers. The situation becomes even more challenging when dealing with method overloads that have optional parameter values.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3427",
-          "properties": {
-            "category": "Blocker Code Smell",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
-              "TestSourceScope",
               "SonarWay"
             ]
           }

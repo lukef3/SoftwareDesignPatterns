@@ -67,9 +67,10 @@ namespace ToolSYS.Presentation.Forms
             // 
             // cboReportType
             // 
-            cboReportType.Location = new Point(144, 55);
+            cboReportType.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboReportType.Location = new Point(122, 55);
             cboReportType.Name = "cboReportType";
-            cboReportType.Size = new Size(170, 23);
+            cboReportType.Size = new Size(121, 23);
             cboReportType.TabIndex = 12;
             // 
             // btnConfirm

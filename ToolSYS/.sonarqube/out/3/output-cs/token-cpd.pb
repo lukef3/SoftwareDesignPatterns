@@ -1,80 +1,92 @@
-π
+™
 HC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\Program.cs
-	namespace 	
-ToolSYS
+	namespace 	
+ToolSYS
  
-. 
-Presentation 
-{ 
-static 
+. 
+Presentation 
+{ 
+static 
 
-class 
-Program 
-{ 
-[ 	
-	STAThread	 
-] 
-static 
-void 
-Main 
-( 
-) 
-{ 	
+class 
+Program 
+{ 
+[ 	
+	STAThread	 
+] 
+static 
+void 
+Main 
+( 
+) 
+{ 	
+Application 
+. 
+EnableVisualStyles *
+(* +
+)+ ,
+;, -
 Application 
-. 
-EnableVisualStyles *
-(* +
-)+ ,
-;, -
-Application 
-. -
-!SetCompatibleTextRenderingDefault 9
-(9 :
-false: ?
-)? @
-;@ A
-	IToolData 
-toolData 
-=  
-new! $
-ToolData% -
-(- .
-). /
-;/ 0
-IToolService 
-toolService $
-=% &
-new' *
-ToolService+ 6
-(6 7
-toolData7 ?
-)? @
-;@ A
-	IRateData 
-rateData 
-=  
-new! $
-RateData% -
-(- .
-). /
-;/ 0
-IRateService 
-rateService $
-=% &
-new' *
-RateService+ 6
-(6 7
-rateData7 ?
-)? @
-;@ A
-ICustomerData 
-customerData &
-=' (
-new) ,
-CustomerData- 9
-(9 :
-): ;
-;; <
+. -
+!SetCompatibleTextRenderingDefault 9
+(9 :
+false: ?
+)? @
+;@ A
+	IToolData 
+toolData 
+=  
+new! $
+ToolData% -
+(- .
+). /
+;/ 0
+IToolService 
+toolService $
+=% &
+new' *
+ToolService+ 6
+(6 7
+toolData7 ?
+)? @
+;@ A
+	IRateData 
+rateData 
+=  
+new! $
+RateData% -
+(- .
+). /
+;/ 0
+IRateService 
+rateService $
+=% &
+new' *
+RateService+ 6
+(6 7
+rateData7 ?
+)? @
+;@ A
+ICustomerData 
+customerData &
+=' (
+new) ,
+CustomerData- 9
+(9 :
+): ;
+;; <
+
+IValidator 
+< 
+Customer 
+>  
+customerValidator! 2
+=3 4
+new5 8
+CustomerValidator9 J
+(J K
+)K L
+;L M
 ICustomerService   
 customerService   ,
 =  - .
@@ -82,8 +94,10 @@ HC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\Program.cs
 CustomerService  3 B
 (  B C
 customerData  C O
-)  O P
-;  P Q
+,  O P
+customerValidator  Q b
+)  b c
+;  c d
 IAnalysisData"" 
 analysisData"" &
 =""' (
@@ -101,981 +115,84 @@ HC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\Program.cs
 analysisData##C O
 )##O P
 ;##P Q
-IRentalData%% 
+IUnitOfWork%% 
 
-rentalData%% "
+unitOfWork%% "
 =%%# $
 new%%% (
 
-RentalData%%) 3
-(%%3 4
-)%%4 5
-;%%5 6
-IRentalItemData&& 
-rentalItemData&& *
-=&&+ ,
-new&&- 0
-RentalItemData&&1 ?
-(&&? @
-)&&@ A
-;&&A B
-IRentalService'' 
-rentalService'' (
-='') *
-new''+ .
-RentalService''/ <
-(''< =
+UnitOfWork%%) 3
+(%%3 4
+	DbConnect%%4 =
+.%%= >
+Oradb%%> C
+)%%C D
+;%%D E
+IRentalService&& 
+rentalService&& (
+=&&) *
+new&&+ .
+RentalService&&/ <
+(&&< =
+rateData&&= E
+,&&E F
 
-rentalData''= G
-,''G H
-rentalItemData''I W
-,''W X
-rateData''Y a
-)''a b
-;''b c
-IRentalFacade)) 
-rentalFacade)) &
-=))' (
-new))) ,
-RentalFacade))- 9
-())9 :
-toolService)): E
-,))E F
-rateService))G R
-,))R S
-customerService))T c
-,))c d
-rentalService))e r
-)))r s
-;))s t
-INavigation++ 
+unitOfWork&&G Q
+)&&Q R
+;&&R S
+IRentalFacade(( 
+rentalFacade(( &
+=((' (
+new(() ,
+RentalFacade((- 9
+(((9 :
+toolService((: E
+,((E F
+rateService((G R
+,((R S
+customerService((T c
+,((c d
+rentalService((e r
+)((r s
+;((s t
+INavigation** 
 
-navigation++ "
-=++# $
-new++% (
+navigation** "
+=**# $
+new**% (
 
-Navigation++) 3
-(++3 4
-toolService++4 ?
-,++? @
-rateService++A L
-,++L M
-customerService++N ]
-,++] ^
-analysisService++_ n
-,++n o
-rentalService++p }
-,++} ~
-rentalFacade	++ ã
+Navigation**) 3
+(**3 4
+toolService**4 ?
+,**? @
+rateService**A L
+,**L M
+customerService**N ]
+,**] ^
+analysisService**_ n
+,**n o
+rentalService**p }
+,**} ~
+rentalFacade	** ã
 )
-++ã å
+**ã å
 ;
-++å ç
-Application.. 
-... 
-Run.. 
-(.. 
-new.. 
-FrmMainMenu..  +
-(..+ ,
+**å ç
+Application,, 
+.,, 
+Run,, 
+(,, 
+new,, 
+FrmMainMenu,,  +
+(,,+ ,
 
-navigation.., 6
-)..6 7
-)..7 8
-;..8 9
-}// 	
-}00 
-}11 Ãl
-OC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\Nav\Navigation.cs
-	namespace 	
-ToolSYS
- 
-. 
-Presentation 
-. 
-Nav "
-{ 
-public 
-
-	interface 
-INavigation  
-{		 
-void
-
- %
-NavigateToSetToolCategory
-
- &
-(
-
-& '
-Form
-
-' +
-form
-
-, 0
-)
-
-0 1
-;
-
-1 2
-void  
-NavigateToUpdateRate !
-(! "
-Form" &
-form' +
-)+ ,
-;, -
-void 
-NavigateToAddTool 
-( 
-Form #
-form$ (
-)( )
-;) *
-void  
-NavigateToUpdateTool !
-(! "
-Form" &
-form' +
-)+ ,
-;, -
-void  
-NavigateToRemoveTool !
-(! "
-Form" &
-form' +
-)+ ,
-;, -
-void 
-NavigateToViewTools  
-(  !
-Form! %
-form& *
-)* +
-;+ ,
-void 
-NavigateToRentTools  
-(  !
-Form! %
-form& *
-)* +
-;+ ,
-void !
-NavigateToReturnTools "
-(" #
-Form# '
-form( ,
-), -
-;- .
-void !
-NavigateToViewRentals "
-(" #
-Form# '
-form( ,
-), -
-;- .
-void !
-NavigateToAddCustomer "
-(" #
-Form# '
-form( ,
-), -
-;- .
-void $
-NavigateToUpdateCustomer %
-(% &
-Form& *
-form+ /
-)/ 0
-;0 1
-void #
-NavigateToViewCustomers $
-($ %
-Form% )
-form* .
-). /
-;/ 0
-void 
-NavigateToAnalysis 
-(  
-Form  $
-form% )
-)) *
-;* +
-void 
-NavigateToMainMenu 
-(  
-Form  $
-form% )
-)) *
-;* +
-} 
-public 
-
-class 
-
-Navigation 
-: 
-INavigation )
-{ 
-private 
-readonly 
-IToolService %
-_toolService& 2
-;2 3
-private 
-readonly 
-IRateService %
-_rateService& 2
-;2 3
-private 
-readonly 
-ICustomerService )
-_customerService* :
-;: ;
-private 
-readonly 
-IAnalysisService )
-_analysisService* :
-;: ;
-private   
-readonly   
-IRentalService   '
-_rentalService  ( 6
-;  6 7
-private!! 
-readonly!! 
-IRentalFacade!! &
-_rentalFacade!!' 4
-;!!4 5
-public## 
-
-Navigation## 
-(## 
-IToolService## &
-toolService##' 2
-,##2 3
-IRateService##4 @
-rateService##A L
-,##L M
-ICustomerService##N ^
-customerService##_ n
-,##n o
-IAnalysisService	##p Ä
-analysisService
-##Å ê
-,
-##ê ë
-IRentalService
-##í †
-rentalService
-##° Æ
-,
-##Æ Ø
-IRentalFacade
-##∞ Ω
-rentalFacade
-##æ  
-)
-##  À
-{$$ 	
-_toolService%% 
-=%% 
-toolService%% &
-;%%& '
-_rateService&& 
-=&& 
-rateService&& &
-;&&& '
-_customerService'' 
-='' 
-customerService'' .
-;''. /
-_analysisService(( 
-=(( 
-analysisService(( .
-;((. /
-_rentalService)) 
-=)) 
-rentalService)) *
-;))* +
-_rentalFacade** 
-=** 
-rentalFacade** (
-;**( )
-}++ 	
-public-- 
-void-- %
-NavigateToSetToolCategory-- -
-(--- .
-Form--. 2
-form--3 7
-)--7 8
-{.. 	
-form// 
-.// 
-Hide// 
-(// 
-)// 
-;// 
-FrmSetToolCategory00 
-nextForm00 '
-=00( )
-new00* -
-FrmSetToolCategory00. @
-(00@ A
-this00A E
-,00E F
-_rateService00G S
-)00S T
-;00T U
-nextForm11 
-.11 
-
-ShowDialog11 
-(11  
-)11  !
-;11! "
-form22 
-.22 
-Close22 
-(22 
-)22 
-;22 
-}33 	
-public44 
-void44  
-NavigateToUpdateRate44 (
-(44( )
-Form44) -
-form44. 2
-)442 3
-{55 	
-form66 
-.66 
-Hide66 
-(66 
-)66 
-;66 
-FrmUpdateToolRate77 
-nextForm77 &
-=77' (
-new77) ,
-FrmUpdateToolRate77- >
-(77> ?
-this77? C
-,77C D
-_rateService77E Q
-)77Q R
-;77R S
-nextForm88 
-.88 
-
-ShowDialog88 
-(88  
-)88  !
-;88! "
-form99 
-.99 
-Close99 
-(99 
-)99 
-;99 
-}:: 	
-public<< 
-void<< 
-NavigateToAddTool<< %
-(<<% &
-Form<<& *
-form<<+ /
-)<</ 0
-{== 	
-form>> 
-.>> 
-Hide>> 
-(>> 
-)>> 
-;>> 
-
-FrmAddTool?? 
-nextForm?? 
-=??  !
-new??" %
-
-FrmAddTool??& 0
-(??0 1
-this??1 5
-,??5 6
-_toolService??7 C
-,??C D
-_rateService??E Q
-)??Q R
-;??R S
-nextForm@@ 
-.@@ 
-
-ShowDialog@@ 
-(@@  
-)@@  !
-;@@! "
-formAA 
-.AA 
-CloseAA 
-(AA 
-)AA 
-;AA 
-}BB 	
-publicDD 
-voidDD  
-NavigateToUpdateToolDD (
-(DD( )
-FormDD) -
-formDD. 2
-)DD2 3
-{EE 	
-formFF 
-.FF 
-HideFF 
-(FF 
-)FF 
-;FF 
-FrmUpdateToolGG 
-nextFormGG "
-=GG# $
-newGG% (
-FrmUpdateToolGG) 6
-(GG6 7
-thisGG7 ;
-,GG; <
-_toolServiceGG= I
-,GGI J
-_rateServiceGGK W
-)GGW X
-;GGX Y
-nextFormHH 
-.HH 
-
-ShowDialogHH 
-(HH  
-)HH  !
-;HH! "
-formII 
-.II 
-CloseII 
-(II 
-)II 
-;II 
-}JJ 	
-publicLL 
-voidLL  
-NavigateToRemoveToolLL (
-(LL( )
-FormLL) -
-formLL. 2
-)LL2 3
-{MM 	
-formNN 
-.NN 
-HideNN 
-(NN 
-)NN 
-;NN 
-FrmRemoveToolOO 
-nextFormOO "
-=OO# $
-newOO% (
-FrmRemoveToolOO) 6
-(OO6 7
-thisOO7 ;
-,OO; <
-_toolServiceOO= I
-)OOI J
-;OOJ K
-nextFormPP 
-.PP 
-
-ShowDialogPP 
-(PP  
-)PP  !
-;PP! "
-formQQ 
-.QQ 
-CloseQQ 
-(QQ 
-)QQ 
-;QQ 
-}RR 	
-publicSS 
-voidSS 
-NavigateToViewToolsSS '
-(SS' (
-FormSS( ,
-formSS- 1
-)SS1 2
-{TT 	
-formUU 
-.UU 
-HideUU 
-(UU 
-)UU 
-;UU 
-FrmViewToolsVV 
-nextFormVV !
-=VV" #
-newVV$ '
-FrmViewToolsVV( 4
-(VV4 5
-thisVV5 9
-,VV9 :
-_toolServiceVV; G
-,VVG H
-_rateServiceVVI U
-)VVU V
-;VVV W
-nextFormWW 
-.WW 
-
-ShowDialogWW 
-(WW  
-)WW  !
-;WW! "
-formXX 
-.XX 
-CloseXX 
-(XX 
-)XX 
-;XX 
-}YY 	
-public[[ 
-void[[ 
-NavigateToRentTools[[ '
-([[' (
-Form[[( ,
-form[[- 1
-)[[1 2
-{\\ 	
-form]] 
-.]] 
-Hide]] 
-(]] 
-)]] 
-;]] 
-FrmRentTools^^ 
-nextForm^^ !
-=^^" #
-new^^$ '
-FrmRentTools^^( 4
-(^^4 5
-this^^5 9
-,^^9 :
-_rentalFacade^^; H
-)^^H I
-;^^I J
-nextForm__ 
-.__ 
-
-ShowDialog__ 
-(__  
-)__  !
-;__! "
-form`` 
-.`` 
-Close`` 
-(`` 
-)`` 
-;`` 
-}aa 	
-publiccc 
-voidcc !
-NavigateToReturnToolscc )
-(cc) *
-Formcc* .
-formcc/ 3
-)cc3 4
-{dd 	
-formee 
-.ee 
-Hideee 
-(ee 
-)ee 
-;ee 
-FrmReturnToolsff 
-nextFormff #
-=ff$ %
-newff& )
-FrmReturnToolsff* 8
-(ff8 9
-thisff9 =
-,ff= >
-_rentalServiceff? M
-)ffM N
-;ffN O
-nextFormgg 
-.gg 
-
-ShowDialoggg 
-(gg  
-)gg  !
-;gg! "
-formhh 
-.hh 
-Closehh 
-(hh 
-)hh 
-;hh 
-}ii 	
-publickk 
-voidkk !
-NavigateToViewRentalskk )
-(kk) *
-Formkk* .
-formkk/ 3
-)kk3 4
-{ll 	
-formmm 
-.mm 
-Hidemm 
-(mm 
-)mm 
-;mm 
-FrmViewRentalsnn 
-nextFormnn #
-=nn$ %
-newnn& )
-FrmViewRentalsnn* 8
-(nn8 9
-thisnn9 =
-)nn= >
-;nn> ?
-nextFormoo 
-.oo 
-
-ShowDialogoo 
-(oo  
-)oo  !
-;oo! "
-formpp 
-.pp 
-Closepp 
-(pp 
-)pp 
-;pp 
-}qq 	
-publicrr 
-voidrr !
-NavigateToAddCustomerrr )
-(rr) *
-Formrr* .
-formrr/ 3
-)rr3 4
-{ss 	
-formtt 
-.tt 
-Hidett 
-(tt 
-)tt 
-;tt 
-FrmAddCustomeruu 
-nextFormuu #
-=uu$ %
-newuu& )
-FrmAddCustomeruu* 8
-(uu8 9
-thisuu9 =
-,uu= >
-_customerServiceuu? O
-)uuO P
-;uuP Q
-nextFormvv 
-.vv 
-
-ShowDialogvv 
-(vv  
-)vv  !
-;vv! "
-formww 
-.ww 
-Closeww 
-(ww 
-)ww 
-;ww 
-}xx 	
-publicyy 
-voidyy $
-NavigateToUpdateCustomeryy ,
-(yy, -
-Formyy- 1
-formyy2 6
-)yy6 7
-{zz 	
-form{{ 
-.{{ 
-Hide{{ 
-({{ 
-){{ 
-;{{ 
-FrmUpdateCustomer|| 
-nextForm|| &
-=||' (
-new||) ,
-FrmUpdateCustomer||- >
-(||> ?
-this||? C
-,||C D
-_customerService||E U
-)||U V
-;||V W
-nextForm}} 
-.}} 
-
-ShowDialog}} 
-(}}  
-)}}  !
-;}}! "
-form~~ 
-.~~ 
-Close~~ 
-(~~ 
-)~~ 
-;~~ 
-} 	
-public
-ÄÄ 
-void
-ÄÄ %
-NavigateToViewCustomers
-ÄÄ +
-(
-ÄÄ+ ,
-Form
-ÄÄ, 0
-form
-ÄÄ1 5
-)
-ÄÄ5 6
-{
-ÅÅ 	
-form
-ÇÇ 
-.
-ÇÇ 
-Hide
-ÇÇ 
-(
-ÇÇ 
-)
-ÇÇ 
-;
-ÇÇ 
-FrmViewCustomers
-ÉÉ 
-nextForm
-ÉÉ %
-=
-ÉÉ& '
-new
-ÉÉ( +
-FrmViewCustomers
-ÉÉ, <
-(
-ÉÉ< =
-this
-ÉÉ= A
-,
-ÉÉA B
-_customerService
-ÉÉC S
-)
-ÉÉS T
-;
-ÉÉT U
-nextForm
-ÑÑ 
-.
-ÑÑ 
-
-ShowDialog
-ÑÑ 
-(
-ÑÑ  
-)
-ÑÑ  !
-;
-ÑÑ! "
-form
-ÖÖ 
-.
-ÖÖ 
-Close
-ÖÖ 
-(
-ÖÖ 
-)
-ÖÖ 
-;
-ÖÖ 
-}
-ÜÜ 	
-public
-àà 
-void
-àà  
-NavigateToAnalysis
-àà &
-(
-àà& '
-Form
-àà' +
-form
-àà, 0
-)
-àà0 1
-{
-ââ 	
-form
-ää 
-.
-ää 
-Hide
-ää 
-(
-ää 
-)
-ää 
-;
-ää 
-FrmAnalysis
-ãã 
-nextForm
-ãã  
-=
-ãã! "
-new
-ãã# &
-FrmAnalysis
-ãã' 2
-(
-ãã2 3
-this
-ãã3 7
-,
-ãã7 8
-_rateService
-ãã9 E
-,
-ããE F
-_analysisService
-ããG W
-)
-ããW X
-;
-ããX Y
-nextForm
-åå 
-.
-åå 
-
-ShowDialog
-åå 
-(
-åå  
-)
-åå  !
-;
-åå! "
-form
-çç 
-.
-çç 
-Close
-çç 
-(
-çç 
-)
-çç 
-;
-çç 
-}
-éé 	
-public
-êê 
-void
-êê  
-NavigateToMainMenu
-êê &
-(
-êê& '
-Form
-êê' +
-form
-êê, 0
-)
-êê0 1
-{
-ëë 	
-form
-íí 
-.
-íí 
-Hide
-íí 
-(
-íí 
-)
-íí 
-;
-íí 
-FrmMainMenu
-ìì 
-nextForm
-ìì  
-=
-ìì! "
-new
-ìì# &
-FrmMainMenu
-ìì' 2
-(
-ìì2 3
-this
-ìì3 7
-)
-ìì7 8
-;
-ìì8 9
-nextForm
-îî 
-.
-îî 
-
-ShowDialog
-îî 
-(
-îî  
-)
-îî  !
-;
-îî! "
-form
-ïï 
-.
-ïï 
-Close
-ïï 
-(
-ïï 
-)
-ïï 
-;
-ïï 
-}
-ññ 	
-}
-óó 
-}òò ôò
+navigation,,, 6
+),,6 7
+),,7 8
+;,,8 9
+}-- 	
+}.. 
+}// éó
 LC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\Nav\NavForm.cs
 	namespace 	
 ToolSYS
@@ -1309,25 +426,17 @@ MenuStrip1 "
 
 NavForm 
 ( 
-INavigation 
-? 
+INavigation 
 
-navigation  *
-=+ ,
-null- 1
-)1 2
+navigation )
+)) *
 { 
 
 Navigation 
 = 
 
-navigation 
-??  "
-new# &
-NoOpNavigation' 5
-(5 6
-)6 7
-;7 8
+navigation 
+;  
 InitializeComponent   
 (   
 )   
@@ -2559,9 +1668,9 @@ $viewCustomersToolStripMenuItem_Click
 =
   ' (
 $str
-  ) 4
+  ) :
 ;
-  4 5'
+  : ;'
 AnalysisToolStripMenuItem
 ÀÀ !
 .
@@ -3759,63 +2868,955 @@ MessageBox
 ……4 5
 }
    
-}ÀÀ Ì
-NC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\Miscellaneous.cs
-	namespace 	
-ToolSYS
+}ÀÀ ül
+OC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\Nav\Navigation.cs
+	namespace 	
+ToolSYS
  
-. 
-Presentation 
-{		 
-static
+. 
+Presentation 
+. 
+Nav "
+{ 
+public 
+
+	interface 
+INavigation  
+{		 
+void
 
- 
+ %
+NavigateToSetToolCategory
+
+ &
+(
+
+& '
+Form
+
+' +
+form
+
+, 0
+)
+
+0 1
+;
+
+1 2
+void  
+NavigateToUpdateRate !
+(! "
+Form" &
+form' +
+)+ ,
+;, -
+void 
+NavigateToAddTool 
+( 
+Form #
+form$ (
+)( )
+;) *
+void  
+NavigateToUpdateTool !
+(! "
+Form" &
+form' +
+)+ ,
+;, -
+void  
+NavigateToRemoveTool !
+(! "
+Form" &
+form' +
+)+ ,
+;, -
+void 
+NavigateToViewTools  
+(  !
+Form! %
+form& *
+)* +
+;+ ,
+void 
+NavigateToRentTools  
+(  !
+Form! %
+form& *
+)* +
+;+ ,
+void !
+NavigateToReturnTools "
+(" #
+Form# '
+form( ,
+), -
+;- .
+void !
+NavigateToViewRentals "
+(" #
+Form# '
+form( ,
+), -
+;- .
+void !
+NavigateToAddCustomer "
+(" #
+Form# '
+form( ,
+), -
+;- .
+void $
+NavigateToUpdateCustomer %
+(% &
+Form& *
+form+ /
+)/ 0
+;0 1
+void #
+NavigateToViewCustomers $
+($ %
+Form% )
+form* .
+). /
+;/ 0
+void 
+NavigateToAnalysis 
+(  
+Form  $
+form% )
+)) *
+;* +
+void 
+NavigateToMainMenu 
+(  
+Form  $
+form% )
+)) *
+;* +
+} 
+public 
 
-class
+class 
+
+Navigation 
+: 
+INavigation )
+{ 
+private 
+readonly 
+IToolService %
+_toolService& 2
+;2 3
+private 
+readonly 
+IRateService %
+_rateService& 2
+;2 3
+private 
+readonly 
+ICustomerService )
+_customerService* :
+;: ;
+private 
+readonly 
+IAnalysisService )
+_analysisService* :
+;: ;
+private   
+readonly   
+IRentalService   '
+_rentalService  ( 6
+;  6 7
+private!! 
+readonly!! 
+IRentalFacade!! &
+_rentalFacade!!' 4
+;!!4 5
+public## 
+
+Navigation## 
+(## 
+IToolService## &
+toolService##' 2
+,##2 3
+IRateService##4 @
+rateService##A L
+,##L M
+ICustomerService##N ^
+customerService##_ n
+,##n o
+IAnalysisService	##p Ä
+analysisService
+##Å ê
+,
+##ê ë
+IRentalService
+##í †
+rentalService
+##° Æ
+,
+##Æ Ø
+IRentalFacade
+##∞ Ω
+rentalFacade
+##æ  
+)
+##  À
+{$$ 	
+_toolService%% 
+=%% 
+toolService%% &
+;%%& '
+_rateService&& 
+=&& 
+rateService&& &
+;&&& '
+_customerService'' 
+='' 
+customerService'' .
+;''. /
+_analysisService(( 
+=(( 
+analysisService(( .
+;((. /
+_rentalService)) 
+=)) 
+rentalService)) *
+;))* +
+_rentalFacade** 
+=** 
+rentalFacade** (
+;**( )
+}++ 	
+public-- 
+void-- %
+NavigateToSetToolCategory-- -
+(--- .
+Form--. 2
+form--3 7
+)--7 8
+{.. 	
+form// 
+.// 
+Hide// 
+(// 
+)// 
+;// 
+FrmSetToolCategory00 
+nextForm00 '
+=00( )
+new00* -
+FrmSetToolCategory00. @
+(00@ A
+this00A E
+,00E F
+_rateService00G S
+)00S T
+;00T U
+nextForm11 
+.11 
+
+ShowDialog11 
+(11  
+)11  !
+;11! "
+form22 
+.22 
+Close22 
+(22 
+)22 
+;22 
+}33 	
+public44 
+void44  
+NavigateToUpdateRate44 (
+(44( )
+Form44) -
+form44. 2
+)442 3
+{55 	
+form66 
+.66 
+Hide66 
+(66 
+)66 
+;66 
+FrmUpdateToolRate77 
+nextForm77 &
+=77' (
+new77) ,
+FrmUpdateToolRate77- >
+(77> ?
+this77? C
+,77C D
+_rateService77E Q
+)77Q R
+;77R S
+nextForm88 
+.88 
+
+ShowDialog88 
+(88  
+)88  !
+;88! "
+form99 
+.99 
+Close99 
+(99 
+)99 
+;99 
+}:: 	
+public<< 
+void<< 
+NavigateToAddTool<< %
+(<<% &
+Form<<& *
+form<<+ /
+)<</ 0
+{== 	
+form>> 
+.>> 
+Hide>> 
+(>> 
+)>> 
+;>> 
+
+FrmAddTool?? 
+nextForm?? 
+=??  !
+new??" %
+
+FrmAddTool??& 0
+(??0 1
+this??1 5
+,??5 6
+_toolService??7 C
+,??C D
+_rateService??E Q
+)??Q R
+;??R S
+nextForm@@ 
+.@@ 
+
+ShowDialog@@ 
+(@@  
+)@@  !
+;@@! "
+formAA 
+.AA 
+CloseAA 
+(AA 
+)AA 
+;AA 
+}BB 	
+publicDD 
+voidDD  
+NavigateToUpdateToolDD (
+(DD( )
+FormDD) -
+formDD. 2
+)DD2 3
+{EE 	
+formFF 
+.FF 
+HideFF 
+(FF 
+)FF 
+;FF 
+FrmUpdateToolGG 
+nextFormGG "
+=GG# $
+newGG% (
+FrmUpdateToolGG) 6
+(GG6 7
+thisGG7 ;
+,GG; <
+_toolServiceGG= I
+,GGI J
+_rateServiceGGK W
+)GGW X
+;GGX Y
+nextFormHH 
+.HH 
+
+ShowDialogHH 
+(HH  
+)HH  !
+;HH! "
+formII 
+.II 
+CloseII 
+(II 
+)II 
+;II 
+}JJ 	
+publicLL 
+voidLL  
+NavigateToRemoveToolLL (
+(LL( )
+FormLL) -
+formLL. 2
+)LL2 3
+{MM 	
+formNN 
+.NN 
+HideNN 
+(NN 
+)NN 
+;NN 
+FrmRemoveToolOO 
+nextFormOO "
+=OO# $
+newOO% (
+FrmRemoveToolOO) 6
+(OO6 7
+thisOO7 ;
+,OO; <
+_toolServiceOO= I
+)OOI J
+;OOJ K
+nextFormPP 
+.PP 
+
+ShowDialogPP 
+(PP  
+)PP  !
+;PP! "
+formQQ 
+.QQ 
+CloseQQ 
+(QQ 
+)QQ 
+;QQ 
+}RR 	
+publicSS 
+voidSS 
+NavigateToViewToolsSS '
+(SS' (
+FormSS( ,
+formSS- 1
+)SS1 2
+{TT 	
+formUU 
+.UU 
+HideUU 
+(UU 
+)UU 
+;UU 
+FrmViewToolsVV 
+nextFormVV !
+=VV" #
+newVV$ '
+FrmViewToolsVV( 4
+(VV4 5
+thisVV5 9
+,VV9 :
+_toolServiceVV; G
+,VVG H
+_rateServiceVVI U
+)VVU V
+;VVV W
+nextFormWW 
+.WW 
+
+ShowDialogWW 
+(WW  
+)WW  !
+;WW! "
+formXX 
+.XX 
+CloseXX 
+(XX 
+)XX 
+;XX 
+}YY 	
+public[[ 
+void[[ 
+NavigateToRentTools[[ '
+([[' (
+Form[[( ,
+form[[- 1
+)[[1 2
+{\\ 	
+form]] 
+.]] 
+Hide]] 
+(]] 
+)]] 
+;]] 
+FrmRentTools^^ 
+nextForm^^ !
+=^^" #
+new^^$ '
+FrmRentTools^^( 4
+(^^4 5
+this^^5 9
+,^^9 :
+_rentalFacade^^; H
+)^^H I
+;^^I J
+nextForm__ 
+.__ 
+
+ShowDialog__ 
+(__  
+)__  !
+;__! "
+form`` 
+.`` 
+Close`` 
+(`` 
+)`` 
+;`` 
+}aa 	
+publiccc 
+voidcc !
+NavigateToReturnToolscc )
+(cc) *
+Formcc* .
+formcc/ 3
+)cc3 4
+{dd 	
+formee 
+.ee 
+Hideee 
+(ee 
+)ee 
+;ee 
+FrmReturnToolsff 
+nextFormff #
+=ff$ %
+newff& )
+FrmReturnToolsff* 8
+(ff8 9
+thisff9 =
+,ff= >
+_rentalServiceff? M
+)ffM N
+;ffN O
+nextFormgg 
+.gg 
+
+ShowDialoggg 
+(gg  
+)gg  !
+;gg! "
+formhh 
+.hh 
+Closehh 
+(hh 
+)hh 
+;hh 
+}ii 	
+publickk 
+voidkk !
+NavigateToViewRentalskk )
+(kk) *
+Formkk* .
+formkk/ 3
+)kk3 4
+{ll 	
+formmm 
+.mm 
+Hidemm 
+(mm 
+)mm 
+;mm 
+FrmViewRentalsnn 
+nextFormnn #
+=nn$ %
+newnn& )
+FrmViewRentalsnn* 8
+(nn8 9
+thisnn9 =
+)nn= >
+;nn> ?
+nextFormoo 
+.oo 
+
+ShowDialogoo 
+(oo  
+)oo  !
+;oo! "
+formpp 
+.pp 
+Closepp 
+(pp 
+)pp 
+;pp 
+}qq 	
+publicrr 
+voidrr !
+NavigateToAddCustomerrr )
+(rr) *
+Formrr* .
+formrr/ 3
+)rr3 4
+{ss 	
+formtt 
+.tt 
+Hidett 
+(tt 
+)tt 
+;tt 
+FrmAddCustomeruu 
+nextFormuu #
+=uu$ %
+newuu& )
+FrmAddCustomeruu* 8
+(uu8 9
+thisuu9 =
+,uu= >
+_customerServiceuu? O
+)uuO P
+;uuP Q
+nextFormvv 
+.vv 
+
+ShowDialogvv 
+(vv  
+)vv  !
+;vv! "
+formww 
+.ww 
+Closeww 
+(ww 
+)ww 
+;ww 
+}xx 	
+publicyy 
+voidyy $
+NavigateToUpdateCustomeryy ,
+(yy, -
+Formyy- 1
+formyy2 6
+)yy6 7
+{zz 	
+form{{ 
+.{{ 
+Hide{{ 
+({{ 
+){{ 
+;{{ 
+FrmUpdateCustomer|| 
+nextForm|| &
+=||' (
+new||) ,
+FrmUpdateCustomer||- >
+(||> ?
+this||? C
+,||C D
+_customerService||E U
+)||U V
+;||V W
+nextForm}} 
+.}} 
+
+ShowDialog}} 
+(}}  
+)}}  !
+;}}! "
+form~~ 
+.~~ 
+Close~~ 
+(~~ 
+)~~ 
+;~~ 
+} 	
+public
+ÄÄ 
+void
+ÄÄ %
+NavigateToViewCustomers
+ÄÄ +
+(
+ÄÄ+ ,
+Form
+ÄÄ, 0
+form
+ÄÄ1 5
+)
+ÄÄ5 6
+{
+ÅÅ 	
+form
+ÇÇ 
+.
+ÇÇ 
+Hide
+ÇÇ 
+(
+ÇÇ 
+)
+ÇÇ 
+;
+ÇÇ 
+FrmViewCustomers
+ÉÉ 
+nextForm
+ÉÉ %
+=
+ÉÉ& '
+new
+ÉÉ( +
+FrmViewCustomers
+ÉÉ, <
+(
+ÉÉ< =
+this
+ÉÉ= A
+,
+ÉÉA B
+_customerService
+ÉÉC S
+)
+ÉÉS T
+;
+ÉÉT U
+nextForm
+ÑÑ 
+.
+ÑÑ 
+
+ShowDialog
+ÑÑ 
+(
+ÑÑ  
+)
+ÑÑ  !
+;
+ÑÑ! "
+form
+ÖÖ 
+.
+ÖÖ 
+Close
+ÖÖ 
+(
+ÖÖ 
+)
+ÖÖ 
+;
+ÖÖ 
+}
+ÜÜ 	
+public
+àà 
+void
+àà  
+NavigateToAnalysis
+àà &
+(
+àà& '
+Form
+àà' +
+form
+àà, 0
+)
+àà0 1
+{
+ââ 	
+form
+ää 
+.
+ää 
+Hide
+ää 
+(
+ää 
+)
+ää 
+;
+ää 
+FrmAnalysis
+ãã 
+nextForm
+ãã  
+=
+ãã! "
+new
+ãã# &
+FrmAnalysis
+ãã' 2
+(
+ãã2 3
+this
+ãã3 7
+,
+ãã7 8
+_analysisService
+ãã9 I
+)
+ããI J
+;
+ããJ K
+nextForm
+åå 
+.
+åå 
+
+ShowDialog
+åå 
+(
+åå  
+)
+åå  !
+;
+åå! "
+form
+çç 
+.
+çç 
+Close
+çç 
+(
+çç 
+)
+çç 
+;
+çç 
+}
+éé 	
+public
+êê 
+void
+êê  
+NavigateToMainMenu
+êê &
+(
+êê& '
+Form
+êê' +
+form
+êê, 0
+)
+êê0 1
+{
+ëë 	
+form
+íí 
+.
+íí 
+Hide
+íí 
+(
+íí 
+)
+íí 
+;
+íí 
+FrmMainMenu
+ìì 
+nextForm
+ìì  
+=
+ìì! "
+new
+ìì# &
+FrmMainMenu
+ìì' 2
+(
+ìì2 3
+this
+ìì3 7
+)
+ìì7 8
+;
+ìì8 9
+nextForm
+îî 
+.
+îî 
+
+ShowDialog
+îî 
+(
+îî  
+)
+îî  !
+;
+îî! "
+form
+ïï 
+.
+ïï 
+Close
+ïï 
+(
+ïï 
+)
+ïï 
+;
+ïï 
+}
+ññ 	
+}
+óó 
+}òò Ì
+NC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\Miscellaneous.cs
+	namespace 	
+ToolSYS
+ 
+. 
+Presentation 
+{ 
+static 
+
+class 
+Miscellaneous 
+{ 
+public 
+static 
+void %
+SetDataGridViewProperties 4
+(4 5
+DataGridView5 A
+dgvB E
+)E F
+{ 	
+dgv 
+. $
+AllowUserToResizeColumns (
+=) *
+true+ /
+;/ 0
+dgv		 
+.		 
+AllowUserToAddRows		 "
+=		# $
+false		% *
+;		* +
+dgv
 
- 
-Miscellaneous
+ 
+.
 
- 
-{ 
-public 
-static 
-void %
-SetDataGridViewProperties 4
-(4 5
-DataGridView5 A
-dgvB E
-)E F
-{ 	
-dgv 
-. $
-AllowUserToResizeColumns (
-=) *
-true+ /
-;/ 0
-dgv 
-. 
-AllowUserToAddRows "
-=# $
-false% *
-;* +
-dgv 
-. !
-AllowUserToResizeRows %
-=& '
-false( -
-;- .
-dgv 
-. 
-AutoSizeColumnsMode #
-=$ %+
-DataGridViewAutoSizeColumnsMode& E
-.E F
-FillF J
-;J K
-} 	
-} 
-} ∞9
+ !
+AllowUserToResizeRows
+
+ %
+=
+
+& '
+false
+
+( -
+;
+
+- .
+dgv 
+. 
+AutoSizeColumnsMode #
+=$ %+
+DataGridViewAutoSizeColumnsMode& E
+.E F
+FillF J
+;J K
+} 	
+} 
+} ∞9
 SC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\Forms\frmViewTools.cs
 	namespace 	
 ToolSYS
@@ -5785,613 +5786,639 @@ MessageBoxqq 
 ÜÜ 	
 }
 áá 
-}àà ﬁQ
+}àà âV
 XC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\Forms\frmUpdateCustomer.cs
-	namespace 	
-ToolSYS
+	namespace 	
+ToolSYS
  
-. 
-Presentation 
-. 
-Forms $
-{ 
-public 
+. 
+Presentation 
+. 
+Forms $
+{ 
+public		 
 
-partial 
-class 
-FrmUpdateCustomer *
-:+ ,
-NavForm- 4
-{		 
-private
+partial		 
+class		 
+FrmUpdateCustomer		 *
+:		+ ,
+NavForm		- 4
+{
 
- 
-readonly
-
- 
-ICustomerService
-
- )
-_customerService
-
-* :
-;
-
-: ;
-public 
-FrmUpdateCustomer  
-(  !
-INavigation! ,
+ 
+private 
+readonly 
+ICustomerService )
+_customerService* :
+;: ;
+public 
+FrmUpdateCustomer  
+(  !
+INavigation! ,
 
-navigation- 7
-,7 8
-ICustomerService9 I
-customerServiceJ Y
-)Y Z
-:[ \
-base] a
-(a b
+navigation- 7
+,7 8
+ICustomerService9 I
+customerServiceJ Y
+)Y Z
+:[ \
+base] a
+(a b
 
-navigationb l
-)l m
-{ 	
-InitializeComponent 
-(  
-)  !
-;! "
-_customerService 
-= 
-customerService .
-;. /
-} 	
-private 
-void 
-btnSearch_Click $
-($ %
-object% +
-sender, 2
-,2 3
-	EventArgs4 =
-e> ?
-)? @
-{ 	
-try 
-{ 
-string 
+navigationb l
+)l m
+{ 	
+InitializeComponent 
+(  
+)  !
+;! "
+_customerService 
+= 
+customerService .
+;. /
+} 	
+private 
+void 
+btnSearch_Click $
+($ %
+object% +
+sender, 2
+,2 3
+	EventArgs4 =
+e> ?
+)? @
+{ 	
+try 
+{ 
+string 
 
-customerId !
-=" #
-txtCustomerID$ 1
-.1 2
-Text2 6
-;6 7
-string 
-forename 
-=  !
-txtForename" -
-.- .
-Text. 2
-;2 3
-string 
-surname 
-=  
+customerId !
+=" #
+txtCustomerID$ 1
+.1 2
+Text2 6
+;6 7
+string 
+forename 
+=  !
+txtForename" -
+.- .
+Text. 2
+;2 3
+string 
+surname 
+=  
 
-txtSurname! +
-.+ ,
-Text, 0
-;0 1
-string 
-email 
-= 
-txtEmail '
-.' (
-Text( ,
-;, -
+txtSurname! +
+.+ ,
+Text, 0
+;0 1
 string 
-phone 
+email 
 = 
-txtPhone '
+txtEmail '
 .' (
 Text( ,
 ;, -
-string 
-eircode 
-=  
+string 
+phone 
+= 
+txtPhone '
+.' (
+Text( ,
+;, -
+string 
+eircode 
+=  
 
-txtEircode! +
-.+ ,
-Text, 0
-;0 1
-string 
-phrase 
-= 
-	txtPhrase  )
-.) *
-Text* .
-;. /
-DataSet 
-results 
-=  !
-_customerService" 2
-.2 3 
-GetFilteredCustomers3 G
-(G H
+txtEircode! +
+.+ ,
+Text, 0
+;0 1
+string 
+phrase 
+= 
+	txtPhrase  )
+.) *
+Text* .
+;. /
+DataSet 
+results 
+=  !
+_customerService" 2
+.2 3 
+GetFilteredCustomers3 G
+(G H
 
-customerIdH R
-,R S
-forenameT \
-,\ ]
-surname^ e
-,e f
-emailg l
-,l m
-phonen s
-,s t
-eircodeu |
-,| }
-phrase	~ Ñ
+customerIdH R
+,R S
+forenameT \
+,\ ]
+surname^ e
+,e f
+emailg l
+,l m
+phonen s
+,s t
+eircodeu |
+,| }
+phrase	~ Ñ
 )
-Ñ Ö
+Ñ Ö
 ;
-Ö Ü
-dgvCustomers 
-. 
-
-DataSource '
-=( )
-results* 1
-.1 2
-Tables2 8
-[8 9
-$str9 C
-]C D
-;D E
+Ö Ü
 dgvCustomers   
-.   
-AutoSizeColumnsMode   0
-=  1 2+
-DataGridViewAutoSizeColumnsMode  3 R
-.  R S
-Fill  S W
-;  W X
+.   
+
+DataSource   '
+=  ( )
+results  * 1
+.  1 2
+Tables  2 8
+[  8 9
+$str  9 C
+]  C D
+;  D E
 dgvCustomers!! 
-.!! 
-Columns!! $
-[!!$ %
-$num!!% &
-]!!& '
-.!!' (
-AutoSizeMode!!( 4
-=!!5 6*
-DataGridViewAutoSizeColumnMode!!7 U
-.!!U V
-AllCells!!V ^
-;!!^ _
-}"" 
-catch## 
-(## 
-	Exception## 
-ex## 
-)##  
-{$$ 
+.!! 
+AutoSizeColumnsMode!! 0
+=!!1 2+
+DataGridViewAutoSizeColumnsMode!!3 R
+.!!R S
+Fill!!S W
+;!!W X
+dgvCustomers"" 
+."" 
+Columns"" $
+[""$ %
+$num""% &
+]""& '
+.""' (
+AutoSizeMode""( 4
+=""5 6*
+DataGridViewAutoSizeColumnMode""7 U
+.""U V
+AllCells""V ^
+;""^ _
+}## 
+catch$$ 
+($$ 
+ValidationException$$ &
+ex$$' )
+)$$) *
+{%% 
 
-MessageBox%% 
-.%% 
-Show%% 
-(%%  
-$@"%%  #
-{%%# $
-ex%%$ &
-.%%& '
-Message%%' .
-}%%. /
-"%%/ 0
-,%%0 1
-$str%%2 :
-,%%: ;
-MessageBoxButtons%%< M
-.%%M N
-OK%%N P
-,%%P Q
-MessageBoxIcon%%R `
-.%%` a
-Error%%a f
-)%%f g
-;%%g h
-}&& 
-}'' 	
-private)) 
-void)) 
-btnClear_Click)) #
-())# $
-object))$ *
-sender))+ 1
-,))1 2
-	EventArgs))3 <
-e))= >
-)))> ?
-{** 	
-txtCustomerID++ 
-.++ 
-Clear++ 
-(++  
-)++  !
-;++! "
-txtForename,, 
-.,, 
-Clear,, 
-(,, 
-),, 
-;,,  
-
-txtSurname-- 
-.-- 
-Clear-- 
-(-- 
-)-- 
-;-- 
-txtEmail.. 
-... 
-Clear.. 
-(.. 
-).. 
-;.. 
-txtPhone// 
-.// 
-Clear// 
-(// 
-)// 
-;// 
-
-txtEircode00 
-.00 
-Clear00 
-(00 
-)00 
-;00 
-	txtPhrase11 
-.11 
-Clear11 
-(11 
-)11 
-;11 
-}22 	
-private44 
-void44 
-btnUpdate_Click44 $
-(44$ %
-object44% +
-sender44, 2
-,442 3
-	EventArgs444 =
-e44> ?
-)44? @
-{55 	
-try66 
-{77 
-Customer88 
-customer88 !
-=88" #
-new88$ '
-Customer88( 0
-{881 2
-
-customerId99 
-=99  
-Convert99! (
-.99( )
-ToInt3299) 0
-(990 1
-txtUpdCustomerID991 A
-.99A B
-Text99B F
-)99F G
-,99G H
-forename:: 
-=:: 
-txtUpdForename:: -
-.::- .
-Text::. 2
-,::2 3
-surname;; 
-=;; 
-txtUpdSurname;; +
-.;;+ ,
-Text;;, 0
-,;;0 1
-email<< 
-=<< 
-txtUpdEmail<< '
-.<<' (
-Text<<( ,
-,<<, -
-phone== 
-=== 
-txtUpdPhone== '
-.==' (
-Text==( ,
-,==, -
-eircode>> 
-=>> 
-txtUpdEircode>> +
-.>>+ ,
-Text>>, 0
-}?? 
-;?? 
-_customerServiceAA  
-.AA  !
-UpdateCustomerAA! /
-(AA/ 0
-customerAA0 8
-)AA8 9
-;AA9 :
-
-MessageBoxCC 
-.CC 
-ShowCC 
-(CC  
-$strCC  J
-,CCJ K
-$strCCL Z
-,CCZ [
-MessageBoxButtonsCC\ m
-.CCm n
-OKCCn p
-,CCp q
-MessageBoxIcon	CCr Ä
-.
-CCÄ Å
-Information
-CCÅ å
+MessageBox&& 
+.&& 
+Show&& 
+(&&  
+$"&&  "
+$str&&" 5
+{&&5 6
+ex&&6 8
+.&&8 9
+Message&&9 @
+}&&@ A
+"&&A B
+,&&B C
+$str&&D V
+,&&V W
+MessageBoxButtons&&X i
+.&&i j
+OK&&j l
+,&&l m
+MessageBoxIcon&&n |
+.&&| }
+Warning	&&} Ñ
 )
-CCå ç
+&&Ñ Ö
 ;
-CCç é
-txtUpdCustomerIDDD  
-.DD  !
-ClearDD! &
-(DD& '
-)DD' (
-;DD( )
-txtUpdForenameEE 
-.EE 
-ClearEE $
-(EE$ %
-)EE% &
-;EE& '
-txtUpdSurnameFF 
-.FF 
-ClearFF #
-(FF# $
-)FF$ %
-;FF% &
-txtUpdEmailGG 
-.GG 
-ClearGG !
-(GG! "
-)GG" #
-;GG# $
-txtUpdPhoneHH 
-.HH 
-ClearHH !
-(HH! "
-)HH" #
-;HH# $
-txtUpdEircodeII 
-.II 
-ClearII #
-(II# $
-)II$ %
-;II% &
-}JJ 
-catchKK 
-(KK 
-	ExceptionKK 
-exKK 
-)KK  
-{LL 
+&&Ö Ü
+}'' 
+catch(( 
+((( 
+	Exception(( 
+ex(( 
+)((  
+{)) 
 
-MessageBoxNN 
-.NN 
-ShowNN 
-(NN  
-$@"NN  #
-{NN# $
-exNN$ &
-.NN& '
-MessageNN' .
-}NN. /
-"NN/ 0
-,NN0 1
-$strNN2 :
-,NN: ;
-MessageBoxButtonsNN< M
-.NNM N
-OKNNN P
-,NNP Q
-MessageBoxIconNNR `
-.NN` a
-ErrorNNa f
-)NNf g
-;NNg h
-}OO 
-}PP 	
-privateRR 
-voidRR "
-dgvCustomers_CellClickRR +
-(RR+ ,
-objectRR, 2
-senderRR3 9
-,RR9 :%
-DataGridViewCellEventArgsRR; T
-eRRU V
-)RRV W
-{SS 	
-txtUpdCustomerIDTT 
-.TT 
-TextTT !
-=TT" #
-dgvCustomersTT$ 0
-.TT0 1
-RowsTT1 5
-[TT5 6
-dgvCustomersTT6 B
-.TTB C
+MessageBox** 
+.** 
+Show** 
+(**  
+$@"**  #
+{**# $
+ex**$ &
+.**& '
+Message**' .
+}**. /
+"**/ 0
+,**0 1
+$str**2 :
+,**: ;
+MessageBoxButtons**< M
+.**M N
+OK**N P
+,**P Q
+MessageBoxIcon**R `
+.**` a
+Error**a f
+)**f g
+;**g h
+}++ 
+},, 	
+private.. 
+void.. 
+btnClear_Click.. #
+(..# $
+object..$ *
+sender..+ 1
+,..1 2
+	EventArgs..3 <
+e..= >
+)..> ?
+{// 	
+txtCustomerID00 
+.00 
+Clear00 
+(00  
+)00  !
+;00! "
+txtForename11 
+.11 
+Clear11 
+(11 
+)11 
+;11  
 
-CurrentRowTTC M
-.TTM N
-IndexTTN S
-]TTS T
-.TTT U
-CellsTTU Z
-[TTZ [
-$numTT[ \
-]TT\ ]
-.TT] ^
-ValueTT^ c
-.TTc d
-ToStringTTd l
-(TTl m
-)TTm n
-;TTn o
-txtUpdForenameUU 
-.UU 
-TextUU 
-=UU  !
-dgvCustomersUU" .
-.UU. /
-RowsUU/ 3
-[UU3 4
-dgvCustomersUU4 @
-.UU@ A
+txtSurname22 
+.22 
+Clear22 
+(22 
+)22 
+;22 
+txtEmail33 
+.33 
+Clear33 
+(33 
+)33 
+;33 
+txtPhone44 
+.44 
+Clear44 
+(44 
+)44 
+;44 
 
-CurrentRowUUA K
-.UUK L
-IndexUUL Q
-]UUQ R
-.UUR S
-CellsUUS X
-[UUX Y
-$numUUY Z
-]UUZ [
-.UU[ \
-ValueUU\ a
-.UUa b
-ToStringUUb j
-(UUj k
-)UUk l
-;UUl m
-txtUpdSurnameVV 
-.VV 
-TextVV 
-=VV  
-dgvCustomersVV! -
-.VV- .
-RowsVV. 2
-[VV2 3
-dgvCustomersVV3 ?
-.VV? @
+txtEircode55 
+.55 
+Clear55 
+(55 
+)55 
+;55 
+	txtPhrase66 
+.66 
+Clear66 
+(66 
+)66 
+;66 
+}77 	
+private99 
+void99 
+btnUpdate_Click99 $
+(99$ %
+object99% +
+sender99, 2
+,992 3
+	EventArgs994 =
+e99> ?
+)99? @
+{:: 	
+try;; 
+{<< 
+Customer== 
+customer== !
+===" #
+new==$ '
+Customer==( 0
+{==1 2
 
-CurrentRowVV@ J
-.VVJ K
-IndexVVK P
-]VVP Q
-.VVQ R
-CellsVVR W
-[VVW X
-$numVVX Y
-]VVY Z
-.VVZ [
-ValueVV[ `
-.VV` a
-ToStringVVa i
-(VVi j
-)VVj k
-;VVk l
-txtUpdEmailWW 
-.WW 
-TextWW 
-=WW 
-dgvCustomersWW +
-.WW+ ,
-RowsWW, 0
-[WW0 1
-dgvCustomersWW1 =
-.WW= >
+customerId>> 
+=>>  
+Convert>>! (
+.>>( )
+ToInt32>>) 0
+(>>0 1
+txtUpdCustomerID>>1 A
+.>>A B
+Text>>B F
+)>>F G
+,>>G H
+forename?? 
+=?? 
+txtUpdForename?? -
+.??- .
+Text??. 2
+,??2 3
+surname@@ 
+=@@ 
+txtUpdSurname@@ +
+.@@+ ,
+Text@@, 0
+,@@0 1
+emailAA 
+=AA 
+txtUpdEmailAA '
+.AA' (
+TextAA( ,
+,AA, -
+phoneBB 
+=BB 
+txtUpdPhoneBB '
+.BB' (
+TextBB( ,
+,BB, -
+eircodeCC 
+=CC 
+txtUpdEircodeCC +
+.CC+ ,
+TextCC, 0
+}DD 
+;DD 
+_customerServiceFF  
+.FF  !
+UpdateCustomerFF! /
+(FF/ 0
+customerFF0 8
+)FF8 9
+;FF9 :
 
-CurrentRowWW> H
-.WWH I
-IndexWWI N
-]WWN O
-.WWO P
-CellsWWP U
-[WWU V
-$numWWV W
-]WWW X
-.WWX Y
-ValueWWY ^
-.WW^ _
-ToStringWW_ g
-(WWg h
-)WWh i
-;WWi j
-txtUpdPhoneXX 
-.XX 
-TextXX 
-=XX 
-dgvCustomersXX +
-.XX+ ,
-RowsXX, 0
-[XX0 1
-dgvCustomersXX1 =
-.XX= >
+MessageBoxHH 
+.HH 
+ShowHH 
+(HH  
+$strHH  J
+,HHJ K
+$strHHL Z
+,HHZ [
+MessageBoxButtonsHH\ m
+.HHm n
+OKHHn p
+,HHp q
+MessageBoxIcon	HHr Ä
+.
+HHÄ Å
+Information
+HHÅ å
+)
+HHå ç
+;
+HHç é
+txtUpdCustomerIDII  
+.II  !
+ClearII! &
+(II& '
+)II' (
+;II( )
+txtUpdForenameJJ 
+.JJ 
+ClearJJ $
+(JJ$ %
+)JJ% &
+;JJ& '
+txtUpdSurnameKK 
+.KK 
+ClearKK #
+(KK# $
+)KK$ %
+;KK% &
+txtUpdEmailLL 
+.LL 
+ClearLL !
+(LL! "
+)LL" #
+;LL# $
+txtUpdPhoneMM 
+.MM 
+ClearMM !
+(MM! "
+)MM" #
+;MM# $
+txtUpdEircodeNN 
+.NN 
+ClearNN #
+(NN# $
+)NN$ %
+;NN% &
+}OO 
+catchPP 
+(PP 
+	ExceptionPP 
+exPP 
+)PP  
+{QQ 
 
-CurrentRowXX> H
-.XXH I
-IndexXXI N
-]XXN O
-.XXO P
-CellsXXP U
-[XXU V
-$numXXV W
-]XXW X
-.XXX Y
-ValueXXY ^
-.XX^ _
-ToStringXX_ g
-(XXg h
-)XXh i
-;XXi j
-txtUpdEircodeYY 
-.YY 
-TextYY 
-=YY  
-dgvCustomersYY! -
-.YY- .
-RowsYY. 2
-[YY2 3
-dgvCustomersYY3 ?
-.YY? @
+MessageBoxSS 
+.SS 
+ShowSS 
+(SS  
+$@"SS  #
+{SS# $
+exSS$ &
+.SS& '
+MessageSS' .
+}SS. /
+"SS/ 0
+,SS0 1
+$strSS2 :
+,SS: ;
+MessageBoxButtonsSS< M
+.SSM N
+OKSSN P
+,SSP Q
+MessageBoxIconSSR `
+.SS` a
+ErrorSSa f
+)SSf g
+;SSg h
+}TT 
+}UU 	
+privateWW 
+voidWW "
+dgvCustomers_CellClickWW +
+(WW+ ,
+objectWW, 2
+senderWW3 9
+,WW9 :%
+DataGridViewCellEventArgsWW; T
+eWWU V
+)WWV W
+{XX 	
+txtUpdCustomerIDYY 
+.YY 
+TextYY !
+=YY" #
+dgvCustomersYY$ 0
+.YY0 1
+RowsYY1 5
+[YY5 6
+dgvCustomersYY6 B
+.YYB C
 
-CurrentRowYY@ J
-.YYJ K
-IndexYYK P
-]YYP Q
-.YYQ R
-CellsYYR W
-[YYW X
-$numYYX Y
-]YYY Z
-.YYZ [
-ValueYY[ `
-.YY` a
-ToStringYYa i
-(YYi j
-)YYj k
-;YYk l
-}ZZ 	
-}[[ 
-}\\ Ú
+CurrentRowYYC M
+.YYM N
+IndexYYN S
+]YYS T
+.YYT U
+CellsYYU Z
+[YYZ [
+$numYY[ \
+]YY\ ]
+.YY] ^
+ValueYY^ c
+.YYc d
+ToStringYYd l
+(YYl m
+)YYm n
+;YYn o
+txtUpdForenameZZ 
+.ZZ 
+TextZZ 
+=ZZ  !
+dgvCustomersZZ" .
+.ZZ. /
+RowsZZ/ 3
+[ZZ3 4
+dgvCustomersZZ4 @
+.ZZ@ A
+
+CurrentRowZZA K
+.ZZK L
+IndexZZL Q
+]ZZQ R
+.ZZR S
+CellsZZS X
+[ZZX Y
+$numZZY Z
+]ZZZ [
+.ZZ[ \
+ValueZZ\ a
+.ZZa b
+ToStringZZb j
+(ZZj k
+)ZZk l
+;ZZl m
+txtUpdSurname[[ 
+.[[ 
+Text[[ 
+=[[  
+dgvCustomers[[! -
+.[[- .
+Rows[[. 2
+[[[2 3
+dgvCustomers[[3 ?
+.[[? @
+
+CurrentRow[[@ J
+.[[J K
+Index[[K P
+][[P Q
+.[[Q R
+Cells[[R W
+[[[W X
+$num[[X Y
+][[Y Z
+.[[Z [
+Value[[[ `
+.[[` a
+ToString[[a i
+([[i j
+)[[j k
+;[[k l
+txtUpdEmail\\ 
+.\\ 
+Text\\ 
+=\\ 
+dgvCustomers\\ +
+.\\+ ,
+Rows\\, 0
+[\\0 1
+dgvCustomers\\1 =
+.\\= >
+
+CurrentRow\\> H
+.\\H I
+Index\\I N
+]\\N O
+.\\O P
+Cells\\P U
+[\\U V
+$num\\V W
+]\\W X
+.\\X Y
+Value\\Y ^
+.\\^ _
+ToString\\_ g
+(\\g h
+)\\h i
+;\\i j
+txtUpdPhone]] 
+.]] 
+Text]] 
+=]] 
+dgvCustomers]] +
+.]]+ ,
+Rows]], 0
+[]]0 1
+dgvCustomers]]1 =
+.]]= >
+
+CurrentRow]]> H
+.]]H I
+Index]]I N
+]]]N O
+.]]O P
+Cells]]P U
+[]]U V
+$num]]V W
+]]]W X
+.]]X Y
+Value]]Y ^
+.]]^ _
+ToString]]_ g
+(]]g h
+)]]h i
+;]]i j
+txtUpdEircode^^ 
+.^^ 
+Text^^ 
+=^^  
+dgvCustomers^^! -
+.^^- .
+Rows^^. 2
+[^^2 3
+dgvCustomers^^3 ?
+.^^? @
+
+CurrentRow^^@ J
+.^^J K
+Index^^K P
+]^^P Q
+.^^Q R
+Cells^^R W
+[^^W X
+$num^^X Y
+]^^Y Z
+.^^Z [
+Value^^[ `
+.^^` a
+ToString^^a i
+(^^i j
+)^^j k
+;^^k l
+}__ 	
+}`` 
+}aa Ú
 YC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\Forms\frmSetToolCategory.cs
 	namespace 	
 ToolSYS
@@ -7072,265 +7099,289 @@ CurrentRowWW@ J
 ;WWk l
 }XX 	
 }YY 
-}ZZ ﬁª
+}ZZ ææ
 SC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\Forms\frmRentTools.cs
-	namespace 	
-ToolSYS
+	namespace 	
+ToolSYS
  
-. 
-Presentation 
-. 
-Forms $
-{		 
-public
-
- 
+. 
+Presentation 
+. 
+Forms $
+{ 
+public 
 
-partial
-
- 
-class
-
- 
-FrmRentTools
-
- %
-:
-
-& '
-NavForm
-
-( /
-{ 
-private 
-readonly 
-IRentalFacade &
-_rentalFacade' 4
-;4 5
-public 
-FrmRentTools 
-( 
-INavigation '
+partial 
+class 
+FrmRentTools %
+:& '
+NavForm( /
+{ 
+private 
+readonly 
+IRentalFacade &
+_rentalFacade' 4
+;4 5
+public 
+FrmRentTools 
+( 
+INavigation '
 
-navigation( 2
-,2 3
-IRentalFacade4 A
-rentalFacadeB N
-)N O
-:P Q
-baseR V
-(V W
+navigation( 2
+,2 3
+IRentalFacade4 A
+rentalFacadeB N
+)N O
+:P Q
+baseR V
+(V W
 
-navigationW a
-)a b
-{ 	
-InitializeComponent 
-(  
-)  !
-;! "
-_rentalFacade 
-= 
-rentalFacade (
-;( )
-} 	
-private 
-void 
-frmRentTools_Load &
-(& '
-object' -
-sender. 4
-,4 5
-	EventArgs6 ?
-e@ A
-)A B
-{ 	
-dtpFrom 
-. 
-MinDate 
-= 
-DateTime &
-.& '
-Today' ,
-;, -
-dtpTo   
-.   
-MinDate   
-=   
-DateTime   $
-.  $ %
-Today  % *
-;  * +
-txtRentalID!! 
-.!! 
-Text!! 
-=!! 
-$str!! !
-;!!! "
-cboCategories"" 
-."" 
-Items"" 
-.""  
-Add""  #
-(""# $
-$str""$ &
-)""& '
-;""' (
-	DataTable## 
+navigationW a
+)a b
+{ 	
+InitializeComponent 
+(  
+)  !
+;! "
+_rentalFacade 
+= 
+rentalFacade (
+;( )
+} 	
+private 
+void 
+frmRentTools_Load &
+(& '
+object' -
+sender. 4
+,4 5
+	EventArgs6 ?
+e@ A
+)A B
+{ 	
+dtpFrom 
+. 
+MinDate 
+= 
+DateTime &
+.& '
+Today' ,
+;, -
+dtpTo 
+. 
+MinDate 
+= 
+DateTime $
+.$ %
+Today% *
+;* +
+txtRentalID 
+. 
+Text 
+= 
+$str !
+;! "
+cboCategories 
+. 
+Items 
+.  
+Add  #
+(# $
+$str$ &
+)& '
+;' (
+	DataTable   
 
-categories##  
-=##! "
-_rentalFacade### 0
-.##0 1
-GetCategories##1 >
-(##> ?
-)##? @
-;##@ A
-foreach%% 
-(%% 
-DataRow%% 
-row%%  
-in%%! #
+categories    
+=  ! "
+_rentalFacade  # 0
+.  0 1
+GetCategories  1 >
+(  > ?
+)  ? @
+;  @ A
+foreach"" 
+("" 
+DataRow"" 
+row""  
+in""! #
 
-categories%%$ .
-.%%. /
-Rows%%/ 3
-)%%3 4
-{&& 
-string'' 
-category'' 
-=''  !
-row''" %
-[''% &
-$str''& 4
-]''4 5
-+''6 7
-$str''8 =
-+''> ?
-row''@ C
-[''C D
-$str''D R
-]''R S
-;''S T
-cboCategories(( 
-.(( 
-Items(( #
-.((# $
-Add(($ '
-(((' (
-category((( 0
-)((0 1
-;((1 2
-})) 
+categories""$ .
+."". /
+Rows""/ 3
+)""3 4
+{## 
+string$$ 
+category$$ 
+=$$  !
+row$$" %
+[$$% &
+$str$$& 4
+]$$4 5
++$$6 7
+$str$$8 =
++$$> ?
+row$$@ C
+[$$C D
+$str$$D R
+]$$R S
+;$$S T
+cboCategories%% 
+.%% 
+Items%% #
+.%%# $
+Add%%$ '
+(%%' (
+category%%( 0
+)%%0 1
+;%%1 2
+}&& 
+	dgvRental'' 
+.'' 
+Columns'' 
+.'' 
+Add'' !
+(''! "
+$str''" *
+,''* +
+$str'', 0
+)''0 1
+;''1 2
+	dgvRental(( 
+.(( 
+Columns(( 
+.(( 
+Add(( !
+(((! "
+$str((" 0
+,((0 1
+$str((2 A
+)((A B
+;((B C
+	dgvRental)) 
+.)) 
+Columns)) 
+.)) 
+Add)) !
+())! "
+$str))" 3
+,))3 4
+$str))5 B
+)))B C
+;))C D
 	dgvRental** 
 .** 
 Columns** 
 .** 
 Add** !
 (**! "
-$str**" *
-,*** +
-$str**, 0
-)**0 1
-;**1 2
+$str**" 4
+,**4 5
+$str**6 D
+)**D E
+;**E F
 	dgvRental++ 
 .++ 
 Columns++ 
 .++ 
 Add++ !
 (++! "
-$str++" 0
-,++0 1
-$str++2 A
-)++A B
-;++B C
+$str++" ,
+,++, -
+$str++. 9
+)++9 :
+;++: ;
 	dgvRental,, 
 .,, 
 Columns,, 
 .,, 
 Add,, !
 (,,! "
-$str,," 3
-,,,3 4
-$str,,5 B
-),,B C
-;,,C D
+$str,," .
+,,,. /
+$str,,0 =
+),,= >
+;,,> ?
 	dgvRental-- 
 .-- 
 Columns-- 
 .-- 
 Add-- !
 (--! "
-$str--" 4
-,--4 5
-$str--6 D
-)--D E
-;--E F
-	dgvRental.. 
-... 
-Columns.. 
-... 
-Add.. !
-(..! "
-$str.." ,
-,.., -
-$str... 9
-)..9 :
-;..: ;
-	dgvRental// 
-.// 
-Columns// 
-.// 
-Add// !
-(//! "
-$str//" .
-,//. /
-$str//0 =
-)//= >
-;//> ?
-	dgvRental00 
-.00 
-Columns00 
-.00 
-Add00 !
-(00! "
-$str00" -
-,00- .
-$str00/ ;
-)00; <
-;00< =
-Miscellaneous11 
-.11 %
-SetDataGridViewProperties11 3
-(113 4
-	dgvRental114 =
-)11= >
-;11> ?
-}22 	
-private33 
-void33 #
-btnCustomerSearch_Click33 ,
-(33, -
-object33- 3
-sender334 :
-,33: ;
-	EventArgs33< E
-e33F G
-)33G H
-{44 	
-dgvCustomers55 
-.55 
+$str--" -
+,--- .
+$str--/ ;
+)--; <
+;--< =
+Miscellaneous.. 
+... %
+SetDataGridViewProperties.. 3
+(..3 4
+	dgvRental..4 =
+)..= >
+;..> ?
+}// 	
+private00 
+void00 #
+btnCustomerSearch_Click00 ,
+(00, -
+object00- 3
+sender004 :
+,00: ;
+	EventArgs00< E
+e00F G
+)00G H
+{11 	
+dgvCustomers22 
+.22 
 
-DataSource55 #
-=55$ %
-_rentalFacade55& 3
-.553 4
-SearchCustomers554 C
-(55C D
-txtCustomerSearch55D U
-.55U V
-Text55V Z
-)55Z [
-;55[ \
+DataSource22 #
+=22$ %
+_rentalFacade22& 3
+.223 4
+SearchCustomers224 C
+(22C D
+txtCustomerSearch22D U
+.22U V
+Text22V Z
+)22Z [
+;22[ \
+dgvCustomers44 
+.44 
+Columns44  
+[44  !
+$num44! "
+]44" #
+.44# $
+
+HeaderText44$ .
+=44/ 0
+$str441 6
+;446 7
+dgvCustomers55 
+.55 
+Columns55  
+[55  !
+$num55! "
+]55" #
+.55# $
+
+HeaderText55$ .
+=55/ 0
+$str551 <
+;55< =
+dgvCustomers66 
+.66 
+Columns66  
+[66  !
+$num66! "
+]66" #
+.66# $
+
+HeaderText66$ .
+=66/ 0
+$str661 ;
+;66; <
 dgvCustomers77 
 .77 
 Columns77  
@@ -7341,8 +7392,8 @@ DataSource55 #
 
 HeaderText77$ .
 =77/ 0
-$str771 6
-;776 7
+$str771 9
+;779 :
 dgvCustomers88 
 .88 
 Columns88  
@@ -7353,8 +7404,8 @@ HeaderText77$ .
 
 HeaderText88$ .
 =88/ 0
-$str881 <
-;88< =
+$str881 9
+;889 :
 dgvCustomers99 
 .99 
 Columns99  
@@ -7366,160 +7417,185 @@ HeaderText88$ .
 HeaderText99$ .
 =99/ 0
 $str991 ;
-;99; <
-dgvCustomers:: 
-.:: 
-Columns::  
-[::  !
-$num::! "
-]::" #
-.::# $
+;99; <
+Miscellaneous:: 
+.:: %
+SetDataGridViewProperties:: 3
+(::3 4
+dgvCustomers::4 @
+)::@ A
+;::A B
+};; 	
+private>> 
+void>> "
+dgvCustomers_CellClick>> +
+(>>+ ,
+object>>, 2
+sender>>3 9
+,>>9 :%
+DataGridViewCellEventArgs>>; T
+e>>U V
+)>>V W
+{?? 	
+if@@ 
+(@@ 
+dgvCustomers@@ 
+.@@ 
 
-HeaderText::$ .
-=::/ 0
-$str::1 9
-;::9 :
-dgvCustomers;; 
-.;; 
-Columns;;  
-[;;  !
-$num;;! "
-];;" #
-.;;# $
+CurrentRow@@ '
+!=@@( *
+null@@+ /
+)@@/ 0
+{AA 
+intBB 
 
-HeaderText;;$ .
-=;;/ 0
-$str;;1 9
-;;;9 :
-dgvCustomers<< 
-.<< 
-Columns<<  
-[<<  !
-$num<<! "
-]<<" #
-.<<# $
+customerIdBB 
+=BB  
+ConvertBB! (
+.BB( )
+ToInt32BB) 0
+(BB0 1
+dgvCustomersBB1 =
+.BB= >
 
-HeaderText<<$ .
-=<</ 0
-$str<<1 ;
-;<<; <
-Miscellaneous== 
-.== %
-SetDataGridViewProperties== 3
-(==3 4
-dgvCustomers==4 @
-)==@ A
-;==A B
-}>> 	
-privateAA 
-voidAA "
-dgvCustomers_CellClickAA +
-(AA+ ,
-objectAA, 2
-senderAA3 9
-,AA9 :%
-DataGridViewCellEventArgsAA; T
-eAAU V
-)AAV W
-{BB 	
-ifCC 
-(CC 
-dgvCustomersCC 
-.CC 
+CurrentRowBB> H
+.BBH I
+CellsBBI N
+[BBN O
+$numBBO P
+]BBP Q
+.BBQ R
+ValueBBR W
+)BBW X
+;BBX Y
+_rentalFacadeCC 
+.CC 
+StartNewRentalCC ,
+(CC, -
 
-CurrentRowCC '
-!=CC( *
-nullCC+ /
-)CC/ 0
-{DD 
-intEE 
+customerIdCC- 7
+)CC7 8
+;CC8 9
+txtRentalIDEE 
+.EE 
+TextEE  
+=EE! "
+_rentalFacadeEE# 0
+.EE0 1
+GetCurrentRentalEE1 A
+(EEA B
+)EEB C
+.EEC D
+rentalIdEED L
+.EEL M
+ToStringEEM U
+(EEU V
+$strEEV [
+)EE[ \
+;EE\ ]
+txtCustomerIDFF 
+.FF 
+TextFF "
+=FF# $
+dgvCustomersFF% 1
+.FF1 2
 
-customerIdEE 
-=EE  
-ConvertEE! (
-.EE( )
-ToInt32EE) 0
-(EE0 1
-dgvCustomersEE1 =
-.EE= >
+CurrentRowFF2 <
+.FF< =
+CellsFF= B
+[FFB C
+$numFFC D
+]FFD E
+.FFE F
+ValueFFF K
+.FFK L
+ToStringFFL T
+(FFT U
+)FFU V
+;FFV W
+txtForenameGG 
+.GG 
+TextGG  
+=GG! "
+dgvCustomersGG# /
+.GG/ 0
 
-CurrentRowEE> H
-.EEH I
-CellsEEI N
-[EEN O
-$numEEO P
-]EEP Q
-.EEQ R
-ValueEER W
-)EEW X
-;EEX Y
-_rentalFacadeFF 
-.FF 
-StartNewRentalFF ,
-(FF, -
+CurrentRowGG0 :
+.GG: ;
+CellsGG; @
+[GG@ A
+$numGGA B
+]GGB C
+.GGC D
+ValueGGD I
+.GGI J
+ToStringGGJ R
+(GGR S
+)GGS T
+;GGT U
 
-customerIdFF- 7
-)FF7 8
-;FF8 9
-txtRentalIDHH 
-.HH 
-TextHH  
-=HH! "
-_rentalFacadeHH# 0
-.HH0 1
-GetCurrentRentalHH1 A
-(HHA B
-)HHB C
-.HHC D
-rentalIdHHD L
-.HHL M
-ToStringHHM U
-(HHU V
-$strHHV [
-)HH[ \
-;HH\ ]
-txtCustomerIDII 
-.II 
-TextII "
-=II# $
-dgvCustomersII% 1
-.II1 2
+txtSurnameHH 
+.HH 
+TextHH 
+=HH  !
+dgvCustomersHH" .
+.HH. /
 
-CurrentRowII2 <
-.II< =
-CellsII= B
-[IIB C
-$numIIC D
-]IID E
-.IIE F
-ValueIIF K
-.IIK L
-ToStringIIL T
-(IIT U
-)IIU V
-;IIV W
-txtForenameJJ 
-.JJ 
-TextJJ  
-=JJ! "
-dgvCustomersJJ# /
-.JJ/ 0
+CurrentRowHH/ 9
+.HH9 :
+CellsHH: ?
+[HH? @
+$numHH@ A
+]HHA B
+.HHB C
+ValueHHC H
+.HHH I
+ToStringHHI Q
+(HHQ R
+)HHR S
+;HHS T
+txtEmailII 
+.II 
+TextII 
+=II 
+dgvCustomersII  ,
+.II, -
 
-CurrentRowJJ0 :
-.JJ: ;
-CellsJJ; @
-[JJ@ A
-$numJJA B
-]JJB C
-.JJC D
-ValueJJD I
-.JJI J
-ToStringJJJ R
-(JJR S
-)JJS T
-;JJT U
+CurrentRowII- 7
+.II7 8
+CellsII8 =
+[II= >
+$numII> ?
+]II? @
+.II@ A
+ValueIIA F
+.IIF G
+ToStringIIG O
+(IIO P
+)IIP Q
+;IIQ R
+txtPhoneJJ 
+.JJ 
+TextJJ 
+=JJ 
+dgvCustomersJJ  ,
+.JJ, -
 
-txtSurnameKK 
+CurrentRowJJ- 7
+.JJ7 8
+CellsJJ8 =
+[JJ= >
+$numJJ> ?
+]JJ? @
+.JJ@ A
+ValueJJA F
+.JJF G
+ToStringJJG O
+(JJO P
+)JJP Q
+;JJQ R
+
+txtEircodeKK 
 .KK 
 TextKK 
 =KK  !
@@ -7538,1181 +7614,1163 @@ CurrentRowKK/ 9
 ToStringKKI Q
 (KKQ R
 )KKR S
-;KKS T
-txtEmailLL 
-.LL 
-TextLL 
-=LL 
-dgvCustomersLL  ,
-.LL, -
+;KKS T
+}LL 
+}MM 	
+privateOO 
+voidOO &
+txtCustomerSearch_KeyPressOO /
+(OO/ 0
+objectOO0 6
+senderOO7 =
+,OO= >
+KeyPressEventArgsOO? P
+eOOQ R
+)OOR S
+{PP 	
+ifQQ 
+(QQ 
+eQQ 
+.QQ 
+KeyCharQQ 
+==QQ 
+(QQ 
+charQQ !
+)QQ! "
+$numQQ" $
+)QQ$ %
+{RR 
+btnCustomerSearchSS !
+.SS! "
+PerformClickSS" .
+(SS. /
+)SS/ 0
+;SS0 1
+}TT 
+}UU 	
+privateWW 
+voidWW $
+dgvTools_CellDoubleClickWW -
+(WW- .
+objectWW. 4
+senderWW5 ;
+,WW; <%
+DataGridViewCellEventArgsWW= V
+eWWW X
+)WWX Y
+{XX 	
+btnAddToRentalYY 
+.YY 
+PerformClickYY '
+(YY' (
+)YY( )
+;YY) *
+}ZZ 	
+private\\ 
+void\\  
+btnAddToRental_Click\\ )
+(\\) *
+object\\* 0
+sender\\1 7
+,\\7 8
+	EventArgs\\9 B
+e\\C D
+)\\D E
+{]] 	
+try^^ 
+{__ 
+if`` 
+(`` 
+string`` 
+.`` 
+IsNullOrEmpty`` (
+(``( )
+txtCustomerID``) 6
+.``6 7
+Text``7 ;
+)``; <
+)``< =
+throwaa 
+newaa 
+ArgumentExceptionaa /
+(aa/ 0
+$straa0 K
+)aaK L
+;aaL M
+intcc 
 
-CurrentRowLL- 7
-.LL7 8
-CellsLL8 =
-[LL= >
-$numLL> ?
-]LL? @
-.LL@ A
-ValueLLA F
-.LLF G
-ToStringLLG O
-(LLO P
-)LLP Q
-;LLQ R
-txtPhoneMM 
-.MM 
-TextMM 
-=MM 
-dgvCustomersMM  ,
-.MM, -
+customerIdcc 
+=cc  
+Convertcc! (
+.cc( )
+ToInt32cc) 0
+(cc0 1
+txtCustomerIDcc1 >
+.cc> ?
+Textcc? C
+)ccC D
+;ccD E
+ifdd 
+(dd 
+dgvToolsdd 
+.dd 
 
-CurrentRowMM- 7
-.MM7 8
-CellsMM8 =
-[MM= >
-$numMM> ?
-]MM? @
-.MM@ A
-ValueMMA F
-.MMF G
-ToStringMMG O
-(MMO P
-)MMP Q
-;MMQ R
-
-txtEircodeNN 
-.NN 
-TextNN 
-=NN  !
-dgvCustomersNN" .
-.NN. /
-
-CurrentRowNN/ 9
-.NN9 :
-CellsNN: ?
-[NN? @
-$numNN@ A
-]NNA B
-.NNB C
-ValueNNC H
-.NNH I
-ToStringNNI Q
-(NNQ R
-)NNR S
-;NNS T
-}OO 
-}PP 	
-privateRR 
-voidRR &
-txtCustomerSearch_KeyPressRR /
-(RR/ 0
-objectRR0 6
-senderRR7 =
-,RR= >
-KeyPressEventArgsRR? P
-eRRQ R
-)RRR S
-{SS 	
-ifTT 
-(TT 
-eTT 
-.TT 
-KeyCharTT 
-==TT 
-(TT 
-charTT !
-)TT! "
-$numTT" $
-)TT$ %
-{UU 
-btnCustomerSearchVV !
-.VV! "
-PerformClickVV" .
-(VV. /
-)VV/ 0
-;VV0 1
-}WW 
-}XX 	
-privateZZ 
-voidZZ $
-dgvTools_CellDoubleClickZZ -
-(ZZ- .
-objectZZ. 4
-senderZZ5 ;
-,ZZ; <%
-DataGridViewCellEventArgsZZ= V
-eZZW X
-)ZZX Y
-{[[ 	
-btnAddToRental\\ 
-.\\ 
-PerformClick\\ '
-(\\' (
-)\\( )
-;\\) *
-}]] 	
-private__ 
-void__  
-btnAddToRental_Click__ )
-(__) *
-object__* 0
-sender__1 7
-,__7 8
-	EventArgs__9 B
-e__C D
-)__D E
-{`` 	
-tryaa 
-{bb 
-ifcc 
-(cc 
-stringcc 
-.cc 
-IsNullOrEmptycc (
-(cc( )
-txtCustomerIDcc) 6
-.cc6 7
-Textcc7 ;
-)cc; <
-)cc< =
-throwdd 
-newdd 
-ArgumentExceptiondd /
-(dd/ 0
-$strdd0 K
-)ddK L
-;ddL M
-intff 
-
-customerIdff 
+CurrentRowdd '
+!=dd( *
+nulldd+ /
+)dd/ 0
+{ee 
+intff 
+toolIdff 
 =ff  
 Convertff! (
 .ff( )
 ToInt32ff) 0
-(ff0 1
-txtCustomerIDff1 >
-.ff> ?
-Textff? C
-)ffC D
-;ffD E
-ifgg 
-(gg 
-dgvToolsgg 
-.gg 
+(ff0 1
+dgvToolsff1 9
+.ff9 :
 
-CurrentRowgg '
-!=gg( *
-nullgg+ /
-)gg/ 0
-{hh 
-intii 
-toolIdii 
-=ii  
-Convertii! (
-.ii( )
-ToInt32ii) 0
-(ii0 1
-dgvToolsii1 9
-.ii9 :
+CurrentRowff: D
+.ffD E
+CellsffE J
+[ffJ K
+$numffK L
+]ffL M
+.ffM N
+ValueffN S
+)ffS T
+;ffT U
+stringgg 
+categoryCodegg '
+=gg( )
+dgvToolsgg* 2
+.gg2 3
 
-CurrentRowii: D
-.iiD E
-CellsiiE J
-[iiJ K
-$numiiK L
-]iiL M
-.iiM N
-ValueiiN S
-)iiS T
-;iiT U
-stringjj 
-categoryCodejj '
-=jj( )
-dgvToolsjj* 2
-.jj2 3
-
-CurrentRowjj3 =
-.jj= >
-Cellsjj> C
-[jjC D
-$numjjD E
-]jjE F
-.jjF G
-ValuejjG L
-.jjL M
-ToStringjjM U
-(jjU V
-)jjV W
-??jjX Z
-throwjj[ `
-newjja d
-ArgumentExceptionjje v
-(jjv w
-$str	jjw í
+CurrentRowgg3 =
+.gg= >
+Cellsgg> C
+[ggC D
+$numggD E
+]ggE F
+.ggF G
+ValueggG L
+.ggL M
+ToStringggM U
+(ggU V
+)ggV W
+??ggX Z
+throwgg[ `
+newgga d
+ArgumentExceptiongge v
+(ggv w
+$str	ggw í
 )
-jjí ì
+ggí ì
 ;
-jjì î
-stringkk 
-descriptionkk &
-=kk' (
-dgvToolskk) 1
-.kk1 2
+ggì î
+stringhh 
+descriptionhh &
+=hh' (
+dgvToolshh) 1
+.hh1 2
 
-CurrentRowkk2 <
-.kk< =
-Cellskk= B
-[kkB C
-$numkkC D
-]kkD E
-.kkE F
-ValuekkF K
-.kkK L
-ToStringkkL T
-(kkT U
-)kkU V
-??kkW Y
-throwkkZ _
-newkk` c
-ArgumentExceptionkkd u
-(kku v
-$str	kkv è
+CurrentRowhh2 <
+.hh< =
+Cellshh= B
+[hhB C
+$numhhC D
+]hhD E
+.hhE F
+ValuehhF K
+.hhK L
+ToStringhhL T
+(hhT U
+)hhU V
+??hhW Y
+throwhhZ _
+newhh` c
+ArgumentExceptionhhd u
+(hhu v
+$str	hhv è
 )
-kkè ê
+hhè ê
 ;
-kkê ë
-stringll 
-manufacturerll '
-=ll( )
-dgvToolsll* 2
-.ll2 3
+hhê ë
+stringii 
+manufacturerii '
+=ii( )
+dgvToolsii* 2
+.ii2 3
 
-CurrentRowll3 =
-.ll= >
-Cellsll> C
-[llC D
-$numllD E
-]llE F
-.llF G
-ValuellG L
-.llL M
-ToStringllM U
-(llU V
-)llV W
-??llX Z
-throwll[ `
-newlla d
-ArgumentExceptionlle v
-(llv w
-$str	llw ë
+CurrentRowii3 =
+.ii= >
+Cellsii> C
+[iiC D
+$numiiD E
+]iiE F
+.iiF G
+ValueiiG L
+.iiL M
+ToStringiiM U
+(iiU V
+)iiV W
+??iiX Z
+throwii[ `
+newiia d
+ArgumentExceptioniie v
+(iiv w
+$str	iiw ë
 )
-llë í
+iië í
 ;
-llí ì
-DateTimemm 
-rentDatemm %
-=mm& '
-dtpFrommm( /
-.mm/ 0
-Valuemm0 5
-;mm5 6
-DateTimenn 
+iií ì
+DateTimejj 
+rentDatejj %
+=jj& '
+dtpFromjj( /
+.jj/ 0
+Valuejj0 5
+;jj5 6
+DateTimekk 
 
-returnDatenn '
-=nn( )
-dtpTonn* /
-.nn/ 0
-Valuenn0 5
-;nn5 6
-ifpp 
-(pp 
-	dgvRentalpp !
-.pp! "
-Rowspp" &
-.pp& '
-Countpp' ,
->=pp- /
-$numpp0 1
-)pp1 2
-{qq 
-foreachrr 
-(rr  !
-DataGridViewRowrr! 0
-rowrr1 4
-inrr5 7
-	dgvRentalrr8 A
-.rrA B
-RowsrrB F
-)rrF G
-{ss 
-iftt 
-(tt  
-Converttt  '
-.tt' (
-ToInt32tt( /
-(tt/ 0
-dgvToolstt0 8
-.tt8 9
+returnDatekk '
+=kk( )
+dtpTokk* /
+.kk/ 0
+Valuekk0 5
+;kk5 6
+ifmm 
+(mm 
+	dgvRentalmm !
+.mm! "
+Rowsmm" &
+.mm& '
+Countmm' ,
+>=mm- /
+$nummm0 1
+)mm1 2
+{nn 
+foreachoo 
+(oo  !
+DataGridViewRowoo! 0
+rowoo1 4
+inoo5 7
+	dgvRentaloo8 A
+.ooA B
+RowsooB F
+)ooF G
+{pp 
+ifqq 
+(qq  
+Convertqq  '
+.qq' (
+ToInt32qq( /
+(qq/ 0
+dgvToolsqq0 8
+.qq8 9
 
-CurrentRowtt9 C
-.ttC D
-CellsttD I
-[ttI J
-$strttJ N
-]ttN O
-.ttO P
-ValuettP U
-)ttU V
-==ttW Y
-toolIdttZ `
-)tt` a
-{uu 
+CurrentRowqq9 C
+.qqC D
+CellsqqD I
+[qqI J
+$strqqJ N
+]qqN O
+.qqO P
+ValueqqP U
+)qqU V
+==qqW Y
+toolIdqqZ `
+)qq` a
+{rr 
 
-MessageBoxvv  *
-.vv* +
-Showvv+ /
-(vv/ 0
-$strvv0 X
-,vvX Y
-$strvvZ d
-,vvd e
-MessageBoxButtonsvvf w
-.vvw x
-OKvvx z
-,vvz {
-MessageBoxIcon	vv| ä
+MessageBoxss  *
+.ss* +
+Showss+ /
+(ss/ 0
+$strss0 X
+,ssX Y
+$strssZ d
+,ssd e
+MessageBoxButtonsssf w
+.ssw x
+OKssx z
+,ssz {
+MessageBoxIcon	ss| ä
 .
-vvä ã
+ssä ã
 Error
-vvã ê
+ssã ê
 )
-vvê ë
+ssê ë
 ;
-vvë í
-returnww  &
-;ww& '
-}xx 
-}yy 
-}zz 
-_rentalFacade|| !
-.||! "
-AddToolToRental||" 1
-(||1 2
-toolId||2 8
-,||8 9
-categoryCode||: F
-,||F G
-description||H S
-,||S T
-manufacturer||U a
-,||a b
-rentDate||c k
-,||k l
+ssë í
+returntt  &
+;tt& '
+}uu 
+}vv 
+}ww 
+_rentalFacadeyy !
+.yy! "
+AddToolToRentalyy" 1
+(yy1 2
+toolIdyy2 8
+,yy8 9
+categoryCodeyy: F
+,yyF G
+descriptionyyH S
+,yyS T
+manufactureryyU a
+,yya b
+rentDateyyc k
+,yyk l
 
-returnDate||m w
-)||w x
-;||x y
-decimal~~ 
-	rentalFee~~ %
-=~~& '
-_rentalFacade~~( 5
-.~~5 6
-GetCurrentRental~~6 F
-(~~F G
-)~~G H
-.~~H I
-rentalItems~~I T
-. 
-First 
-( 
-item #
-=>$ &
-item' +
-.+ ,
-toolId, 2
-==3 5
-toolId6 <
-)< =
-.= >
-	rentalFee> G
-;G H
-	dgvRental
-ÅÅ 
-.
-ÅÅ 
-Rows
-ÅÅ "
-.
-ÅÅ" #
-Add
-ÅÅ# &
-(
-ÅÅ& '
-toolId
-ÇÇ 
-,
-ÇÇ 
+returnDateyym w
+)yyw x
+;yyx y
+decimal{{ 
+	rentalFee{{ %
+={{& '
+_rentalFacade{{( 5
+.{{5 6
+GetCurrentRental{{6 F
+({{F G
+){{G H
+.{{H I
+rentalItems{{I T
+.|| 
+First|| 
+(|| 
+item|| #
+=>||$ &
+item||' +
+.||+ ,
+toolId||, 2
+==||3 5
+toolId||6 <
+)||< =
+.||= >
+	rentalFee||> G
+;||G H
+	dgvRental~~ 
+.~~ 
+Rows~~ "
+.~~" #
+Add~~# &
+(~~& '
+toolId 
+, 
 categoryCode
-ÉÉ $
+ÄÄ $
 ,
-ÉÉ$ %
+ÄÄ$ %
 description
-ÑÑ #
+ÅÅ #
 ,
-ÑÑ# $
+ÅÅ# $
 manufacturer
-ÖÖ $
+ÇÇ $
 ,
-ÖÖ$ %
+ÇÇ$ %
 rentDate
-ÜÜ  
+ÉÉ  
 .
-ÜÜ  !
+ÉÉ  !
 ToString
-ÜÜ! )
+ÉÉ! )
 (
-ÜÜ) *
+ÉÉ) *
 $str
-ÜÜ* 5
+ÉÉ* 5
 )
-ÜÜ5 6
+ÉÉ5 6
 ,
-ÜÜ6 7
+ÉÉ6 7
 
 returnDate
-áá "
+ÑÑ "
 .
-áá" #
+ÑÑ" #
 ToString
-áá# +
+ÑÑ# +
 (
-áá+ ,
+ÑÑ+ ,
 $str
-áá, 7
+ÑÑ, 7
 )
-áá7 8
+ÑÑ7 8
 ,
-áá8 9
+ÑÑ8 9
 	rentalFee
-àà !
+ÖÖ !
 .
-àà! "
+ÖÖ! "
 ToString
-àà" *
+ÖÖ" *
 (
-àà* +
+ÖÖ* +
 $str
-àà+ 1
+ÖÖ+ 1
 )
-àà1 2
+ÖÖ1 2
 )
-ââ 
+ÜÜ 
 ;
-ââ 
+ÜÜ 
 }
-ää 
+áá 
 else
-ãã 
+àà 
 {
-åå 
+ââ 
 throw
-çç 
+ää 
 new
-çç 
+ää 
 ArgumentException
-çç /
+ää /
 (
-çç/ 0
+ää/ 0
 $str
-çç0 G
+ää0 G
 )
-ççG H
+ääG H
 ;
-ççH I
+ääH I
 }
-éé 
+ãã 
 UpdateTotalFee
-êê 
+çç 
 (
-êê 
+çç 
 )
-êê  
+çç  
 ;
-êê  !
+çç  !
 }
-ëë 
+éé 
 catch
-íí 
+èè 
 (
-íí 
+èè 
 	Exception
-íí 
+èè 
 ex
-íí 
+èè 
 )
-íí  
+èè  
 {
-ìì 
+êê 
 
 MessageBox
-îî 
+ëë 
 .
-îî 
+ëë 
 Show
-îî 
+ëë 
 (
-îî  
+ëë  
 $@"
-îî  #
+ëë  #
 {
-îî# $
+ëë# $
 ex
-îî$ &
+ëë$ &
 .
-îî& '
+ëë& '
 Message
-îî' .
+ëë' .
 }
-îî. /
+ëë. /
 "
-îî/ 0
+ëë/ 0
 ,
-îî0 1
+ëë0 1
 $str
-îî2 :
+ëë2 :
 ,
-îî: ;
+ëë: ;
 MessageBoxButtons
-îî< M
+ëë< M
 .
-îîM N
+ëëM N
 OK
-îîN P
+ëëN P
 ,
-îîP Q
+ëëP Q
 MessageBoxIcon
-îîR `
+ëëR `
 .
-îî` a
+ëë` a
 Error
-îîa f
+ëëa f
 )
-îîf g
+ëëf g
 ;
-îîg h
+ëëg h
 }
-ïï 
+íí 
 }
-ññ 	
+ìì 	
 private
-òò 
+ïï 
 void
-òò 
+ïï 
 UpdateTotalFee
-òò #
+ïï #
 (
-òò# $
+ïï# $
 )
-òò$ %
+ïï$ %
 {
-ôô 	
+ññ 	
 txtTotalFee
-öö 
+óó 
 .
-öö 
+óó 
 Text
-öö 
+óó 
 =
-öö 
+óó 
 	dgvRental
-öö (
+óó (
 .
-öö( )
+óó( )
 Rows
-öö) -
+óó) -
 .
-öö- .
+óó- .
 Cast
-öö. 2
+óó. 2
 <
-öö2 3
+óó2 3
 DataGridViewRow
-öö3 B
+óó3 B
 >
-ööB C
+óóB C
 (
-ööC D
+óóC D
 )
-ööD E
+óóD E
 .
-õõ  !
+òò  !
 Sum
-õõ! $
+òò! $
 (
-õõ$ %
+òò$ %
 row
-õõ% (
+òò% (
 =>
-õõ) +
+òò) +
 Convert
-õõ, 3
+òò, 3
 .
-õõ3 4
+òò3 4
 	ToDecimal
-õõ4 =
+òò4 =
 (
-õõ= >
+òò= >
 row
-õõ> A
+òò> A
 .
-õõA B
+òòA B
 Cells
-õõB G
+òòB G
 [
-õõG H
+òòG H
 $str
-õõH S
+òòH S
 ]
-õõS T
+òòS T
 .
-õõT U
+òòT U
 Value
-õõU Z
+òòU Z
 )
-õõZ [
+òòZ [
 )
-õõ[ \
+òò[ \
 .
-úú  !
+ôô  !
 ToString
-úú! )
+ôô! )
 (
-úú) *
+ôô) *
 $str
-úú* 0
+ôô* 0
 )
-úú0 1
+ôô0 1
 ;
-úú1 2
+ôô1 2
 }
-ùù 	
+öö 	
 private
-üü 
+úú 
 void
-üü $
+úú $
 btnConfirmRental_Click
-üü +
+úú +
 (
-üü+ ,
+úú+ ,
 object
-üü, 2
+úú, 2
 sender
-üü3 9
+úú3 9
 ,
-üü9 :
+úú9 :
 	EventArgs
-üü; D
+úú; D
 e
-üüE F
+úúE F
 )
-üüF G
+úúF G
 {
-†† 	
+ùù 	
 try
-°° 
+ûû 
 {
-¢¢ 
+üü 
 _rentalFacade
-££ 
+†† 
 .
-££ 
+†† 
 ConfirmRental
-££ +
+†† +
 (
-££+ ,
+††+ ,
 )
-££, -
+††, -
 ;
-££- .
+††- .
 
 MessageBox
-ÀÀ 
+»» 
 .
-ÀÀ 
+»» 
 Show
-ÀÀ 
+»» 
 (
-ÀÀ  
+»»  
 $str
-ÀÀ  4
+»»  4
 ,
-ÀÀ4 5
+»»4 5
 $str
-ÀÀ6 D
+»»6 D
 ,
-ÀÀD E
+»»D E
 MessageBoxButtons
-ÀÀF W
+»»F W
 .
-ÀÀW X
+»»W X
 OK
-ÀÀX Z
+»»X Z
 ,
-ÀÀZ [
+»»Z [
 MessageBoxIcon
-ÀÀ\ j
+»»\ j
 .
-ÀÀj k
+»»j k
 Information
-ÀÀk v
+»»k v
 )
-ÀÀv w
+»»v w
 ;
-ÀÀw x
+»»w x
 RefreshForm
-ÃÃ 
+…… 
 (
-ÃÃ 
+…… 
 )
-ÃÃ 
+…… 
 ;
-ÃÃ 
+…… 
 }
-ÕÕ 
+   
 catch
-ŒŒ 
+ÀÀ 
 (
-ŒŒ 
+ÀÀ 
 	Exception
-ŒŒ 
+ÀÀ 
 ex
-ŒŒ 
+ÀÀ 
 )
-ŒŒ  
+ÀÀ  
 {
-œœ 
+ÃÃ 
 
 MessageBox
-–– 
+ÕÕ 
 .
-–– 
+ÕÕ 
 Show
-–– 
+ÕÕ 
 (
-––  
+ÕÕ  
 $@"
-––  #
+ÕÕ  #
 {
-––# $
+ÕÕ# $
 ex
-––$ &
+ÕÕ$ &
 .
-––& '
+ÕÕ& '
 Message
-––' .
+ÕÕ' .
 }
-––. /
+ÕÕ. /
 "
-––/ 0
+ÕÕ/ 0
 ,
-––0 1
+ÕÕ0 1
 $str
-––2 :
+ÕÕ2 :
 ,
-––: ;
+ÕÕ: ;
 MessageBoxButtons
-––< M
+ÕÕ< M
 .
-––M N
+ÕÕM N
 OK
-––N P
+ÕÕN P
 ,
-––P Q
+ÕÕP Q
 MessageBoxIcon
-––R `
+ÕÕR `
 .
-––` a
+ÕÕ` a
 Error
-––a f
+ÕÕa f
 )
-––f g
+ÕÕf g
 ;
-––g h
+ÕÕg h
 }
-—— 
+ŒŒ 
 }
-““ 	
+œœ 	
 private
-‘‘ 
+—— 
 void
-‘‘ 
+—— 
 RefreshForm
-‘‘  
+——  
 (
-‘‘  !
+——  !
 )
-‘‘! "
+——! "
 {
-’’ 	
+““ 	
+cboCategories
+”” 
+.
+”” "
+SelectedIndexChanged
+”” .
+-=
+””/ 10
+"cboCategories_SelectedIndexChanged
+””2 T
+!
+””T U
+;
+””U V
 txtRentalID
-÷÷ 
+‘‘ 
 .
-÷÷ 
+‘‘ 
 Text
-÷÷ 
+‘‘ 
 =
-÷÷ 
+‘‘ 
 $str
-÷÷ !
+‘‘ !
 ;
-÷÷! "
+‘‘! "
 txtCustomerSearch
-◊◊ 
+’’ 
 .
-◊◊ 
+’’ 
 Clear
-◊◊ #
+’’ #
 (
-◊◊# $
+’’# $
 )
-◊◊$ %
+’’$ %
 ;
-◊◊% &
+’’% &
 txtCustomerID
-ÿÿ 
+÷÷ 
 .
-ÿÿ 
+÷÷ 
 Clear
-ÿÿ 
+÷÷ 
 (
-ÿÿ  
+÷÷  
 )
-ÿÿ  !
+÷÷  !
 ;
-ÿÿ! "
+÷÷! "
 txtForename
-ŸŸ 
+◊◊ 
 .
-ŸŸ 
+◊◊ 
 Clear
-ŸŸ 
+◊◊ 
 (
-ŸŸ 
+◊◊ 
 )
-ŸŸ 
+◊◊ 
 ;
-ŸŸ  
+◊◊  
 txtPhone
-⁄⁄ 
+ÿÿ 
 .
-⁄⁄ 
+ÿÿ 
 Clear
-⁄⁄ 
+ÿÿ 
 (
-⁄⁄ 
+ÿÿ 
 )
-⁄⁄ 
+ÿÿ 
 ;
-⁄⁄ 
+ÿÿ 
 txtEmail
-€€ 
+ŸŸ 
 .
-€€ 
+ŸŸ 
 Clear
-€€ 
+ŸŸ 
 (
-€€ 
+ŸŸ 
 )
-€€ 
+ŸŸ 
 ;
-€€ 
+ŸŸ 
 
 txtEircode
-‹‹ 
+⁄⁄ 
 .
-‹‹ 
+⁄⁄ 
 Clear
-‹‹ 
+⁄⁄ 
 (
-‹‹ 
+⁄⁄ 
 )
-‹‹ 
+⁄⁄ 
 ;
-‹‹ 
+⁄⁄ 
 
 txtSurname
-›› 
+€€ 
 .
-›› 
+€€ 
 Clear
-›› 
+€€ 
 (
-›› 
+€€ 
 )
-›› 
+€€ 
 ;
-›› 
+€€ 
 txtTotalFee
-ﬁﬁ 
+‹‹ 
 .
-ﬁﬁ 
+‹‹ 
 Clear
-ﬁﬁ 
+‹‹ 
 (
-ﬁﬁ 
+‹‹ 
 )
-ﬁﬁ 
+‹‹ 
 ;
-ﬁﬁ  
+‹‹  
 dgvCustomers
-ﬂﬂ 
+›› 
 .
-ﬂﬂ 
+›› 
 
 DataSource
-ﬂﬂ #
+›› #
 =
-ﬂﬂ$ %
+››$ %
 null
-ﬂﬂ& *
+››& *
 ;
-ﬂﬂ* +
+››* +
 dgvCustomers
-‡‡ 
+ﬁﬁ 
 .
-‡‡ 
+ﬁﬁ 
 Rows
-‡‡ 
+ﬁﬁ 
 .
-‡‡ 
+ﬁﬁ 
 Clear
-‡‡ #
+ﬁﬁ #
 (
-‡‡# $
+ﬁﬁ# $
 )
-‡‡$ %
+ﬁﬁ$ %
 ;
-‡‡% &
+ﬁﬁ% &
 dgvTools
-·· 
+ﬂﬂ 
 .
-·· 
+ﬂﬂ 
 
 DataSource
-·· 
+ﬂﬂ 
 =
-··  !
+ﬂﬂ  !
 null
-··" &
+ﬂﬂ" &
 ;
-··& '
+ﬂﬂ& '
 dgvTools
-‚‚ 
+‡‡ 
 .
-‚‚ 
+‡‡ 
 Rows
-‚‚ 
+‡‡ 
 .
-‚‚ 
+‡‡ 
 Clear
-‚‚ 
+‡‡ 
 (
-‚‚  
+‡‡  
 )
-‚‚  !
+‡‡  !
 ;
-‚‚! "
+‡‡! "
 	dgvRental
-„„ 
+·· 
 .
-„„ 
+·· 
 Rows
-„„ 
+·· 
 .
-„„ 
+·· 
 Clear
-„„  
+··  
 (
-„„  !
+··  !
 )
-„„! "
+··! "
 ;
-„„" #
+··" #
 cboCategories
-‰‰ 
+‚‚ 
 .
-‰‰ 
+‚‚ 
 SelectedIndex
-‰‰ '
+‚‚ '
 =
-‰‰( )
+‚‚( )
 -
-‰‰* +
+‚‚* +
 $num
-‰‰+ ,
+‚‚+ ,
 ;
-‰‰, -
+‚‚, -
 dtpFrom
-ÂÂ 
+„„ 
 .
-ÂÂ 
+„„ 
 Value
-ÂÂ 
+„„ 
 =
-ÂÂ 
+„„ 
 DateTime
-ÂÂ $
+„„ $
 .
-ÂÂ$ %
+„„$ %
 Today
-ÂÂ% *
+„„% *
 ;
-ÂÂ* +
+„„* +
 dtpTo
-ÊÊ 
+‰‰ 
 .
-ÊÊ 
+‰‰ 
 Value
-ÊÊ 
+‰‰ 
 =
-ÊÊ 
+‰‰ 
 DateTime
-ÊÊ "
+‰‰ "
 .
-ÊÊ" #
+‰‰" #
 Today
-ÊÊ# (
+‰‰# (
 ;
-ÊÊ( )
-}
-ÁÁ 	
-private
-ÈÈ 
-void
-ÈÈ 0
+‰‰( )
+cboCategories
+ÂÂ 
+.
+ÂÂ "
+SelectedIndexChanged
+ÂÂ .
++=
+ÂÂ/ 10
 "cboCategories_SelectedIndexChanged
-ÈÈ 7
-(
-ÈÈ7 8
-object
-ÈÈ8 >
-sender
-ÈÈ? E
-,
-ÈÈE F
-	EventArgs
-ÈÈG P
-e
-ÈÈQ R
-)
-ÈÈR S
-{
-ÍÍ 	
-if
-ÎÎ 
-(
-ÎÎ 
-cboCategories
-ÎÎ 
-.
-ÎÎ 
-SelectedIndex
-ÎÎ +
->=
-ÎÎ, .
-$num
-ÎÎ/ 0
-&&
-ÎÎ1 3
-cboCategories
-ÎÎ4 A
-.
-ÎÎA B
-SelectedItem
-ÎÎB N
-!=
-ÎÎO Q
-null
-ÎÎR V
-)
-ÎÎV W
-{
-ÏÏ 
-string
-ÌÌ 
-categoryCode
-ÌÌ #
-=
-ÌÌ$ %
-cboCategories
-ÌÌ& 3
-.
-ÌÌ3 4
-SelectedItem
-ÌÌ4 @
-.
-ÌÌ@ A
-ToString
-ÌÌA I
-(
-ÌÌI J
-)
-ÌÌJ K
+ÂÂ2 T
 !
-ÌÌK L
-[
-ÌÌL M
-..
-ÌÌM O
-$num
-ÌÌO P
-]
-ÌÌP Q
+ÂÂT U
 ;
-ÌÌQ R
-dgvTools
-ÔÔ 
+ÂÂU V
+}
+ÊÊ 	
+private
+ËË 
+void
+ËË 0
+"cboCategories_SelectedIndexChanged
+ËË 7
+(
+ËË7 8
+object
+ËË8 >
+sender
+ËË? E
+,
+ËËE F
+	EventArgs
+ËËG P
+e
+ËËQ R
+)
+ËËR S
+{
+ÈÈ 	
+if
+ÍÍ 
+(
+ÍÍ 
+cboCategories
+ÍÍ 
 .
-ÔÔ 
+ÍÍ 
+SelectedIndex
+ÍÍ +
+>=
+ÍÍ, .
+$num
+ÍÍ/ 0
+&&
+ÍÍ1 3
+cboCategories
+ÍÍ4 A
+.
+ÍÍA B
+SelectedItem
+ÍÍB N
+!=
+ÍÍO Q
+null
+ÍÍR V
+)
+ÍÍV W
+{
+ÎÎ 
+string
+ÏÏ 
+categoryCode
+ÏÏ #
+=
+ÏÏ$ %
+cboCategories
+ÏÏ& 3
+.
+ÏÏ3 4
+SelectedItem
+ÏÏ4 @
+.
+ÏÏ@ A
+ToString
+ÏÏA I
+(
+ÏÏI J
+)
+ÏÏJ K
+!
+ÏÏK L
+[
+ÏÏL M
+..
+ÏÏM O
+$num
+ÏÏO P
+]
+ÏÏP Q
+;
+ÏÏQ R
+dgvTools
+ÓÓ 
+.
+ÓÓ 
 
 DataSource
-ÔÔ #
+ÓÓ #
 =
-ÔÔ$ %
+ÓÓ$ %
 _rentalFacade
-ÔÔ& 3
+ÓÓ& 3
 .
- 
+ÔÔ 
 GetRentableTools
- %
+ÔÔ %
 (
-% &
+ÔÔ% &
 categoryCode
-& 2
+ÔÔ& 2
 :
-2 3
+ÔÔ2 3
 categoryCode
-4 @
+ÔÔ4 @
 ,
-@ A
+ÔÔ@ A
 dtpFrom
-B I
+ÔÔB I
 .
-I J
+ÔÔI J
 Value
-J O
+ÔÔJ O
 ,
-O P
+ÔÔO P
 dtpTo
-Q V
+ÔÔQ V
 .
-V W
+ÔÔV W
 Value
-W \
+ÔÔW \
 )
-\ ]
+ÔÔ\ ]
 ;
-] ^
+ÔÔ] ^
+dgvTools
+ÒÒ 
+.
+ÒÒ 
+Columns
+ÒÒ  
+[
+ÒÒ  !
+$num
+ÒÒ! "
+]
+ÒÒ" #
+.
+ÒÒ# $
+
+HeaderText
+ÒÒ$ .
+=
+ÒÒ/ 0
+$str
+ÒÒ1 6
+;
+ÒÒ6 7
 dgvTools
 ÚÚ 
 .
@@ -8733,9 +8791,9 @@ HeaderText
 =
 ÚÚ/ 0
 $str
-ÚÚ1 6
+ÚÚ1 A
 ;
-ÚÚ6 7
+ÚÚA B
 dgvTools
 ÛÛ 
 .
@@ -8756,9 +8814,9 @@ HeaderText
 =
 ÛÛ/ 0
 $str
-ÛÛ1 A
+ÛÛ1 ?
 ;
-ÛÛA B
+ÛÛ? @
 dgvTools
 ÙÙ 
 .
@@ -8779,9 +8837,9 @@ HeaderText
 =
 ÙÙ/ 0
 $str
-ÙÙ1 ?
+ÙÙ1 @
 ;
-ÙÙ? @
+ÙÙ@ A
 dgvTools
 ıı 
 .
@@ -8802,91 +8860,68 @@ HeaderText
 =
 ıı/ 0
 $str
-ıı1 @
+ıı1 :
 ;
-ıı@ A
-dgvTools
-ˆˆ 
-.
-ˆˆ 
-Columns
-ˆˆ  
-[
-ˆˆ  !
-$num
-ˆˆ! "
-]
-ˆˆ" #
-.
-ˆˆ# $
-
-HeaderText
-ˆˆ$ .
-=
-ˆˆ/ 0
-$str
-ˆˆ1 :
-;
-ˆˆ: ;
+ıı: ;
 Miscellaneous
-˜˜ 
+ˆˆ 
 .
-˜˜ '
+ˆˆ '
 SetDataGridViewProperties
-˜˜ 7
+ˆˆ 7
 (
-˜˜7 8
+ˆˆ7 8
 dgvTools
-˜˜8 @
+ˆˆ8 @
 )
-˜˜@ A
+ˆˆ@ A
 ;
-˜˜A B
+ˆˆA B
 }
-¯¯ 
+˜˜ 
 else
-˘˘ 
+¯¯ 
 {
-˙˙ 
+˘˘ 
 
 MessageBox
-˚˚ 
+˙˙ 
 .
-˚˚ 
+˙˙ 
 Show
-˚˚ 
+˙˙ 
 (
-˚˚  
+˙˙  
 $str
-˚˚  B
+˙˙  B
 ,
-˚˚B C
+˙˙B C
 $str
-˚˚D X
+˙˙D X
 ,
-˚˚X Y
+˙˙X Y
 MessageBoxButtons
-˚˚Z k
+˙˙Z k
 .
-˚˚k l
+˙˙k l
 OK
-˚˚l n
+˙˙l n
 ,
-˚˚n o
+˙˙n o
 MessageBoxIcon
-˚˚p ~
+˙˙p ~
 .
-˚˚~ 
-Warning˚˚ Ü
-)˚˚Ü á
-;˚˚á à
+˙˙~ 
+Warning˙˙ Ü
+)˙˙Ü á
+;˙˙á à
 }
-¸¸ 
+˚˚ 
 }
-˝˝ 	
+¸¸ 	
 }
-˛˛ 
-}ˇˇ π?
+˝˝ 
+}˛˛ π?
 TC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\Forms\frmRemoveTool.cs
 	namespace 	
 ToolSYS
@@ -9399,81 +9434,70 @@ navigation; E
 
  	
 } 
-} ‚d
+} ùu
 RC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\Forms\frmAnalysis.cs
-	namespace 	
-ToolSYS
+	namespace 	
+ToolSYS
  
-. 
-Presentation 
-. 
-Forms $
-{ 
-public 
+. 
+Presentation 
+. 
+Forms $
+{		 
+public
+
+ 
 
-partial 
-class 
-FrmAnalysis $
-:% &
-NavForm' .
-{		 
-private
+partial
 
- 
-readonly
+ 
+class
 
- 
-IAnalysisService
+ 
+FrmAnalysis
 
- )
-_analysisService
+ $
+:
 
-* :
-;
+% &
+NavForm
 
-: ;
-private 
-readonly 
-IRateService %
-_rateService& 2
-;2 3
-private 
-IReportStrategy 
-_report  '
-;' (
-public 
-FrmAnalysis 
-( 
-INavigation &
+' .
+{ 
+private 
+readonly 
+IAnalysisService )
+_analysisService* :
+;: ;
+private 
+IReportStrategy 
+_reportStrategy  /
+;/ 0
+public 
+FrmAnalysis 
+( 
+INavigation &
 
-navigation' 1
-,1 2
-IRateService3 ?
-rateService@ K
-,K L
-IAnalysisServiceM ]
-analysisService^ m
-)m n
-:o p
-baseq u
-(u v
+navigation' 1
+,1 2
+IAnalysisService3 C
+analysisServiceD S
+)S T
+:U V
+baseW [
+([ \
 
-navigation	v Ä
-)
-Ä Å
-{ 	
-InitializeComponent 
-(  
-)  !
-;! "
-_analysisService 
-= 
-analysisService .
-;. /
-_rateService 
-= 
-rateService &
-;& '
+navigation\ f
+)f g
+{ 	
+InitializeComponent 
+(  
+)  !
+;! "
+_analysisService 
+= 
+analysisService .
+;. /
 } 	
 private 
 void 
@@ -9493,798 +9517,980 @@ navigation	v Ä
 	LoadYears 
 ( 
 ) 
-; 
-LoadCategories 
-( 
-) 
-; 
-SetReportType 
-( 
-) 
-; 
-} 	
-private 
-void !
-InitializeReportTypes *
-(* +
-)+ ,
-{ 	
+; 
+} 	
+private 
+void !
+InitializeReportTypes *
+(* +
+)+ ,
+{ 	
+cboReportType 
+. 
+Items 
+.  
+Add  #
+(# $
+$str$ 6
+)6 7
+;7 8
+cboReportType 
+. 
+Items 
+.  
+Add  #
+(# $
+$str$ :
+): ;
+;; <
 cboReportType 
 . 
 Items 
 .  
 Add  #
 (# $
-$str$ 6
-)6 7
-;7 8
+$str$ <
+)< =
+;= >
 cboReportType   
-.   
-Items   
-.    
-Add    #
-(  # $
-$str  $ :
-)  : ;
-;  ; <
-cboReportType!! 
-.!! 
-SelectedIndex!! '
-=!!( )
-$num!!* +
-;!!+ ,
-}"" 	
-private$$ 
-void$$ 
-LoadCategories$$ #
-($$# $
-)$$$ %
-{%% 	
-try&& 
-{'' 
-cboCategories(( 
-.(( 
-Items(( #
-.((# $
-Clear(($ )
-((() *
-)((* +
-;((+ ,
-DataSet)) 
+.   
+SelectedIndex   '
+=  ( )
+$num  * +
+;  + ,
+}!! 	
+private## 
+void## 
+	LoadYears## 
+(## 
+)##  
+{$$ 	
+try%% 
+{&& 
+	DataTable'' 
 
-categories)) "
-=))# $
-_rateService))% 1
-.))1 2
-GetAllCategories))2 B
-())B C
-)))C D
-;))D E
-foreach++ 
-(++ 
-DataRow++  
-row++! $
-in++% '
+yearsTable'' $
+=''% &
+_analysisService''' 7
+.''7 8
+GetDistinctYears''8 H
+(''H I
+)''I J
+;''J K
+cboYears(( 
+.(( 
+Items(( 
+.(( 
+Clear(( $
+((($ %
+)((% &
+;((& '
+foreach** 
+(** 
+DataRow**  
+row**! $
+in**% '
 
-categories++( 2
-.++2 3
-Tables++3 9
-[++9 :
-$num++: ;
-]++; <
-.++< =
-Rows++= A
-)++A B
-{,, 
-string-- 
-category-- #
-=--$ %
-$"--& (
-{--( )
-row--) ,
-[--, -
-$str--- ;
-]--; <
-}--< =
-$str--= @
-{--@ A
-row--A D
-[--D E
-$str--E S
-]--S T
-}--T U
-"--U V
-;--V W
-cboCategories.. !
-...! "
-Items.." '
-...' (
-Add..( +
-(..+ ,
-category.., 4
-)..4 5
-;..5 6
-}// 
-}00 
-catch11 
-(11 
-	Exception11 
-ex11 
-)11  
-{22 
+yearsTable**( 2
+.**2 3
+Rows**3 7
+)**7 8
+{++ 
+cboYears,, 
+.,, 
+Items,, "
+.,," #
+Add,,# &
+(,,& '
+row,,' *
+[,,* +
+$str,,+ 1
+],,1 2
+.,,2 3
+ToString,,3 ;
+(,,; <
+),,< =
+),,= >
+;,,> ?
+}-- 
+}.. 
+catch// 
+(// 
+	Exception// 
+ex// 
+)//  
+{00 
 
-MessageBox33 
-.33 
-Show33 
-(33  
-$@"33  #
-{33# $
-ex33$ &
-.33& '
-Message33' .
-}33. /
-"33/ 0
-,330 1
-$str332 :
-,33: ;
-MessageBoxButtons33< M
-.33M N
-OK33N P
-,33P Q
-MessageBoxIcon33R `
-.33` a
-Error33a f
-)33f g
-;33g h
-}44 
-}55 	
-private77 
-void77 
-	LoadYears77 
-(77 
-)77  
-{88 	
-try99 
-{:: 
-	DataTable;; 
+MessageBox11 
+.11 
+Show11 
+(11  
+$@"11  #
+{11# $
+ex11$ &
+.11& '
+Message11' .
+}11. /
+"11/ 0
+,110 1
+$str112 :
+,11: ;
+MessageBoxButtons11< M
+.11M N
+OK11N P
+,11P Q
+MessageBoxIcon11R `
+.11` a
+Error11a f
+)11f g
+;11g h
+}22 
+}33 	
+private55 
+void55 
+btnConfirm_Click55 %
+(55% &
+object55& ,
+sender55- 3
+,553 4
+	EventArgs555 >
+e55? @
+)55@ A
+{66 	
+try77 
+{88 
+ValidateSelections99 "
+(99" #
+)99# $
+;99$ %
 
-yearsTable;; $
-=;;% &
-_analysisService;;' 7
-.;;7 8
-GetDistinctYears;;8 H
-(;;H I
-);;I J
-;;;J K
-cboYears<< 
-.<< 
-Items<< 
-.<< 
-Clear<< $
-(<<$ %
-)<<% &
-;<<& '
-foreach>> 
-(>> 
-DataRow>>  
-row>>! $
-in>>% '
+ReportData:: 
 
-yearsTable>>( 2
-.>>2 3
-Rows>>3 7
-)>>7 8
-{?? 
-cboYears@@ 
-.@@ 
-Items@@ "
-.@@" #
-Add@@# &
-(@@& '
-row@@' *
-[@@* +
-$str@@+ 1
-]@@1 2
-.@@2 3
-ToString@@3 ;
-(@@; <
-)@@< =
-)@@= >
-;@@> ?
-}AA 
-}BB 
-catchCC 
-(CC 
-	ExceptionCC 
-exCC 
-)CC  
-{DD 
+reportData:: %
+=::& '
+_analysisService::( 8
+.::8 9
+GetReportData::9 F
+(::F G
+Convert::G N
+.::N O
+ToInt32::O V
+(::V W
+cboYears::W _
+.::_ `
+Text::` d
+)::d e
+,::e f
+cboReportType::g t
+.::t u
+Text::u y
+)::y z
+;::z {
+RenderGraph;; 
+(;; 
 
-MessageBoxEE 
-.EE 
-ShowEE 
-(EE  
-$@"EE  #
-{EE# $
-exEE$ &
-.EE& '
-MessageEE' .
-}EE. /
-"EE/ 0
-,EE0 1
-$strEE2 :
-,EE: ;
-MessageBoxButtonsEE< M
-.EEM N
-OKEEN P
-,EEP Q
-MessageBoxIconEER `
-.EE` a
-ErrorEEa f
-)EEf g
-;EEg h
-}FF 
-}GG 	
-privateII 
-voidII 
-SetReportTypeII "
-(II" #
-)II# $
-{JJ 	
-ifKK 
-(KK 
-cboReportTypeKK 
-.KK 
-SelectedItemKK *
-!=KK+ -
-nullKK. 2
-&&KK3 5
-cboReportTypeKK6 C
-.KKC D
-SelectedItemKKD P
-.KKP Q
-ToStringKKQ Y
-(KKY Z
-)KKZ [
-==KK\ ^
-$strKK_ q
-)KKq r
-{LL 
-_reportMM 
-=MM 
-newMM 
-RevenueReportMM +
-(MM+ ,
-_analysisServiceMM, <
-)MM< =
-;MM= >
-}NN 
-elseOO 
-{PP 
-_reportQQ 
-=QQ 
-newQQ 
-ToolRentalReportQQ .
-(QQ. /
-_analysisServiceQQ/ ?
-)QQ? @
-;QQ@ A
-}RR 
-lblCategorySS 
-.SS 
-VisibleSS 
-=SS  !
-_reportSS" )
-.SS) *
-needsCategorySS* 7
-;SS7 8
-cboCategoriesTT 
-.TT 
-VisibleTT !
-=TT" #
-_reportTT$ +
-.TT+ ,
-needsCategoryTT, 9
-;TT9 :
-}UU 	
-privateWW 
-voidWW 0
-$cboReportType_SelectedIndexChanged_1WW 9
-(WW9 :
-objectWW: @
-senderWWA G
-,WWG H
-	EventArgsWWI R
-eWWS T
-)WWT U
-{XX 	
-SetReportTypeYY 
-(YY 
-)YY 
-;YY 
-}ZZ 	
-private\\ 
-void\\ 
-btnConfirm_Click\\ %
-(\\% &
-object\\& ,
-sender\\- 3
-,\\3 4
-	EventArgs\\5 >
-e\\? @
-)\\@ A
-{]] 	
-try^^ 
-{__ 
-ValidateSelections`` "
-(``" #
-)``# $
-;``$ %
-UpdateChartaa 
-(aa 
-)aa 
-;aa 
-}bb 
-catchcc 
-(cc 
-	Exceptioncc 
-excc 
-)cc  
-{dd 
+reportData;; &
+);;& '
+;;;' (
+}<< 
+catch== 
+(== 
+	Exception== 
+ex== 
+)==  
+{>> 
 
-MessageBoxee 
-.ee 
-Showee 
-(ee  
-exee  "
-.ee" #
-Messageee# *
-,ee* +
-$stree, @
-,ee@ A
-MessageBoxButtonseeB S
-.eeS T
-OKeeT V
-,eeV W
-MessageBoxIconeeX f
-.eef g
-Warningeeg n
-)een o
-;eeo p
-}ff 
-}gg 	
-privateii 
-voidii 
-ValidateSelectionsii '
-(ii' (
-)ii( )
-{jj 	
-ifkk 
-(kk 
-_reportkk 
-.kk 
-needsCategorykk %
-)kk% &
-{ll 
-ifmm 
-(mm 
-cboCategoriesmm !
-.mm! "
-SelectedIndexmm" /
-<mm0 1
-$nummm2 3
-)mm3 4
-thrownn 
-newnn 
-ArgumentExceptionnn /
-(nn/ 0
-$strnn0 P
-)nnP Q
-;nnQ R
-}oo 
-ifqq 
-(qq 
-cboYearsqq 
-.qq 
-SelectedIndexqq &
-<qq' (
-$numqq) *
-)qq* +
-throwrr 
-newrr 
-ArgumentExceptionrr +
-(rr+ ,
-$strrr, C
-)rrC D
-;rrD E
-}ss 	
-privateuu 
-voiduu 
-UpdateChartuu  
-(uu  !
-)uu! "
-{vv 	
-UpdateChartww 
-(ww 
-cboCategoriesww %
-)ww% &
-;ww& '
-}xx 	
-privatezz 
-voidzz 
-UpdateChartzz  
-(zz  !
-ComboBoxzz! )
-cboCategorieszz* 7
+MessageBox?? 
+.?? 
+Show?? 
+(??  
+ex??  "
+.??" #
+Message??# *
+,??* +
+$str??, @
+,??@ A
+MessageBoxButtons??B S
+.??S T
+OK??T V
+,??V W
+MessageBoxIcon??X f
+.??f g
+Warning??g n
+)??n o
+;??o p
+}@@ 
+}AA 	
+privateCC 
+voidCC 
+ValidateSelectionsCC '
+(CC' (
+)CC( )
+{DD 	
+ifEE 
+(EE 
+cboYearsEE 
+.EE 
+SelectedIndexEE &
+<EE' (
+$numEE) *
+)EE* +
+throwFF 
+newFF 
+ArgumentExceptionFF +
+(FF+ ,
+$strFF, C
+)FFC D
+;FFD E
+ifGG 
+(GG 
+cboReportTypeGG 
+.GG 
+SelectedIndexGG +
+<GG, -
+$numGG. /
+)GG/ 0
+throwHH 
+newHH 
+ArgumentExceptionHH +
+(HH+ ,
+$strHH, E
+)HHE F
+;HHF G
+}II 
+privateKK 
+voidKK 
+RenderGraphKK  
+(KK  !
+
+ReportDataKK! +
+
+reportDataKK, 6
+)KK6 7
+{LL 	
+
+formsPlot1MM 
+.MM 
+PlotMM 
+.MM 
+ClearMM !
+(MM! "
+)MM" #
+;MM# $
+switchNN 
+(NN 
+
+reportDataNN 
+.NN 
+	ChartTypeNN (
+)NN( )
+{OO 
+casePP 
+	ChartTypePP 
+.PP 
+BarPP "
+:PP" #
+RenderBarChartQQ "
+(QQ" #
+
+reportDataQQ# -
+)QQ- .
+;QQ. /
+breakRR 
+;RR 
+caseTT 
+	ChartTypeTT 
+.TT 
+LineTT #
+:TT# $
+RenderLineChartUU #
+(UU# $
+
+reportDataUU$ .
+)UU. /
+;UU/ 0
+breakVV 
+;VV 
+caseXX 
+	ChartTypeXX 
+.XX 
+ScatterXX &
+:XX& '
+RenderScatterChartYY &
+(YY& '
+
+reportDataYY' 1
+)YY1 2
+;YY2 3
+breakZZ 
+;ZZ 
+case\\ 
+	ChartType\\ 
+.\\ 
+Pie\\ "
+:\\" #
+RenderPieChart]] "
+(]]" #
+
+reportData]]# -
+)]]- .
+;]]. /
+break^^ 
+;^^ 
+default`` 
+:`` 
+throwaa 
+newaa !
+NotSupportedExceptionaa 3
+(aa3 4
+$"aa4 6
+$straa6 B
+{aaB C
+
+reportDataaaC M
+.aaM N
+	ChartTypeaaN W
+}aaW X
+$straaX k
+"aak l
+)aal m
+;aam n
+}bb 
+
+formsPlot1dd 
+.dd 
+Plotdd 
+.dd 
+Titledd !
+(dd! "
+
+reportDatadd" ,
+.dd, -
+Titledd- 2
+)dd2 3
+;dd3 4
+
+formsPlot1ee 
+.ee 
+Plotee 
+.ee 
+YLabelee "
+(ee" #
+
+reportDataee# -
+.ee- .
+YLabelee. 4
+)ee4 5
+;ee5 6
+
+formsPlot1gg 
+.gg 
+Refreshgg 
+(gg 
+)gg  
+;gg  !
+}hh 	
+privatejj 
+voidjj 
+RenderBarChartjj #
+(jj# $
+
+ReportDatajj$ .
+datajj/ 3
+)jj3 4
+{kk 	
+doublell 
+[ll 
+]ll 
+ysll 
+=ll 
+datall 
+.ll 
+YValuesll &
+.ll& '
+ToArrayll' .
+(ll. /
+)ll/ 0
+;ll0 1
+doublemm 
+[mm 
+]mm 
+xsmm 
+=mm 
+
+Enumerablemm $
+.mm$ %
+Rangemm% *
+(mm* +
+$nummm+ ,
+,mm, -
+ysmm. 0
+.mm0 1
+Lengthmm1 7
+)mm7 8
+.mm8 9
+Selectmm9 ?
+(mm? @
+xmm@ A
+=>mmB D
+(mmE F
+doublemmF L
+)mmL M
+xmmM N
+)mmN O
+.mmO P
+ToArraymmP W
+(mmW X
+)mmX Y
+;mmY Z
+varnn 
+barnn 
+=nn 
+
+formsPlot1nn  
+.nn  !
+Plotnn! %
+.nn% &
+AddBarnn& ,
+(nn, -
+ysnn- /
+)nn/ 0
+;nn0 1
+baroo 
+.oo 
+PositionOffsetoo 
+=oo  
+$numoo! "
+;oo" #
+barpp 
+.pp 
+BarWidthpp 
+=pp 
+$numpp 
+;pp 
+barqq 
+.qq 
+	FillColorqq 
+=qq 
+Systemqq "
+.qq" #
+Drawingqq# *
+.qq* +
+Colorqq+ 0
+.qq0 1
+Blueqq1 5
+;qq5 6
+barrr 
+.rr 
+Labelrr 
+=rr 
+$strrr !
+;rr! "
+
+formsPlot1ss 
+.ss 
+Plotss 
+.ss 
+XTicksss "
+(ss" #
+xsss# %
+,ss% &
+datass' +
+.ss+ ,
+XLabelsss, 3
+.ss3 4
+ToArrayss4 ;
+(ss; <
+)ss< =
+)ss= >
+;ss> ?
+
+formsPlot1tt 
+.tt 
+Plottt 
+.tt 
+Legendtt "
+(tt" #
+)tt# $
+;tt$ %
+}uu 	
+privateww 
+voidww 
+RenderLineChartww $
+(ww$ %
+
+ReportDataww% /
+dataww0 4
+)ww4 5
+{xx 	
+doubleyy 
+[yy 
+]yy 
+ysyy 
+=yy 
+datayy 
+.yy 
+YValuesyy &
+.yy& '
+ToArrayyy' .
+(yy. /
+)yy/ 0
+;yy0 1
+doublezz 
+[zz 
+]zz 
+xszz 
+=zz 
+
+Enumerablezz $
+.zz$ %
+Rangezz% *
+(zz* +
+$numzz+ ,
+,zz, -
+yszz. 0
+.zz0 1
+Lengthzz1 7
 )zz7 8
-{{{ 	
-try|| 
-{}} 
-int~~ 
-selectedYear~~  
-=~~! "
-int~~# &
-.~~& '
-Parse~~' ,
-(~~, -
-cboYears~~- 5
-.~~5 6
-SelectedItem~~6 B
-.~~B C
-ToString~~C K
-(~~K L
-)~~L M
-)~~M N
-;~~N O
-string 
-categoryCode #
-=$ %
-null& *
-;* +
-if
-ÅÅ 
-(
-ÅÅ 
-_report
-ÅÅ 
-.
-ÅÅ 
-needsCategory
-ÅÅ )
-&&
-ÅÅ* ,
-cboCategories
-ÅÅ- :
-.
-ÅÅ: ;
-SelectedItem
-ÅÅ; G
-!=
-ÅÅH J
-null
-ÅÅK O
-)
-ÅÅO P
-{
-ÇÇ 
-categoryCode
-ÉÉ  
-=
-ÉÉ! "
-cboCategories
-ÉÉ# 0
-.
-ÉÉ0 1
-SelectedItem
-ÉÉ1 =
-.
-ÉÉ= >
-ToString
-ÉÉ> F
-(
-ÉÉF G
-)
-ÉÉG H
-.
-ÉÉH I
-	Substring
-ÉÉI R
-(
-ÉÉR S
-$num
-ÉÉS T
-,
-ÉÉT U
-$num
-ÉÉV W
-)
-ÉÉW X
-;
-ÉÉX Y
+.zz8 9
+Selectzz9 ?
+(zz? @
+xzz@ A
+=>zzB D
+(zzE F
+doublezzF L
+)zzL M
+xzzM N
+)zzN O
+.zzO P
+ToArrayzzP W
+(zzW X
+)zzX Y
+;zzY Z
+var{{ 
+line{{ 
+={{ 
+
+formsPlot1{{ !
+.{{! "
+Plot{{" &
+.{{& '
+
+AddScatter{{' 1
+({{1 2
+xs{{2 4
+,{{4 5
+ys{{6 8
+,{{8 9
+label{{: ?
+:{{? @
+$str{{A J
+){{J K
+;{{K L
+line|| 
+.|| 
+
+MarkerSize|| 
+=|| 
+$num|| 
+;||  
+line}} 
+.}} 
+	LineWidth}} 
+=}} 
+$num}} 
+;}} 
+
+formsPlot1~~ 
+.~~ 
+Plot~~ 
+.~~ 
+XTicks~~ "
+(~~" #
+xs~~# %
+,~~% &
+data~~' +
+.~~+ ,
+XLabels~~, 3
+.~~3 4
+ToArray~~4 ;
+(~~; <
+)~~< =
+)~~= >
+;~~> ?
+
+formsPlot1 
+. 
+Plot 
+. 
+Legend "
+(" #
+)# $
+;$ %
 }
-ÑÑ 
-var
-ÖÖ 
+ÄÄ 	
+private
+ÇÇ 
+void
+ÇÇ  
+RenderScatterChart
+ÇÇ '
 (
-ÖÖ 
-labels
-ÖÖ 
-,
-ÖÖ 
-values
-ÖÖ #
-)
-ÖÖ# $
-=
-ÖÖ% &
-_report
-ÖÖ' .
-.
-ÖÖ. /
-GetData
-ÖÖ/ 6
-(
-ÖÖ6 7
-selectedYear
-ÖÖ7 C
-,
-ÖÖC D
-categoryCode
-ÖÖE Q
-)
-ÖÖQ R
-;
-ÖÖR S
+ÇÇ' (
 
-formsPlot1
-áá 
-.
-áá 
-Plot
-áá 
-.
-áá  
-Clear
-áá  %
-(
-áá% &
+ReportData
+ÇÇ( 2
+data
+ÇÇ3 7
 )
-áá& '
-;
-áá' (
-
-formsPlot1
-àà 
-.
-àà 
-Plot
-àà 
-.
-àà  
-AddBar
-àà  &
-(
-àà& '
-values
-àà' -
-)
-àà- .
-;
-àà. /
+ÇÇ7 8
+{
+ÉÉ 	
 double
-ââ 
+ÑÑ 
 [
-ââ 
+ÑÑ 
 ]
-ââ 
-
-xPositions
-ââ #
+ÑÑ 
+ys
+ÑÑ 
 =
-ââ$ %
+ÑÑ 
+data
+ÑÑ 
+.
+ÑÑ 
+YValues
+ÑÑ &
+.
+ÑÑ& '
+ToArray
+ÑÑ' .
+(
+ÑÑ. /
+)
+ÑÑ/ 0
+;
+ÑÑ0 1
+double
+ÖÖ 
+[
+ÖÖ 
+]
+ÖÖ 
+xs
+ÖÖ 
+=
+ÖÖ 
 
 Enumerable
-ââ& 0
+ÖÖ $
 .
-ââ0 1
+ÖÖ$ %
 Range
-ââ1 6
+ÖÖ% *
 (
-ââ6 7
+ÖÖ* +
 $num
-ââ7 8
+ÖÖ+ ,
 ,
-ââ8 9
-labels
-ââ: @
+ÖÖ, -
+ys
+ÖÖ. 0
 .
-ââ@ A
+ÖÖ0 1
 Length
-ââA G
+ÖÖ1 7
 )
-ââG H
+ÖÖ7 8
 .
-ää 
+ÖÖ8 9
 Select
-ää 
+ÖÖ9 ?
 (
-ää 
-i
-ää 
+ÖÖ? @
+x
+ÖÖ@ A
 =>
-ää  
+ÖÖB D
 (
-ää! "
+ÖÖE F
 double
-ää" (
+ÖÖF L
 )
-ää( )
-i
-ää) *
+ÖÖL M
+x
+ÖÖM N
 )
-ää* +
+ÖÖN O
 .
-ää+ ,
+ÖÖO P
 ToArray
-ää, 3
+ÖÖP W
 (
-ää3 4
+ÖÖW X
 )
-ää4 5
+ÖÖX Y
 ;
-ää5 6
+ÖÖY Z
+var
+ÜÜ 
+scatter
+ÜÜ 
+=
+ÜÜ 
 
 formsPlot1
-ãã 
+ÜÜ $
 .
-ãã 
+ÜÜ$ %
 Plot
-ãã 
+ÜÜ% )
 .
-ãã  
+ÜÜ) *
+
+AddScatter
+ÜÜ* 4
+(
+ÜÜ4 5
+xs
+ÜÜ5 7
+,
+ÜÜ7 8
+ys
+ÜÜ9 ;
+,
+ÜÜ; <
+
+markerSize
+ÜÜ= G
+:
+ÜÜG H
+$num
+ÜÜI K
+,
+ÜÜK L
+label
+ÜÜM R
+:
+ÜÜR S
+$str
+ÜÜT ]
+)
+ÜÜ] ^
+;
+ÜÜ^ _
+scatter
+áá 
+.
+áá 
+MarkerShape
+áá 
+=
+áá  !
+MarkerShape
+áá" -
+.
+áá- .
+filledCircle
+áá. :
+;
+áá: ;
+scatter
+àà 
+.
+àà 
+Color
+àà 
+=
+àà 
+System
+àà "
+.
+àà" #
+Drawing
+àà# *
+.
+àà* +
+Color
+àà+ 0
+.
+àà0 1
+Red
+àà1 4
+;
+àà4 5
+
+formsPlot1
+ââ 
+.
+ââ 
+Plot
+ââ 
+.
+ââ 
 XTicks
-ãã  &
+ââ "
 (
-ãã& '
-
-xPositions
-ãã' 1
+ââ" #
+xs
+ââ# %
 ,
-ãã1 2
-labels
-ãã3 9
+ââ% &
+data
+ââ' +
+.
+ââ+ ,
+XLabels
+ââ, 3
+.
+ââ3 4
+ToArray
+ââ4 ;
+(
+ââ; <
 )
-ãã9 :
+ââ< =
+)
+ââ= >
 ;
-ãã: ;
+ââ> ?
 
 formsPlot1
-åå 
+ää 
 .
-åå 
+ää 
 Plot
-åå 
+ää 
 .
-åå  
-Title
-åå  %
+ää 
+Legend
+ää "
 (
-åå% &
-_report
-åå& -
-.
-åå- .
-GetTitle
-åå. 6
-(
-åå6 7
-selectedYear
-åå7 C
-,
-ååC D
-categoryCode
-ååE Q
+ää" #
 )
-ååQ R
-)
-ååR S
+ää# $
 ;
-ååS T
-
-formsPlot1
-çç 
-.
-çç 
-Plot
-çç 
-.
-çç  
-XLabel
-çç  &
-(
-çç& '
-$str
-çç' /
-)
-çç/ 0
-;
-çç0 1
-
-formsPlot1
-éé 
-.
-éé 
-Refresh
-éé "
-(
-éé" #
-)
-éé# $
-;
-éé$ %
+ää$ %
 }
-èè 
-catch
-êê 
+ãã 	
+private
+çç 
+void
+çç 
+RenderPieChart
+çç #
 (
-êê 
-	Exception
-êê 
-ex
-êê 
-)
-êê  
-{
-ëë 
+çç# $
 
-MessageBox
+ReportData
+çç$ .
+data
+çç/ 3
+)
+çç3 4
+{
+éé 	
+double
+èè 
+[
+èè 
+]
+èè 
+ys
+èè 
+=
+èè 
+data
+èè 
+.
+èè 
+YValues
+èè &
+.
+èè& '
+ToArray
+èè' .
+(
+èè. /
+)
+èè/ 0
+;
+èè0 1
+var
+êê 
+pie
+êê 
+=
+êê 
+
+formsPlot1
+êê  
+.
+êê  !
+Plot
+êê! %
+.
+êê% &
+AddPie
+êê& ,
+(
+êê, -
+ys
+êê- /
+)
+êê/ 0
+;
+êê0 1
+pie
+ëë 
+.
+ëë 
+SliceLabels
+ëë 
+=
+ëë 
+data
+ëë "
+.
+ëë" #
+XLabels
+ëë# *
+.
+ëë* +
+ToArray
+ëë+ 2
+(
+ëë2 3
+)
+ëë3 4
+;
+ëë4 5
+pie
+íí 
+.
+íí 
+
+ShowLabels
 íí 
+=
+íí 
+true
+íí !
+;
+íí! "
+pie
+ìì 
 .
-íí 
-Show
-íí 
-(
-íí  
-$@"
-íí  #
-$str
-íí# <
-{
-íí< =
-ex
-íí= ?
-.
-íí? @
-Message
-íí@ G
-}
-ííG H
-"
-ííH I
-,
-ííI J
-$str
-ííK S
-,
-ííS T
-MessageBoxButtons
-ííU f
-.
-ííf g
-OK
-ííg i
-,
-ííi j
-MessageBoxIcon
-íík y
-.
-ííy z
-Error
-ííz 
-)íí Ä
-;ííÄ Å
-}
-ìì 
+ìì 
+	DonutSize
+ìì 
+=
+ìì 
+$num
+ìì 
+;
+ìì  
 }
 îî 	
 }
@@ -10780,288 +10986,304 @@ MessageBox[[ 
 }\\ 
 }]] 	
 }^^ 
-}__ ò#
+}__ √'
 UC:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\Forms\frmAddCustomer.cs
-	namespace 	
-ToolSYS
+	namespace 	
+ToolSYS
  
-. 
-Presentation 
-. 
-Forms $
-{ 
-public 
+. 
+Presentation 
+. 
+Forms $
+{ 
+public 
 
-partial 
-class 
-FrmAddCustomer '
-:( )
-NavForm* 1
-{ 
-private		 
-readonly		 
-ICustomerService		 )
-_customerService		* :
-;		: ;
-public
+partial 
+class 
+FrmAddCustomer '
+:( )
+NavForm* 1
+{		 
+private
 
- 
-FrmAddCustomer
+ 
+readonly
 
- 
-(
-
- 
-INavigation
-
- )
-
-navigation
-
-* 4
-,
-
-4 5
+ 
 ICustomerService
 
-6 F
-customerService
+ )
+_customerService
 
-G V
-)
+* :
+;
 
-V W
-:
-
-X Y
-base
-
-Z ^
-(
-
-_ `
+: ;
+public 
+FrmAddCustomer 
+( 
+INavigation )
 
-navigation
-
-` j
-)
-
-j k
-{ 	
-InitializeComponent 
-(  
-)  !
-;! "
-_customerService 
-= 
-customerService .
-;. /
-} 	
-private 
-void 
-frmAddCustomer_Load (
-(( )
-object) /
-sender0 6
-,6 7
-	EventArgs8 A
-eB C
-)C D
-{ 	
-txtCustomerID 
-. 
-Text 
-=  
-_customerService! 1
-.1 2
-GetNextCustomerId2 C
-(C D
-)D E
-.E F
-ToStringF N
-(N O
-$strO U
-)U V
-;V W
-} 	
-private 
-void 
-BtnConfirm_Click %
-(% &
-object& ,
-sender- 3
-,3 4
-	EventArgs5 >
-e? @
-)@ A
-{ 	
-try 
-{ 
-Customer 
-customer !
-=" #
-new$ '
-Customer( 0
-{ 
+navigation* 4
+,4 5
+ICustomerService6 F
+customerServiceG V
+)V W
+:X Y
+baseZ ^
+(_ `
 
-customerId 
-=  
-Convert! (
-.( )
-ToInt32) 0
-(0 1
-txtCustomerID1 >
-.> ?
-Text? C
-)C D
-,D E
-forename 
-= 
-txtForename *
-.* +
-Text+ /
-,/ 0
-surname 
-= 
+navigation` j
+)j k
+{ 	
+InitializeComponent 
+(  
+)  !
+;! "
+_customerService 
+= 
+customerService .
+;. /
+} 	
+private 
+void 
+frmAddCustomer_Load (
+(( )
+object) /
+sender0 6
+,6 7
+	EventArgs8 A
+eB C
+)C D
+{ 	
+txtCustomerID 
+. 
+Text 
+=  
+_customerService! 1
+.1 2
+GetNextCustomerId2 C
+(C D
+)D E
+.E F
+ToStringF N
+(N O
+$strO U
+)U V
+;V W
+} 	
+private 
+void 
+BtnConfirm_Click %
+(% &
+object& ,
+sender- 3
+,3 4
+	EventArgs5 >
+e? @
+)@ A
+{ 	
+try 
+{ 
+Customer 
+customer !
+=" #
+new$ '
+Customer( 0
+{ 
 
-txtSurname (
-.( )
-Text) -
-,- .
-email 
-= 
-txtEmail $
-.$ %
-Text% )
-,) *
-phone 
+customerId 
+=  
+Convert! (
+.( )
+ToInt32) 0
+(0 1
+txtCustomerID1 >
+.> ?
+Text? C
+)C D
+,D E
+forename 
+= 
+txtForename *
+.* +
+Text+ /
+,/ 0
+surname 
+= 
+
+txtSurname (
+.( )
+Text) -
+,- .
+email 
 = 
-txtPhone $
+txtEmail $
 .$ %
 Text% )
-,) *
-eircode   
-=   
+,) *
+phone   
+=   
+txtPhone   $
+.  $ %
+Text  % )
+,  ) *
+eircode!! 
+=!! 
 
-txtEircode   (
-.  ( )
-Text  ) -
-}!! 
-;!! 
-_customerService##  
-.##  !
-AddCustomer##! ,
-(##, -
-customer##- 5
-)##5 6
-;##6 7
+txtEircode!! (
+.!!( )
+Text!!) -
+}"" 
+;"" 
+_customerService$$  
+.$$  !
+AddCustomer$$! ,
+($$, -
+customer$$- 5
+)$$5 6
+;$$6 7
 
-MessageBox$$ 
-.$$ 
-Show$$ 
-($$  
-$str$$  L
-,$$L M
-$str$$N \
-,$$\ ]
-MessageBoxButtons$$^ o
-.$$o p
-OK$$p r
-,$$r s
-MessageBoxIcon	$$t Ç
+MessageBox%% 
+.%% 
+Show%% 
+(%%  
+$str%%  L
+,%%L M
+$str%%N \
+,%%\ ]
+MessageBoxButtons%%^ o
+.%%o p
+OK%%p r
+,%%r s
+MessageBoxIcon	%%t Ç
 .
-$$Ç É
+%%Ç É
 Information
-$$É é
+%%É é
 )
-$$é è
+%%é è
 ;
-$$è ê
-txtCustomerID%% 
-.%% 
-Clear%% #
-(%%# $
-)%%$ %
-;%%% &
-txtForename&& 
-.&& 
-Clear&& !
-(&&! "
-)&&" #
-;&&# $
+%%è ê
+txtCustomerID&& 
+.&& 
+Clear&& #
+(&&# $
+)&&$ %
+;&&% &
+txtForename'' 
+.'' 
+Clear'' !
+(''! "
+)''" #
+;''# $
 
-txtSurname'' 
-.'' 
-Clear''  
-(''  !
-)''! "
-;''" #
-txtEmail(( 
-.(( 
-Clear(( 
-((( 
-)((  
-;((  !
-txtPhone)) 
+txtSurname(( 
+.(( 
+Clear((  
+(((  !
+)((! "
+;((" #
+txtEmail)) 
 .)) 
 Clear)) 
 ()) 
 )))  
-;))  !
+;))  !
+txtPhone** 
+.** 
+Clear** 
+(** 
+)**  
+;**  !
 
-txtEircode** 
-.** 
-Clear**  
-(**  !
-)**! "
-;**" #
-txtCustomerID++ 
-.++ 
-Text++ "
-=++# $
-_customerService++% 5
-.++5 6
-GetNextCustomerId++6 G
-(++G H
-)++H I
-.++I J
-ToString++J R
-(++R S
-$str++S Y
-)++Y Z
-;++Z [
-}-- 
-catch.. 
-(.. 
-	Exception.. 
-ex.. 
-)..  
-{// 
+txtEircode++ 
+.++ 
+Clear++  
+(++  !
+)++! "
+;++" #
+txtCustomerID,, 
+.,, 
+Text,, "
+=,,# $
+_customerService,,% 5
+.,,5 6
+GetNextCustomerId,,6 G
+(,,G H
+),,H I
+.,,I J
+ToString,,J R
+(,,R S
+$str,,S Y
+),,Y Z
+;,,Z [
+}.. 
+catch// 
+(// 
+ValidationException// &
+ex//' )
+)//) *
+{00 
 
-MessageBox00 
-.00 
-Show00 
-(00  
-$@"00  #
-{00# $
-ex00$ &
-.00& '
-Message00' .
-}00. /
-"00/ 0
-,000 1
-$str002 :
-,00: ;
-MessageBoxButtons00< M
-.00M N
-OK00N P
-,00P Q
-MessageBoxIcon00R `
-.00` a
-Error00a f
-)00f g
-;00g h
-}11 
-}22 	
-}33 
-}44 
+MessageBox11 
+.11 
+Show11 
+(11  
+$"11  "
+$str11" 5
+{115 6
+ex116 8
+.118 9
+Message119 @
+}11@ A
+"11A B
+,11B C
+$str11D V
+,11V W
+MessageBoxButtons11X i
+.11i j
+OK11j l
+,11l m
+MessageBoxIcon11n |
+.11| }
+Warning	11} Ñ
+)
+11Ñ Ö
+;
+11Ö Ü
+}22 
+catch33 
+(33 
+	Exception33 
+ex33 
+)33  
+{44 
+
+MessageBox55 
+.55 
+Show55 
+(55  
+$@"55  #
+{55# $
+ex55$ &
+.55& '
+Message55' .
+}55. /
+"55/ 0
+,550 1
+$str552 :
+,55: ;
+MessageBoxButtons55< M
+.55M N
+OK55N P
+,55P Q
+MessageBoxIcon55R `
+.55` a
+Error55a f
+)55f g
+;55g h
+}66 
+}77 	
+}88 
+}99 

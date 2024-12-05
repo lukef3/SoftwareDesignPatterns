@@ -5,4 +5,6 @@ C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Services\CustomerServi
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Services\RateService.cs
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Services\RentalService.cs
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Services\ToolService.cs
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\SimpleFactories\ReportStrategySimpleFactory.cs
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Strategies\ReportStrategy.cs
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Business\Validators\CustomerValidator.cs

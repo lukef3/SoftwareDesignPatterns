@@ -17,7 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Factories\" />
     <Folder Include="Strategies\" />
   </ItemGroup>
 

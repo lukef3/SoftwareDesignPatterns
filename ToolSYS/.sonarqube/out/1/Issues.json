@@ -12,18 +12,65 @@
       },
       "results": [
         {
-          "ruleId": "S125",
+          "ruleId": "CS8618",
           "level": "warning",
-          "message": "Remove this commented out code.",
+          "message": "Non-nullable field '_transaction' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/DBConnect.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/RentalData.cs",
                 "region": {
-                  "startLine": 6,
-                  "startColumn": 9,
-                  "endLine": 6,
-                  "endColumn": 114
+                  "startLine": 20,
+                  "startColumn": 16,
+                  "endLine": 20,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/RentalData.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 35,
+                  "endLine": 18,
+                  "endColumn": 47
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable field '_transaction' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/RentalItemData.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 16,
+                  "endLine": 16,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/RentalItemData.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 35,
+                  "endLine": 15,
+                  "endColumn": 47
                 }
               }
             }
@@ -76,9 +123,9 @@
               "physicalLocation": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/ToolData.cs",
                 "region": {
-                  "startLine": 211,
+                  "startLine": 205,
                   "startColumn": 36,
-                  "endLine": 211,
+                  "endLine": 205,
                   "endColumn": 45
                 }
               }
@@ -90,6 +137,55 @@
               "0": null,
               "1": null,
               "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S3881",
+          "level": "warning",
+          "message": "Fix this implementation of 'IDisposable' to conform to the dispose pattern.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/UnitOfWork/UnitOfWork.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 14,
+                  "endLine": 14,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/UnitOfWork/UnitOfWork.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 14,
+                  "endLine": 14,
+                  "endColumn": 24
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/UnitOfWork/UnitOfWork.cs",
+                "region": {
+                  "startLine": 66,
+                  "startColumn": 17,
+                  "endLine": 66,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "Provide 'protected' overridable implementation of 'Dispose(bool)' on 'UnitOfWork' or mark the type as 'sealed'.",
+              "1": "'UnitOfWork.Dispose()' should call 'Dispose(true)' and 'GC.SuppressFinalize(this)'."
             }
           }
         },
@@ -155,18 +251,39 @@
           }
         },
         {
-          "ruleId": "S2068",
-          "level": "warning",
-          "message": "\"password\" detected here, make sure this is not a hard-coded credential.",
+          "ruleId": "CA1816",
+          "level": "note",
+          "message": "Change UnitOfWork.Dispose() to call GC.SuppressFinalize(object). This will prevent derived types that introduce a finalizer from needing to re-implement 'IDisposable' to call it.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/DBConnect.cs",
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/UnitOfWork/UnitOfWork.cs",
                 "region": {
-                  "startLine": 9,
-                  "startColumn": 29,
-                  "endLine": 9,
-                  "endColumn": 122
+                  "startLine": 66,
+                  "startColumn": 17,
+                  "endLine": 66,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2589",
+          "level": "warning",
+          "message": "Remove this unnecessary check for null.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/UnitOfWork/UnitOfWork.cs",
+                "region": {
+                  "startLine": 49,
+                  "startColumn": 13,
+                  "endLine": 49,
+                  "endColumn": 25
                 }
               }
             }
@@ -252,9 +369,9 @@
               "physicalLocation": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/ToolData.cs",
                 "region": {
-                  "startLine": 125,
+                  "startLine": 124,
                   "startColumn": 17,
-                  "endLine": 125,
+                  "endLine": 124,
                   "endColumn": 19
                 }
               }
@@ -263,9 +380,9 @@
               "physicalLocation": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/ToolData.cs",
                 "region": {
-                  "startLine": 131,
+                  "startLine": 129,
                   "startColumn": 17,
-                  "endLine": 131,
+                  "endLine": 129,
                   "endColumn": 19
                 }
               }
@@ -274,9 +391,9 @@
               "physicalLocation": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/ToolData.cs",
                 "region": {
-                  "startLine": 136,
+                  "startLine": 133,
                   "startColumn": 17,
-                  "endLine": 136,
+                  "endLine": 133,
                   "endColumn": 19
                 }
               }
@@ -285,9 +402,9 @@
               "physicalLocation": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/ToolData.cs",
                 "region": {
-                  "startLine": 141,
+                  "startLine": 137,
                   "startColumn": 17,
-                  "endLine": 141,
+                  "endLine": 137,
                   "endColumn": 19
                 }
               }
@@ -296,9 +413,9 @@
               "physicalLocation": {
                 "uri": "file:///C:/GitHub/SoftwareDesignPatterns/ToolSYS/ToolSYS.Data/ToolData.cs",
                 "region": {
-                  "startLine": 147,
+                  "startLine": 142,
                   "startColumn": 17,
-                  "endLine": 147,
+                  "endLine": 142,
                   "endColumn": 19
                 }
               }
@@ -322,6 +439,36 @@
         }
       ],
       "rules": {
+        "CA1816": {
+          "id": "CA1816",
+          "shortDescription": "Dispose methods should call SuppressFinalize",
+          "fullDescription": "A method that is an implementation of Dispose does not call GC.SuppressFinalize; or a method that is not an implementation of Dispose calls GC.SuppressFinalize; or a method calls GC.SuppressFinalize and passes something other than this (Me in Visual Basic).",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1816",
+          "properties": {
+            "category": "Usage",
+            "isEnabledByDefault": true,
+            "tags": [
+              "PortedFromFxCop",
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CS8618": {
+          "id": "CS8618",
+          "shortDescription": "Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8618)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
         "S1192": {
           "id": "S1192",
           "shortDescription": "String literals should not be duplicated",
@@ -338,12 +485,12 @@
             ]
           }
         },
-        "S125": {
-          "id": "S125",
-          "shortDescription": "Sections of code should not be commented out",
-          "fullDescription": "Commented-out code distracts the focus from the actual executed code. It creates a noise that increases maintenance code. And because it is never executed, it quickly becomes out of date and invalid.",
+        "S2589": {
+          "id": "S2589",
+          "shortDescription": "Boolean expressions should not be gratuitous",
+          "fullDescription": "Gratuitous boolean expressions are conditions that do not change the evaluation of a program. This issue can indicate logical errors and affect the correctness of an application, as well as its maintainability.",
           "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-125",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2589",
           "properties": {
             "category": "Major Code Smell",
             "isEnabledByDefault": true,
@@ -351,22 +498,6 @@
               "C#",
               "MainSourceScope",
               "TestSourceScope",
-              "SonarWay"
-            ]
-          }
-        },
-        "S2068": {
-          "id": "S2068",
-          "shortDescription": "Hard-coded credentials are security-sensitive",
-          "fullDescription": "Because it is easy to extract strings from an application source code or binary, credentials should not be hard-coded. This is particularly true for applications that are distributed or that are open-source.",
-          "defaultLevel": "warning",
-          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2068",
-          "properties": {
-            "category": "Blocker Security Hotspot",
-            "isEnabledByDefault": true,
-            "tags": [
-              "C#",
-              "MainSourceScope",
               "SonarWay"
             ]
           }
@@ -380,6 +511,23 @@
           "properties": {
             "category": "Critical Code Smell",
             "isEnabledByDefault": false,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S3881": {
+          "id": "S3881",
+          "shortDescription": "\"IDisposable\" should be implemented correctly",
+          "fullDescription": "The IDisposable interface is a mechanism to release unmanaged resources, if not implemented correctly this could result in resource leaks or more severe bugs.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-3881",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
             "tags": [
               "C#",
               "MainSourceScope",

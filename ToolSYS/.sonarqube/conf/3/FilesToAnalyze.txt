@@ -45,4 +45,5 @@ C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\Forms\frmViewCusto
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\Forms\frmViewRentals.resx
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\Forms\frmViewTools.resx
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\Nav\NavForm.resx
+C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\App.config
 C:\GitHub\SoftwareDesignPatterns\ToolSYS\ToolSYS.Presentation\packages.config

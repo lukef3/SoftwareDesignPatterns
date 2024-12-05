@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using ToolSYS.Data;
+using ToolSYS.Data.UnitOfWork;
 using ToolSYS.Entities;
 
 namespace ToolSYS.Business.Services
@@ -14,20 +15,18 @@ namespace ToolSYS.Business.Services
     }
     public class RentalService : IRentalService
     {
-        private readonly IRentalData _rentalData;
-        private readonly IRentalItemData _rentalItemData;
         private readonly IRateData _rateData;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public RentalService(IRentalData rentalData, IRentalItemData rentalItemData, IRateData rateData)
+        public RentalService(IRateData rateData, IUnitOfWork unitOfWork)
         {
-            _rentalData = rentalData;
-            _rentalItemData = rentalItemData;     
             _rateData = rateData;     
+            _unitOfWork = unitOfWork;
         }
 
         public int GetNextRentalId()
         {
-            return _rentalData.GetNextRentalId();
+            return _unitOfWork.Rentals.GetNextRentalId();
         }
 
         public decimal CalculateRentalFee(int customerId, string categoryCode, DateTime rentDate, DateTime returnDate)
@@ -45,11 +44,23 @@ namespace ToolSYS.Business.Services
 
         public void ConfirmRental(Rental rental)
         {
-            _rentalData.AddRental(rental);
-
-            foreach (var rentalItem in rental.rentalItems)
+            try
             {
-                _rentalItemData.AddRentalItem(rentalItem);
+                _unitOfWork.BeginTransaction();
+
+                _unitOfWork.Rentals.AddRental(rental);
+
+                foreach (var rentalItem in rental.rentalItems)
+                {
+                    _unitOfWork.RentalItems.AddRentalItem(rentalItem);
+                }
+
+                _unitOfWork.Commit();
+            }
+            catch
+            {
+                _unitOfWork.Rollback();
+                throw;
             }
         }
 
@@ -58,7 +69,7 @@ namespace ToolSYS.Business.Services
             if (rentalId <= 0)
                 throw new ArgumentException("Invalid Rental ID.");
 
-            return _rentalData.GetRentalItemsByRentalId(rentalId);
+            return _unitOfWork.Rentals.GetRentalItemsByRentalId(rentalId);
         }
 
         public void ReturnTool(int rentalId, int toolId)
@@ -66,7 +77,7 @@ namespace ToolSYS.Business.Services
             if (rentalId <= 0 || toolId <= 0)
                 throw new ArgumentException("Rental ID and Tool ID must be valid numbers.");
 
-            _rentalData.ReturnTool(rentalId, toolId);
+            _unitOfWork.Rentals.ReturnTool(rentalId, toolId);
         }
 
 

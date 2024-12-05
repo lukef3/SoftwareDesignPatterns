@@ -24,7 +24,7 @@ namespace ToolSYS.Business.Services
 
         public ReportData GetReportData(int year, string reportType)
         {
-            IReportStrategy strategy = ReportStrategyFactory.GetStrategy(reportType, _analysisData);
+            IReportStrategy strategy = ReportStrategySimpleFactory.GetStrategy(reportType, _analysisData);
             return strategy.GenerateReport(year, reportType);
         }
 

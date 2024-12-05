@@ -55,8 +55,7 @@ namespace ToolSYS.Presentation.Forms
             try
             {
                 ValidateSelections();
-                ReportData reportData =
-                    _analysisService.GetReportData(Convert.ToInt32(cboYears.Text), cboReportType.Text);
+                ReportData reportData = _analysisService.GetReportData(Convert.ToInt32(cboYears.Text), cboReportType.Text);
                 RenderGraph(reportData);
             }
             catch (Exception ex)
@@ -71,8 +70,7 @@ namespace ToolSYS.Presentation.Forms
                 throw new ArgumentException("Please select a year.");
             if (cboReportType.SelectedIndex < 0)
                 throw new ArgumentException("Please select a report.");
-
-        }
+            }
 
         private void RenderGraph(ReportData reportData)
         {
@@ -147,20 +145,6 @@ namespace ToolSYS.Presentation.Forms
             pie.SliceLabels = data.XLabels.ToArray();
             pie.ShowLabels = true;
             pie.DonutSize = 0.6;
-            }
-
-        /*private void RenderAreaChart(ReportData data)
-        {
-            double[] ys = data.YValues.ToArray();
-            double[] xs = Enumerable.Range(0, ys.Length).Select(x => (double)x).ToArray();
-
-            var area = formsPlot1.Plot.AddFilledCurve(xs, ys, 0, color: System.Drawing.Color.LightBlue);
-            area.Label = "Revenue";
-
-            // Set X-axis labels
-            formsPlot1.Plot.XTicks(xs, data.XLabels.ToArray());
-
-            formsPlot1.Plot.Legend();
-        }*/
+        }
     }
 }

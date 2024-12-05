@@ -1,8 +1,5 @@
 ﻿using System.Data;
-using ToolSYS.Business.Builders;
 using ToolSYS.Business.Facades;
-using ToolSYS.Business.Services;
-using ToolSYS.Entities;
 using ToolSYS.Presentation.Nav;
 
 namespace ToolSYS.Presentation.Forms
@@ -211,6 +208,7 @@ namespace ToolSYS.Presentation.Forms
 
         private void RefreshForm()
         {
+            cboCategories.SelectedIndexChanged -= cboCategories_SelectedIndexChanged!;
             txtRentalID.Text = "";
             txtCustomerSearch.Clear();
             txtCustomerID.Clear();
@@ -228,6 +226,7 @@ namespace ToolSYS.Presentation.Forms
             cboCategories.SelectedIndex = -1;
             dtpFrom.Value = DateTime.Today;
             dtpTo.Value = DateTime.Today;
+            cboCategories.SelectedIndexChanged += cboCategories_SelectedIndexChanged!;
         }
 
         private void cboCategories_SelectedIndexChanged(object sender, EventArgs e)
